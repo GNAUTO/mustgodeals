@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
 
 export const metadata: Metadata = {
   title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀 | MustGoDeals",
@@ -31,55 +32,6 @@ const S = {
     minHeight: "100vh",
     background: "#F5F5F0",
     fontFamily: "inherit",
-  } as React.CSSProperties,
-
-  nav: {
-    background: "#1A1A1A",
-    padding: "0 2rem",
-    height: "60px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  } as React.CSSProperties,
-
-  logo: {
-    fontSize: "20px",
-    fontWeight: 500,
-    color: "white",
-    letterSpacing: "-0.5px",
-  } as React.CSSProperties,
-
-  logoAccent: {
-    color: "#CCDA47",
-  } as React.CSSProperties,
-
-  logoSub: {
-    fontSize: "11px",
-    color: "rgba(255,255,255,0.35)",
-    letterSpacing: "2px",
-    marginTop: "2px",
-  } as React.CSSProperties,
-
-  navLinks: {
-    display: "flex",
-    gap: "1.5rem",
-    alignItems: "center",
-  } as React.CSSProperties,
-
-  navLink: {
-    color: "rgba(255,255,255,0.65)",
-    fontSize: "13px",
-    textDecoration: "none",
-  } as React.CSSProperties,
-
-  navCta: {
-    background: "#CCDA47",
-    color: "#1A1A1A",
-    padding: "6px 14px",
-    borderRadius: "6px",
-    fontSize: "13px",
-    fontWeight: 500,
-    textDecoration: "none",
   } as React.CSSProperties,
 
   hero: {
@@ -305,20 +257,7 @@ const S = {
 export default function Page() {
   return (
     <div style={S.page}>
-      {/* Nav */}
-      <nav style={S.nav}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span style={S.logo}>
-            must<span style={S.logoAccent}>go</span>
-          </span>
-          <span style={S.logoSub}>DEALS</span>
-        </div>
-        <div style={S.navLinks}>
-          <Link href="/blog" style={S.navLink}>Blog</Link>
-          <Link href="/listings" style={S.navLink}>Listings</Link>
-          <Link href="/alerts" style={S.navCta}>Get Alerts</Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero */}
       <div style={S.hero}>
@@ -326,7 +265,7 @@ export default function Page() {
           <div style={S.breadcrumb}>
             <Link href="/" style={S.breadcrumbLink}>홈</Link>
             <span>›</span>
-            <Link href="/blog" style={S.breadcrumbLink}>블로그</Link>
+            <Link href="/coming-soon" style={S.breadcrumbLink}>블로그</Link>
             <span>›</span>
             <span style={{ color: "rgba(255,255,255,0.55)" }}>월말 자동차 딜</span>
           </div>
@@ -618,7 +557,7 @@ export default function Page() {
           <div style={S.ctaBox}>
             <div style={S.ctaTitle}>월말 딜 알림 받기</div>
             <p style={S.ctaDesc}>딜러가 반드시 팔아야 하는 차량, 매주 업데이트됩니다</p>
-            <Link href="/alerts" style={S.ctaBtn}>무료로 알림 신청하기 →</Link>
+            <Link href="/coming-soon" style={S.ctaBtn}>무료로 알림 신청하기 →</Link>
           </div>
 
           <hr style={S.divider} />
@@ -626,13 +565,13 @@ export default function Page() {
           <div style={{ fontSize: "13px", color: "#888", lineHeight: 1.7 }}>
             <strong style={{ color: "#555" }}>관련 가이드</strong>
             <div style={{ marginTop: "0.75rem", display: "flex", flexDirection: "column" as const, gap: "6px" }}>
-              <Link href="/blog/ho-ju-jungo-cha-gide" style={{ color: "#8A9A10", textDecoration: "none" }}>
+              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
                 → 호주에서 중고차 구매 완벽 가이드 — 딜러 협상 팁
               </Link>
-              <Link href="/blog/end-of-month-car-deals-explained" style={{ color: "#8A9A10", textDecoration: "none" }}>
+              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
                 → End of month car deals explained (영문)
               </Link>
-              <Link href="/blog/best-time-to-buy-car-australia" style={{ color: "#8A9A10", textDecoration: "none" }}>
+              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
                 → Best time to buy a car in Australia (영문)
               </Link>
             </div>
@@ -645,7 +584,7 @@ export default function Page() {
         <span style={S.footerText}>© 2026 MustGoDeals.com.au — Sydney, Australia</span>
         <div style={S.footerLinks}>
           {["About", "For Dealers", "Privacy", "Contact"].map((l) => (
-            <Link key={l} href={`/${l.toLowerCase().replace(" ", "-")}`} style={S.footerLink}>
+            <Link key={l} href="/coming-soon" style={S.footerLink}>
               {l}
             </Link>
           ))}

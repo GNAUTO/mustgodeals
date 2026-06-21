@@ -12,6 +12,15 @@ const NEWS_PREVIEW = [
     category: "NEWS",
     date: "June 21, 2026",
     image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "maserati-grecale-2027-australia-ko",
+    title: "마세라티, 2027 그레칼레 SUV 라인업 호주 시장에 확대 출시",
+    category: "뉴스",
+    date: "2026년 6월 21일",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
+    lang: "KO",
   },
 ];
 
@@ -75,6 +84,7 @@ export default function Home() {
   const countdown = useCountdown();
 
   const filtered = posts.filter((p) => p.lang === activeLang);
+  const filteredNews = NEWS_PREVIEW.filter((n) => n.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
   return (
@@ -135,8 +145,11 @@ export default function Home() {
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
           </div>
+          {filteredNews.length === 0 ? (
+            <div style={{ textAlign: "center", padding: "2rem", color: "#aaa", fontSize: "14px" }}>{currentLang.comingSoon}</div>
+          ) : null}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px" }}>
-            {NEWS_PREVIEW.map((item) => (
+            {filteredNews.map((item) => (
               <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
                 <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -159,7 +172,7 @@ export default function Home() {
       <div style={{ flex: 1 }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
-          <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest guides</h2>
+          <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest articles</h2>
           <Link href="/coming-soon" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
         </div>
 

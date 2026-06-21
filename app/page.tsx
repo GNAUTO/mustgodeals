@@ -5,6 +5,16 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+const NEWS_PREVIEW = [
+  {
+    slug: "maserati-grecale-2027-australia",
+    title: "Maserati expands Grecale SUV lineup for 2027 Australian market",
+    category: "NEWS",
+    date: "June 21, 2026",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
+  },
+];
+
 const posts = [
   {
     slug: "end-of-month-car-deals-explained",
@@ -118,8 +128,36 @@ export default function Home() {
         Google AdSense — Advertisement
       </div>
 
+      {/* Latest News */}
+      <div style={{ background: "#ECEEE7", padding: "2.5rem 2rem" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
+            <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
+            <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px" }}>
+            {NEWS_PREVIEW.map((item) => (
+              <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
+                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.image} alt={item.title} style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }} />
+                  <div style={{ padding: "1rem" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
+                      <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)", padding: "2px 8px", borderRadius: "10px" }}>{item.category}</span>
+                      <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
+                    </div>
+                    <div style={{ fontSize: "14px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4 }}>{item.title}</div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Blog cards */}
-      <div style={{ flex: 1, maxWidth: "1100px", width: "100%", margin: "0 auto", padding: "3rem 2rem" }}>
+      <div style={{ flex: 1 }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
           <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest guides</h2>
           <Link href="/coming-soon" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
@@ -146,6 +184,7 @@ export default function Home() {
             ))}
           </div>
         )}
+      </div>
       </div>
 
       {/* Email signup */}

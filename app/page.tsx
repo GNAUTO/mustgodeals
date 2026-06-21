@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 
@@ -29,8 +29,30 @@ function getMonthBadge() {
   return `${month} ${year} — MONTH END CLEARANCE`;
 }
 
+function useCountdown() {
+  const [t, setT] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  useEffect(() => {
+    function tick() {
+      const now = new Date();
+      const end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+      const diff = Math.max(0, end.getTime() - now.getTime());
+      setT({
+        days:    Math.floor(diff / 86400000),
+        hours:   Math.floor((diff % 86400000) / 3600000),
+        minutes: Math.floor((diff % 3600000) / 60000),
+        seconds: Math.floor((diff % 60000) / 1000),
+      });
+    }
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  return t;
+}
+
 export default function Home() {
   const [activeLang, setActiveLang] = useState("EN");
+  const countdown = useCountdown();
 
   const filtered = posts.filter((p) => p.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
@@ -45,8 +67,28 @@ export default function Home() {
           {getMonthBadge()}
         </div>
         <h1 style={{ color: "white", fontSize: "46px", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
-          Cars dealers <span style={{ color: "#CCDA47" }}>must sell</span><br />before month end
+          Cars dealers <span className="must-sell-animate">must sell</span><br />before month end
         </h1>
+
+        {/* Countdown */}
+        <div style={{ display: "flex", gap: "10px", justifyContent: "center", margin: "1.25rem auto 1.75rem" }}>
+          {([
+            { value: countdown.days,    label: "days" },
+            { value: countdown.hours,   label: "hrs" },
+            { value: countdown.minutes, label: "min" },
+            { value: countdown.seconds, label: "sec" },
+          ] as const).map(({ value, label }) => (
+            <div key={label} style={{ textAlign: "center" }}>
+              <div style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "6px", padding: "8px 12px", minWidth: "52px" }}>
+                <span className="countdown-digit" style={{ color: "white", fontSize: "22px", fontWeight: 500 }}>
+                  {String(value).padStart(2, "0")}
+                </span>
+              </div>
+              <div style={{ color: "rgba(255,255,255,0.3)", fontSize: "10px", marginTop: "4px", letterSpacing: "0.5px", textTransform: "uppercase" }}>{label}</div>
+            </div>
+          ))}
+        </div>
+
         <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "17px", maxWidth: "480px", margin: "0 auto 2rem" }}>
           Insider guides, negotiation tips, and clearance deals — updated every week.
         </p>

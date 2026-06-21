@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
+import BlogLangTabs from "../../components/BlogLangTabs";
 
 export const metadata: Metadata = {
   title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀 | MustGoDeals",
@@ -258,6 +259,7 @@ export default function Page() {
   return (
     <div style={S.page}>
       <Navbar />
+      <BlogLangTabs current="KO" />
 
       {/* Hero */}
       <div style={S.hero}>
@@ -560,22 +562,6 @@ export default function Page() {
             <Link href="/coming-soon" style={S.ctaBtn}>무료로 알림 신청하기 →</Link>
           </div>
 
-          <hr style={S.divider} />
-
-          <div style={{ fontSize: "13px", color: "#888", lineHeight: 1.7 }}>
-            <strong style={{ color: "#555" }}>관련 가이드</strong>
-            <div style={{ marginTop: "0.75rem", display: "flex", flexDirection: "column" as const, gap: "6px" }}>
-              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
-                → 호주에서 중고차 구매 완벽 가이드 — 딜러 협상 팁
-              </Link>
-              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
-                → End of month car deals explained (영문)
-              </Link>
-              <Link href="/coming-soon" style={{ color: "#8A9A10", textDecoration: "none" }}>
-                → Best time to buy a car in Australia (영문)
-              </Link>
-            </div>
-          </div>
         </div>
       </article>
 

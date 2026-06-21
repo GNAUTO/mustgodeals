@@ -39,22 +39,49 @@ export default function Home() {
     <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
-      {/* Posts section — main content above fold */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2.5rem 2rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-          <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest guides</h2>
+      {/* Hero */}
+      <div style={{ background: "#1A1A1A", padding: "3rem 2rem", textAlign: "center" }}>
+        <div style={{ display: "inline-block", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px" }}>
+          {getMonthBadge()}
+        </div>
+        <h1 style={{ color: "white", fontSize: "46px", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
+          Cars dealers <span style={{ color: "#CCDA47" }}>must sell</span><br />before month end
+        </h1>
+        <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "17px", maxWidth: "480px", margin: "0 auto 2rem" }}>
+          Insider guides, negotiation tips, and clearance deals — updated every week.
+        </p>
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
+            Read buying guides
+          </Link>
+          <Link href="/coming-soon" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
+            Get deal alerts
+          </Link>
+        </div>
+      </div>
+
+      {/* Ad banner */}
+      <div style={{ background: "white", borderTop: "3px solid #CCDA47", padding: "10px 2rem", textAlign: "center", fontSize: "12px", color: "#888" }}>
+        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 500, padding: "2px 6px", borderRadius: "3px", marginRight: "8px", letterSpacing: "0.5px" }}>AD</span>
+        Google AdSense — Advertisement
+      </div>
+
+      {/* Blog cards */}
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+          <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest guides</h2>
           <Link href="/coming-soon" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
         </div>
 
         {filtered.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "3rem 2rem", color: "#aaa", fontSize: "15px" }}>
+          <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#aaa", fontSize: "15px" }}>
             {currentLang.comingSoon}
           </div>
         ) : (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
             {filtered.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
-                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", cursor: "pointer" }}>
+                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", transition: "border-color 0.2s", cursor: "pointer" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
                     <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
                     <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
@@ -67,33 +94,6 @@ export default function Home() {
             ))}
           </div>
         )}
-      </div>
-
-      {/* Ad banner */}
-      <div style={{ background: "white", borderTop: "3px solid #CCDA47", padding: "10px 2rem", textAlign: "center", fontSize: "12px", color: "#888" }}>
-        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 500, padding: "2px 6px", borderRadius: "3px", marginRight: "8px", letterSpacing: "0.5px" }}>AD</span>
-        Google AdSense — Advertisement
-      </div>
-
-      {/* Hero — compact, below posts */}
-      <div style={{ background: "#1A1A1A", padding: "2rem 2rem", textAlign: "center" }}>
-        <div style={{ display: "inline-block", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "0.75rem", letterSpacing: "0.5px" }}>
-          {getMonthBadge()}
-        </div>
-        <h1 style={{ color: "white", fontSize: "34px", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
-          Cars dealers <span style={{ color: "#CCDA47" }}>must sell</span><br />before month end
-        </h1>
-        <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", maxWidth: "420px", margin: "0 auto 1.5rem" }}>
-          Insider guides, negotiation tips, and clearance deals — updated every week.
-        </p>
-        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "10px 22px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
-            Read buying guides
-          </Link>
-          <Link href="/coming-soon" style={{ background: "transparent", color: "white", padding: "10px 22px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
-            Get deal alerts
-          </Link>
-        </div>
       </div>
 
       {/* Email signup */}

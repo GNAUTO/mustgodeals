@@ -55,7 +55,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
             ))}
           </div>
         )}
-        <Link href="/coming-soon" style={{ color: linkColor("blog"), fontSize: "13px", textDecoration: "none" }}>Blog</Link>
+        <Link href="/" style={{ color: linkColor("blog"), fontSize: "13px", textDecoration: "none" }}>Blog</Link>
         <Link href="/coming-soon" style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
         <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "6px 14px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, textDecoration: "none" }}>Get Alerts</Link>
       </div>

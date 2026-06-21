@@ -22,6 +22,22 @@ const NEWS_PREVIEW = [
     image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
     lang: "KO",
   },
+  {
+    slug: "porsche-taycan-e-shift-2027",
+    title: "Porsche Taycan gets simulated gear shifts — and it's more interesting than it sounds",
+    category: "NEWS",
+    date: "June 18, 2026",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "porsche-taycan-e-shift-2027-ko",
+    title: "포르쉐 타이칸, 가상 변속기를 달다 — 전기차가 기어를 흉내 내는 이유",
+    category: "뉴스",
+    date: "2026년 6월 18일",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
+    lang: "KO",
+  },
 ];
 
 const posts = [

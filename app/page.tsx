@@ -1,65 +1,32 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 const posts = [
   {
-    slug: "best-time-to-buy-car-australia",
-    title: "Best time to buy a car in Australia (and save thousands)",
-    excerpt: "Most Australians don't know that the timing of your car purchase can save you $3,000–$10,000. Here's exactly when to buy.",
-    category: "Buyer Guide",
-    readTime: "5 min read",
-    date: "June 2026",
-    lang: "EN",
-  },
-  {
-    slug: "end-of-month-car-deals-explained",
-    title: "End of month car deals explained — insider knowledge from dealerships",
-    excerpt: "Dealerships face huge pressure from manufacturers at month end. Here's how to use that pressure to your advantage.",
-    category: "Insider Guide",
-    readTime: "6 min read",
-    date: "June 2026",
-    lang: "EN",
-  },
-  {
-    slug: "demo-car-vs-used-car-australia",
-    title: "Demo car vs used car in Australia — what's the real difference?",
-    excerpt: "Demo cars are often the best value in the market. But there are things you need to check before buying one.",
-    category: "Buyer Guide",
-    readTime: "4 min read",
-    date: "June 2026",
-    lang: "EN",
-  },
-  {
-    slug: "how-to-negotiate-car-dealership",
-    title: "How to negotiate at a car dealership in Australia (scripts included)",
-    excerpt: "Most people leave money on the table when buying a car. These exact phrases will help you get a better deal every time.",
-    category: "Negotiation",
-    readTime: "7 min read",
-    date: "June 2026",
-    lang: "EN",
-  },
-  {
-    slug: "ho-ju-jungo-cha-gide",
-    title: "호주에서 중고차 구매 완벽 가이드 — 딜러 협상 팁",
-    excerpt: "호주에서 중고차를 살 때 꼭 알아야 할 것들. 딜러십 협상부터 검사 체크리스트까지 완벽 정리.",
+    slug: "wolmal-jadongcha-dil-jongni",
+    title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀",
+    excerpt: "월말 마지막 3~5 영업일, 딜러에게 가장 강한 압박이 걸리는 시간. 이 타이밍과 협상 전술만 알면 수천 달러를 아낄 수 있습니다.",
     category: "한국어 가이드",
-    readTime: "6분 읽기",
+    readTime: "8분 읽기",
     date: "2026년 6월",
     lang: "KO",
   },
-  {
-    slug: "australia-car-buying-guide-chinese",
-    title: "澳大利亚买车完整指南 — 如何在月底抄底",
-    excerpt: "澳大利亚经销商在月底面临巨大压力，这正是买家的机会。了解如何利用这一时机获得最优惠的价格。",
-    category: "中文指南",
-    readTime: "5分钟阅读",
-    date: "2026年6月",
-    lang: "ZH",
-  },
 ];
 
-const langs = ["EN", "한국어", "中文", "हिन्दी"];
+const LANGS = [
+  { label: "EN", code: "EN", comingSoon: "Coming soon." },
+  { label: "한국어", code: "KO", comingSoon: "준비중입니다." },
+  { label: "中文", code: "ZH", comingSoon: "敬请期待。" },
+];
 
 export default function Home() {
+  const [activeLang, setActiveLang] = useState("KO");
+
+  const filtered = posts.filter((p) => p.lang === activeLang);
+  const currentLang = LANGS.find((l) => l.code === activeLang)!;
+
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
       <nav style={{ background: "#1A1A1A", padding: "0 2rem", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -77,8 +44,23 @@ export default function Home() {
       </nav>
 
       <div style={{ background: "#1A1A1A", padding: "4px 2rem", display: "flex", gap: "1rem" }}>
-        {langs.map((l) => (
-          <span key={l} style={{ fontSize: "11px", color: l === "EN" ? "#CCDA47" : "rgba(255,255,255,0.35)", cursor: "pointer", fontWeight: l === "EN" ? 500 : 400 }}>{l}</span>
+        {LANGS.map((l) => (
+          <button
+            key={l.code}
+            onClick={() => setActiveLang(l.code)}
+            style={{
+              background: "none",
+              border: "none",
+              padding: "4px 0",
+              fontSize: "11px",
+              color: activeLang === l.code ? "#CCDA47" : "rgba(255,255,255,0.35)",
+              fontWeight: activeLang === l.code ? 500 : 400,
+              cursor: "pointer",
+              fontFamily: "inherit",
+            }}
+          >
+            {l.label}
+          </button>
         ))}
       </div>
 
@@ -113,21 +95,27 @@ export default function Home() {
           <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
-              <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", transition: "border-color 0.2s", cursor: "pointer" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                  <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
-                  <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
+        {filtered.length === 0 ? (
+          <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#aaa", fontSize: "15px" }}>
+            {currentLang.comingSoon}
+          </div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
+            {filtered.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
+                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", transition: "border-color 0.2s", cursor: "pointer" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+                    <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
+                    <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
+                  </div>
+                  <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
+                  <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
+                  <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
                 </div>
-                <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
-                <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
-                <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
 
       <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem", maxWidth: "1100px", margin: "0 auto" }}>

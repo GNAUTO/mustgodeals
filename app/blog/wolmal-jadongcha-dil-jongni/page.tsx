@@ -1,0 +1,656 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀 | MustGoDeals",
+  description:
+    "월말에 자동차를 사면 왜 더 싸게 살 수 있는지, 딜러가 절대 먼저 알려주지 않는 협상 비밀과 월말 타이밍 공략법을 완벽 정리했습니다. 호주에서 최대 수천 달러를 아낄 수 있는 실전 가이드.",
+  keywords: [
+    "월말 자동차 딜",
+    "호주 자동차 협상",
+    "딜러 협상 팁",
+    "자동차 구매 타이밍",
+    "month end car deals australia",
+    "car negotiation tips",
+  ],
+  openGraph: {
+    title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀",
+    description:
+      "호주에서 월말에 차를 사면 수천 달러를 아낄 수 있습니다. 딜러의 내부 압박 구조와 협상 전략을 공개합니다.",
+    type: "article",
+    locale: "ko_KR",
+    siteName: "MustGoDeals",
+  },
+  alternates: {
+    canonical: "/blog/wolmal-jadongcha-dil-jongni",
+  },
+};
+
+const S = {
+  page: {
+    minHeight: "100vh",
+    background: "#F5F5F0",
+    fontFamily: "inherit",
+  } as React.CSSProperties,
+
+  nav: {
+    background: "#1A1A1A",
+    padding: "0 2rem",
+    height: "60px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  } as React.CSSProperties,
+
+  logo: {
+    fontSize: "20px",
+    fontWeight: 500,
+    color: "white",
+    letterSpacing: "-0.5px",
+  } as React.CSSProperties,
+
+  logoAccent: {
+    color: "#CCDA47",
+  } as React.CSSProperties,
+
+  logoSub: {
+    fontSize: "11px",
+    color: "rgba(255,255,255,0.35)",
+    letterSpacing: "2px",
+    marginTop: "2px",
+  } as React.CSSProperties,
+
+  navLinks: {
+    display: "flex",
+    gap: "1.5rem",
+    alignItems: "center",
+  } as React.CSSProperties,
+
+  navLink: {
+    color: "rgba(255,255,255,0.65)",
+    fontSize: "13px",
+    textDecoration: "none",
+  } as React.CSSProperties,
+
+  navCta: {
+    background: "#CCDA47",
+    color: "#1A1A1A",
+    padding: "6px 14px",
+    borderRadius: "6px",
+    fontSize: "13px",
+    fontWeight: 500,
+    textDecoration: "none",
+  } as React.CSSProperties,
+
+  hero: {
+    background: "#1A1A1A",
+    padding: "3rem 2rem 2.5rem",
+  } as React.CSSProperties,
+
+  heroInner: {
+    maxWidth: "780px",
+    margin: "0 auto",
+  } as React.CSSProperties,
+
+  badge: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "6px",
+    background: "rgba(204,218,71,0.15)",
+    border: "1px solid #CCDA47",
+    color: "#CCDA47",
+    fontSize: "11px",
+    padding: "4px 14px",
+    borderRadius: "20px",
+    marginBottom: "1.25rem",
+    letterSpacing: "0.5px",
+  } as React.CSSProperties,
+
+  h1: {
+    color: "white",
+    fontSize: "38px",
+    fontWeight: 500,
+    lineHeight: 1.25,
+    marginBottom: "1rem",
+    letterSpacing: "-0.5px",
+  } as React.CSSProperties,
+
+  hereMeta: {
+    display: "flex",
+    gap: "1.25rem",
+    alignItems: "center",
+    flexWrap: "wrap" as const,
+    marginTop: "1rem",
+  } as React.CSSProperties,
+
+  metaItem: {
+    fontSize: "12px",
+    color: "rgba(255,255,255,0.4)",
+  } as React.CSSProperties,
+
+  article: {
+    maxWidth: "780px",
+    margin: "0 auto",
+    padding: "3rem 2rem 4rem",
+  } as React.CSSProperties,
+
+  body: {
+    fontSize: "16px",
+    lineHeight: 1.8,
+    color: "#2A2A2A",
+  } as React.CSSProperties,
+
+  h2: {
+    fontSize: "24px",
+    fontWeight: 600,
+    color: "#1A1A1A",
+    marginTop: "2.5rem",
+    marginBottom: "1rem",
+    letterSpacing: "-0.3px",
+  } as React.CSSProperties,
+
+  h3: {
+    fontSize: "18px",
+    fontWeight: 600,
+    color: "#1A1A1A",
+    marginTop: "1.75rem",
+    marginBottom: "0.75rem",
+  } as React.CSSProperties,
+
+  p: {
+    marginBottom: "1.25rem",
+    color: "#333",
+    lineHeight: 1.8,
+  } as React.CSSProperties,
+
+  callout: {
+    background: "#1A1A1A",
+    border: "1px solid rgba(204,218,71,0.3)",
+    borderLeft: "4px solid #CCDA47",
+    borderRadius: "8px",
+    padding: "1.25rem 1.5rem",
+    margin: "1.75rem 0",
+  } as React.CSSProperties,
+
+  calloutTitle: {
+    color: "#CCDA47",
+    fontSize: "12px",
+    fontWeight: 600,
+    letterSpacing: "1px",
+    marginBottom: "0.5rem",
+  } as React.CSSProperties,
+
+  calloutText: {
+    color: "rgba(255,255,255,0.85)",
+    fontSize: "15px",
+    lineHeight: 1.7,
+    margin: 0,
+  } as React.CSSProperties,
+
+  tipBox: {
+    background: "white",
+    border: "0.5px solid rgba(0,0,0,0.1)",
+    borderRadius: "10px",
+    padding: "1.25rem 1.5rem",
+    margin: "1.5rem 0",
+  } as React.CSSProperties,
+
+  tipTitle: {
+    fontSize: "13px",
+    fontWeight: 600,
+    color: "#8A9A10",
+    marginBottom: "0.75rem",
+    letterSpacing: "0.3px",
+  } as React.CSSProperties,
+
+  tipList: {
+    paddingLeft: "1.25rem",
+    margin: 0,
+  } as React.CSSProperties,
+
+  tipItem: {
+    color: "#333",
+    fontSize: "15px",
+    lineHeight: 1.75,
+    marginBottom: "0.4rem",
+  } as React.CSSProperties,
+
+  highlight: {
+    background: "rgba(204,218,71,0.2)",
+    color: "#1A1A1A",
+    fontWeight: 600,
+    padding: "1px 5px",
+    borderRadius: "3px",
+  } as React.CSSProperties,
+
+  divider: {
+    border: "none",
+    borderTop: "1px solid rgba(0,0,0,0.08)",
+    margin: "2.5rem 0",
+  } as React.CSSProperties,
+
+  ctaBox: {
+    background: "#1A1A1A",
+    borderRadius: "12px",
+    padding: "2rem",
+    textAlign: "center" as const,
+    margin: "3rem 0",
+  } as React.CSSProperties,
+
+  ctaTitle: {
+    color: "white",
+    fontSize: "20px",
+    fontWeight: 500,
+    marginBottom: "0.5rem",
+  } as React.CSSProperties,
+
+  ctaDesc: {
+    color: "rgba(255,255,255,0.5)",
+    fontSize: "14px",
+    marginBottom: "1.25rem",
+  } as React.CSSProperties,
+
+  ctaBtn: {
+    display: "inline-block",
+    background: "#CCDA47",
+    color: "#1A1A1A",
+    padding: "12px 28px",
+    borderRadius: "8px",
+    fontSize: "14px",
+    fontWeight: 600,
+    textDecoration: "none",
+  } as React.CSSProperties,
+
+  footer: {
+    background: "#111",
+    padding: "1.25rem 2rem",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap" as const,
+    gap: "1rem",
+  } as React.CSSProperties,
+
+  footerText: {
+    color: "rgba(255,255,255,0.3)",
+    fontSize: "11px",
+  } as React.CSSProperties,
+
+  footerLinks: {
+    display: "flex",
+    gap: "1.5rem",
+  } as React.CSSProperties,
+
+  footerLink: {
+    color: "rgba(255,255,255,0.3)",
+    fontSize: "11px",
+    textDecoration: "none",
+  } as React.CSSProperties,
+
+  breadcrumb: {
+    display: "flex",
+    gap: "6px",
+    alignItems: "center",
+    fontSize: "12px",
+    color: "rgba(255,255,255,0.35)",
+    marginBottom: "1.25rem",
+  } as React.CSSProperties,
+
+  breadcrumbLink: {
+    color: "rgba(255,255,255,0.35)",
+    textDecoration: "none",
+  } as React.CSSProperties,
+};
+
+export default function Page() {
+  return (
+    <div style={S.page}>
+      {/* Nav */}
+      <nav style={S.nav}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <span style={S.logo}>
+            must<span style={S.logoAccent}>go</span>
+          </span>
+          <span style={S.logoSub}>DEALS</span>
+        </div>
+        <div style={S.navLinks}>
+          <Link href="/blog" style={S.navLink}>Blog</Link>
+          <Link href="/listings" style={S.navLink}>Listings</Link>
+          <Link href="/alerts" style={S.navCta}>Get Alerts</Link>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div style={S.hero}>
+        <div style={S.heroInner}>
+          <div style={S.breadcrumb}>
+            <Link href="/" style={S.breadcrumbLink}>홈</Link>
+            <span>›</span>
+            <Link href="/blog" style={S.breadcrumbLink}>블로그</Link>
+            <span>›</span>
+            <span style={{ color: "rgba(255,255,255,0.55)" }}>월말 자동차 딜</span>
+          </div>
+          <div style={S.badge}>
+            <span>한국어 가이드</span>
+            <span style={{ opacity: 0.5 }}>·</span>
+            <span>2026년 6월</span>
+          </div>
+          <h1 style={S.h1}>
+            월말 자동차 딜 총정리 —{" "}
+            <span style={{ color: "#CCDA47" }}>딜러가 절대 말 안해주는 비밀</span>
+          </h1>
+          <div style={S.hereMeta}>
+            <span style={S.metaItem}>약 8분 읽기</span>
+            <span style={S.metaItem}>·</span>
+            <span style={S.metaItem}>협상 팁 · 타이밍 · 실전 스크립트</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Article */}
+      <article style={S.article}>
+        <div style={S.body}>
+
+          <p style={S.p}>
+            호주에서 자동차를 구입할 때 단순히 "좋은 차"를 고르는 것만큼이나 중요한 게
+            있습니다. 바로 <strong>언제 사느냐</strong>입니다. 같은 차종, 같은 딜러십에서도
+            월말 마지막 며칠 안에 방문하면 수백에서 수천 달러를 더 아낄 수 있습니다.
+            그리고 딜러들은 절대 먼저 이 사실을 알려주지 않습니다.
+          </p>
+
+          <p style={S.p}>
+            이 가이드에서는 월말 딜이 왜 실제로 존재하는지, 딜러십 내부에서 어떤 압박이
+            작동하는지, 그리고 그 압박을 내 협상력으로 전환하는 방법을 구체적으로 설명합니다.
+          </p>
+
+          <div style={S.callout}>
+            <div style={S.calloutTitle}>핵심 요약</div>
+            <p style={S.calloutText}>
+              월말, 특히 마지막 3~5 영업일 안에 딜러십을 방문하세요. 딜러들은 이 시기에
+              제조사 판매 할당량을 채워야 하는 극심한 압박을 받습니다. 이 압박이 곧
+              여러분의 협상력입니다.
+            </p>
+          </div>
+
+          <h2 style={S.h2}>왜 월말에 차가 더 싸게 팔리는가</h2>
+
+          <p style={S.p}>
+            딜러십이 월말에 할인을 더 많이 해주는 이유는 단순한 친절함이 아닙니다.
+            자동차 제조사(Toyota, Hyundai, Kia, Ford 등)는 딜러십과 월별 판매 할당량
+            계약을 맺습니다. 그리고 딜러십이 이 목표치를 달성하면 제조사로부터
+            <strong> 보너스 인센티브(holdback, stair-step bonus)</strong>를 받습니다.
+          </p>
+
+          <p style={S.p}>
+            예를 들어 어떤 딜러십이 한 달에 Toyota를 30대 팔면 대당 $500의 보너스를
+            받는다고 합시다. 29대를 팔았는데 월말이 이틀 남았다면? 마지막 한 대를
+            팔기 위해 딜러가 $2,000 손해를 보더라도 거래를 성사시키는 게
+            $500 × 30 = $15,000 보너스를 확보하는 길입니다. 즉, 그 손해는
+            실제로 손해가 아닙니다.
+          </p>
+
+          <div style={S.tipBox}>
+            <div style={S.tipTitle}>딜러 인센티브 구조 — 알아야 할 용어</div>
+            <ul style={S.tipList}>
+              <li style={S.tipItem}><strong>Holdback:</strong> 제조사가 딜러에게 되돌려 주는 숨겨진 마진 (보통 차값의 2~3%)</li>
+              <li style={S.tipItem}><strong>Stair-step bonus:</strong> 판매 목표 달성 시 추가 지급되는 제조사 보너스</li>
+              <li style={S.tipItem}><strong>Floorplan assistance:</strong> 재고 보유 비용을 제조사가 일부 부담하는 구조</li>
+              <li style={S.tipItem}><strong>Demo allowance:</strong> 시승 차량 전환 시 제공되는 추가 할인 여력</li>
+            </ul>
+          </div>
+
+          <p style={S.p}>
+            이 구조를 이해하면 딜러가 여러분에게 할인해 줄 때 "손해를 보는 게 아니라는 것"을
+            알 수 있습니다. 그래서 협상이 가능한 것입니다. 딜러는 할인을 해줄 여력이 항상
+            있습니다. 단지 먼저 꺼내지 않을 뿐입니다.
+          </p>
+
+          <h2 style={S.h2}>월말 타이밍 — 정확히 언제가 "황금 구간"인가</h2>
+
+          <p style={S.p}>
+            단순히 "월말이면 된다"는 생각은 절반만 맞습니다. 더 정밀하게 타이밍을 잡아야 합니다.
+          </p>
+
+          <h3 style={S.h3}>마지막 3~5 영업일</h3>
+          <p style={S.p}>
+            딜러십이 본격적으로 "마감 모드"에 들어가는 시점입니다. 세일즈 매니저가 각
+            영업사원에게 개인 실적 압박을 가하고, 팀 전체의 월 목표 달성 여부가 시야에
+            들어오기 시작합니다. 이 시점에 방문하면 이전에 "불가능하다"고 했던 딜이
+            갑자기 가능해지는 경우가 많습니다.
+          </p>
+
+          <h3 style={S.h3}>월말 주말보다 평일 오후</h3>
+          <p style={S.p}>
+            주말엔 딜러십이 바쁩니다. 영업사원이 여러 고객을 동시에 상대하기 때문에
+            협상에 집중하기 어렵고, 여러분을 기다리게 만드는 심리적 전술도 쉽게 씁니다.
+            반면 <span style={S.highlight}>평일 오후 3~6시</span>는 방문객이 적고
+            영업사원이 오늘 계약을 성사시켜야 한다는 압박을 가장 강하게 느끼는 시간대입니다.
+          </p>
+
+          <h3 style={S.h3}>분기말, 연말은 더 강력하다</h3>
+          <p style={S.p}>
+            월말보다 더 큰 기회는 <strong>분기 마감(3월, 6월, 9월, 12월 말)</strong>과
+            <strong> 연말(12월)</strong>입니다. 이 시기에는 연간 딜러십 인센티브 보너스까지
+            걸려 있기 때문에 훨씬 공격적인 할인이 가능합니다. 특히 12월 말은 호주에서
+            자동차를 가장 싸게 살 수 있는 최고의 타이밍으로 알려져 있습니다.
+          </p>
+
+          <div style={S.callout}>
+            <div style={S.calloutTitle}>타이밍 우선순위</div>
+            <p style={S.calloutText}>
+              연말 &gt; 분기말 &gt; 월말 마지막 3 영업일 &gt; 월말 주말 &gt; 월초·중순
+            </p>
+          </div>
+
+          <h2 style={S.h2}>딜러가 절대 먼저 말 안해주는 것들</h2>
+
+          <p style={S.p}>
+            딜러십에 들어서면 여러분은 정보 비대칭 환경 속에 놓입니다. 딜러는 재고 상황,
+            인센티브 구조, 최저 마진을 알고 있지만 여러분은 모릅니다.
+            아래는 딜러가 절대 먼저 꺼내지 않는 정보들입니다.
+          </p>
+
+          <h3 style={S.h3}>1. 재고 체류 기간</h3>
+          <p style={S.p}>
+            딜러십 재고에 오래 있던 차일수록 딜러에게 비용이 됩니다(플로어플랜 이자).
+            3~6개월 이상 된 재고는 딜러가 처리하고 싶어 합니다. 차량 등록증(compliance plate)에
+            있는 제조 날짜와 딜러 재고 스티커의 입고일을 확인해 보세요. "이 차 얼마나
+            된 재고예요?"라고 직접 물어보는 것도 좋습니다.
+          </p>
+
+          <h3 style={S.h3}>2. 데모카(시승차)의 실제 가치</h3>
+          <p style={S.p}>
+            딜러십 시승용으로 쓰던 데모카는 통상 신차보다 <strong>10~15% 저렴</strong>하게
+            살 수 있습니다. 주행거리가 수백에서 수천 km에 불과하지만 신차와 동일한 제조사
+            보증을 받을 수 있는 경우가 많습니다. 딜러들은 데모카 재고가 많을수록 새 차
+            등록이 어렵기 때문에 빨리 처분하고 싶어 합니다. 데모카 구입 시엔
+            딜러가 말하지 않아도 더 깎을 여지가 있습니다.
+          </p>
+
+          <h3 style={S.h3}>3. 옵션 패키지의 마진</h3>
+          <p style={S.p}>
+            딜러가 추천하는 애프터마켓 옵션(틴팅, 시트 보호재, 도장 보호 코팅 등)은
+            딜러에게 높은 마진을 남기는 항목입니다. 이것들은 협상의 여지가 가장 큰 부분입니다.
+            차량 가격 협상이 막히면 "그러면 옵션 패키지 무료로 해주세요"라고 요청해 보세요.
+            딜러가 거절하기 어렵습니다.
+          </p>
+
+          <h3 style={S.h3}>4. 파이낸스(할부) 수익</h3>
+          <p style={S.p}>
+            딜러십이 자체 파이낸스를 권하는 이유는 금융 수수료에서 추가 수익을 내기 때문입니다.
+            "현금 구매" 또는 "사전에 별도 금융기관에서 승인받아 왔다"고 말하면 딜러의
+            전략이 바뀝니다. 하지만 반대로 딜러 파이낸스를 활용하면서 "금리를 낮춰주면
+            계약할게요"라는 레버리지로도 쓸 수 있습니다.
+          </p>
+
+          <div style={S.tipBox}>
+            <div style={S.tipTitle}>딜러십 입장 전 체크리스트</div>
+            <ul style={S.tipList}>
+              <li style={S.tipItem}>RedBook.com.au에서 목표 차종의 시장 가격 조회</li>
+              <li style={S.tipItem}>최소 2~3개 딜러십에서 견적 받아두기</li>
+              <li style={S.tipItem}>원하는 차의 재고 체류 기간 파악</li>
+              <li style={S.tipItem}>파이낸스 사전 승인 또는 현금 구매 준비 신호 보내기</li>
+              <li style={S.tipItem}>월말 마지막 3 영업일 방문 예약</li>
+            </ul>
+          </div>
+
+          <h2 style={S.h2}>실전 협상 전략 — 단계별 접근법</h2>
+
+          <h3 style={S.h3}>1단계: 감정을 차 밖에 두고 들어가라</h3>
+          <p style={S.p}>
+            딜러십 영업사원은 고객이 특정 차에 감정적으로 빠져드는 순간을 포착합니다.
+            "이 색깔 너무 예쁘다", "이 차 꼭 사야겠다"는 반응을 보이는 순간 협상력이
+            절반으로 줄어듭니다. 시승하고 관심을 표현하되, 항상 "결정은 아직 안 했다"는
+            태도를 유지하세요.
+          </p>
+
+          <h3 style={S.h3}>2단계: 경쟁 견적을 활용하라</h3>
+          <p style={S.p}>
+            같은 차종을 판매하는 딜러십이 여럿이라면 최소 두 곳에서 견적을 받아 두세요.
+            그리고 딜러에게 "다른 딜러에서 이 가격에 제안받았는데"라고 말하세요.
+            딜러들은 경쟁을 극도로 싫어합니다. 이 한 마디가 수백 달러의 추가 할인으로
+            이어지는 경우가 많습니다.
+          </p>
+
+          <h3 style={S.h3}>3단계: 먼저 숫자를 말하지 마라</h3>
+          <p style={S.p}>
+            "예산이 얼마예요?" 또는 "월 할부금 얼마가 편하세요?"라는 질문은 협상을
+            여러분에게 불리하게 만드는 함정입니다. 이 질문에 답하는 순간 딜러는
+            그 숫자 안에서 최대 이익을 뽑아내는 방향으로 조건을 구성합니다.
+            항상 "전체 총액 기준으로 가장 좋은 가격을 보여주세요"라고 말하세요.
+          </p>
+
+          <h3 style={S.h3}>4단계: 침묵을 두려워하지 마라</h3>
+          <p style={S.p}>
+            가격 제시 후 딜러가 잠시 침묵하거나 "이 이상은 어렵습니다"라고 하면 많은
+            사람들이 바로 수락해버립니다. 하지만 침묵은 협상 기술입니다. 상대가 제시한
+            가격에 즉각 반응하지 말고 잠시 침묵 후 "좀 더 생각해봐야 할 것 같네요.
+            조금 더 맞춰주실 수 없나요?"라고 물어보세요.
+          </p>
+
+          <h3 style={S.h3}>5단계: 자리를 뜰 준비를 하라</h3>
+          <p style={S.p}>
+            가장 강력한 협상 카드는 "떠날 수 있다"는 것입니다. 딜러가 원하는 가격에
+            맞춰주지 않으면 "다시 생각해보고 연락드릴게요"라며 실제로 자리를 뜨세요.
+            많은 경우 주차장까지 따라오거나 다음날 전화해서 더 나은 조건을 제시합니다.
+            월말이라면 이 전략의 효과가 배가 됩니다.
+          </p>
+
+          <div style={S.callout}>
+            <div style={S.calloutTitle}>실전 협상 스크립트 예시</div>
+            <p style={S.calloutText}>
+              "이 차에 관심이 있는데, 다른 딜러에서 드라이브어웨이 $[X]로 견적받았어요.
+              여기서 이 가격에 맞춰주시면 오늘 바로 계약할게요. 월말이라 결정하려고 하는데,
+              최선의 가격 한 번만 보여주세요."
+            </p>
+          </div>
+
+          <hr style={S.divider} />
+
+          <h2 style={S.h2}>딜러가 쓰는 전술 — 미리 알면 당하지 않는다</h2>
+
+          <h3 style={S.h3}>&ldquo;4방위 공격(4-square)&rdquo; 전술</h3>
+          <p style={S.p}>
+            차 가격, 할부금, 트레이드인 가격, 계약금을 동시에 한 종이에 섞어서 협상하게
+            만드는 전술입니다. 한 숫자를 낮추면 다른 숫자를 올리는 방식으로 실제 총액을
+            숨깁니다. 항상 <strong>"드라이브어웨이 총액 기준"</strong>으로 협상하고,
+            하나씩 분리해서 처리하세요.
+          </p>
+
+          <h3 style={S.h3}>매니저 핑계 전술</h3>
+          <p style={S.p}>
+            "저는 괜찮은데 매니저가 승인을 안 해줍니다"라는 말은 딜러 내부의 협상
+            구조입니다. 이때는 "그러면 매니저를 직접 만나서 얘기하고 싶습니다"라고
+            요청하세요. 중간 단계를 없애면 협상이 훨씬 빨라집니다.
+          </p>
+
+          <h3 style={S.h3}>급박감 조성 전술</h3>
+          <p style={S.p}>
+            "이 가격은 오늘까지만 유효합니다", "다른 분이 이미 관심 있어요"라는 말은
+            여러분을 서두르게 만드는 전술입니다. 진짜 월말 압박은 딜러에게 있지,
+            여러분에게 있지 않습니다. 서두를 필요가 없습니다.
+          </p>
+
+          <div style={S.tipBox}>
+            <div style={S.tipTitle}>협상 중 피해야 할 말 vs 써야 할 말</div>
+            <ul style={S.tipList}>
+              <li style={S.tipItem}>❌ "예산이 $X 정도예요" → ✅ "가장 좋은 가격을 먼저 보여주세요"</li>
+              <li style={S.tipItem}>❌ "이 차 너무 마음에 들어요" → ✅ "몇 군데 더 보고 결정하려고요"</li>
+              <li style={S.tipItem}>❌ "월 할부금이 얼마나 될까요?" → ✅ "드라이브어웨이 총액 기준으로 알려주세요"</li>
+              <li style={S.tipItem}>❌ "오늘 계약하고 싶어요" → ✅ "좋은 딜이면 오늘 결정할 수도 있어요"</li>
+            </ul>
+          </div>
+
+          <h2 style={S.h2}>트레이드인(기존 차 처분) 협상 팁</h2>
+
+          <p style={S.p}>
+            기존 차를 딜러에게 넘기는 트레이드인은 새 차 협상과 절대 섞어서 진행하지
+            마세요. 딜러는 새 차 할인을 줄이는 대신 트레이드인 가격을 올려주는 식으로
+            실제 혜택을 최소화하는 방식을 씁니다.
+          </p>
+
+          <p style={S.p}>
+            트레이드인 협상은 별도로 진행하되, 먼저 <strong>CarSales.com.au나 Carsguide</strong>에서
+            내 차의 시장 가격을 파악하고, 여러 딜러에서 트레이드인 견적을 받아두세요.
+            협상 순서는 ① 새 차 가격 확정 → ② 트레이드인 가격 협상 → ③ 파이낸스 조건 순으로
+            분리해서 처리하는 게 핵심입니다.
+          </p>
+
+          <h2 style={S.h2}>마무리 — 월말 딜의 핵심은 "정보"와 "타이밍"</h2>
+
+          <p style={S.p}>
+            딜러가 월말에 할인을 해주는 건 친절이 아니라 구조적 압박 때문입니다.
+            그 압박의 원리를 이해하고, 타이밍을 잡고, 올바른 협상 전술을 쓰면
+            같은 차를 수천 달러 더 싸게 살 수 있습니다.
+          </p>
+
+          <p style={S.p}>
+            핵심을 다시 정리하면: 월말 마지막 3~5 영업일, 평일 오후에 방문하고,
+            감정을 숨기고, 경쟁 견적을 들고 가고, 드라이브어웨이 총액 기준으로만
+            협상하세요. 그리고 필요하다면 자리를 떠날 준비를 하세요.
+          </p>
+
+          <p style={S.p}>
+            MustGoDeals는 딜러가 월말에 반드시 팔아야 하는 재고 차량을 매주 업데이트합니다.
+            아래에서 알림을 신청하면 이런 딜을 가장 먼저 받아볼 수 있습니다.
+          </p>
+
+          <div style={S.ctaBox}>
+            <div style={S.ctaTitle}>월말 딜 알림 받기</div>
+            <p style={S.ctaDesc}>딜러가 반드시 팔아야 하는 차량, 매주 업데이트됩니다</p>
+            <Link href="/alerts" style={S.ctaBtn}>무료로 알림 신청하기 →</Link>
+          </div>
+
+          <hr style={S.divider} />
+
+          <div style={{ fontSize: "13px", color: "#888", lineHeight: 1.7 }}>
+            <strong style={{ color: "#555" }}>관련 가이드</strong>
+            <div style={{ marginTop: "0.75rem", display: "flex", flexDirection: "column" as const, gap: "6px" }}>
+              <Link href="/blog/ho-ju-jungo-cha-gide" style={{ color: "#8A9A10", textDecoration: "none" }}>
+                → 호주에서 중고차 구매 완벽 가이드 — 딜러 협상 팁
+              </Link>
+              <Link href="/blog/end-of-month-car-deals-explained" style={{ color: "#8A9A10", textDecoration: "none" }}>
+                → End of month car deals explained (영문)
+              </Link>
+              <Link href="/blog/best-time-to-buy-car-australia" style={{ color: "#8A9A10", textDecoration: "none" }}>
+                → Best time to buy a car in Australia (영문)
+              </Link>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      {/* Footer */}
+      <footer style={S.footer}>
+        <span style={S.footerText}>© 2026 MustGoDeals.com.au — Sydney, Australia</span>
+        <div style={S.footerLinks}>
+          {["About", "For Dealers", "Privacy", "Contact"].map((l) => (
+            <Link key={l} href={`/${l.toLowerCase().replace(" ", "-")}`} style={S.footerLink}>
+              {l}
+            </Link>
+          ))}
+        </div>
+      </footer>
+    </div>
+  );
+}

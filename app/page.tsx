@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const posts = [
   {
@@ -150,15 +151,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer style={{ background: "#111", padding: "1.25rem 2rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-        <span style={{ color: "rgba(255,255,255,0.3)", fontSize: "11px" }}>© 2026 MustGoDeals.com.au — Sydney, Australia</span>
-        <div style={{ display: "flex", gap: "1.5rem" }}>
-          {["About", "For Dealers", "Privacy", "Contact"].map((l) => (
-            <Link key={l} href="/coming-soon" style={{ color: "rgba(255,255,255,0.3)", fontSize: "11px", textDecoration: "none" }}>{l}</Link>
-          ))}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

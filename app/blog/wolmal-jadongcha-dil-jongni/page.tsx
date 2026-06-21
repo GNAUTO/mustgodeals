@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import BlogLangTabs from "../../components/BlogLangTabs";
+import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
   title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀 | MustGoDeals",
@@ -211,32 +212,6 @@ const S = {
     borderRadius: "8px",
     fontSize: "14px",
     fontWeight: 600,
-    textDecoration: "none",
-  } as React.CSSProperties,
-
-  footer: {
-    background: "#111",
-    padding: "1.25rem 2rem",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexWrap: "wrap" as const,
-    gap: "1rem",
-  } as React.CSSProperties,
-
-  footerText: {
-    color: "rgba(255,255,255,0.3)",
-    fontSize: "11px",
-  } as React.CSSProperties,
-
-  footerLinks: {
-    display: "flex",
-    gap: "1.5rem",
-  } as React.CSSProperties,
-
-  footerLink: {
-    color: "rgba(255,255,255,0.3)",
-    fontSize: "11px",
     textDecoration: "none",
   } as React.CSSProperties,
 
@@ -565,17 +540,7 @@ export default function Page() {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer style={S.footer}>
-        <span style={S.footerText}>© 2026 MustGoDeals.com.au — Sydney, Australia</span>
-        <div style={S.footerLinks}>
-          {["About", "For Dealers", "Privacy", "Contact"].map((l) => (
-            <Link key={l} href="/coming-soon" style={S.footerLink}>
-              {l}
-            </Link>
-          ))}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

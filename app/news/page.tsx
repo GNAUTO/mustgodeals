@@ -88,14 +88,14 @@ export default function NewsPage() {
       </div>
 
       {/* Grid */}
-      <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2.5rem 2rem" }}>
+      <div style={{ flex: 1, maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ padding: "2.5rem 0" }}>
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#aaa", fontSize: "15px" }}>
               {currentLang.comingSoon}
             </div>
           ) : (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
               {filtered.map((item) => (
                 <Link
                   key={item.slug}

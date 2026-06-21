@@ -59,7 +59,7 @@ export default function Home() {
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
+    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
       {/* Hero */}
@@ -110,7 +110,7 @@ export default function Home() {
       </div>
 
       {/* Blog cards */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
+      <div style={{ flex: 1, maxWidth: "1100px", width: "100%", margin: "0 auto", padding: "3rem 2rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
           <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest guides</h2>
           <Link href="/coming-soon" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
@@ -140,14 +140,16 @@ export default function Home() {
       </div>
 
       {/* Email signup */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem", maxWidth: "1100px", margin: "0 auto" }}>
-        <div>
-          <h3 style={{ color: "white", fontSize: "16px", fontWeight: 500, marginBottom: "4px" }}>Get alerts before deals are gone</h3>
-          <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "13px" }}>New clearance vehicles every week — be first to know</p>
-        </div>
-        <div style={{ display: "flex", gap: "8px" }}>
-          <input placeholder="your@email.com" style={{ padding: "10px 14px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.08)", color: "white", fontSize: "13px", width: "220px" }} />
-          <button style={{ background: "#CCDA47", color: "#1A1A1A", border: "none", padding: "10px 18px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, cursor: "pointer" }}>Get alerts</button>
+      <div style={{ background: "#1A1A1A" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
+          <div>
+            <h3 style={{ color: "white", fontSize: "16px", fontWeight: 500, marginBottom: "4px" }}>Get alerts before deals are gone</h3>
+            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "13px" }}>New clearance vehicles every week — be first to know</p>
+          </div>
+          <div style={{ display: "flex", gap: "8px" }}>
+            <input placeholder="your@email.com" style={{ padding: "10px 14px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.08)", color: "white", fontSize: "13px", width: "220px" }} />
+            <button style={{ background: "#CCDA47", color: "#1A1A1A", border: "none", padding: "10px 18px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, cursor: "pointer" }}>Get alerts</button>
+          </div>
         </div>
       </div>
 

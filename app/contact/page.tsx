@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
+    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
       <Navbar />
 
       {/* Page header */}
@@ -22,6 +22,7 @@ export default function Contact() {
       </div>
 
       {/* Content */}
+      <div style={{ flex: 1 }}>
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "3rem 2rem 4rem" }}>
 
         {/* General */}
@@ -67,6 +68,7 @@ export default function Contact() {
           </a>
         </div>
 
+      </div>
       </div>
 
       <Footer />

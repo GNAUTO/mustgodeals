@@ -95,15 +95,15 @@ export default function NewsPage() {
               {currentLang.comingSoon}
             </div>
           ) : (
-            <div className="news-grid">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
               {filtered.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/news/${item.slug}`}
                   className="news-card"
-                  style={{ textDecoration: "none", display: "block" }}
+                  style={{ textDecoration: "none" }}
                 >
-                  <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
+                  <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden", height: "100%" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.image}
@@ -121,10 +121,10 @@ export default function NewsPage() {
                         </span>
                         <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
                       </div>
-                      <h3 style={{ color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>
+                      <h3 style={{ fontSize: "15px", color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>
                         {item.title}
                       </h3>
-                      <p style={{ color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>
+                      <p style={{ fontSize: "13px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>
                         {item.excerpt}
                       </p>
                       <span style={{ fontSize: "11px", color: "#aaa" }}>{item.author}</span>

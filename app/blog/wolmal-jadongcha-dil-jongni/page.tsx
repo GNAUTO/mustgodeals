@@ -234,7 +234,7 @@ export default function Page() {
   return (
     <div style={S.page}>
       <Navbar />
-      <BlogLangTabs current="KO" />
+      <BlogLangTabs current="KO" links={{ EN: "/blog/end-of-month-car-deals-explained", KO: "/blog/wolmal-jadongcha-dil-jongni" }} />
 
       {/* Hero */}
       <div style={S.hero}>

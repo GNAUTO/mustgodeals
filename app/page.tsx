@@ -139,8 +139,8 @@ export default function Home() {
       </div>
 
       {/* Latest News */}
-      <div style={{ background: "#ECEEE7", padding: "2.5rem 2rem" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+      <div style={{ background: "#ECEEE7", padding: "2.5rem 0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>

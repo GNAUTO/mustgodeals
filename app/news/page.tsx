@@ -88,53 +88,51 @@ export default function NewsPage() {
       </div>
 
       {/* Grid */}
-      <div style={{ flex: 1, maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
-        <div style={{ padding: "2.5rem 0" }}>
-          {filtered.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#aaa", fontSize: "15px" }}>
-              {currentLang.comingSoon}
-            </div>
-          ) : (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
-              {filtered.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/news/${item.slug}`}
-                  className="news-card"
-                  style={{ textDecoration: "none" }}
-                >
-                  <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden", height: "100%" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{ width: "100%", height: "200px", objectFit: "cover", display: "block" }}
-                    />
-                    <div style={{ padding: "1.25rem" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
-                        <span style={{
-                          fontSize: "10px", color: "#8A9A10", fontWeight: 600,
-                          letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)",
-                          padding: "2px 10px", borderRadius: "10px",
-                        }}>
-                          {item.category}
-                        </span>
-                        <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
-                      </div>
-                      <h3 style={{ fontSize: "15px", color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>
-                        {item.title}
-                      </h3>
-                      <p style={{ fontSize: "13px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>
-                        {item.excerpt}
-                      </p>
-                      <span style={{ fontSize: "11px", color: "#aaa" }}>{item.author}</span>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
+        {filtered.length === 0 ? (
+          <div style={{ textAlign: "center", padding: "5rem 0", color: "#aaa", fontSize: "15px" }}>
+            {currentLang.comingSoon}
+          </div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+            {filtered.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/news/${item.slug}`}
+                className="news-card"
+                style={{ textDecoration: "none" }}
+              >
+                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden", height: "100%" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{ width: "100%", height: "200px", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ padding: "1.25rem" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
+                      <span style={{
+                        fontSize: "10px", color: "#8A9A10", fontWeight: 600,
+                        letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)",
+                        padding: "2px 10px", borderRadius: "10px",
+                      }}>
+                        {item.category}
+                      </span>
+                      <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
                     </div>
+                    <h3 style={{ fontSize: "15px", color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>
+                      {item.title}
+                    </h3>
+                    <p style={{ fontSize: "13px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>
+                      {item.excerpt}
+                    </p>
+                    <span style={{ fontSize: "11px", color: "#aaa" }}>{item.author}</span>
                   </div>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
 
       <Footer />

@@ -144,7 +144,7 @@ export default function Page() {
               src="https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg"
               alt="2027 마세라티 그레칼레 SUV"
               className="article-img"
-              style={{ width: "100%", height: "400px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Maserati Media</p>
           </div>

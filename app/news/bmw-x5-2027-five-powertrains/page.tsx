@@ -144,7 +144,7 @@ export default function Page() {
               src="https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg"
               alt="2027 BMW X5 prototype"
               className="article-img"
-              style={{ width: "100%", height: "400px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>Image: BMW Group Media</p>
           </div>

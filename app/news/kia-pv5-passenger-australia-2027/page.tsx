@@ -5,26 +5,26 @@ import BlogLangTabs from "../../components/BlogLangTabs";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인 | MustGoDeals",
+  title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming | MustGoDeals",
   description:
-    "2027 BMW X5는 가솔린, 디젤, PHEV, 순수 전기, 수소까지 다섯 가지 파워트레인을 하나의 차체에 담은 BMW 최초의 모델이다. 세계 최초 공개를 앞둔 현재까지 알려진 정보를 정리했다.",
+    "Kia Australia confirms the PV5 Passenger electric people mover arrives in Q4 2026 — the first EV people mover on the local market, with 390km of expected range and pricing around $60,000.",
   keywords: [
-    "BMW X5 2027",
-    "iX5 전기차",
-    "BMW X5 호주",
-    "BMW X5 수소",
-    "BMW X5 플러그인 하이브리드",
-    "2027 BMW X5 가격",
+    "kia pv5 passenger australia",
+    "electric people mover australia",
+    "kia pv5 2026",
+    "kia pv5 price australia",
+    "electric minivan australia",
+    "kia pv5 range",
   ],
   openGraph: {
-    title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인",
+    title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming",
     description:
-      "하나의 차체에 다섯 가지 파워트레인. 가솔린, 디젤, PHEV, 순수 전기, 수소까지 — BMW 역사상 가장 복잡한 X5가 온다.",
+      "The PV5 Passenger arrives in Australia Q4 2026 — seven seats, ~390km range, and expected pricing around $60,000.",
     type: "article",
-    locale: "ko_AU",
+    locale: "en_AU",
     siteName: "MustGoDeals",
   },
-  alternates: { canonical: "/news/bmw-x5-2027-five-powertrains-ko" },
+  alternates: { canonical: "/news/kia-pv5-passenger-australia-2027" },
 };
 
 const S = {
@@ -99,10 +99,10 @@ export default function Page() {
     <div style={S.page}>
       <Navbar />
       <BlogLangTabs
-        current="KO"
+        current="EN"
         links={{
-          EN: "/news/bmw-x5-2027-five-powertrains",
-          KO: "/news/bmw-x5-2027-five-powertrains-ko",
+          EN: "/news/kia-pv5-passenger-australia-2027",
+          KO: "/news/kia-pv5-passenger-australia-2027-ko",
         }}
       />
 
@@ -112,23 +112,23 @@ export default function Page() {
           <div style={S.breadcrumb}>
             <Link href="/" style={S.breadcrumbLink}>Home</Link>
             <span>›</span>
-            <Link href="/news" style={S.breadcrumbLink}>뉴스</Link>
+            <Link href="/news" style={S.breadcrumbLink}>News</Link>
             <span>›</span>
-            <span style={{ color: "rgba(255,255,255,0.55)" }}>BMW X5 2027</span>
+            <span style={{ color: "rgba(255,255,255,0.55)" }}>Kia PV5 Passenger</span>
           </div>
           <div style={S.badge}>
-            <span>뉴스</span>
+            <span>NEWS</span>
             <span style={{ opacity: 0.5 }}>·</span>
-            <span>2026년 6월 22일</span>
+            <span>June 22, 2026</span>
           </div>
           <h1 style={S.h1}>
-            2027 BMW X5: 하나의 SUV,{" "}
-            <span style={{ color: "#CCDA47" }}>다섯 가지 파워트레인</span>
+            Kia PV5 Passenger: Australia&rsquo;s First{" "}
+            <span style={{ color: "#CCDA47" }}>Electric People Mover</span> Is Coming
           </h1>
           <div style={S.hereMeta}>
-            <span style={S.metaItem}>MustGoDeals 편집팀</span>
+            <span style={S.metaItem}>MustGoDeals Editorial</span>
             <span style={S.metaItem}>·</span>
-            <span style={S.metaItem}>전기차 · 테크놀로지</span>
+            <span style={S.metaItem}>Electric Vehicles · Australia</span>
           </div>
         </div>
       </div>
@@ -137,119 +137,114 @@ export default function Page() {
       <article style={S.article}>
         <div style={S.body}>
 
-          {/* Hero image */}
+          {/* Image 1 — hero */}
           <div style={S.imgWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg"
-              alt="2027 BMW X5 프로토타입"
+              src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg"
+              alt="Kia PV5 Passenger electric people mover"
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
-            <p style={S.imgCaption}>Image: BMW Group Media</p>
+            <p style={S.imgCaption}>Image: Kia Media</p>
           </div>
 
           <p style={S.p}>
-            BMW가 차세대 X5의 최종 개발 단계를 공식 확인했다. 세계 최초 공개는 수 주 안에
-            이뤄질 전망이다. 이번 모델이 주목받는 이유는 단 하나 — 2027 X5는 하나의 차체에{" "}
-            <span style={S.highlight}>다섯 가지 파워트레인</span>을 모두 품은 BMW 최초의
-            모델이다. 가솔린, 디젤, 플러그인 하이브리드, 순수 전기, 그리고 수소 연료전지까지.
+            Kia Australia has confirmed the PV5 Passenger electric people mover is coming to
+            Australia in the <span style={S.highlight}>fourth quarter of 2026</span>, making
+            it the first electric people mover available in the local market. It will sit
+            alongside the diesel and hybrid Carnival — a segment the Carnival has dominated
+            for years — but with a very different pitch: zero emissions, lower running costs,
+            and a clever cabin layout.
           </p>
 
-          <h2 style={S.h2}>라인업 한눈에 보기</h2>
+          <h2 style={S.h2}>What It Is</h2>
 
           <p style={S.p}>
-            X5 40 xDrive는 <span style={S.highlight}>400마력</span>, X5 50e xDrive
-            플러그인 하이브리드는 <span style={S.highlight}>490마력</span>, iX5 60 xDrive
-            전기 모델은 <span style={S.highlight}>578마력</span>을 발휘한다.
-            0&ndash;100km/h 가속은 X5 40 xDrive가 5.4초, X5 50e xDrive가 5.0초,
-            iX5 60 xDrive가 4.7초다.
+            The PV5 Passenger is a seven-seat, three-row electric van built on Kia&rsquo;s
+            dedicated <span style={S.highlight}>E-GMP.S platform</span> — the same
+            underpinning the PV5 Cargo that launched in Australia from $55,990 earlier this
+            year. It measures 4,695mm long, 1,895mm wide, and 1,905mm tall, making it nearly
+            400mm shorter than a Carnival, though it sits about 150mm taller.
           </p>
 
           <p style={S.p}>
-            라인업의 핵심은 전기 모델 iX5다. EPA 및 CARB 인증 데이터에 따르면
-            iX5 60 xDrive는 전후 듀얼모터 AWD 시스템으로 약 569마력을 발휘하며,
-            10&ndash;80% 급속충전은 약 25분이 소요될 것으로 예상된다.
+            Seven seats are arranged in a{" "}
+            <span style={S.highlight}>2+2+3 configuration</span>, with the two second-row
+            seats offset to allow walkthrough access to the third row from the left-hand
+            sliding door — a practical touch for kerbside boarding. Inside, a 7.5-inch
+            digital instrument cluster pairs with a 12.9-inch infotainment touchscreen running
+            Android Automotive OS, with Apple CarPlay and Android Auto as standard.
+          </p>
+
+          <h2 style={S.h2}>Range and Charging</h2>
+
+          <p style={S.p}>
+            All PV5s share a single-motor, front-wheel-drive setup producing{" "}
+            <span style={S.highlight}>120kW and 250Nm</span>. In South Korea, the
+            seven-seat PV5 Passenger claims 358km of range, and given that Kia quotes
+            416km WLTP for the Australian-spec Cargo variant, the Passenger is expected
+            to land around <span style={S.highlight}>390km</span> locally after tuning.
           </p>
 
           <div style={S.callout}>
-            <div style={S.calloutTitle}>iX5 충전 성능</div>
+            <div style={S.calloutTitle}>FAST CHARGING</div>
             <p style={S.calloutText}>
-              EPA·CARB 인증 데이터 기준, iX5 60 xDrive는 DC 급속충전기에서
-              10&ndash;80% 충전을 약 25분 만에 완료할 것으로 예상된다.
-              현재 출시된 최상위권 EV와 동등한 수준이다.
+              DC fast charging from 10 to 80 percent takes approximately 30 minutes —
+              enough to add around 280km of range during a typical motorway stop.
             </p>
           </div>
 
-          <h2 style={S.h2}>수소는 2028년에</h2>
+          <h2 style={S.h2}>What Will It Cost?</h2>
 
           <p style={S.p}>
-            수소 연료전지 모델 iX5 Hydrogen은 토요타와의 협업으로 개발되며{" "}
-            <span style={S.highlight}>2028년 출시 예정</span>이다. BMW와 토요타는
-            2013년부터 수소 연료전지 기술을 공동 개발해왔으며, iX5 Hydrogen은
-            그 협력의 첫 번째 양산 승용차 결과물이다.
-          </p>
-
-          <p style={S.p}>
-            수소 모델은 출시 초기 생산 물량이 제한될 가능성이 높다. 특히 호주의 경우
-            수소 충전 인프라가 아직 초기 단계에 머물러 있어, 실질적인 보급까지는
-            상당한 시간이 필요할 것으로 보인다.
-          </p>
-
-          <h2 style={S.h2}>다섯 가지를 하나로 — 엔지니어링의 묘수</h2>
-
-          <p style={S.p}>
-            내연기관, PHEV, 순수 전기 모델 모두 전후 액슬 캐리어 마운팅 포인트가
-            동일하다. 장착되는 하드웨어만 다를 뿐, 기본 구조는 하나다. 이 단일 플랫폼
-            전략은 BMW의 Neue Klasse 방향성과 맞닿아 있으며, 동일한 생산 라인에서
-            전혀 다른 파워트레인을 조립하는 것을 가능하게 한다.
-          </p>
-
-          <p style={S.p}>
-            BMW는 모든 파워트레인 버전에서 전후 중량 배분 균형을 목표로 했으며,
-            전기 모델의 배터리는 무게 중심을 낮추기 위해 액슬 사이 낮은 위치에
-            배치된다. 결과적으로 전기 모델이 기존 X5보다 상당히 무거움에도 불구하고,
-            모든 파워트레인 버전에서 구형 대비 낮아진 무게 중심을 달성했다는 것이
-            BMW의 설명이다.
+            Kia hasn&rsquo;t confirmed Australian pricing yet, but the numbers from other
+            markets give a useful reference point. The Korean-market PV5 Passenger starts
+            from around <span style={S.highlight}>A$42,400</span>, while the PV5 Cargo
+            launched locally at $55,990. If the gap between Cargo and Passenger pricing
+            follows a similar pattern to what&rsquo;s been seen elsewhere, expect the
+            PV5 Passenger to land somewhere in the{" "}
+            <span style={S.highlight}>$60,000 range</span> before on-road costs — well
+            below the Volkswagen ID. Buzz, which starts at $75,990.
           </p>
 
           <hr style={S.divider} />
 
-          <h2 style={S.h2}>호주 출시는 언제?</h2>
+          <h2 style={S.h2}>Why It Matters for Australia</h2>
 
           <p style={S.p}>
-            2027 BMW X5는 <span style={S.highlight}>2026년 10월&ndash;12월</span> 사이
-            출시가 예상된다. 호주 사양과 가격은 아직 공개되지 않았지만, X5는 전통적으로
-            글로벌 데뷔 후 수개월 내 호주 시장에 상륙해왔다.
+            The people mover segment in Australia has long been the domain of the Kia Carnival
+            and Toyota HiAce. The PV5 Passenger doesn&rsquo;t try to replace them outright —
+            it&rsquo;s shorter, lighter, and more urban-focused. But for families, shuttle
+            operators, and fleet buyers looking to electrify without paying EV premium prices,
+            it arrives at the right time.
           </p>
 
           <p style={S.p}>
-            현재 호주에서 판매 중인 X5 xDrive40i의 시작 가격은 약 $119,900이다.
-            확장된 파워트레인 라인업과 신규 플랫폼 적용을 감안하면 전반적인 가격 인상이
-            예상되지만, BMW 호주는 아직 2027년형 가격에 대해 공식 입장을 밝히지
-            않은 상태다.
+            Exact pricing, specifications, and final range figures will be confirmed closer
+            to the fourth-quarter launch.
           </p>
 
           {/* Source */}
           <div style={S.sourceBox}>
-            <span style={S.sourceLabel}>출처</span>
+            <span style={S.sourceLabel}>SOURCE</span>
             <a
-              href="https://www.press.bmwgroup.com/global/article/detail/T0458432EN/on-the-finishing-straight:-the-new-bmw-x5-enters-its-final-test-phase"
+              href="https://www.kia.com/eu/pbv/vehicles/pv5-passenger/discover/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}
             >
-              BMW Group Press ↗
+              Kia PV5 Passenger ↗
             </a>
           </div>
 
           {/* CTA */}
           <div style={S.ctaBox}>
-            <div style={S.ctaTitle}>신차 딜 알림 받기</div>
+            <div style={S.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={S.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              Be first to know when clearance vehicles hit the market — updated weekly
             </p>
-            <Link href="/coming-soon" style={S.ctaBtn}>무료 알림 신청 →</Link>
+            <Link href="/coming-soon" style={S.ctaBtn}>Get free alerts →</Link>
           </div>
 
         </div>
@@ -259,24 +254,24 @@ export default function Page() {
       <div style={{ background: "white", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "2.5rem 2rem" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>관련 뉴스</div>
-            <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>전체 뉴스 →</Link>
+            <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Related News</div>
+            <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
           </div>
           <div className="section-grid">
             {[
+              {
+                slug: "kia-pv5-passenger-australia-2027-ko",
+                title: "기아 PV5 패신저, 호주 최초의 전기 미니밴으로 온다",
+                category: "뉴스",
+                date: "2026년 6월 22일",
+                image: "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg",
+              },
               {
                 slug: "bmw-x5-2027-five-powertrains",
                 title: "2027 BMW X5: One SUV, Five Ways to Power It",
                 category: "NEWS",
                 date: "June 22, 2026",
                 image: "https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg",
-              },
-              {
-                slug: "porsche-taycan-e-shift-2027-ko",
-                title: "포르쉐 타이칸, 가상 변속기를 달다 — 전기차가 기어를 흉내 내는 이유",
-                category: "뉴스",
-                date: "2026년 6월 18일",
-                image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
               },
             ].map((item) => (
               <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
@@ -301,28 +296,28 @@ export default function Page() {
       <div style={{ background: "#ECEEE7", padding: "2.5rem 2rem" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>최신 아티클</div>
-            <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>전체 보기 →</Link>
+            <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Latest Articles</div>
+            <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
           </div>
           <div className="section-grid">
             {[
               {
-                slug: "best-time-to-buy-a-car-australia-ko",
-                title: "호주에서 자동차를 가장 싸게 살 수 있는 시기",
-                excerpt: "회계연도 마감, 월말, 신형 출시 직전. 호주 딜러십이 움직이는 방식을 이해하면 타이밍은 운이 아니라 전략이 된다.",
-                category: "구매 가이드",
-                readTime: "7분 읽기",
-                date: "2026년 6월",
-                lang: "KO",
+                slug: "best-time-to-buy-a-car-australia",
+                title: "The Best Time to Buy a Car in Australia",
+                excerpt: "End of financial year, month end, and just before a new model drops — once you understand how dealerships operate, timing stops being guesswork and starts being strategy.",
+                category: "Buying Guide",
+                readTime: "7 min read",
+                date: "June 2026",
+                lang: "EN",
               },
               {
-                slug: "wolmal-jadongcha-dil-jongni",
-                title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀",
-                excerpt: "월말 마지막 3~5 영업일, 딜러에게 가장 강한 압박이 걸리는 시간. 이 타이밍과 협상 전술만 알면 수천 달러를 아낄 수 있습니다.",
-                category: "한국어 가이드",
-                readTime: "8분 읽기",
-                date: "2026년 6월",
-                lang: "KO",
+                slug: "end-of-month-car-deals-explained",
+                title: "End of month car deals explained — secrets dealers will never tell you",
+                excerpt: "Dealers face huge pressure from manufacturers at month end. Here's exactly how that pressure works — and how to use it to negotiate thousands off your next car.",
+                category: "Insider Guide",
+                readTime: "7 min read",
+                date: "June 2026",
+                lang: "EN",
               },
             ].map((item) => (
               <Link key={item.slug} href={`/blog/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>

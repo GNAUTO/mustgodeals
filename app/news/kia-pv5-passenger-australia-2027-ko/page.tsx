@@ -5,26 +5,26 @@ import BlogLangTabs from "../../components/BlogLangTabs";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인 | MustGoDeals",
+  title: "기아 PV5 패신저, 호주 최초의 전기 미니밴으로 온다 | MustGoDeals",
   description:
-    "2027 BMW X5는 가솔린, 디젤, PHEV, 순수 전기, 수소까지 다섯 가지 파워트레인을 하나의 차체에 담은 BMW 최초의 모델이다. 세계 최초 공개를 앞둔 현재까지 알려진 정보를 정리했다.",
+    "기아 오스트레일리아가 PV5 패신저 전기 미니밴의 2026년 4분기 현지 출시를 공식 확인했다. 호주 최초의 전기 미니밴으로, 390km 주행거리와 $60,000 안팎의 가격이 예상된다.",
   keywords: [
-    "BMW X5 2027",
-    "iX5 전기차",
-    "BMW X5 호주",
-    "BMW X5 수소",
-    "BMW X5 플러그인 하이브리드",
-    "2027 BMW X5 가격",
+    "기아 PV5 패신저",
+    "전기 미니밴 호주",
+    "기아 PV5 호주",
+    "기아 PV5 가격",
+    "전기차 호주 2026",
+    "기아 PV5 주행거리",
   ],
   openGraph: {
-    title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인",
+    title: "기아 PV5 패신저, 호주 최초의 전기 미니밴으로 온다",
     description:
-      "하나의 차체에 다섯 가지 파워트레인. 가솔린, 디젤, PHEV, 순수 전기, 수소까지 — BMW 역사상 가장 복잡한 X5가 온다.",
+      "7인승, 390km 주행거리, $60,000 안팎. PV5 패신저가 2026년 4분기 호주 시장에 상륙한다.",
     type: "article",
     locale: "ko_AU",
     siteName: "MustGoDeals",
   },
-  alternates: { canonical: "/news/bmw-x5-2027-five-powertrains-ko" },
+  alternates: { canonical: "/news/kia-pv5-passenger-australia-2027-ko" },
 };
 
 const S = {
@@ -101,8 +101,8 @@ export default function Page() {
       <BlogLangTabs
         current="KO"
         links={{
-          EN: "/news/bmw-x5-2027-five-powertrains",
-          KO: "/news/bmw-x5-2027-five-powertrains-ko",
+          EN: "/news/kia-pv5-passenger-australia-2027",
+          KO: "/news/kia-pv5-passenger-australia-2027-ko",
         }}
       />
 
@@ -114,7 +114,7 @@ export default function Page() {
             <span>›</span>
             <Link href="/news" style={S.breadcrumbLink}>뉴스</Link>
             <span>›</span>
-            <span style={{ color: "rgba(255,255,255,0.55)" }}>BMW X5 2027</span>
+            <span style={{ color: "rgba(255,255,255,0.55)" }}>기아 PV5 패신저</span>
           </div>
           <div style={S.badge}>
             <span>뉴스</span>
@@ -122,13 +122,13 @@ export default function Page() {
             <span>2026년 6월 22일</span>
           </div>
           <h1 style={S.h1}>
-            2027 BMW X5: 하나의 SUV,{" "}
-            <span style={{ color: "#CCDA47" }}>다섯 가지 파워트레인</span>
+            기아 PV5 패신저, 호주 최초의{" "}
+            <span style={{ color: "#CCDA47" }}>전기 미니밴</span>으로 온다
           </h1>
           <div style={S.hereMeta}>
             <span style={S.metaItem}>MustGoDeals 편집팀</span>
             <span style={S.metaItem}>·</span>
-            <span style={S.metaItem}>전기차 · 테크놀로지</span>
+            <span style={S.metaItem}>전기차 · 호주</span>
           </div>
         </div>
       </div>
@@ -137,109 +137,99 @@ export default function Page() {
       <article style={S.article}>
         <div style={S.body}>
 
-          {/* Hero image */}
+          {/* Image 1 — hero */}
           <div style={S.imgWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg"
-              alt="2027 BMW X5 프로토타입"
+              src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg"
+              alt="기아 PV5 패신저 전기 미니밴"
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
-            <p style={S.imgCaption}>Image: BMW Group Media</p>
+            <p style={S.imgCaption}>Image: Kia Media</p>
           </div>
 
           <p style={S.p}>
-            BMW가 차세대 X5의 최종 개발 단계를 공식 확인했다. 세계 최초 공개는 수 주 안에
-            이뤄질 전망이다. 이번 모델이 주목받는 이유는 단 하나 — 2027 X5는 하나의 차체에{" "}
-            <span style={S.highlight}>다섯 가지 파워트레인</span>을 모두 품은 BMW 최초의
-            모델이다. 가솔린, 디젤, 플러그인 하이브리드, 순수 전기, 그리고 수소 연료전지까지.
+            기아 오스트레일리아가 PV5 패신저 전기 미니밴의 현지 출시를 공식 확인했다.
+            출시 시기는 <span style={S.highlight}>2026년 4분기(10&ndash;12월)</span>로,
+            호주 시장에 등장하는 최초의 전기 미니밴이 된다. 오랫동안 이 세그먼트를
+            지배해온 카니발(디젤·하이브리드)과 나란히 서게 되지만, 방향성은 전혀
+            다르다 — 무공해, 낮은 유지비, 그리고 실용적인 실내 설계가 핵심이다.
           </p>
 
-          <h2 style={S.h2}>라인업 한눈에 보기</h2>
+          <h2 style={S.h2}>어떤 차인가</h2>
 
           <p style={S.p}>
-            X5 40 xDrive는 <span style={S.highlight}>400마력</span>, X5 50e xDrive
-            플러그인 하이브리드는 <span style={S.highlight}>490마력</span>, iX5 60 xDrive
-            전기 모델은 <span style={S.highlight}>578마력</span>을 발휘한다.
-            0&ndash;100km/h 가속은 X5 40 xDrive가 5.4초, X5 50e xDrive가 5.0초,
-            iX5 60 xDrive가 4.7초다.
+            PV5 패신저는 기아의 전용{" "}
+            <span style={S.highlight}>E-GMP.S 플랫폼</span> 위에 올라선 7인승 3열
+            전기 밴이다. 올해 초 $55,990에 출시된 PV5 카고와 플랫폼을 공유한다.
+            전장 4,695mm, 전폭 1,895mm, 전고 1,905mm로, 카니발보다 약 400mm 짧지만
+            150mm가량 더 높다.
           </p>
 
           <p style={S.p}>
-            라인업의 핵심은 전기 모델 iX5다. EPA 및 CARB 인증 데이터에 따르면
-            iX5 60 xDrive는 전후 듀얼모터 AWD 시스템으로 약 569마력을 발휘하며,
-            10&ndash;80% 급속충전은 약 25분이 소요될 것으로 예상된다.
+            7개 좌석은 <span style={S.highlight}>2+2+3 배열</span>이며, 2열 두 좌석이
+            오른쪽으로 오프셋되어 좌측 슬라이딩 도어 쪽으로 3열까지 통로가 확보된다 —
+            도로변에서 탑승할 때 특히 편리한 구조다. 실내에는 7.5인치 디지털
+            클러스터와 12.9인치 인포테인먼트 스크린이 탑재되며, 애플 카플레이와
+            안드로이드 오토가 기본이다.
+          </p>
+
+          <h2 style={S.h2}>주행거리와 충전</h2>
+
+          <p style={S.p}>
+            PV5 전 라인업은 전륜구동 단일 모터(
+            <span style={S.highlight}>120kW, 250Nm</span>)를 공유한다. 한국 시장
+            7인승 PV5 패신저의 공인 주행거리는 358km이며, 호주 사양 PV5 카고가
+            WLTP 기준 416km를 기록한다는 점을 감안하면 패신저는 현지 튜닝 후{" "}
+            <span style={S.highlight}>390km 안팎</span>이 될 것으로 예상된다.
           </p>
 
           <div style={S.callout}>
-            <div style={S.calloutTitle}>iX5 충전 성능</div>
+            <div style={S.calloutTitle}>급속충전</div>
             <p style={S.calloutText}>
-              EPA·CARB 인증 데이터 기준, iX5 60 xDrive는 DC 급속충전기에서
-              10&ndash;80% 충전을 약 25분 만에 완료할 것으로 예상된다.
-              현재 출시된 최상위권 EV와 동등한 수준이다.
+              DC 급속충전으로 10&ndash;80%를 채우는 데 약 30분이 소요된다.
+              고속도로 휴게소 한 번 정차만으로 약 280km를 추가할 수 있는 셈이다.
             </p>
           </div>
 
-          <h2 style={S.h2}>수소는 2028년에</h2>
+          <h2 style={S.h2}>가격은 얼마나?</h2>
 
           <p style={S.p}>
-            수소 연료전지 모델 iX5 Hydrogen은 토요타와의 협업으로 개발되며{" "}
-            <span style={S.highlight}>2028년 출시 예정</span>이다. BMW와 토요타는
-            2013년부터 수소 연료전지 기술을 공동 개발해왔으며, iX5 Hydrogen은
-            그 협력의 첫 번째 양산 승용차 결과물이다.
-          </p>
-
-          <p style={S.p}>
-            수소 모델은 출시 초기 생산 물량이 제한될 가능성이 높다. 특히 호주의 경우
-            수소 충전 인프라가 아직 초기 단계에 머물러 있어, 실질적인 보급까지는
-            상당한 시간이 필요할 것으로 보인다.
-          </p>
-
-          <h2 style={S.h2}>다섯 가지를 하나로 — 엔지니어링의 묘수</h2>
-
-          <p style={S.p}>
-            내연기관, PHEV, 순수 전기 모델 모두 전후 액슬 캐리어 마운팅 포인트가
-            동일하다. 장착되는 하드웨어만 다를 뿐, 기본 구조는 하나다. 이 단일 플랫폼
-            전략은 BMW의 Neue Klasse 방향성과 맞닿아 있으며, 동일한 생산 라인에서
-            전혀 다른 파워트레인을 조립하는 것을 가능하게 한다.
-          </p>
-
-          <p style={S.p}>
-            BMW는 모든 파워트레인 버전에서 전후 중량 배분 균형을 목표로 했으며,
-            전기 모델의 배터리는 무게 중심을 낮추기 위해 액슬 사이 낮은 위치에
-            배치된다. 결과적으로 전기 모델이 기존 X5보다 상당히 무거움에도 불구하고,
-            모든 파워트레인 버전에서 구형 대비 낮아진 무게 중심을 달성했다는 것이
-            BMW의 설명이다.
+            기아 오스트레일리아는 아직 현지 가격을 공개하지 않았지만, 해외 시장
+            데이터가 참고가 된다. 한국 시장 PV5 패신저 시작가는 호주 달러 기준 약{" "}
+            <span style={S.highlight}>A$42,400</span> 수준이며, PV5 카고는 현지에서
+            $55,990에 출시됐다. 카고와 패신저 간 가격 차이가 다른 시장과 비슷하게
+            형성된다면, PV5 패신저는 온로드 비용 전{" "}
+            <span style={S.highlight}>$60,000 안팎</span>에 출시될 가능성이 높다 —
+            $75,990부터 시작하는 폭스바겐 ID. Buzz보다 훨씬 낮은 가격이다.
           </p>
 
           <hr style={S.divider} />
 
-          <h2 style={S.h2}>호주 출시는 언제?</h2>
+          <h2 style={S.h2}>호주 시장에서 주목받는 이유</h2>
 
           <p style={S.p}>
-            2027 BMW X5는 <span style={S.highlight}>2026년 10월&ndash;12월</span> 사이
-            출시가 예상된다. 호주 사양과 가격은 아직 공개되지 않았지만, X5는 전통적으로
-            글로벌 데뷔 후 수개월 내 호주 시장에 상륙해왔다.
+            호주 미니밴 시장은 오랫동안 기아 카니발과 토요타 하이에이스의 영역이었다.
+            PV5 패신저는 이 둘을 정면으로 대체하려는 차가 아니다 — 더 짧고, 더 가볍고,
+            도심 친화적이다. 하지만 전기차 프리미엄 없이 전동화를 원하는 가족,
+            셔틀 운영자, 플릿 바이어에게는 타이밍이 맞는 선택지가 될 수 있다.
           </p>
 
           <p style={S.p}>
-            현재 호주에서 판매 중인 X5 xDrive40i의 시작 가격은 약 $119,900이다.
-            확장된 파워트레인 라인업과 신규 플랫폼 적용을 감안하면 전반적인 가격 인상이
-            예상되지만, BMW 호주는 아직 2027년형 가격에 대해 공식 입장을 밝히지
-            않은 상태다.
+            정확한 가격과 사양, 최종 주행거리는 4분기 출시에 앞서 공개될 예정이다.
           </p>
 
           {/* Source */}
           <div style={S.sourceBox}>
             <span style={S.sourceLabel}>출처</span>
             <a
-              href="https://www.press.bmwgroup.com/global/article/detail/T0458432EN/on-the-finishing-straight:-the-new-bmw-x5-enters-its-final-test-phase"
+              href="https://www.kia.com/eu/pbv/vehicles/pv5-passenger/discover/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "13px", color: "#555", textDecoration: "none" }}
             >
-              BMW Group Press ↗
+              Kia PV5 Passenger ↗
             </a>
           </div>
 
@@ -265,18 +255,18 @@ export default function Page() {
           <div className="section-grid">
             {[
               {
-                slug: "bmw-x5-2027-five-powertrains",
-                title: "2027 BMW X5: One SUV, Five Ways to Power It",
+                slug: "kia-pv5-passenger-australia-2027",
+                title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming",
                 category: "NEWS",
                 date: "June 22, 2026",
-                image: "https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg",
+                image: "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg",
               },
               {
-                slug: "porsche-taycan-e-shift-2027-ko",
-                title: "포르쉐 타이칸, 가상 변속기를 달다 — 전기차가 기어를 흉내 내는 이유",
+                slug: "bmw-x5-2027-five-powertrains-ko",
+                title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인",
                 category: "뉴스",
-                date: "2026년 6월 18일",
-                image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
+                date: "2026년 6월 22일",
+                image: "https://mediapool.bmwgroup.com/cache/P9/202606/P90645286/P90645286-the-new-bmw-x5-prototype-spartanburg-06-2026-2250px.jpg",
               },
             ].map((item) => (
               <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>

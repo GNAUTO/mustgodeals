@@ -190,7 +190,7 @@ export default function Page() {
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg"
               alt="2027 포르쉐 타이칸 E-Shift"
               className="article-img"
-              style={{ width: "100%", height: "420px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>이미지: Porsche Media</p>
           </div>
@@ -240,7 +240,7 @@ export default function Page() {
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0406.jpg"
               alt="포르쉐 타이칸 E-Shift 패들 시프터"
               className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>이미지: Porsche Media</p>
           </div>
@@ -303,7 +303,7 @@ export default function Page() {
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0400.jpg"
               alt="2027 포르쉐 타이칸 실내 인포테인먼트"
               className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>이미지: Porsche Media</p>
           </div>
@@ -325,7 +325,7 @@ export default function Page() {
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0408.jpg"
               alt="2027 포르쉐 타이칸 외관"
               className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={S.imgCaption}>이미지: Porsche Media</p>
           </div>

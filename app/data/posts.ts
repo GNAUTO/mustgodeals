@@ -68,6 +68,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "kia-pv5-passenger-australia-2027",
+    title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming",
+    excerpt:
+      "Kia Australia confirms the PV5 Passenger electric people mover arrives in Q4 2026 — the first EV people mover on the local market, with ~390km range and pricing around $60,000.",
+    category: "NEWS",
+    date: "June 22, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "kia-pv5-passenger-australia-2027-ko",
+    title: "기아 PV5 패신저, 호주 최초의 전기 미니밴으로 온다",
+    excerpt:
+      "기아 오스트레일리아가 PV5 패신저 전기 미니밴의 2026년 4분기 현지 출시를 공식 확인했다. 호주 최초의 전기 미니밴으로, 390km 주행거리와 $60,000 안팎의 가격이 예상된다.",
+    category: "뉴스",
+    date: "2026년 6월 22일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg",
+    lang: "KO",
+  },
+  {
     slug: "bmw-x5-2027-five-powertrains",
     title: "2027 BMW X5: One SUV, Five Ways to Power It",
     excerpt:

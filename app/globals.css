@@ -46,3 +46,111 @@ p  { font-size: 15px !important; }
   font-variant-numeric: tabular-nums;
   display: inline-block;
 }
+
+/* News grid — 3 cols → 2 cols → 1 col */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Navbar responsive ───────────────────────────────────── */
+
+/* Desktop: lang tabs + divider */
+.navbar-lang-tabs {
+  display: flex;
+  gap: 0.875rem;
+  align-items: center;
+  padding-right: 1.25rem;
+  margin-right: 0.25rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.navbar-lang-btn { font-size: 12px; }
+
+/* Desktop: Blog / News / Listings */
+.navbar-desktop-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Desktop right wrapper (lang + links + Get Alerts) */
+.navbar-desktop-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Hamburger — hidden on desktop */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Mobile 2nd row — hidden on desktop */
+.navbar-mobile-row2 {
+  display: none;
+  background: #1A1A1A;
+  padding: 0 1.5rem;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Mobile lang buttons in 2nd row */
+.navbar-mobile-lang {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.navbar-mobile-lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Dropdown */
+.navbar-mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+  background: #1A1A1A;
+}
+
+@media (max-width: 768px) {
+  .navbar-desktop-right { display: none !important; }
+  .navbar-hamburger     { display: flex; }
+  .navbar-mobile-row2   { display: flex; }
+}
+
+/* News card hover lift */
+.news-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.11);
+}

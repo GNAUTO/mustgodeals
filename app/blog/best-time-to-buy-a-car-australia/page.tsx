@@ -214,12 +214,11 @@ export default function Page() {
           </p>
 
           <p style={S.p}>
-            The mechanism behind this is the{" "}
-            <span style={S.highlight}>stair-step bonus</span> — a manufacturer incentive structure
-            where hitting a monthly sales target unlocks a large payment applied retroactively
-            across every vehicle sold that month. The last one or two cars can determine whether
-            that entire bonus is triggered, which means a dealer will often sacrifice margin to
-            close a deal rather than miss the threshold entirely.
+            The mechanism behind this is a manufacturer incentive structure where hitting a
+            monthly sales target unlocks a payment applied retroactively across every vehicle
+            sold that month. The last one or two cars can determine whether that entire bonus
+            is triggered, which means a dealer will often sacrifice margin to close a deal
+            rather than miss the threshold entirely.
           </p>
 
           <h2 style={S.h2}>Just Before a New Model Drops — Hidden Opportunity</h2>

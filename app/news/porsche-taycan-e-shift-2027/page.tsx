@@ -189,6 +189,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg"
               alt="2027 Porsche Taycan E-Shift"
+              className="article-img"
               style={{ width: "100%", height: "420px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Porsche Media</p>
@@ -242,6 +243,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0406.jpg"
               alt="Porsche Taycan E-Shift paddle shifter detail"
+              className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Porsche Media</p>
@@ -309,6 +311,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0400.jpg"
               alt="2027 Porsche Taycan interior infotainment"
+              className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Porsche Media</p>
@@ -331,6 +334,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0408.jpg"
               alt="2027 Porsche Taycan exterior"
+              className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Porsche Media</p>
@@ -386,7 +390,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Related News</div>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {RELATED_NEWS.map((item) => (
               <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
                 <div style={{ background: "#F5F5F0", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
@@ -413,7 +417,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Latest Articles</div>
             <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {LATEST_ARTICLES.map((item) => (
               <Link key={item.slug} href={`/blog/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
                 <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem" }}>

@@ -143,6 +143,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg"
               alt="2027 Maserati Grecale SUV"
+              className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Maserati Media</p>
@@ -282,7 +283,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Related News</div>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {[
               {
                 slug: "maserati-grecale-2027-australia-ko",
@@ -317,7 +318,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>Latest Articles</div>
             <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {[
               {
                 slug: "end-of-month-car-deals-explained",

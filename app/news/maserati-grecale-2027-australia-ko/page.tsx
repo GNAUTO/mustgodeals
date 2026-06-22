@@ -143,6 +143,7 @@ export default function Page() {
             <img
               src="https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg"
               alt="2027 마세라티 그레칼레 SUV"
+              className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", display: "block" }}
             />
             <p style={S.imgCaption}>Image: Maserati Media</p>
@@ -266,7 +267,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>관련 뉴스</div>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>전체 뉴스 →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {[
               {
                 slug: "maserati-grecale-2027-australia",
@@ -301,7 +302,7 @@ export default function Page() {
             <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>최신 글</div>
             <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>전체 글 →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+          <div className="section-grid">
             {[
               {
                 slug: "wolmal-jadongcha-dil-jongni",

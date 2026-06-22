@@ -4,62 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-const NEWS_PREVIEW = [
-  {
-    slug: "maserati-grecale-2027-australia",
-    title: "Maserati expands Grecale SUV lineup for 2027 Australian market",
-    category: "NEWS",
-    date: "June 21, 2026",
-    image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
-    lang: "EN",
-  },
-  {
-    slug: "maserati-grecale-2027-australia-ko",
-    title: "마세라티, 2027 그레칼레 SUV 라인업 호주 시장에 확대 출시",
-    category: "뉴스",
-    date: "2026년 6월 21일",
-    image: "https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg",
-    lang: "KO",
-  },
-  {
-    slug: "porsche-taycan-e-shift-2027",
-    title: "Porsche Taycan gets simulated gear shifts — and it's more interesting than it sounds",
-    category: "NEWS",
-    date: "June 18, 2026",
-    image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
-    lang: "EN",
-  },
-  {
-    slug: "porsche-taycan-e-shift-2027-ko",
-    title: "포르쉐 타이칸, 가상 변속기를 달다 — 전기차가 기어를 흉내 내는 이유",
-    category: "뉴스",
-    date: "2026년 6월 18일",
-    image: "https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg",
-    lang: "KO",
-  },
-];
-
-const posts = [
-  {
-    slug: "end-of-month-car-deals-explained",
-    title: "End of month car deals explained — secrets dealers will never tell you",
-    excerpt: "Dealers face huge pressure from manufacturers at month end. Here's exactly how that pressure works — and how to use it to negotiate thousands off your next car.",
-    category: "Insider Guide",
-    readTime: "7 min read",
-    date: "June 2026",
-    lang: "EN",
-  },
-  {
-    slug: "wolmal-jadongcha-dil-jongni",
-    title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀",
-    excerpt: "월말 마지막 3~5 영업일, 딜러에게 가장 강한 압박이 걸리는 시간. 이 타이밍과 협상 전술만 알면 수천 달러를 아낄 수 있습니다.",
-    category: "한국어 가이드",
-    readTime: "8분 읽기",
-    date: "2026년 6월",
-    lang: "KO",
-  },
-];
+import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 
 const LANGS = [
   { label: "EN", code: "EN", comingSoon: "Articles coming soon." },
@@ -99,8 +44,8 @@ export default function Home() {
   const [activeLang, setActiveLang] = useState("EN");
   const countdown = useCountdown();
 
-  const filtered = posts.filter((p) => p.lang === activeLang);
-  const filteredNews = NEWS_PREVIEW.filter((n) => n.lang === activeLang);
+  const filtered = BLOG_POSTS.filter((p) => p.lang === activeLang);
+  const filteredNews = NEWS_ITEMS.filter((n) => n.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
   return (

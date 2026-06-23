@@ -68,6 +68,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "hyundai-i20-n-hybrid-nextgen",
+    title: "Next-Gen Hyundai i20 N Is Coming — With Hybrid Power That Could Beat the i30 N",
+    excerpt:
+      "Hyundai R&D boss confirms a second-gen i20 N with hybrid power is coming sooner rather than later — expected outputs of up to 224kW could make it stronger than any current i30 N.",
+    category: "NEWS",
+    date: "June 23, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/i20-n-render.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "hyundai-i20-n-hybrid-nextgen-ko",
+    title: "차세대 현대 i20 N 확정 — 하이브리드 탑재로 i30 N을 넘어설 수도",
+    excerpt:
+      "현대 글로벌 R&D 총괄이 2세대 i20 N 출시를 공식 확인했다. 최대 224kW 출력의 하이브리드 파워트레인 탑재가 예상되며, 2028년 판매 시작이 유력하다.",
+    category: "뉴스",
+    date: "2026년 6월 23일",
+    author: "MustGoDeals 편집팀",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/i20-n-render.jpg",
+    lang: "KO",
+  },
+  {
     slug: "byd-goodwood-2026-eight-models",
     title: "BYD Is Bringing Eight New Models to Goodwood — Including a Porsche 911 Rival",
     excerpt:

@@ -53,11 +53,11 @@ export default function Home() {
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
       {/* Hero */}
-      <div style={{ background: "#1A1A1A", padding: "3rem 2rem", textAlign: "center" }}>
+      <div className="hero-section" style={{ background: "#1A1A1A", textAlign: "center" }}>
         <div style={{ display: "inline-block", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px" }}>
           {getMonthBadge()}
         </div>
-        <h1 style={{ color: "white", fontSize: "46px", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
+        <h1 style={{ color: "white", fontSize: "clamp(2rem, 7vw, 2.875rem)", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
           Cars dealers <span className="must-sell-animate">must sell</span><br />before month end
         </h1>
 

@@ -169,6 +169,21 @@ p  { font-size: 15px !important; }
   }
 }
 
+/* Hero section — responsive padding */
+.hero-section {
+  padding: 3rem 2.5rem;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2.5rem 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 1.25rem;
+  }
+}
+
 /* News card hover lift */
 .news-card {
   transition: transform 0.22s ease, box-shadow 0.22s ease;

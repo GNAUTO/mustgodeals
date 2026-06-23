@@ -24,6 +24,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-to-negotiate-car-price-australia",
+    title: "How to Negotiate a Car Price at an Australian Dealership — A Practical Guide That Actually Works",
+    excerpt:
+      "The price on the sticker is almost never the final price. Here's what to research beforehand, what not to say in the showroom, and the tactics that actually get dealers to move.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "June 23, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "how-to-negotiate-car-price-australia-ko",
+    title: "호주 딜러십에서 자동차 가격을 깎는 법 — 현장에서 통하는 실전 가이드",
+    excerpt:
+      "쇼룸에 들어서기 전 준비해야 할 것들, 절대 먼저 말하면 안 되는 것, 딜러를 움직이게 만드는 협상 전술까지.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 6월 23일",
+    lang: "KO",
+  },
+  {
     slug: "best-time-to-buy-a-car-australia",
     title: "The Best Time to Buy a Car in Australia",
     excerpt:

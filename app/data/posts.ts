@@ -68,6 +68,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "byd-goodwood-2026-eight-models",
+    title: "BYD Is Bringing Eight New Models to Goodwood — Including a Porsche 911 Rival",
+    excerpt:
+      "BYD debuts eight models at Goodwood 2026 across BYD, Denza, and Yangwang brands — headlined by the world premiere of the Denza Z Coupe, a 350km/h EV targeting the Porsche 911.",
+    category: "NEWS",
+    date: "June 23, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/denza-z-2-rxk7.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "byd-goodwood-2026-eight-models-ko",
+    title: "BYD, 굿우드에서 8개 신모델 공개 — 포르쉐 911 라이벌도 등장",
+    excerpt:
+      "BYD가 굿우드 2026에서 덴자 Z 쿠페 세계 최초 공개를 포함해 BYD·덴자·양왕 3개 브랜드의 신모델 8개를 선보인다. 부스 면적은 행사 역사상 최대인 2,016㎡다.",
+    category: "뉴스",
+    date: "2026년 6월 23일",
+    author: "MustGoDeals 편집팀",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/denza-z-2-rxk7.jpg",
+    lang: "KO",
+  },
+  {
     slug: "renault-megane-etech-2026-australia",
     title: "2026 Renault Megane E-Tech: A Complete Overhaul for Australia",
     excerpt:

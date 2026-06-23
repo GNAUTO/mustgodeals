@@ -68,6 +68,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "renault-megane-etech-2026-australia",
+    title: "2026 Renault Megane E-Tech: A Complete Overhaul for Australia",
+    excerpt:
+      "The 2026 Megane E-Tech arrives with a 67kWh LFP battery, 500km WLTP range, 165kW DC fast charging, and Google Gemini inside. Australian launch expected first half of 2027.",
+    category: "NEWS",
+    date: "June 23, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/23664-megane-studiothomascortesi-4.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "renault-megane-etech-2026-australia-ko",
+    title: "2026 르노 메간 E-Tech: 완전히 달라진 호주 출시 예정 모델",
+    excerpt:
+      "67kWh LFP 배터리, WLTP 500km, 165kW 급속충전, Google Gemini — 완전히 새로워진 메간 E-Tech가 2027년 상반기 호주에 상륙한다.",
+    category: "뉴스",
+    date: "2026년 6월 23일",
+    author: "MustGoDeals 편집팀",
+    image: "https://editorial.pxcrush.net/carsales/general/editorial/23664-megane-studiothomascortesi-4.jpg",
+    lang: "KO",
+  },
+  {
     slug: "kia-pv5-passenger-australia-2027",
     title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming",
     excerpt:

@@ -93,12 +93,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Ad banner */}
-      <div style={{ background: "white", borderTop: "3px solid #CCDA47", padding: "10px 2rem", textAlign: "center", fontSize: "12px", color: "#888" }}>
-        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 500, padding: "2px 6px", borderRadius: "3px", marginRight: "8px", letterSpacing: "0.5px" }}>AD</span>
-        Google AdSense — Advertisement
-      </div>
-
       {/* Latest News */}
       <div style={{ background: "#ECEEE7", padding: "2.5rem 0" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>

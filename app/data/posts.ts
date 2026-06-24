@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "car-stamp-duty-australia-explained",
+    title: "What Is Stamp Duty on a Car in Australia? The Hidden Cost Most Buyers Don't See Coming",
+    excerpt:
+      "Stamp duty is a state government tax applied to every car purchase in Australia — and the rates vary significantly by state. Here's what you need to know before you buy.",
+    category: "Buying Guide",
+    readTime: "6 min read",
+    date: "June 24, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "car-stamp-duty-australia-explained-ko",
+    title: "호주에서 차 살 때 스탬프 듀티란? — 아무도 알려주지 않는 숨겨진 비용",
+    excerpt:
+      "주마다 세율이 다르다. 같은 차라도 어느 주에서 사느냐에 따라 수백에서 수천 달러 차이가 날 수 있다.",
+    category: "구매 가이드",
+    readTime: "6분",
+    date: "2026년 6월 24일",
+    lang: "KO",
+  },
+  {
     slug: "eofy-car-tax-benefits-australia",
     title: "Should You Buy a Car Before EOFY? A Guide for Australian ABN Holders",
     excerpt:

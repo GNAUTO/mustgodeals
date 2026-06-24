@@ -24,6 +24,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "why-buy-demo-car-australia",
+    title: "Why Buying a Demo Car in Australia Makes More Sense Than You Think",
+    excerpt:
+      "Near-new quality, full manufacturer warranty, and prices 10–30% below new. Demo cars are one of the best value plays in the Australian car market — especially right now.",
+    category: "Buying Guide",
+    readTime: "7 min read",
+    date: "June 24, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "why-buy-demo-car-australia-ko",
+    title: "호주에서 데모카를 사야 하는 이유 — 신차보다 현명한 선택",
+    excerpt:
+      "신차와 거의 같은 퀄리티에 가격은 10~30% 낮다. 지금 회계연도 마감 시즌, 데모카 매물이 연중 가장 많이 나오는 시기다.",
+    category: "구매 가이드",
+    readTime: "7분",
+    date: "2026년 6월 24일",
+    lang: "KO",
+  },
+  {
     slug: "how-to-negotiate-car-price-australia",
     title: "How to Negotiate a Car Price at an Australian Dealership — A Practical Guide That Actually Works",
     excerpt:

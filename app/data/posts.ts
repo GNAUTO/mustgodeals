@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "eofy-car-tax-benefits-australia",
+    title: "Should You Buy a Car Before EOFY? A Guide for Australian ABN Holders",
+    excerpt:
+      "For Australian business owners with an ABN, buying a car before 30 June can deliver real tax advantages — but the rules are more nuanced than most people realise.",
+    category: "Buying Guide",
+    readTime: "7 min read",
+    date: "June 24, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "eofy-car-tax-benefits-australia-ko",
+    title: "회계연도 마감 전에 차를 사면 세금 혜택이 있을까? — ABN 사업자를 위한 가이드",
+    excerpt:
+      "Instant Asset Write-Off, Car Limit, 업무용 비율 — EOFY 전 차량 구매 시 실제로 적용되는 세금 규정을 정리했다.",
+    category: "구매 가이드",
+    readTime: "7분",
+    date: "2026년 6월 24일",
+    lang: "KO",
+  },
+  {
     slug: "why-buy-demo-car-australia",
     title: "Why Buying a Demo Car in Australia Makes More Sense Than You Think",
     excerpt:

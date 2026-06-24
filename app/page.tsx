@@ -44,7 +44,9 @@ export default function Home() {
   const [activeLang, setActiveLang] = useState("EN");
   const countdown = useCountdown();
 
-  const filtered = BLOG_POSTS.filter((p) => p.lang === activeLang);
+  const filtered = BLOG_POSTS
+    .filter((p) => p.lang === activeLang)
+    .sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   const filteredNews = NEWS_ITEMS.filter((n) => n.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
@@ -141,7 +143,12 @@ export default function Home() {
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
                 <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", transition: "border-color 0.2s", cursor: "pointer" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                    <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
+                      {post.pinned && (
+                        <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "4px 10px", borderRadius: "4px" }}>FEATURED</span>
+                      )}
+                    </div>
                     <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
                   </div>
                   <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>

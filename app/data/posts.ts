@@ -8,6 +8,7 @@ export type BlogPost = {
   readTime: string;
   date: string;
   lang: Lang;
+  pinned?: boolean;
 };
 
 export type NewsItem = {
@@ -32,6 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "June 24, 2026",
     lang: "EN",
+    pinned: true,
   },
   {
     slug: "why-buy-demo-car-australia-ko",
@@ -42,6 +44,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7분",
     date: "2026년 6월 24일",
     lang: "KO",
+    pinned: true,
   },
   {
     slug: "how-to-negotiate-car-price-australia",

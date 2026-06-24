@@ -20,10 +20,10 @@ body {
   line-height: 1.6;
 }
 
-h1 { font-size: 42px !important; }
-h2 { font-size: 24px !important; }
-h3 { font-size: 17px !important; }
-p  { font-size: 15px !important; }
+h1 { font-size: 42px; }
+h2 { font-size: 24px; }
+h3 { font-size: 17px; }
+p  { font-size: 15px; }
 
 @keyframes mustSellPulse {
   0%, 100% { color: #CCDA47; text-shadow: none; }
@@ -180,7 +180,7 @@ p  { font-size: 15px !important; }
 }
 @media (max-width: 480px) {
   .hero-section {
-    padding: 2rem 1.25rem;
+    padding: 2rem 1.5rem;
   }
 }
 

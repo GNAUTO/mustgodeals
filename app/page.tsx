@@ -57,7 +57,7 @@ export default function Home() {
         <div style={{ display: "inline-block", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px" }}>
           {getMonthBadge()}
         </div>
-        <h1 style={{ color: "white", fontSize: "clamp(2rem, 7vw, 2.875rem)", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
+        <h1 style={{ color: "white", fontSize: "clamp(1.5rem, 8.5vw, 2.875rem)", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
           Cars dealers <span className="must-sell-animate">must sell</span><br />before month end
         </h1>
 

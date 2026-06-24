@@ -108,6 +108,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "australia-fuel-excise-relief-extended-july-2026",
+    title: "Fuel Prices to Stay Lower for a Little Longer as Australia Extends Excise Relief",
+    excerpt:
+      "The Albanese Government has extended fuel excise relief through August 2, 2026 — keeping petrol and diesel 16 cents per litre cheaper and saving drivers around $11 per tank.",
+    category: "NEWS",
+    date: "June 24, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/7cb59eee-4c04-5d94-82a8-793a2e150000",
+    lang: "EN",
+  },
+  {
+    slug: "australia-fuel-excise-relief-extended-july-2026-ko",
+    title: "호주 유류세 인하 연장 — 7월도 리터당 16센트 저렴하게",
+    excerpt:
+      "알바니즈 정부가 유류세 인하를 2026년 8월 2일까지 연장한다고 발표했다. 휘발유·경유 가격이 정상 대비 리터당 16센트 낮게 유지된다.",
+    category: "뉴스",
+    date: "2026년 6월 24일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/7cb59eee-4c04-5d94-82a8-793a2e150000",
+    lang: "KO",
+  },
+  {
     slug: "mazda-6e-cx6e-orders-australia-2026",
     title: "Mazda 6e and CX-6e Clock Up Thousands of Orders Ahead of Australian Launch",
     excerpt:

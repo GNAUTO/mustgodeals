@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   title: "MustGoDeals - Car Deals Australia",
   description: "Cars dealers must sell before month end. Find the best clearance deals on new, demo and used cars across Australia.",
   icons: {
-    icon: { url: "/favicon.svg", type: "image/svg+xml" },
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", sizes: "32x32", type: "image/svg+xml" },
+      { url: "/favicon.svg", sizes: "16x16", type: "image/svg+xml" },
+    ],
   },
   verification: {
     google: "iqfqnlyUtAWMdNsJ7K32zDCmw0MmYQKOWmVuCqHDcpk",

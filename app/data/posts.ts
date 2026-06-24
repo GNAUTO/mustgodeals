@@ -108,6 +108,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "mazda-6e-cx6e-orders-australia-2026",
+    title: "Mazda 6e and CX-6e Clock Up Thousands of Orders Ahead of Australian Launch",
+    excerpt:
+      "The Mazda 6e sold its initial 300-unit pre-order allocation in two weeks. Now the CX-6e SUV is seeing even stronger demand — and it hasn't even been priced yet.",
+    category: "NEWS",
+    date: "June 24, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.mazda.com.au/4966d2/globalassets/vehicle-landing-pages/cx-6e/launch-vlp/assets/au41-p00005750_mazda_cx-6e_vlp_introduction_1300x650px.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "mazda-6e-cx6e-orders-australia-2026-ko",
+    title: "마즈다 6e·CX-6e, 호주 출시 전 수천 건 사전 주문 돌파",
+    excerpt:
+      "마즈다 6e 세단 300대 사전 주문이 2주 만에 완판됐다. CX-6e SUV는 가격 발표도 전에 세단을 웃도는 관심을 받고 있다.",
+    category: "뉴스",
+    date: "2026년 6월 24일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.mazda.com.au/4966d2/globalassets/vehicle-landing-pages/cx-6e/launch-vlp/assets/au41-p00005750_mazda_cx-6e_vlp_introduction_1300x650px.jpg",
+    lang: "KO",
+  },
+  {
     slug: "hyundai-i20-n-hybrid-nextgen",
     title: "Next-Gen Hyundai i20 N Is Coming — With Hybrid Power That Could Beat the i30 N",
     excerpt:

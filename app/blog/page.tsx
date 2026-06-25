@@ -12,16 +12,39 @@ const LANGS = [
   { label: "中文",  code: "ZH", comingSoon: "敬请期待。" },
 ];
 
+const PER_PAGE = 9;
+
+function getPageNumbers(current: number, total: number): (number | "...")[] {
+  if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
+  if (current <= 3) return [1, 2, 3, "...", total];
+  if (current >= total - 2) return [1, "...", total - 2, total - 1, total];
+  return [1, "...", current - 1, current, current + 1, "...", total];
+}
+
 export default function BlogPage() {
   const [activeLang, setActiveLang] = useState("EN");
+  const [currentPage, setCurrentPage] = useState(1);
+
   const filtered = BLOG_POSTS
     .filter((p) => p.lang === activeLang)
     .sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
+  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const paginated = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+
+  function handleLangChange(lang: string) {
+    setActiveLang(lang);
+    setCurrentPage(1);
+  }
+
+  function goTo(page: number) {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
-      <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
+      <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
       {/* Hero */}
       <div style={{ background: "#1A1A1A", padding: "2rem 2rem 2.25rem" }}>
@@ -51,26 +74,68 @@ export default function BlogPage() {
               {currentLang.comingSoon}
             </div>
           ) : (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
-              {filtered.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="news-card" style={{ textDecoration: "none" }}>
-                  <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", cursor: "pointer" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                        <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
-                        {post.pinned && (
-                          <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "4px 10px", borderRadius: "4px" }}>FEATURED</span>
-                        )}
+            <>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
+                {paginated.map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="news-card" style={{ textDecoration: "none" }}>
+                    <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", cursor: "pointer" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                          <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
+                          {post.pinned && (
+                            <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "4px 10px", borderRadius: "4px" }}>FEATURED</span>
+                          )}
+                        </div>
+                        <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
                       </div>
-                      <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
+                      <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
+                      <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
+                      <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
                     </div>
-                    <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
-                    <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
-                    <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "6px", marginTop: "3rem" }}>
+                  {/* Prev */}
+                  <button
+                    className="page-btn arrow"
+                    onClick={() => goTo(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    aria-label="Previous page"
+                  >
+                    ‹
+                  </button>
+
+                  {/* Page numbers */}
+                  {getPageNumbers(currentPage, totalPages).map((page, i) =>
+                    page === "..." ? (
+                      <span key={`ellipsis-${i}`} style={{ color: "#555", fontSize: "13px", padding: "0 4px", lineHeight: "36px" }}>···</span>
+                    ) : (
+                      <button
+                        key={page}
+                        className={`page-btn${currentPage === page ? " active" : ""}`}
+                        onClick={() => goTo(page as number)}
+                      >
+                        {page}
+                      </button>
+                    )
+                  )}
+
+                  {/* Next */}
+                  <button
+                    className="page-btn arrow"
+                    onClick={() => goTo(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    aria-label="Next page"
+                  >
+                    ›
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

@@ -224,6 +224,18 @@ p  { font-size: 15px; }
   pointer-events: none;
 }
 
+/* Demo Cars grid — 4 col → 2 col on mobile */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+@media (max-width: 768px) {
+  .demo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* News card hover lift */
 .news-card {
   transition: transform 0.22s ease, box-shadow 0.22s ease;

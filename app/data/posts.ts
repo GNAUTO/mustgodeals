@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "novated-lease-australia",
+    title: "What Is a Novated Lease — And Is It Worth It in Australia?",
+    excerpt:
+      "A novated lease lets you pay for a car with pre-tax salary. Here's exactly how it works, how much you can save, and whether it's the right move for your situation.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "June 25, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "novated-lease-australia-ko",
+    title: "노베이티드 리스, 진짜 이득일까? 호주 직장인이라면 알아야 할 모든 것",
+    excerpt:
+      "세전 급여 공제, FBT, 전기차 면제 혜택까지 — 노베이티드 리스가 내 상황에 맞는지 판단하는 가이드.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 6월 25일",
+    lang: "KO",
+  },
+  {
     slug: "car-stamp-duty-australia-explained",
     title: "What Is Stamp Duty on a Car in Australia? The Hidden Cost Most Buyers Don't See Coming",
     excerpt:

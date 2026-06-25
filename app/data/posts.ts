@@ -171,6 +171,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "skoda-peaq-2027-australia",
+    title: "Skoda Peaq Revealed: Seven-Seat Electric SUV with 640km Range Confirmed for Australia",
+    excerpt:
+      "Skoda's largest-ever SUV arrives as a direct Kia EV9 rival — with up to 640km range, V2L/V2H/V2G bidirectional charging, and a price expected to start in the low-to-mid $70,000s.",
+    category: "NEWS",
+    date: "June 25, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c4d60c30-2aac-5ab1-a8e5-57f962a50000",
+    lang: "EN",
+  },
+  {
+    slug: "skoda-peaq-2027-australia-ko",
+    title: "스코다 피크 공개 — 640km 항속, 7인승 전기 SUV 호주 상륙 예고",
+    excerpt:
+      "스코다 역대 최대 SUV 피크가 베일을 벗었다. 기아 EV9의 직접 경쟁 상대로, 최대 640km 주행거리와 V2L/V2H/V2G를 탑재한 채 호주 출시가 확정됐다.",
+    category: "뉴스",
+    date: "2026년 6월 25일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c4d60c30-2aac-5ab1-a8e5-57f962a50000",
+    lang: "KO",
+  },
+  {
     slug: "australia-fuel-excise-relief-extended-july-2026",
     title: "Fuel Prices to Stay Lower for a Little Longer as Australia Extends Excise Relief",
     excerpt:

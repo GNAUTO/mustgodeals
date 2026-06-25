@@ -193,7 +193,21 @@ export default function ListingPage() {
           </div>
         </div>
 
-        {/* 3. Specifications */}
+        {/* 3. Dealer Comment */}
+        <div style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "8px", padding: "14px 16px", marginBottom: "2rem" }}>
+          <div style={{ fontSize: "10px", color: "#555", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600, marginBottom: "10px" }}>
+            Dealer&#39;s note
+          </div>
+          <div style={{ display: "flex", gap: "8px", alignItems: "flex-start", marginBottom: "10px" }}>
+            <span style={{ fontSize: "18px", color: "#CCDA47", lineHeight: 1, flexShrink: 0 }}>&ldquo;</span>
+            <p style={{ fontSize: "13px", color: "#aaa", lineHeight: 1.6, fontStyle: "italic", margin: 0 }}>
+              This Q5 has been our showroom display vehicle and has been exceptionally well maintained. One of the best-spec&#39;d Q5s we&#39;ve had in stock — full option, low kilometres, and ready to go.
+            </p>
+          </div>
+          <div style={{ fontSize: "11px", color: "#555", textAlign: "right" }}>— Jung In B, Artarmon</div>
+        </div>
+
+        {/* 4. Specifications */}
         <div style={{ marginBottom: "2rem" }}>
           <SectionTitle>Specifications</SectionTitle>
           <div className="spec-grid">

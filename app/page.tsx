@@ -86,11 +86,11 @@ export default function Home() {
           Insider guides, negotiation tips, and clearance deals — updated every week.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
+          <Link href="/blog" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
             Read buying guides
           </Link>
-          <Link href="/coming-soon" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
-            Get deal alerts
+          <Link href="/listings" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
+            Browse Demo Cars
           </Link>
         </div>
       </div>
@@ -104,9 +104,38 @@ export default function Home() {
           </div>
 
           <div className="demo-grid">
-            {/* Cards 1–3: COMING SOON */}
-            {[0, 1, 2].map((i) => (
-              <Link key={i} href="/listings/2024-audi-q5-sport" style={{ textDecoration: "none", display: "block" }}>
+            {/* Card 1: Real listing */}
+            <Link href="/listings/2025-audi-a5-sport" style={{ textDecoration: "none", display: "block" }}>
+              <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
+                <div style={{ height: "120px", background: "#1e1e1e", overflow: "hidden", position: "relative" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://edge.pxcrush.net/cars/dealer/euy7ctpajf5ul5opydntht8xw.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=98b39390ab0e54aba568cf55b91ca2fe&pxc_size=1000%2c667"
+                    alt="2025 Audi A5 TFSI 200kW S line"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ position: "absolute", top: "10px", left: "10px", background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
+                    DEMO
+                  </div>
+                </div>
+                <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 600, color: "#ddd", lineHeight: 1.3, marginBottom: "3px" }}>2025 Audi A5 TFSI 200kW S line</div>
+                  <div style={{ fontSize: "10px", color: "#555", marginBottom: "8px" }}>2,500 km · Daytona Grey · Petrol</div>
+                  <div style={{ fontSize: "16px", fontWeight: 700, color: "#CCDA47", marginBottom: "3px" }}>$87,880</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "10px" }}>
+                    <span style={{ fontSize: "9px", fontWeight: 700, color: "#CCDA47", background: "#1f2410", border: "0.5px solid #3a4a10", padding: "2px 5px", borderRadius: "4px" }}>SAVE $41,038</span>
+                    <span style={{ fontSize: "9px", color: "#555" }}>32% below new</span>
+                  </div>
+                  <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
+                    View listing →
+                  </button>
+                </div>
+              </div>
+            </Link>
+
+            {/* Cards 2–3: COMING SOON */}
+            {[1, 2].map((i) => (
+              <Link key={i} href="/listings" style={{ textDecoration: "none", display: "block" }}>
                 <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
                   <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
                     <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>

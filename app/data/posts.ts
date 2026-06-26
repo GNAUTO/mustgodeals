@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "hyundai-i30-sedan-2027-australia",
+    title: "2027 Hyundai i30 Sedan Revealed — Bigger, Hybrid-Focused, and Coming to Australia Next Year",
+    excerpt:
+      "The eighth-generation i30 Sedan grows in every dimension, drops the 1.6T petrol, and upgrades the hybrid to 117kW. Australian arrival is confirmed for the first half of 2027.",
+    category: "NEWS",
+    date: "June 26, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e67acf95-dd06-5ea8-a53b-d688c8c50000",
+    lang: "EN",
+  },
+  {
+    slug: "hyundai-i30-sedan-2027-australia-ko",
+    title: "2027 현대 i30 세단 공개 — 더 커지고, 하이브리드 중심으로, 내년 호주 상륙",
+    excerpt:
+      "전장 4,765mm로 성장하고, 1.6T 삭제, 117kW 하이브리드로 재편된 8세대 i30 세단. 호주 출시는 2027년 상반기로 예정돼 있다.",
+    category: "뉴스",
+    date: "2026년 6월 26일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e67acf95-dd06-5ea8-a53b-d688c8c50000",
+    lang: "KO",
+  },
+  {
     slug: "skoda-peaq-2027-australia",
     title: "Skoda Peaq Revealed: Seven-Seat Electric SUV with 640km Range Confirmed for Australia",
     excerpt:

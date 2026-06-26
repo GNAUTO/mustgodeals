@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "luxury-car-tax-australia",
+    title: "Luxury Car Tax in Australia — What It Is and How It Affects Your Next Car Purchase",
+    excerpt:
+      "LCT can add thousands to the cost of a premium vehicle. Here's how the 2025–26 thresholds work, how to calculate your exposure, and how a demo car can legally eliminate the tax entirely.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "June 26, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "luxury-car-tax-australia-ko",
+    title: "호주 럭셔리 카 택스(LCT), 얼마나 내야 할까? 프리미엄 차 사기 전에 꼭 알아야 할 것",
+    excerpt:
+      "아우디, BMW, 메르세데스 구매 전 반드시 알아야 할 LCT. 2025~2026 기준 한도, 실제 세금 계산법, 데모카로 세금을 줄이는 합법적인 방법까지 정리했다.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 6월 26일",
+    lang: "KO",
+  },
+  {
     slug: "novated-lease-australia",
     title: "What Is a Novated Lease — And Is It Worth It in Australia?",
     excerpt:

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -40,6 +41,17 @@ const OPTIONS = [
   { name: "Wireless Charging Pad",    ko: "케이블 없이 폰을 충전",         price: "+$600",   raw: 600 },
 ];
 
+const COOLDOWN_MS = 2 * 60 * 60 * 1000; // 2 hours
+
+function formatCooldown(ms: number): string {
+  const totalSec = Math.ceil(ms / 1000);
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.ceil((totalSec % 3600) / 60);
+  if (h > 0 && m > 0) return `${h}h ${m}min`;
+  if (h > 0) return `${h}h`;
+  return `${m}min`;
+}
+
 // ── Shared mini-components ────────────────────────────────────────────────────
 
 function SectionTitle({ children, right }: { children: React.ReactNode; right?: React.ReactNode }) {
@@ -68,14 +80,135 @@ function CarSilhouette({ color = "#2e2e2e", size = 64 }: { color?: string; size?
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ListingPage() {
+  const params = useParams();
+  const slug = typeof params?.slug === "string" ? params.slug : "listing";
+
   const [activeImg, setActiveImg]   = useState(0);
   const [featLang, setFeatLang]     = useState<"EN" | "KO">("EN");
 
+  // Enquire form
+  const [enquireOpen, setEnquireOpen] = useState(false);
+  const [formName, setFormName]       = useState("");
+  const [formMobile, setFormMobile]   = useState("");
+  const [formMsg, setFormMsg]         = useState("");
+  const [sending, setSending]         = useState(false);
+
+  // Success popup
+  const [showSuccess, setShowSuccess]       = useState(false);
+  const [submittedMobile, setSubmittedMobile] = useState("");
+
+  // Cooldown
+  const [cooldownLeft, setCooldownLeft] = useState(0); // ms remaining
+
+  const lsKey = `enquiry_${slug}`;
+
+  const checkCooldown = useCallback(() => {
+    const stored = localStorage.getItem(lsKey);
+    if (!stored) return 0;
+    const sentAt = parseInt(stored, 10);
+    const remaining = sentAt + COOLDOWN_MS - Date.now();
+    return remaining > 0 ? remaining : 0;
+  }, [lsKey]);
+
+  useEffect(() => {
+    setCooldownLeft(checkCooldown());
+  }, [checkCooldown]);
+
+  useEffect(() => {
+    if (cooldownLeft <= 0) return;
+    const interval = setInterval(() => {
+      const remaining = checkCooldown();
+      setCooldownLeft(remaining);
+      if (remaining <= 0) clearInterval(interval);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [cooldownLeft, checkCooldown]);
+
+  const isCoolingDown = cooldownLeft > 0;
   const features = FEATURES[featLang];
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!formName.trim() || !formMobile.trim()) return;
+    setSending(true);
+    try {
+      await fetch("/api/enquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formName.trim(),
+          mobile: formMobile.trim(),
+          message: formMsg.trim() || "I'm interested in this car",
+          carName: "2024 Audi Q5 Sport",
+          listingUrl: window.location.href,
+        }),
+      });
+      localStorage.setItem(lsKey, String(Date.now()));
+      setCooldownLeft(COOLDOWN_MS);
+      setSubmittedMobile(formMobile.trim());
+      setShowSuccess(true);
+      setEnquireOpen(false);
+      setFormName(""); setFormMobile(""); setFormMsg("");
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSending(false);
+    }
+  }
 
   return (
     <div style={{ minHeight: "100vh", background: "#1A1A1A", display: "flex", flexDirection: "column" }}>
       <Navbar />
+
+      {/* Success popup */}
+      {showSuccess && (
+        <div
+          style={{
+            position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)",
+            zIndex: 999, display: "flex", alignItems: "center", justifyContent: "center",
+            padding: "1rem",
+          }}
+          onClick={() => setShowSuccess(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#242424", borderRadius: "12px", padding: "24px",
+              textAlign: "center", minHeight: "400px", display: "flex",
+              flexDirection: "column", alignItems: "center", justifyContent: "center",
+              width: "100%", maxWidth: "320px", gap: "10px",
+            }}
+          >
+            {/* Check icon */}
+            <div style={{
+              width: "48px", height: "48px", borderRadius: "50%",
+              background: "#1f2e00", border: "0.5px solid #3a4a10",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              marginBottom: "4px",
+            }}>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M5 11.5L9 15.5L17 7" stroke="#CCDA47" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <div style={{ color: "white", fontSize: "16px", fontWeight: 500 }}>Enquiry sent!</div>
+            <div style={{ color: "#666", fontSize: "12px" }}>The dealer will be in touch at</div>
+            <div style={{ color: "#CCDA47", fontSize: "13px", fontWeight: 500 }}>{submittedMobile}</div>
+            <div style={{ color: "#666", fontSize: "12px", lineHeight: 1.5 }}>
+              Usually responds within a few hours during business hours.
+            </div>
+            <button
+              onClick={() => setShowSuccess(false)}
+              style={{
+                marginTop: "8px", width: "100%", padding: "10px",
+                background: "transparent", border: "0.5px solid #333",
+                borderRadius: "6px", color: "#888", fontSize: "13px", cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "1.5rem 2rem 3rem", flex: 1, width: "100%" }}>
 
@@ -171,10 +304,106 @@ export default function ListingPage() {
               ))}
             </div>
 
-            {/* D. CTA button */}
-            <button style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: "pointer", letterSpacing: "0.2px" }}>
-              Enquire Now
-            </button>
+            {/* D. CTA button + form */}
+            <div>
+              {isCoolingDown ? (
+                <div>
+                  <button
+                    disabled
+                    style={{
+                      width: "100%", padding: "11px",
+                      background: "#1f2e00", color: "#CCDA47",
+                      border: "0.5px solid #3a4a10", borderRadius: "6px",
+                      fontSize: "14px", fontWeight: 700, cursor: "default", letterSpacing: "0.2px",
+                    }}
+                  >
+                    Enquiry sent ✓
+                  </button>
+                  <div style={{ textAlign: "center", marginTop: "6px", fontSize: "10px", color: "#444" }}>
+                    You can send another enquiry in {formatCooldown(cooldownLeft)}
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <button
+                    onClick={() => setEnquireOpen((o) => !o)}
+                    style={{
+                      width: "100%", padding: "11px",
+                      background: "#CCDA47", color: "#1A1A1A",
+                      border: "none", borderRadius: "6px",
+                      fontSize: "14px", fontWeight: 700, cursor: "pointer", letterSpacing: "0.2px",
+                    }}
+                  >
+                    {enquireOpen ? "Cancel" : "Enquire Now"}
+                  </button>
+
+                  {/* Slide-down form */}
+                  <div style={{
+                    overflow: "hidden",
+                    maxHeight: enquireOpen ? "600px" : "0",
+                    transition: "max-height 0.3s ease",
+                  }}>
+                    <form onSubmit={handleSubmit} style={{ paddingTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                      <input
+                        required
+                        type="text"
+                        placeholder="Your name"
+                        value={formName}
+                        onChange={(e) => setFormName(e.target.value)}
+                        style={{
+                          width: "100%", padding: "9px 11px",
+                          background: "#1e1e1e", border: "0.5px solid #333",
+                          borderRadius: "6px", color: "#ccc", fontSize: "13px",
+                          outline: "none", boxSizing: "border-box",
+                        }}
+                      />
+                      <input
+                        required
+                        type="tel"
+                        placeholder="Mobile number"
+                        value={formMobile}
+                        onChange={(e) => setFormMobile(e.target.value)}
+                        style={{
+                          width: "100%", padding: "9px 11px",
+                          background: "#1e1e1e", border: "0.5px solid #333",
+                          borderRadius: "6px", color: "#ccc", fontSize: "13px",
+                          outline: "none", boxSizing: "border-box",
+                        }}
+                      />
+                      <textarea
+                        rows={3}
+                        placeholder="I'm interested in this car"
+                        value={formMsg}
+                        onChange={(e) => setFormMsg(e.target.value)}
+                        style={{
+                          width: "100%", padding: "9px 11px",
+                          background: "#1e1e1e", border: "0.5px solid #333",
+                          borderRadius: "6px", color: "#ccc", fontSize: "13px",
+                          outline: "none", resize: "none", boxSizing: "border-box",
+                        }}
+                      />
+                      <div style={{ fontSize: "10px", color: "#444", textAlign: "center" }}>
+                        Your details will be shared with the dealer only
+                      </div>
+                      <button
+                        type="submit"
+                        disabled={sending}
+                        style={{
+                          width: "100%", padding: "11px",
+                          background: "#CCDA47", color: "#1A1A1A",
+                          border: "none", borderRadius: "6px",
+                          fontSize: "14px", fontWeight: 700,
+                          cursor: sending ? "default" : "pointer",
+                          opacity: sending ? 0.7 : 1,
+                        }}
+                      >
+                        {sending ? "Sending…" : "Send Enquiry"}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* E. Dealer contact */}
             <div style={{ background: "#1e1e1e", border: "0.5px solid #2a2a2a", borderRadius: "6px", padding: "10px 12px" }}>
@@ -220,7 +449,7 @@ export default function ListingPage() {
           </div>
         </div>
 
-        {/* 4. Key Features */}
+        {/* 5. Key Features */}
         <div style={{ marginBottom: "2rem" }}>
           <SectionTitle
             right={
@@ -256,7 +485,7 @@ export default function ListingPage() {
           </div>
         </div>
 
-        {/* 5. Added Options */}
+        {/* 6. Added Options */}
         <div style={{ marginBottom: "2rem" }}>
           <SectionTitle>Added Options — included in this vehicle</SectionTitle>
           {OPTIONS.map((opt, i) => (
@@ -277,7 +506,7 @@ export default function ListingPage() {
           </div>
         </div>
 
-        {/* 6. Disclaimer */}
+        {/* 7. Disclaimer */}
         <div style={{ borderTop: "0.5px solid #222", paddingTop: "1rem" }}>
           <p style={{ fontSize: "10px", color: "#333", lineHeight: 1.6 }}>
             Pricing information is provided by the dealer and is subject to change. MustGoDeals acts as a listing platform only and is not party to any sale. All figures should be independently verified with the dealer prior to purchase.

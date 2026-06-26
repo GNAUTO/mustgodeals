@@ -213,6 +213,28 @@ export const NEWS_ITEMS: NewsItem[] = [
     lang: "KO",
   },
   {
+    slug: "audi-a3-s3-rs3-2027-update",
+    title: "2027 Audi A3, S3 and RS3 Updated — Bigger Screens, Fewer Buttons, and a Redesigned Interior",
+    excerpt:
+      "Audi's entire A3 family gets the curved Digital Stage cockpit from the A5 and A6 — a 12.8-inch MMI, 11.9-inch Virtual Cockpit under one piece of glass, and upgraded driver assistance. European launch September 2026.",
+    category: "NEWS",
+    date: "June 26, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/dd218bf3-401e-53e2-a2c4-ed4470650000",
+    lang: "EN",
+  },
+  {
+    slug: "audi-a3-s3-rs3-2027-update-ko",
+    title: "2027 아우디 A3·S3·RS3 업데이트 — 더 커진 스크린, 줄어든 버튼, 완전히 달라진 실내",
+    excerpt:
+      "A5·A6의 디지털 스테이지 아키텍처가 A3까지 내려왔다. 12.8인치 MMI + 11.9인치 버추얼 콕핏이 단일 곡면 유리로 통합되고, 주행 보조 시스템도 전면 강화됐다. 유럽 출시 2026년 9월.",
+    category: "뉴스",
+    date: "2026년 6월 26일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/dd218bf3-401e-53e2-a2c4-ed4470650000",
+    lang: "KO",
+  },
+  {
     slug: "skoda-peaq-2027-australia",
     title: "Skoda Peaq Revealed: Seven-Seat Electric SUV with 640km Range Confirmed for Australia",
     excerpt:

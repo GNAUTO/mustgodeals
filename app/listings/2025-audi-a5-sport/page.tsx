@@ -68,9 +68,9 @@ const FEATURES = {
 };
 
 const OPTIONS = [
-  { name: "Premium Package",  ko: "HUD, B&O Sound, USB-C 고출력, 앰비언트 라이팅 프로, 어쿠스틱 도어 글라스", price: "+$5,500", raw: 5500 },
-  { name: "Style Package",    ko: "20인치 블랙 메탈릭 휠, 블랙 익스테리어 패키지, 프라이버시 글라스",           price: "+$3,200", raw: 3200 },
-  { name: "Panoramic Roof (Switchable)", ko: "전동 투명도 조절 선루프",                                       price: "+$3,800", raw: 3800 },
+  { name: "Premium Package",           descEn: "HUD, B&O Sound, high-power USB-C, ambient lighting pro, acoustic door glass", descKo: "HUD, B&O Sound, USB-C 고출력, 앰비언트 라이팅 프로, 어쿠스틱 도어 글라스", price: "+$5,500", raw: 5500 },
+  { name: "Style Package",             descEn: "20-inch black metallic wheels, black exterior package, privacy glass",         descKo: "20인치 블랙 메탈릭 휠, 블랙 익스테리어 패키지, 프라이버시 글라스",           price: "+$3,200", raw: 3200 },
+  { name: "Panoramic Roof (Switchable)", descEn: "Electronically switchable transparency panoramic sunroof",                  descKo: "전동 투명도 조절 선루프",                                                     price: "+$3,800", raw: 3800 },
 ];
 
 const COOLDOWN_MS = 2 * 60 * 60 * 1000;
@@ -491,14 +491,16 @@ export default function ListingA5Page() {
                 <span style={{ fontSize: "6px", color: "#CCDA47", lineHeight: "18px", flexShrink: 0 }}>●</span>
                 <div>
                   <div style={{ fontSize: "12px", color: "#dddddd", marginBottom: "2px" }}>{opt.name}</div>
-                  <div style={{ fontSize: "10px", color: "#888888" }}>{opt.ko}</div>
+                  <div style={{ fontSize: "10px", color: "#888888" }}>{featLang === "KO" ? opt.descKo : opt.descEn}</div>
                 </div>
               </div>
               <span style={{ fontSize: "12px", color: "#CCDA47", fontWeight: 600, flexShrink: 0, paddingTop: "1px" }}>{opt.price}</span>
             </div>
           ))}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "4px" }}>
-            <span style={{ fontSize: "11px", color: "#666" }}>추가 옵션 합계 (이 차량에 포함)</span>
+            <span style={{ fontSize: "11px", color: "#666" }}>
+              {featLang === "KO" ? "추가 옵션 합계 (이 차량에 포함)" : "Total added options (included in this vehicle)"}
+            </span>
             <span style={{ fontSize: "13px", color: "#CCDA47", fontWeight: 700 }}>+$12,500</span>
           </div>
         </div>

@@ -169,20 +169,20 @@ export default function ListingA5Page() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{ background: "#242424", borderRadius: "12px", padding: "24px", textAlign: "center", minHeight: "400px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%", maxWidth: "320px", gap: "10px" }}
+            style={{ background: "#242424", borderRadius: "12px", padding: "32px", textAlign: "center", minHeight: "400px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "90%", maxWidth: "420px", gap: "14px" }}
           >
-            <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "#1f2e00", border: "0.5px solid #3a4a10", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "4px" }}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <div style={{ width: "60px", height: "60px", borderRadius: "50%", background: "#1f2e00", border: "0.5px solid #3a4a10", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "8px" }}>
+              <svg width="28" height="28" viewBox="0 0 22 22" fill="none">
                 <path d="M5 11.5L9 15.5L17 7" stroke="#CCDA47" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <div style={{ color: "white", fontSize: "16px", fontWeight: 500 }}>Enquiry sent!</div>
+            <div style={{ color: "white", fontSize: "20px", fontWeight: 500 }}>Enquiry sent!</div>
             <div style={{ color: "#666", fontSize: "12px" }}>The dealer will be in touch at</div>
             <div style={{ color: "#CCDA47", fontSize: "13px", fontWeight: 500 }}>{submittedMobile}</div>
-            <div style={{ color: "#666", fontSize: "12px", lineHeight: 1.5 }}>Usually responds within a few hours during business hours.</div>
+            <div style={{ color: "#666", fontSize: "12px", lineHeight: 1.6 }}>Usually responds within a few hours during business hours.</div>
             <button
               onClick={() => setShowSuccess(false)}
-              style={{ marginTop: "8px", width: "100%", padding: "10px", background: "transparent", border: "0.5px solid #333", borderRadius: "6px", color: "#888", fontSize: "13px", cursor: "pointer" }}
+              style={{ marginTop: "12px", width: "100%", padding: "12px", background: "transparent", border: "0.5px solid #333", borderRadius: "6px", color: "#888", fontSize: "13px", cursor: "pointer" }}
             >
               Close
             </button>
@@ -205,7 +205,7 @@ export default function ListingA5Page() {
           {/* Left: Image slider */}
           <div>
             {/* Main image */}
-            <div style={{ height: "280px", background: "#1e1e1e", border: "0.5px solid #2e2e2e", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
+            <div style={{ height: "380px", background: "#1e1e1e", border: "0.5px solid #2e2e2e", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={IMAGES[activeImg]}
@@ -323,9 +323,15 @@ export default function ListingA5Page() {
                       </div>
                       <button
                         type="submit" disabled={sending}
-                        style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1 }}
+                        style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1, display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}
                       >
-                        {sending ? "Sending…" : "Send Enquiry"}
+                        {sending && (
+                          <svg className="animate-spin" width="15" height="15" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="rgba(26,26,26,0.25)" strokeWidth="3" />
+                            <path d="M12 2a10 10 0 0 1 10 10" stroke="#1A1A1A" strokeWidth="3" strokeLinecap="round" />
+                          </svg>
+                        )}
+                        {sending ? "Sending..." : "Send Enquiry"}
                       </button>
                     </form>
                   </div>

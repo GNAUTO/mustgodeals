@@ -41,9 +41,9 @@ export async function POST(req: Request) {
     });
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: "hello.mustgodeals@gmail.com",
+      to: "hello.mustgodeals@gmail.com, yyh1283@gmail.com",
       subject: `[MustGoDeals] New Enquiry — ${carName}`,
-      text: smsMsg,
+      text: `New enquiry received via MustGoDeals\n\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}\nListing: ${listingUrl}\n\nReceived: ${dateStr} ${timeStr}`,
     });
   } catch (e) {
     console.error("[enquire] Email error:", e);

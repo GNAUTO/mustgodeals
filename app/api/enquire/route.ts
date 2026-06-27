@@ -9,12 +9,15 @@ export async function POST(req: Request) {
   const dateStr = now.toLocaleDateString("en-AU");
   const timeStr = now.toLocaleTimeString("en-AU");
 
+  const cleanUrl = listingUrl.replace(/http:\/\/localhost:\d+/, "https://mustgodeals.com.au");
+
   const smsMsg = `[MustGoDeals] New enquiry\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}`;
 
   // 1. Texto SMS
   const rawPhone = process.env.DEALER_PHONE ?? "";
   const dealerE164 = "+61" + rawPhone.replace(/^0/, "");
   try {
+    console.log("[enquire] 1. SMS 시작");
     const smsRes = await fetch("https://api.texto.com.au/send", {
       method: "POST",
       headers: {
@@ -25,12 +28,14 @@ export async function POST(req: Request) {
     });
     const smsData = await smsRes.json();
     console.log("[enquire] SMS response:", JSON.stringify(smsData));
+    console.log("[enquire] 1. SMS 완료");
   } catch (e) {
     console.error("[enquire] SMS error:", e);
   }
 
   // 2. Nodemailer email
   try {
+    console.log("[enquire] 2. Email 시작");
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -41,16 +46,18 @@ export async function POST(req: Request) {
     });
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: "hello.mustgodeals@gmail.com, yyh1283@gmail.com",
+      to: "hello.mustgodeals@gmail.com, jbang@alto.com.au",
       subject: `[MustGoDeals] New Enquiry — ${carName}`,
-      text: `New enquiry received via MustGoDeals\n\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}\nListing: ${listingUrl}\n\nReceived: ${dateStr} ${timeStr}`,
+      text: `New enquiry received via MustGoDeals\n\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}\nListing: ${cleanUrl}\n\nReceived: ${dateStr} ${timeStr}`,
     });
+    console.log("[enquire] 2. Email 완료");
   } catch (e) {
     console.error("[enquire] Email error:", e);
   }
 
   // 3. Google Sheets
   try {
+    console.log("[enquire] 3. Sheets 시작");
     const raw = process.env.GOOGLE_SHEETS_ID ?? "";
     const spreadsheetId = raw.includes("/d/")
       ? raw.split("/d/")[1].split("/")[0]
@@ -67,9 +74,10 @@ export async function POST(req: Request) {
       range: "Sheet1!A:G",
       valueInputOption: "RAW",
       requestBody: {
-        values: [[dateStr, timeStr, carName, name, mobile, message, listingUrl]],
+        values: [[dateStr, timeStr, carName, name, mobile, message, cleanUrl]],
       },
     });
+    console.log("[enquire] 3. Sheets 완료");
   } catch (e) {
     console.error("[enquire] Sheets error:", e);
   }

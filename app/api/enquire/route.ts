@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   const rawPhone = process.env.DEALER_PHONE ?? "";
   const dealerE164 = "+61" + rawPhone.replace(/^0/, "");
   try {
-    await fetch("https://api.texto.com.au/send", {
+    const smsRes = await fetch("https://api.texto.com.au/send", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.TEXTO_API_KEY}`,
@@ -23,6 +23,8 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({ to: dealerE164, message: smsMsg }),
     });
+    const smsData = await smsRes.json();
+    console.log("[enquire] SMS response:", JSON.stringify(smsData));
   } catch (e) {
     console.error("[enquire] SMS error:", e);
   }

@@ -57,7 +57,7 @@ function formatCooldown(ms: number): string {
 function SectionTitle({ children, right }: { children: React.ReactNode; right?: React.ReactNode }) {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid #2a2a2a", paddingBottom: "8px", marginBottom: "10px" }}>
-      <span style={{ fontSize: "10px", color: "#555", textTransform: "uppercase", letterSpacing: "0.8px", fontWeight: 600 }}>
+      <span style={{ fontSize: "10px", color: "#888888", textTransform: "uppercase", letterSpacing: "0.8px", fontWeight: 600 }}>
         {children}
       </span>
       {right}
@@ -244,11 +244,11 @@ export default function ListingPage() {
                   onClick={() => setActiveImg(i)}
                   title={label}
                   style={{
-                    width: "50px", height: "34px", background: "#222",
-                    border: activeImg === i ? "0.5px solid #CCDA47" : "0.5px solid #2e2e2e",
+                    width: "96px", height: "64px", background: "#222",
+                    border: activeImg === i ? "2px solid #CCDA47" : "0.5px solid #2e2e2e",
                     borderRadius: "4px", cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    transition: "border-color 0.15s",
+                    transition: "border-color 0.15s", flexShrink: 0,
                   }}
                 >
                   <CarSilhouette color={activeImg === i ? "#555" : "#333"} size={28} />
@@ -265,11 +265,11 @@ export default function ListingPage() {
               <span style={{ display: "inline-block", background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "2px 8px", borderRadius: "4px", marginBottom: "8px" }}>
                 DEMO
               </span>
-              <div style={{ fontSize: "15px", fontWeight: 600, color: "#ddd", lineHeight: 1.35, marginBottom: "4px" }}>
+              <div style={{ fontSize: "15px", fontWeight: 600, color: "#ffffff", lineHeight: 1.35, marginBottom: "4px" }}>
                 2024 Audi Q5 Sport<br />
-                <span style={{ fontSize: "13px", fontWeight: 400, color: "#888" }}>45 TFSI Quattro</span>
+                <span style={{ fontSize: "13px", fontWeight: 400, color: "#aaaaaa" }}>45 TFSI Quattro</span>
               </div>
-              <div style={{ fontSize: "11px", color: "#555" }}>Artarmon, Sydney · 3,200 km</div>
+              <div style={{ fontSize: "11px", color: "#888888" }}>Artarmon, Sydney · 3,200 km</div>
             </div>
 
             {/* B. Pricing */}
@@ -298,8 +298,8 @@ export default function ListingPage() {
                 { label: "MustGoDeals price",    val: "$72,800",  lime: true  },
               ].map((row, i, arr) => (
                 <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "6px", marginBottom: i < arr.length - 1 ? "6px" : 0, borderBottom: i < arr.length - 1 ? "0.5px solid #252525" : "none" }}>
-                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#555", fontWeight: row.lime ? 600 : 400 }}>{row.label}</span>
-                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#666", fontWeight: row.lime ? 600 : 400 }}>{row.val}</span>
+                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400 }}>{row.label}</span>
+                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400 }}>{row.val}</span>
                 </div>
               ))}
             </div>
@@ -417,9 +417,9 @@ export default function ListingPage() {
               <div style={{ fontSize: "10px", color: "#555", textTransform: "uppercase", letterSpacing: "0.7px", fontWeight: 600, marginBottom: "8px" }}>
                 Your dealer contact
               </div>
-              <div style={{ fontSize: "13px", color: "#ccc", fontWeight: 500, marginBottom: "5px" }}>Jung In B</div>
-              <div style={{ fontSize: "11px", color: "#555", marginBottom: "4px" }}>📍 Artarmon, Sydney</div>
-              <div style={{ fontSize: "11px", color: "#CCDA47" }}>📞 0415 544 635</div>
+              <div style={{ fontSize: "13px", color: "#ffffff", fontWeight: 500, marginBottom: "5px" }}>Jung In B</div>
+              <div style={{ fontSize: "11px", color: "#aaaaaa", marginBottom: "4px" }}>📍 Artarmon, Sydney</div>
+              <div style={{ fontSize: "11px", color: "#aaaaaa" }}>📞 0415 544 635</div>
             </div>
 
             {/* F. Interstate note */}
@@ -449,8 +449,8 @@ export default function ListingPage() {
           <div className="spec-grid">
             {SPECS.map((s) => (
               <div key={s.label} style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "6px", padding: "8px 10px" }}>
-                <div style={{ fontSize: "10px", color: "#555", marginBottom: "3px" }}>{s.label}</div>
-                <div style={{ fontSize: "12px", color: "#ccc", fontWeight: 500 }}>{s.value}</div>
+                <div style={{ fontSize: "10px", color: "#888888", marginBottom: "3px" }}>{s.label}</div>
+                <div style={{ fontSize: "12px", color: "#ffffff", fontWeight: 500 }}>{s.value}</div>
               </div>
             ))}
           </div>
@@ -485,8 +485,8 @@ export default function ListingPage() {
           <div className="feature-grid">
             {features.map((f) => (
               <div key={f.name} style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "6px", padding: "10px 12px" }}>
-                <div style={{ fontSize: "12px", color: "#aaa", fontWeight: 500, marginBottom: "3px" }}>{f.name}</div>
-                <div style={{ fontSize: "10px", color: "#555", lineHeight: 1.5 }}>{f.desc}</div>
+                <div style={{ fontSize: "12px", color: "#cccccc", fontWeight: 500, marginBottom: "3px" }}>{f.name}</div>
+                <div style={{ fontSize: "10px", color: "#888888", lineHeight: 1.5 }}>{f.desc}</div>
               </div>
             ))}
           </div>
@@ -500,8 +500,8 @@ export default function ListingPage() {
               <div style={{ display: "flex", alignItems: "flex-start", gap: "8px", flex: 1 }}>
                 <span style={{ fontSize: "6px", color: "#CCDA47", lineHeight: "18px", flexShrink: 0 }}>●</span>
                 <div>
-                  <div style={{ fontSize: "12px", color: "#ccc", marginBottom: "2px" }}>{opt.name}</div>
-                  <div style={{ fontSize: "10px", color: "#555" }}>{opt.ko}</div>
+                  <div style={{ fontSize: "12px", color: "#dddddd", marginBottom: "2px" }}>{opt.name}</div>
+                  <div style={{ fontSize: "10px", color: "#888888" }}>{opt.ko}</div>
                 </div>
               </div>
               <span style={{ fontSize: "12px", color: "#CCDA47", fontWeight: 600, flexShrink: 0, paddingTop: "1px" }}>{opt.price}</span>

@@ -121,7 +121,11 @@ export default function Home() {
                 <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
                   <div style={{ fontSize: "12px", fontWeight: 600, color: "#ddd", lineHeight: 1.3, marginBottom: "3px" }}>2025 Audi A5 TFSI 200kW S line</div>
                   <div style={{ fontSize: "10px", color: "#555", marginBottom: "8px" }}>2,500 km · Daytona Grey · Petrol</div>
-                  <div style={{ fontSize: "20px", fontWeight: 700, color: "#CCDA47", marginBottom: "3px" }}>$87,880</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                    <span style={{ fontSize: "12px", color: "#888", textDecoration: "line-through" }}>$128,918</span>
+                    <span style={{ fontSize: "12px", color: "#666" }}>→</span>
+                    <span style={{ fontSize: "22px", fontWeight: 700, color: "#CCDA47" }}>$87,880</span>
+                  </div>
                   <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "10px" }}>
                     <span style={{ fontSize: "12px", fontWeight: 700, color: "#CCDA47", background: "#1f2410", border: "0.5px solid #3a4a10", padding: "3px 8px", borderRadius: "4px" }}>SAVE $41,038</span>
                     <span style={{ fontSize: "10px", color: "#CCDA47" }}>32% below new</span>

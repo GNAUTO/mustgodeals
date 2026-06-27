@@ -220,13 +220,56 @@ export default function ListingA5Page() {
           {/* Left: Image slider */}
           <div>
             {/* Main image */}
-            <div style={{ height: "480px", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
+            <div style={{ position: "relative", height: "480px", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={IMAGES[activeImg]}
                 alt={IMG_LABELS[activeImg]}
                 style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
               />
+
+              {/* Left arrow */}
+              {activeImg > 0 && (
+                <button
+                  onClick={() => setActiveImg((i) => i - 1)}
+                  style={{
+                    position: "absolute", left: "12px", top: "50%", transform: "translateY(-50%)",
+                    width: "40px", height: "40px", background: "rgba(0,0,0,0.5)", color: "#fff",
+                    fontSize: "24px", borderRadius: "50%", border: "none", cursor: "pointer",
+                    display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1,
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.8)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.5)")}
+                >
+                  ‹
+                </button>
+              )}
+
+              {/* Right arrow */}
+              {activeImg < IMAGES.length - 1 && (
+                <button
+                  onClick={() => setActiveImg((i) => i + 1)}
+                  style={{
+                    position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)",
+                    width: "40px", height: "40px", background: "rgba(0,0,0,0.5)", color: "#fff",
+                    fontSize: "24px", borderRadius: "50%", border: "none", cursor: "pointer",
+                    display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1,
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.8)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.5)")}
+                >
+                  ›
+                </button>
+              )}
+
+              {/* Index counter */}
+              <div style={{
+                position: "absolute", right: "12px", bottom: "12px",
+                background: "rgba(0,0,0,0.5)", color: "#fff",
+                fontSize: "11px", padding: "3px 8px", borderRadius: "10px",
+              }}>
+                {activeImg + 1} / {IMAGES.length}
+              </div>
             </div>
 
             {/* Thumbnails — horizontal scroll */}

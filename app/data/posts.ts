@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "mazda-sales-dip-australia-2026",
+    title: "Mazda Explains Sudden Sales Dip in Australia — New Models on the Way",
+    excerpt:
+      "Mazda has slipped to 6th–7th in Australia's sales rankings — its lowest position in 15 years. May sales fell 27.4%, but a CX-5 changeover and incoming EVs will reverse the slide.",
+    category: "NEWS",
+    date: "June 27, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c8ff5774-14aa-519c-9dc3-281f4db50000",
+    lang: "EN",
+  },
+  {
+    slug: "mazda-sales-dip-australia-2026-ko",
+    title: "마쯔다, 호주 판매 15년 만에 최저 — 신형 CX-5·전기차로 반등 노린다",
+    excerpt:
+      "마쯔다가 호주 판매 순위 6~7위로 밀려나며 15년 만에 최저 성적을 기록했다. 5월 판매는 27.4% 급감했지만, 신형 CX-5와 전기차 라인업으로 하반기 반등을 자신하고 있다.",
+    category: "뉴스",
+    date: "2026년 6월 27일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c8ff5774-14aa-519c-9dc3-281f4db50000",
+    lang: "KO",
+  },
+  {
     slug: "hyundai-i30-sedan-2027-australia",
     title: "2027 Hyundai i30 Sedan Revealed — Bigger, Hybrid-Focused, and Coming to Australia Next Year",
     excerpt:

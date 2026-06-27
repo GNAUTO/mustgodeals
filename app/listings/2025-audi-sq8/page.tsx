@@ -71,10 +71,10 @@ const FEATURES = {
 };
 
 const OPTIONS = [
-  { name: "Arras Red Upholstery Package",                                    ko: "아라스 레드 업홀스터리 패키지",        price: "+$6,500", raw: 6500 },
-  { name: "Sensory Package (B&O 3D Advanced + Massage + Rear Seat Heating)", ko: "센소리 패키지",                        price: "+$7,200", raw: 7200 },
-  { name: "HD Matrix LED with Laser + OLED Package",                         ko: "HD 매트릭스 LED 레이저 + OLED 패키지", price: "+$3,800", raw: 3800 },
-  { name: "Full Leather Package",                                             ko: "풀 레더 패키지",                       price: "+$2,500", raw: 2500 },
+  { name: "Arras Red Upholstery Package",                                    descEn: "Full Arras Red interior upholstery with contrasting stitching throughout",               descKo: "아라스 레드 풀 인테리어 업홀스터리, 전체 콘트라스트 스티칭 적용",              price: "+$6,500", raw: 6500 },
+  { name: "Sensory Package (B&O 3D Advanced + Massage + Rear Seat Heating)", descEn: "B&O Advanced 3D Sound (1,920W), massage seats, rear seat heating",                       descKo: "B&O 어드밴스드 3D 사운드 (1,920W), 마사지 시트, 후석 히팅",                  price: "+$7,200", raw: 7200 },
+  { name: "HD Matrix LED with Laser + OLED Package",                         descEn: "HD Matrix LED headlights with laser assist and OLED rear taillights",                    descKo: "레이저 보조 HD 매트릭스 LED 헤드라이트 + OLED 리어 테일라이트",               price: "+$3,800", raw: 3800 },
+  { name: "Full Leather Package",                                             descEn: "Nappa leather upholstery with air quality package and electric sunblinds",               descKo: "나파 가죽 풀 업홀스터리, 에어 퀄리티 패키지, 전동 선블라인드",                price: "+$2,500", raw: 2500 },
 ];
 
 const COOLDOWN_MS = 2 * 60 * 60 * 1000;
@@ -495,14 +495,16 @@ export default function ListingSQ8Page() {
                 <span style={{ fontSize: "6px", color: "#CCDA47", lineHeight: "18px", flexShrink: 0 }}>●</span>
                 <div>
                   <div style={{ fontSize: "12px", color: "#dddddd", marginBottom: "2px" }}>{opt.name}</div>
-                  <div style={{ fontSize: "10px", color: "#888888" }}>{opt.ko}</div>
+                  <div style={{ fontSize: "10px", color: "#888888" }}>{featLang === "KO" ? opt.descKo : opt.descEn}</div>
                 </div>
               </div>
               <span style={{ fontSize: "12px", color: "#CCDA47", fontWeight: 600, flexShrink: 0, paddingTop: "1px" }}>{opt.price}</span>
             </div>
           ))}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "4px" }}>
-            <span style={{ fontSize: "11px", color: "#666" }}>추가 옵션 합계 (이 차량에 포함)</span>
+            <span style={{ fontSize: "11px", color: "#666" }}>
+              {featLang === "KO" ? "추가 옵션 합계 (이 차량에 포함)" : "Total added options (included in this vehicle)"}
+            </span>
             <span style={{ fontSize: "13px", color: "#CCDA47", fontWeight: 700 }}>+$20,000</span>
           </div>
         </div>

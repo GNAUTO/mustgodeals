@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { BLOG_POSTS } from "../data/posts";
+import PostCard from "../components/posts/PostCard";
 
 const LANGS = [
   { label: "EN",   code: "EN", comingSoon: "Articles coming soon." },
@@ -77,22 +77,7 @@ export default function BlogPage() {
             <>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
                 {paginated.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="news-card" style={{ textDecoration: "none" }}>
-                    <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", cursor: "pointer" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                          <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
-                          {post.pinned && (
-                            <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "4px 10px", borderRadius: "4px" }}>FEATURED</span>
-                          )}
-                        </div>
-                        <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
-                      </div>
-                      <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
-                      <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
-                      <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
-                    </div>
-                  </Link>
+                  <PostCard key={post.slug} type="blog" item={post} />
                 ))}
               </div>
 

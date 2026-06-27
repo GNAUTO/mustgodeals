@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
+import PostCard from "./components/posts/PostCard";
 
 const LANGS = [
   { label: "EN", code: "EN", comingSoon: "Articles coming soon." },
@@ -239,19 +240,7 @@ export default function Home() {
           ) : null}
           <div className="section-grid">
             {filteredNews.slice(0, 6).map((item) => (
-              <Link key={item.slug} href={`/news/${item.slug}`} className="news-card" style={{ textDecoration: "none", display: "block" }}>
-                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.image} alt={item.title} style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }} />
-                  <div style={{ padding: "1rem" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-                      <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)", padding: "2px 8px", borderRadius: "10px" }}>{item.category}</span>
-                      <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
-                    </div>
-                    <div style={{ fontSize: "14px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4 }}>{item.title}</div>
-                  </div>
-                </div>
-              </Link>
+              <PostCard key={item.slug} type="news" item={item} compact />
             ))}
           </div>
         </div>
@@ -272,22 +261,7 @@ export default function Home() {
         ) : (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
             {filtered.slice(0, 6).map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="news-card" style={{ textDecoration: "none" }}>
-                <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%", cursor: "pointer" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                      <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 500, letterSpacing: "0.5px", textTransform: "uppercase" }}>{post.category}</span>
-                      {post.pinned && (
-                        <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "4px 10px", borderRadius: "4px" }}>FEATURED</span>
-                      )}
-                    </div>
-                    <span style={{ fontSize: "10px", color: "#999", background: "#F5F5F0", padding: "2px 8px", borderRadius: "10px" }}>{post.lang}</span>
-                  </div>
-                  <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>{post.title}</h3>
-                  <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>{post.excerpt}</p>
-                  <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime} · {post.date}</div>
-                </div>
-              </Link>
+              <PostCard key={post.slug} type="blog" item={post} />
             ))}
           </div>
         )}

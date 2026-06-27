@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { NEWS_ITEMS } from "../data/posts";
+import PostCard from "../components/posts/PostCard";
 
 const LANGS = [
   { label: "EN",   code: "EN", comingSoon: "No news in this language yet." },
@@ -75,40 +75,7 @@ export default function NewsPage() {
             <>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
                 {paginated.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/news/${item.slug}`}
-                    className="news-card"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden", height: "100%" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        style={{ width: "100%", height: "200px", objectFit: "cover", display: "block" }}
-                      />
-                      <div style={{ padding: "1.25rem" }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
-                          <span style={{
-                            fontSize: "10px", color: "#8A9A10", fontWeight: 600,
-                            letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)",
-                            padding: "2px 10px", borderRadius: "10px",
-                          }}>
-                            {item.category}
-                          </span>
-                          <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
-                        </div>
-                        <h3 style={{ fontSize: "15px", color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.6rem" }}>
-                          {item.title}
-                        </h3>
-                        <p style={{ fontSize: "13px", color: "#777", lineHeight: 1.6, marginBottom: "1rem" }}>
-                          {item.excerpt}
-                        </p>
-                        <span style={{ fontSize: "11px", color: "#aaa" }}>{item.author}</span>
-                      </div>
-                    </div>
-                  </Link>
+                  <PostCard key={item.slug} type="news" item={item} />
                 ))}
               </div>
 

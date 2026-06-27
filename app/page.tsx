@@ -137,36 +137,67 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Cards 2–3: COMING SOON */}
-            {[1, 2].map((i) => (
-              <Link key={i} href="/listings" style={{ textDecoration: "none", display: "block" }}>
-                <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
-                  <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                    <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
-                      <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
-                      <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
-                      <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                      <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                    </svg>
-                    <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
-                      COMING SOON
-                    </div>
-                  </div>
-                  <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                    <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
-                    <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
-                    <div style={{ background: "#383838", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
-                    <div style={{ display: "flex", gap: "6px", marginBottom: "14px" }}>
-                      <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "38%" }} />
-                      <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "30%" }} />
-                    </div>
-                    <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
-                      Notify me when listed
-                    </button>
+            {/* Card 2: SQ8 listing */}
+            <Link href="/listings/2025-audi-sq8" style={{ textDecoration: "none", display: "block" }}>
+              <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
+                <div style={{ height: "160px", background: "#1e1e1e", overflow: "hidden", position: "relative" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://edge.pxcrush.net/cars/dealer/2kpf62gbkg4jcti5u0rsy42nr.jpg?pxc_expires=20260924144231&pxc_clear=1&pxc_signature=e1cd655ac9667dde9314d4ed7fe61a5b&pxc_size=1000%2c667"
+                    alt="2025 Audi SQ8 TFSI Quattro"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ position: "absolute", top: "10px", left: "10px", background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
+                    DEMO
                   </div>
                 </div>
-              </Link>
-            ))}
+                <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 600, color: "#ddd", lineHeight: 1.3, marginBottom: "3px" }}>2025 Audi SQ8 TFSI Quattro</div>
+                  <div style={{ fontSize: "10px", color: "#555", marginBottom: "8px" }}>2,000 km · Mythos Black · Petrol</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                    <span style={{ fontSize: "12px", color: "#888", textDecoration: "line-through" }}>$227,943</span>
+                    <span style={{ fontSize: "12px", color: "#666" }}>→</span>
+                    <span style={{ fontSize: "22px", fontWeight: 700, color: "#CCDA47" }}>$189,888</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "10px" }}>
+                    <span style={{ fontSize: "12px", fontWeight: 700, color: "#CCDA47", background: "#1f2410", border: "0.5px solid #3a4a10", padding: "3px 8px", borderRadius: "4px" }}>SAVE $38,055</span>
+                    <span style={{ fontSize: "10px", color: "#CCDA47" }}>17% below new</span>
+                  </div>
+                  <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
+                    View listing →
+                  </button>
+                </div>
+              </div>
+            </Link>
+
+            {/* Card 3: COMING SOON */}
+            <Link href="/listings" style={{ textDecoration: "none", display: "block" }}>
+              <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
+                <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                  <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
+                    <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
+                    <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
+                    <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                    <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                  <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
+                    COMING SOON
+                  </div>
+                </div>
+                <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
+                  <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
+                  <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
+                  <div style={{ background: "#383838", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
+                  <div style={{ display: "flex", gap: "6px", marginBottom: "14px" }}>
+                    <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "38%" }} />
+                    <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "30%" }} />
+                  </div>
+                  <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
+                    Notify me when listed
+                  </button>
+                </div>
+              </div>
+            </Link>
 
             {/* Card 4: SOLD */}
             <div style={{ background: "#242424", borderRadius: "8px", border: "0.5px solid #2e2e2e", overflow: "hidden" }}>

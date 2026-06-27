@@ -106,7 +106,7 @@ export default function AustraliaCarRecallsJune2026Content() {
           <li style={AS.tipItem}>
             Go to{" "}
             <a
-              href="https://www.recalls.infrastructure.gov.au"
+              href="https://www.vehiclerecalls.gov.au"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#1A1A1A", fontWeight: 600 }}

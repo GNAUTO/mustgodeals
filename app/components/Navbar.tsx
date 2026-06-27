@@ -64,7 +64,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
           <div className="navbar-desktop-links">
             <Link href="/blog"         style={{ color: linkColor("blog"),     fontSize: "13px", textDecoration: "none" }}>Blog</Link>
             <Link href="/news"         style={{ color: linkColor("news"),     fontSize: "13px", textDecoration: "none" }}>News</Link>
-            <Link href="/coming-soon"  style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
+            <Link href="/listings"  style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
           </div>
           <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "6px 14px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, textDecoration: "none", whiteSpace: "nowrap" }}>
             Get Alerts
@@ -124,7 +124,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
         <div className="navbar-mobile-dropdown">
           <Link href="/blog"        onClick={() => setMenuOpen(false)} style={{ color: linkColor("blog"),     fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Blog</Link>
           <Link href="/news"        onClick={() => setMenuOpen(false)} style={{ color: linkColor("news"),     fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>News</Link>
-          <Link href="/coming-soon" onClick={() => setMenuOpen(false)} style={{ color: linkColor("listings"), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Listings</Link>
+          <Link href="/listings" onClick={() => setMenuOpen(false)} style={{ color: linkColor("listings"), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Listings</Link>
         </div>
       )}
 

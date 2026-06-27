@@ -220,31 +220,37 @@ export default function ListingA5Page() {
           {/* Left: Image slider */}
           <div>
             {/* Main image */}
-            <div style={{ height: "380px", background: "#1e1e1e", border: "0.5px solid #2e2e2e", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
+            <div style={{ height: "480px", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={IMAGES[activeImg]}
                 alt={IMG_LABELS[activeImg]}
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
               />
             </div>
 
             {/* Thumbnails — horizontal scroll */}
-            <div style={{ display: "flex", gap: "6px", overflowX: "auto", paddingBottom: "4px" }}>
+            <div style={{ overflowX: "auto", whiteSpace: "nowrap", paddingBottom: "4px" }}>
               {IMAGES.map((src, i) => (
-                <div
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   key={i}
+                  src={src}
+                  alt={IMG_LABELS[i]}
                   onClick={() => setActiveImg(i)}
-                  title={IMG_LABELS[i]}
                   style={{
-                    width: "96px", height: "64px", flexShrink: 0, borderRadius: "4px", overflow: "hidden", cursor: "pointer",
-                    border: activeImg === i ? "2px solid #CCDA47" : "0.5px solid #2e2e2e",
-                    transition: "border-color 0.15s",
+                    display: "inline-block",
+                    width: "80px", height: "54px",
+                    objectFit: "cover",
+                    borderRadius: "4px",
+                    marginRight: "6px",
+                    cursor: "pointer",
+                    border: activeImg === i ? "2px solid #CCDA47" : "2px solid transparent",
+                    opacity: activeImg === i ? 1 : 0.6,
+                    transition: "border-color 0.15s, opacity 0.15s",
+                    verticalAlign: "top",
                   }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt={IMG_LABELS[i]} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                </div>
+                />
               ))}
             </div>
           </div>

@@ -106,7 +106,7 @@ export default function AustraliaCarRecallsJune2026KoContent() {
               rel="noopener noreferrer"
               style={{ color: "#1A1A1A", fontWeight: 600 }}
             >
-              recalls.infrastructure.gov.au
+              vehiclerecalls.gov.au
             </a>{" "}
             접속
           </li>

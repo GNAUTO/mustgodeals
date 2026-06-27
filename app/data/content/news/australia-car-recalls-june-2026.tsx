@@ -111,7 +111,7 @@ export default function AustraliaCarRecallsJune2026Content() {
               rel="noopener noreferrer"
               style={{ color: "#1A1A1A", fontWeight: 600 }}
             >
-              recalls.infrastructure.gov.au
+              vehiclerecalls.gov.au
             </a>
           </li>
           <li style={AS.tipItem}>Select &ldquo;Vehicle&rdquo; from the product category</li>

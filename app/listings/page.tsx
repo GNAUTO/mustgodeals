@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -18,11 +18,25 @@ function CarIcon() {
   );
 }
 
-function A5Card() {
+function A5Card({ imgH }: { imgH: number }) {
+  const [hovered, setHovered] = useState(false);
   return (
     <Link href="/listings/2025-audi-a5-sport" style={{ textDecoration: "none", display: "block" }}>
-      <div className="listings-real-card">
-        <div className="listings-card-img" style={{ background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: "#fff",
+          borderRadius: "8px",
+          border: hovered ? "0.5px solid #CCDA47" : "0.5px solid #e0e0e0",
+          overflow: "hidden",
+          cursor: "pointer",
+          transform: hovered ? "translateY(-2px)" : "none",
+          boxShadow: hovered ? "0 8px 24px rgba(0,0,0,0.1)" : "none",
+          transition: "border-color 0.2s, transform 0.2s, box-shadow 0.2s",
+        }}
+      >
+        <div style={{ height: imgH, background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://edge.pxcrush.net/cars/dealer/euy7ctpajf5ul5opydntht8xw.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=98b39390ab0e54aba568cf55b91ca2fe&pxc_size=1000%2c667"
@@ -65,11 +79,25 @@ function A5Card() {
   );
 }
 
-function SQ8Card() {
+function SQ8Card({ imgH }: { imgH: number }) {
+  const [hovered, setHovered] = useState(false);
   return (
     <Link href="/listings/2025-audi-sq8" style={{ textDecoration: "none", display: "block" }}>
-      <div className="listings-real-card">
-        <div className="listings-card-img" style={{ background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: "#fff",
+          borderRadius: "8px",
+          border: hovered ? "0.5px solid #CCDA47" : "0.5px solid #e0e0e0",
+          overflow: "hidden",
+          cursor: "pointer",
+          transform: hovered ? "translateY(-2px)" : "none",
+          boxShadow: hovered ? "0 8px 24px rgba(0,0,0,0.1)" : "none",
+          transition: "border-color 0.2s, transform 0.2s, box-shadow 0.2s",
+        }}
+      >
+        <div style={{ height: imgH, background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://edge.pxcrush.net/cars/dealer/2kpf62gbkg4jcti5u0rsy42nr.jpg?pxc_expires=20260924144231&pxc_clear=1&pxc_signature=e1cd655ac9667dde9314d4ed7fe61a5b&pxc_size=1000%2c667"
@@ -112,10 +140,10 @@ function SQ8Card() {
   );
 }
 
-function ComingSoonCard() {
+function ComingSoonCard({ imgH }: { imgH: number }) {
   return (
     <div style={{ background: "#fff", borderRadius: "8px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.5, pointerEvents: "none" }}>
-      <div className="listings-card-img" style={{ background: "#e8e8e8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+      <div style={{ height: imgH, background: "#e8e8e8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
         <CarIcon />
         <div style={{ position: "absolute", top: "12px", left: "12px", background: "#f0f5e0", color: "#5a7a00", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
           COMING SOON
@@ -138,10 +166,10 @@ function ComingSoonCard() {
   );
 }
 
-function SoldCard() {
+function SoldCard({ imgH }: { imgH: number }) {
   return (
     <div style={{ background: "#fff", borderRadius: "8px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.35, pointerEvents: "none" }}>
-      <div className="listings-card-img" style={{ background: "#f5f5f5", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+      <div style={{ height: imgH, background: "#f5f5f5", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
         <CarIcon />
         <div style={{ position: "absolute", top: "12px", left: "12px", background: "#fde8e8", color: "#c0392b", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
           SOLD
@@ -166,6 +194,16 @@ function SoldCard() {
 
 export default function ListingsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const imgH = isMobile ? 200 : 220;
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
@@ -212,11 +250,15 @@ export default function ListingsPage() {
       {/* Card grid */}
       <div style={{ flex: 1 }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
-          <div className="listings-grid">
-            <A5Card />
-            <SQ8Card />
-            <ComingSoonCard />
-            <SoldCard />
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
+            gap: "20px",
+          }}>
+            <A5Card imgH={imgH} />
+            <SQ8Card imgH={imgH} />
+            <ComingSoonCard imgH={imgH} />
+            <SoldCard imgH={imgH} />
           </div>
 
           <p style={{ color: "#aaa", fontSize: "13px", textAlign: "center", marginTop: "2.5rem" }}>

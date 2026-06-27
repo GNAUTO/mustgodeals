@@ -253,7 +253,53 @@ p  { font-size: 15px; }
   .feature-grid { grid-template-columns: 1fr; }
 }
 
-/* Demo Cars grid — 4 col → 2 col on mobile */
+/* Listings card — hover border lime */
+.listing-card {
+  border: 0.5px solid #2e2e2e;
+  transition: border-color 0.2s;
+}
+.listing-card:hover {
+  border-color: #CCDA47;
+}
+
+/* Listings page card grid — 3 col desktop → 1 col mobile */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Listing card image height */
+.listings-card-img {
+  height: 220px;
+}
+@media (max-width: 768px) {
+  .listings-card-img {
+    height: 200px;
+  }
+}
+
+/* Listing card hover effect (light theme) */
+.listings-real-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 0.5px solid #e0e0e0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.listings-real-card:hover {
+  border-color: #CCDA47;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Demo Cars grid — 4 col desktop, horizontal scroll on mobile */
 .demo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -261,7 +307,21 @@ p  { font-size: 15px; }
 }
 @media (max-width: 768px) {
   .demo-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .demo-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .demo-grid > * {
+    min-width: 260px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
 

@@ -171,36 +171,34 @@ export default function Home() {
             </Link>
 
             {/* Card 3: COMING SOON */}
-            <Link href="/listings" style={{ textDecoration: "none", display: "block" }}>
-              <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
-                <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                  <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
-                    <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
-                    <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
-                    <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                    <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                  <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
-                    COMING SOON
-                  </div>
-                </div>
-                <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                  <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
-                  <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
-                  <div style={{ background: "#383838", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
-                  <div style={{ display: "flex", gap: "6px", marginBottom: "14px" }}>
-                    <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "38%" }} />
-                    <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "30%" }} />
-                  </div>
-                  <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
-                    Notify me when listed
-                  </button>
+            <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.5 }}>
+              <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
+                  <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
+                  <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
+                  <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                  <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+                <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
+                  COMING SOON
                 </div>
               </div>
-            </Link>
+              <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
+                <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
+                <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
+                <div style={{ background: "#383838", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
+                <div style={{ display: "flex", gap: "6px", marginBottom: "14px" }}>
+                  <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "38%" }} />
+                  <div style={{ background: "#2a2a2a", height: "8px", borderRadius: "4px", width: "30%" }} />
+                </div>
+                <div style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", textAlign: "center" }}>
+                  Coming soon
+                </div>
+              </div>
+            </div>
 
             {/* Card 4: SOLD */}
-            <div style={{ background: "#242424", borderRadius: "8px", border: "0.5px solid #2e2e2e", overflow: "hidden" }}>
+            <div style={{ background: "#242424", borderRadius: "8px", border: "0.5px solid #2e2e2e", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.35 }}>
               <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
                 <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
                   <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>

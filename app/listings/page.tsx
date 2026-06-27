@@ -7,30 +7,22 @@ import Footer from "../components/Footer";
 
 const FILTERS = ["All", "Audi", "Land Rover", "Under $80k", "EV"];
 
-function CarSilhouette() {
+function CarIcon() {
   return (
     <svg width="72" height="44" viewBox="0 0 64 38" fill="none">
-      <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="#d8d8d8" />
-      <rect x="5" y="24" width="54" height="9" rx="3" fill="#d8d8d8" />
-      <circle cx="16" cy="33" r="5" fill="#ececec" stroke="#d8d8d8" strokeWidth="2" />
-      <circle cx="48" cy="33" r="5" fill="#ececec" stroke="#d8d8d8" strokeWidth="2" />
+      <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="#d0d0d0" />
+      <rect x="5" y="24" width="54" height="9" rx="3" fill="#d0d0d0" />
+      <circle cx="16" cy="33" r="5" fill="#e8e8e8" stroke="#d0d0d0" strokeWidth="2" />
+      <circle cx="48" cy="33" r="5" fill="#e8e8e8" stroke="#d0d0d0" strokeWidth="2" />
     </svg>
   );
 }
 
-function RealListingCard() {
+function A5Card() {
   return (
     <Link href="/listings/2025-audi-a5-sport" style={{ textDecoration: "none", display: "block" }}>
-      <div style={{
-        background: "#ffffff", borderRadius: "10px", border: "0.5px solid #e0e0e0",
-        overflow: "hidden", cursor: "pointer",
-        transition: "box-shadow 0.2s, transform 0.2s",
-      }}
-        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)"; }}
-        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
-      >
-        {/* Image */}
-        <div style={{ height: "200px", background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
+      <div className="listings-real-card">
+        <div className="listings-card-img" style={{ background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://edge.pxcrush.net/cars/dealer/euy7ctpajf5ul5opydntht8xw.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=98b39390ab0e54aba568cf55b91ca2fe&pxc_size=1000%2c667"
@@ -44,17 +36,13 @@ function RealListingCard() {
             SAVE $41,038
           </div>
         </div>
-
-        {/* Content */}
-        <div style={{ padding: "16px 18px 18px" }}>
+        <div style={{ padding: "16px" }}>
           <div style={{ fontSize: "15px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3, marginBottom: "3px" }}>
             2025 Audi A5 TFSI 200kW S line
           </div>
           <div style={{ fontSize: "12px", color: "#888", marginBottom: "12px" }}>
             2.0L Turbo · Quattro AWD · S tronic
           </div>
-
-          {/* Price */}
           <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
             <span style={{ fontSize: "22px", fontWeight: 700, color: "#1A1A1A" }}>$87,880</span>
             <span style={{ fontSize: "13px", color: "#aaa", textDecoration: "line-through" }}>$128,918</span>
@@ -63,15 +51,11 @@ function RealListingCard() {
             <span style={{ fontSize: "11px", fontWeight: 700, color: "#5a7a00", background: "#f0f5e0", padding: "2px 7px", borderRadius: "4px" }}>SAVE $41,038</span>
             <span style={{ fontSize: "11px", color: "#5a7a00" }}>32% below new</span>
           </div>
-
-          {/* Spec tags */}
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "14px" }}>
             {["2,500 km", "Daytona Grey", "Petrol", "📍 Artarmon"].map((tag) => (
               <span key={tag} style={{ fontSize: "11px", color: "#666", background: "#f5f5f0", padding: "3px 8px", borderRadius: "4px" }}>{tag}</span>
             ))}
           </div>
-
-          {/* Button */}
           <div style={{ width: "100%", padding: "10px", background: "#1A1A1A", color: "#CCDA47", borderRadius: "6px", fontSize: "13px", fontWeight: 600, textAlign: "center" }}>
             View listing →
           </div>
@@ -81,19 +65,11 @@ function RealListingCard() {
   );
 }
 
-function SQ8ListingCard() {
+function SQ8Card() {
   return (
     <Link href="/listings/2025-audi-sq8" style={{ textDecoration: "none", display: "block" }}>
-      <div style={{
-        background: "#ffffff", borderRadius: "10px", border: "0.5px solid #e0e0e0",
-        overflow: "hidden", cursor: "pointer",
-        transition: "box-shadow 0.2s, transform 0.2s",
-      }}
-        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)"; }}
-        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
-      >
-        {/* Image */}
-        <div style={{ height: "200px", background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
+      <div className="listings-real-card">
+        <div className="listings-card-img" style={{ background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://edge.pxcrush.net/cars/dealer/2kpf62gbkg4jcti5u0rsy42nr.jpg?pxc_expires=20260924144231&pxc_clear=1&pxc_signature=e1cd655ac9667dde9314d4ed7fe61a5b&pxc_size=1000%2c667"
@@ -107,17 +83,13 @@ function SQ8ListingCard() {
             SAVE $38,055
           </div>
         </div>
-
-        {/* Content */}
-        <div style={{ padding: "16px 18px 18px" }}>
+        <div style={{ padding: "16px" }}>
           <div style={{ fontSize: "15px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3, marginBottom: "3px" }}>
             2025 Audi SQ8 TFSI Quattro
           </div>
           <div style={{ fontSize: "12px", color: "#888", marginBottom: "12px" }}>
             4.0L V8 Twin Turbo · Quattro AWD · Tiptronic
           </div>
-
-          {/* Price */}
           <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "4px" }}>
             <span style={{ fontSize: "22px", fontWeight: 700, color: "#1A1A1A" }}>$189,888</span>
             <span style={{ fontSize: "13px", color: "#aaa", textDecoration: "line-through" }}>$227,943</span>
@@ -126,15 +98,11 @@ function SQ8ListingCard() {
             <span style={{ fontSize: "11px", fontWeight: 700, color: "#5a7a00", background: "#f0f5e0", padding: "2px 7px", borderRadius: "4px" }}>SAVE $38,055</span>
             <span style={{ fontSize: "11px", color: "#5a7a00" }}>17% below new</span>
           </div>
-
-          {/* Spec tags */}
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "14px" }}>
             {["2,000 km", "Mythos Black", "Petrol", "📍 Artarmon"].map((tag) => (
               <span key={tag} style={{ fontSize: "11px", color: "#666", background: "#f5f5f0", padding: "3px 8px", borderRadius: "4px" }}>{tag}</span>
             ))}
           </div>
-
-          {/* Button */}
           <div style={{ width: "100%", padding: "10px", background: "#1A1A1A", color: "#CCDA47", borderRadius: "6px", fontSize: "13px", fontWeight: 600, textAlign: "center" }}>
             View listing →
           </div>
@@ -146,14 +114,14 @@ function SQ8ListingCard() {
 
 function ComingSoonCard() {
   return (
-    <div style={{ background: "#ffffff", borderRadius: "10px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.6 }}>
-      <div style={{ height: "200px", background: "#f5f5f5", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-        <CarSilhouette />
+    <div style={{ background: "#fff", borderRadius: "8px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.5, pointerEvents: "none" }}>
+      <div className="listings-card-img" style={{ background: "#e8e8e8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+        <CarIcon />
         <div style={{ position: "absolute", top: "12px", left: "12px", background: "#f0f5e0", color: "#5a7a00", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
           COMING SOON
         </div>
       </div>
-      <div style={{ padding: "16px 18px 18px" }}>
+      <div style={{ padding: "16px" }}>
         <div style={{ background: "#e8e8e8", height: "14px", borderRadius: "4px", width: "65%", marginBottom: "8px" }} />
         <div style={{ background: "#f0f0f0", height: "11px", borderRadius: "4px", width: "45%", marginBottom: "16px" }} />
         <div style={{ background: "#e0e0e0", height: "26px", borderRadius: "4px", width: "40%", marginBottom: "8px" }} />
@@ -172,14 +140,14 @@ function ComingSoonCard() {
 
 function SoldCard() {
   return (
-    <div style={{ background: "#ffffff", borderRadius: "10px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.4 }}>
-      <div style={{ height: "200px", background: "#f5f5f5", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-        <CarSilhouette />
+    <div style={{ background: "#fff", borderRadius: "8px", border: "0.5px solid #e0e0e0", overflow: "hidden", opacity: 0.35, pointerEvents: "none" }}>
+      <div className="listings-card-img" style={{ background: "#f5f5f5", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+        <CarIcon />
         <div style={{ position: "absolute", top: "12px", left: "12px", background: "#fde8e8", color: "#c0392b", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
           SOLD
         </div>
       </div>
-      <div style={{ padding: "16px 18px 18px" }}>
+      <div style={{ padding: "16px" }}>
         <div style={{ background: "#e8e8e8", height: "14px", borderRadius: "4px", width: "65%", marginBottom: "8px" }} />
         <div style={{ background: "#f0f0f0", height: "11px", borderRadius: "4px", width: "45%", marginBottom: "16px" }} />
         <div style={{ background: "#e0e0e0", height: "26px", borderRadius: "4px", width: "40%", marginBottom: "8px" }} />
@@ -244,9 +212,9 @@ export default function ListingsPage() {
       {/* Card grid */}
       <div style={{ flex: 1 }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px" }}>
-            <RealListingCard />
-            <SQ8ListingCard />
+          <div className="listings-grid">
+            <A5Card />
+            <SQ8Card />
             <ComingSoonCard />
             <SoldCard />
           </div>

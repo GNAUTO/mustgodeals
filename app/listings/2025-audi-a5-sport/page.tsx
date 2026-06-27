@@ -15,9 +15,24 @@ const IMAGES = [
   "https://edge.pxcrush.net/cars/dealer/3djn7viwbypmakn8hd08nyze8.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=982c0e168e1eb055fc079654215c0a41&pxc_size=1000%2c667",
   "https://edge.pxcrush.net/cars/dealer/4p8ifi525rxyt1u8il6uaiete.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=29f0ea919f98fc521038805ba308ec39&pxc_size=1000%2c667",
   "https://edge.pxcrush.net/cars/dealer/72e1jhwnrq89rmn1swiyr46gm.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=63f26dd893be9ba8384b92ac0e923c1a&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/8ety4qxb6hn1162zbx8nc11ay.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=9bcba19a96892532372a9bd47af47026&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/eg8dagkoil7bp95idh7w3q04.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=684f4efed3cfaa7de0562528c4c6a611&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/4h1iiutb24pf2ebx7pnxu6hhl.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=2312b2594347ec11744c417669539265&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/3ks9z9hi82alh1azv47ztil9o.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=b76f1699f43364302f5c70a4d41d6973&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/5sq9ts6l1eswt9i3q21dpz6k7.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=c08ddd9f84b66ea0c9e1b4402c2ffb94&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/cadcyjpb1fop90qq38ur5xn6n.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=8997fed3f47ced46304b86fc82d7f4ab&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/epmm73ctsvh3btr93bvuf63gs.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=7824e84db9df697564d5d93c9740ea42&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/34uhobbg629467b3pio02mnve.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=29ce87605ea04608c4b6d916b7ed2675&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/2vtdcttw78ylys0c13js6c1ic.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=718fc38563a3f372f16d66e3f9cfbb66&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/8jnleu2e97k7l6sxrwd9wxsb8.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=2fd5883fa9e893033f6f7f1b1c4ff4d2&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/bbjjge0y93k5qddyda3cvwo6e.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=e757cf032e4d673bddc77e526b6470b4&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/4i664ofhtb2b3jzlalikpi7mu.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=757720077fe055f0e4c4087308863c97&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/5uj949elwvueuss7ees1xtf61.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=d17a3b674614164eac9a0a8190601d95&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/eqerzy4tdqtk2885adni4e8wd.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=50751974e003ea5ef8d2032124c291d3&pxc_size=1000%2c667",
+  "https://edge.pxcrush.net/cars/dealer/2uhtk0b3ovj08m7eczjx3lag6.jpg?pxc_expires=20260924020510&pxc_clear=1&pxc_signature=4fef64cdf52d3e18cfc63dd3be168084&pxc_size=1000%2c667",
 ];
 
-const IMG_LABELS = ["Front 3/4", "Side Profile", "Rear", "Interior", "Engine Bay"];
+const IMG_LABELS = IMAGES.map((_, i) => `Photo ${i + 1}`);
 
 const SPECS = [
   { label: "Year",         value: "2025" },
@@ -214,8 +229,8 @@ export default function ListingA5Page() {
               />
             </div>
 
-            {/* Thumbnails */}
-            <div style={{ display: "flex", gap: "6px" }}>
+            {/* Thumbnails — horizontal scroll */}
+            <div style={{ display: "flex", gap: "6px", overflowX: "auto", paddingBottom: "4px" }}>
               {IMAGES.map((src, i) => (
                 <div
                   key={i}
@@ -345,8 +360,7 @@ export default function ListingA5Page() {
                 Your dealer contact
               </div>
               <div style={{ fontSize: "13px", color: "#ffffff", fontWeight: 500, marginBottom: "5px" }}>Jung In B</div>
-              <div style={{ fontSize: "11px", color: "#aaaaaa", marginBottom: "4px" }}>📍 Artarmon, Sydney</div>
-              <div style={{ fontSize: "11px", color: "#aaaaaa" }}>📞 0415 544 635</div>
+              <div style={{ fontSize: "11px", color: "#aaaaaa" }}>📍 Artarmon, Sydney</div>
             </div>
 
             {/* F. Interstate note */}

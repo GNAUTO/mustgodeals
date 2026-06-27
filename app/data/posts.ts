@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "australia-car-recalls-june-2026",
+    title: "Every Car Recalled in Australia in June 2026 — Is Yours on the List?",
+    excerpt:
+      "Nine manufacturers issued 11 recalls covering 16 models in June 2026. Here's the full list, how to check your vehicle, and what to do if your car is affected.",
+    category: "NEWS",
+    date: "June 27, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://pressroom.toyota.com.au/-/media/toyota/pressroom/banners/2024/02/13/01/06/lnd_my24_0020_v001-copy.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "australia-car-recalls-june-2026-ko",
+    title: "2026년 6월 호주 리콜 차량 전체 목록 — 내 차 포함됐나요?",
+    excerpt:
+      "2026년 6월 호주에서 9개 제조사가 11건 리콜을 발령했다. 체리·폭스바겐·현대·렉서스·토요타 등 16개 모델 전체 목록과 리콜 확인 방법을 정리했다.",
+    category: "뉴스",
+    date: "2026년 6월 27일",
+    author: "MustGoDeals 편집팀",
+    image: "https://pressroom.toyota.com.au/-/media/toyota/pressroom/banners/2024/02/13/01/06/lnd_my24_0020_v001-copy.jpg",
+    lang: "KO",
+  },
+  {
     slug: "mazda-sales-dip-australia-2026",
     title: "Mazda Explains Sudden Sales Dip in Australia — New Models on the Way",
     excerpt:

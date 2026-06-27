@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import AustraliaCarRecallsJune2026Content from './australia-car-recalls-june-2026';
+import AustraliaCarRecallsJune2026KoContent from './australia-car-recalls-june-2026-ko';
 import AudiA3S3Rs32027UpdateContent from './audi-a3-s3-rs3-2027-update';
 import AudiA3S3Rs32027UpdateKoContent from './audi-a3-s3-rs3-2027-update-ko';
 import AustraliaFuelExciseReliefExtendedJuly2026Content from './australia-fuel-excise-relief-extended-july-2026';
@@ -28,6 +30,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'australia-car-recalls-june-2026': AustraliaCarRecallsJune2026Content,
+  'australia-car-recalls-june-2026-ko': AustraliaCarRecallsJune2026KoContent,
   'audi-a3-s3-rs3-2027-update': AudiA3S3Rs32027UpdateContent,
   'audi-a3-s3-rs3-2027-update-ko': AudiA3S3Rs32027UpdateKoContent,
   'australia-fuel-excise-relief-extended-july-2026': AustraliaFuelExciseReliefExtendedJuly2026Content,

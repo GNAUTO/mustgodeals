@@ -310,6 +310,7 @@ p  { font-size: 15px; }
     display: flex;
     flex-direction: row;
     overflow-x: auto;
+    overflow-y: hidden;
     gap: 12px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -320,8 +321,10 @@ p  { font-size: 15px; }
   }
   .demo-grid > * {
     min-width: 260px;
+    max-width: 260px;
     flex-shrink: 0;
     scroll-snap-align: start;
+    overflow: hidden;
   }
 }
 

@@ -30,8 +30,8 @@ export default function Home() {
       {/* Hero */}
       <div className="hero-section" style={{ background: "#1A1A1A", textAlign: "center" }}>
         <h1 style={{ color: "white", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
-          Cars dealers <span style={{ color: "#CCDA47" }}>must move.</span><br />
-          Savings you didn&rsquo;t expect.
+          Cars dealers <span style={{ color: "#CCDA47" }}>must move</span><br />
+          Savings you didn&rsquo;t expect
         </h1>
         <p style={{ color: "#999", fontSize: "clamp(0.875rem, 2vw, 1rem)", maxWidth: "420px", margin: "0 auto 2rem" }}>
           Dealer clearance vehicles. Real discounts. Updated regularly.

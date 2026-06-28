@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -13,37 +13,9 @@ const LANGS = [
   { label: "中文", code: "ZH", comingSoon: "敬请期待。" },
 ];
 
-function getMonthBadge() {
-  const now = new Date();
-  const month = now.toLocaleString("en-US", { month: "long" }).toUpperCase();
-  const year = now.getFullYear();
-  return `${month} ${year} — MONTH END CLEARANCE`;
-}
-
-function useCountdown() {
-  const [t, setT] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  useEffect(() => {
-    function tick() {
-      const now = new Date();
-      const end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
-      const diff = Math.max(0, end.getTime() - now.getTime());
-      setT({
-        days:    Math.floor(diff / 86400000),
-        hours:   Math.floor((diff % 86400000) / 3600000),
-        minutes: Math.floor((diff % 3600000) / 60000),
-        seconds: Math.floor((diff % 60000) / 1000),
-      });
-    }
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-  return t;
-}
 
 export default function Home() {
   const [activeLang, setActiveLang] = useState("EN");
-  const countdown = useCountdown();
 
   const filtered = BLOG_POSTS
     .filter((p) => p.lang === activeLang)
@@ -57,41 +29,19 @@ export default function Home() {
 
       {/* Hero */}
       <div className="hero-section" style={{ background: "#1A1A1A", textAlign: "center" }}>
-        <div style={{ display: "inline-block", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px" }}>
-          {getMonthBadge()}
-        </div>
-        <h1 style={{ color: "white", fontSize: "clamp(1.5rem, 8.5vw, 2.875rem)", fontWeight: 500, lineHeight: 1.3, marginBottom: "0.75rem", letterSpacing: "-0.5px" }}>
-          Cars dealers <span className="must-sell-animate">must sell</span><br />before month end
+        <h1 style={{ color: "white", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
+          Cars dealers <span style={{ color: "#CCDA47" }}>must move.</span><br />
+          Savings you didn&rsquo;t expect.
         </h1>
-
-        {/* Countdown */}
-        <div style={{ display: "flex", gap: "10px", justifyContent: "center", margin: "1.25rem auto 1.75rem" }}>
-          {([
-            { value: countdown.days,    label: "days" },
-            { value: countdown.hours,   label: "hrs" },
-            { value: countdown.minutes, label: "min" },
-            { value: countdown.seconds, label: "sec" },
-          ] as const).map(({ value, label }) => (
-            <div key={label} style={{ textAlign: "center" }}>
-              <div style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "6px", padding: "8px 12px", minWidth: "52px" }}>
-                <span className="countdown-digit" style={{ color: "white", fontSize: "22px", fontWeight: 500 }}>
-                  {String(value).padStart(2, "0")}
-                </span>
-              </div>
-              <div style={{ color: "rgba(255,255,255,0.3)", fontSize: "10px", marginTop: "4px", letterSpacing: "0.5px", textTransform: "uppercase" }}>{label}</div>
-            </div>
-          ))}
-        </div>
-
-        <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "17px", maxWidth: "480px", margin: "0 auto 2rem" }}>
-          Insider guides, negotiation tips, and clearance deals — updated every week.
+        <p style={{ color: "#999", fontSize: "clamp(0.875rem, 2vw, 1rem)", maxWidth: "420px", margin: "0 auto 2rem" }}>
+          Dealer clearance vehicles. Real discounts. Updated regularly.
         </p>
-        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/blog" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
-            Read buying guides
-          </Link>
-          <Link href="/listings" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
+        <div className="hero-btns">
+          <Link href="/listings" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
             Browse Demo Cars
+          </Link>
+          <Link href="/blog" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
+            Read buying guides
           </Link>
         </div>
       </div>

@@ -171,16 +171,31 @@ p  { font-size: 15px; }
 
 /* Hero section — responsive padding */
 .hero-section {
-  padding: 3rem 2.5rem;
+  padding: 120px 20px;
 }
 @media (max-width: 768px) {
   .hero-section {
-    padding: 2.5rem 1.75rem;
+    padding: 80px 20px;
   }
 }
+
+/* Hero CTA buttons — side by side on desktop, stacked on mobile */
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 2rem 1.5rem;
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-btns a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
 

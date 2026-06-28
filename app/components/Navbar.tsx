@@ -26,7 +26,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
   };
 
   return (
-    <nav style={{ background: "rgba(26,26,26,0.96)", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
+    <nav style={{ background: "#1A1A1A", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
 
       {/* ── Row 1 ── */}
       <div style={{ padding: "0 2rem", height: "52px", display: "flex", alignItems: "center" }}>

@@ -105,30 +105,14 @@ p  { font-size: 15px; }
   flex-shrink: 0;
 }
 
-/* Mobile 2nd row — hidden on desktop */
-.navbar-mobile-row2 {
-  display: none;
-  background: #1A1A1A;
-  padding: 0 1.5rem;
-  height: 44px;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.07);
-}
-
-/* Mobile lang buttons in 2nd row */
-.navbar-mobile-lang {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-}
+/* Mobile lang buttons in dropdown */
 .navbar-mobile-lang-btn {
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
   font-size: 13px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 6px;
 }
 
@@ -136,13 +120,12 @@ p  { font-size: 15px; }
 .navbar-mobile-dropdown {
   display: flex;
   flex-direction: column;
-  background: #1A1A1A;
+  background: #111;
 }
 
 @media (max-width: 768px) {
   .navbar-desktop-right { display: none !important; }
   .navbar-hamburger     { display: flex; }
-  .navbar-mobile-row2   { display: flex; }
 }
 
 /* Article body images — fixed height desktop, auto on mobile */

@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const LANGS = [
   { label: "EN",   code: "EN" },
   { label: "한국어", code: "KO" },
-  { label: "中文",  code: "ZH" },
 ];
 
 type LangTabsProps = {
@@ -19,18 +18,18 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const linkColor = (key: string) => {
+  const linkColor = (key: string, mobile = false) => {
     if (key === "blog"     && pathname.startsWith("/blog"))     return "#CCDA47";
     if (key === "news"     && pathname.startsWith("/news"))     return "#CCDA47";
     if (key === "listings" && pathname.startsWith("/listings")) return "#CCDA47";
-    return "rgba(255,255,255,0.65)";
+    return mobile ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.5)";
   };
 
   return (
-    <nav style={{ background: "#1A1A1A" }}>
+    <nav style={{ background: "rgba(26,26,26,0.96)", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
 
       {/* ── Row 1 ── */}
-      <div style={{ padding: "0 2rem", height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div style={{ padding: "0 2rem", height: "52px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
@@ -40,7 +39,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
           <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", letterSpacing: "2px", marginTop: "2px" }}>DEALS</span>
         </Link>
 
-        {/* Desktop right: lang tabs + nav links + Get Alerts */}
+        {/* Desktop right: lang tabs + nav links */}
         <div className="navbar-desktop-right">
           {langTabs && (
             <div className="navbar-lang-tabs">
@@ -62,16 +61,13 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
             </div>
           )}
           <div className="navbar-desktop-links">
-            <Link href="/blog"         style={{ color: linkColor("blog"),     fontSize: "13px", textDecoration: "none" }}>Blog</Link>
-            <Link href="/news"         style={{ color: linkColor("news"),     fontSize: "13px", textDecoration: "none" }}>News</Link>
-            <Link href="/listings"  style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
+            <Link href="/listings" style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
+            <Link href="/news"     style={{ color: linkColor("news"),     fontSize: "13px", textDecoration: "none" }}>News</Link>
+            <Link href="/blog"     style={{ color: linkColor("blog"),     fontSize: "13px", textDecoration: "none" }}>Blog</Link>
           </div>
-          <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "6px 14px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, textDecoration: "none", whiteSpace: "nowrap" }}>
-            Get Alerts
-          </Link>
         </div>
 
-        {/* Mobile: hamburger only */}
+        {/* Mobile: hamburger */}
         <button
           className="navbar-hamburger"
           onClick={() => setMenuOpen((v) => !v)}
@@ -92,39 +88,32 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
         </button>
       </div>
 
-      {/* ── Row 2 (mobile only) — lang tabs + Get Alerts ── */}
-      <div className="navbar-mobile-row2">
-        <div className="navbar-mobile-lang">
-          {langTabs ? (
-            LANGS.map((l) => (
-              <button
-                key={l.code}
-                onClick={() => langTabs.onLangChange(l.code)}
-                className="navbar-mobile-lang-btn"
-                style={{
-                  color: langTabs.activeLang === l.code ? "#CCDA47" : "rgba(255,255,255,0.5)",
-                  fontWeight: langTabs.activeLang === l.code ? 600 : 400,
-                }}
-              >
-                {l.label}
-              </button>
-            ))
-          ) : (
-            /* 언어탭 없는 페이지(아티클 등)엔 빈 칸 */
-            <span />
-          )}
-        </div>
-        <Link href="/coming-soon" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "6px 14px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, textDecoration: "none", whiteSpace: "nowrap" }}>
-          Get Alerts
-        </Link>
-      </div>
-
-      {/* ── Mobile dropdown — Blog / News / Listings ── */}
+      {/* ── Mobile dropdown ── */}
       {menuOpen && (
         <div className="navbar-mobile-dropdown">
-          <Link href="/blog"        onClick={() => setMenuOpen(false)} style={{ color: linkColor("blog"),     fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Blog</Link>
-          <Link href="/news"        onClick={() => setMenuOpen(false)} style={{ color: linkColor("news"),     fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>News</Link>
-          <Link href="/listings" onClick={() => setMenuOpen(false)} style={{ color: linkColor("listings"), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Listings</Link>
+          {langTabs && (
+            <>
+              <div style={{ display: "flex", padding: "10px 1.5rem" }}>
+                {LANGS.map((l) => (
+                  <button
+                    key={l.code}
+                    onClick={() => langTabs.onLangChange(l.code)}
+                    className="navbar-mobile-lang-btn"
+                    style={{
+                      color: langTabs.activeLang === l.code ? "#CCDA47" : "rgba(255,255,255,0.5)",
+                      fontWeight: langTabs.activeLang === l.code ? 600 : 400,
+                    }}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
+              <div style={{ borderTop: "0.5px solid rgba(255,255,255,0.08)" }} />
+            </>
+          )}
+          <Link href="/listings" onClick={() => setMenuOpen(false)} style={{ color: linkColor("listings", true), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Listings</Link>
+          <Link href="/news"     onClick={() => setMenuOpen(false)} style={{ color: linkColor("news",     true), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", display: "block" }}>News</Link>
+          <Link href="/blog"     onClick={() => setMenuOpen(false)} style={{ color: linkColor("blog",     true), fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", display: "block" }}>Blog</Link>
         </div>
       )}
 

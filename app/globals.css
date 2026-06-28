@@ -68,28 +68,18 @@ p  { font-size: 15px; }
 
 /* ── Navbar responsive ───────────────────────────────────── */
 
-/* Desktop: lang tabs + divider */
+/* Desktop: lang tabs (no divider) */
 .navbar-lang-tabs {
   display: flex;
   gap: 0.875rem;
   align-items: center;
-  padding-right: 1.25rem;
-  margin-right: 0.25rem;
-  border-right: 1px solid rgba(255,255,255,0.1);
 }
 .navbar-lang-btn { font-size: 12px; }
 
-/* Desktop: Blog / News / Listings */
-.navbar-desktop-links {
+/* Desktop: center nav links */
+.navbar-center-links {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-/* Desktop right wrapper (lang + links + Get Alerts) */
-.navbar-desktop-right {
-  display: flex;
-  gap: 1rem;
+  gap: 4px;
   align-items: center;
 }
 
@@ -124,8 +114,9 @@ p  { font-size: 15px; }
 }
 
 @media (max-width: 768px) {
-  .navbar-desktop-right { display: none !important; }
-  .navbar-hamburger     { display: flex; }
+  .navbar-center-links { display: none !important; }
+  .navbar-lang-tabs    { display: none !important; }
+  .navbar-hamburger    { display: flex; }
 }
 
 /* Article body images — fixed height desktop, auto on mobile */

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const LANGS = [
-  { label: "EN",   code: "EN" },
-  { label: "한국어", code: "KO" },
+  { label: "EN", code: "EN" },
+  { label: "KO", code: "KO" },
 ];
 
 type LangTabsProps = {
@@ -29,18 +29,27 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
     <nav style={{ background: "rgba(26,26,26,0.96)", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
 
       {/* ── Row 1 ── */}
-      <div style={{ padding: "0 2rem", height: "52px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div style={{ padding: "0 2rem", height: "52px", display: "flex", alignItems: "center" }}>
 
-        {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
-          <span style={{ fontSize: "20px", fontWeight: 500, color: "white", letterSpacing: "-0.5px" }}>
-            must<span style={{ color: "#CCDA47" }}>go</span>
-          </span>
-          <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", letterSpacing: "2px", marginTop: "2px" }}>DEALS</span>
-        </Link>
+        {/* Left: Logo */}
+        <div style={{ flex: 1 }}>
+          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
+            <span style={{ fontSize: "20px", fontWeight: 500, color: "white", letterSpacing: "-0.5px" }}>
+              must<span style={{ color: "#CCDA47" }}>go</span>
+            </span>
+            <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", letterSpacing: "2px", marginTop: "2px" }}>DEALS</span>
+          </Link>
+        </div>
 
-        {/* Desktop right: lang tabs + nav links */}
-        <div className="navbar-desktop-right">
+        {/* Center: Nav links (desktop only) */}
+        <div className="navbar-center-links">
+          <Link href="/listings" style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none", padding: "4px 10px" }}>Listings</Link>
+          <Link href="/news"     style={{ color: linkColor("news"),     fontSize: "13px", textDecoration: "none", padding: "4px 10px" }}>News</Link>
+          <Link href="/blog"     style={{ color: linkColor("blog"),     fontSize: "13px", textDecoration: "none", padding: "4px 10px" }}>Blog</Link>
+        </div>
+
+        {/* Right: Lang tabs (desktop) + Hamburger (mobile) */}
+        <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
           {langTabs && (
             <div className="navbar-lang-tabs">
               {LANGS.map((l) => (
@@ -60,19 +69,12 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
               ))}
             </div>
           )}
-          <div className="navbar-desktop-links">
-            <Link href="/listings" style={{ color: linkColor("listings"), fontSize: "13px", textDecoration: "none" }}>Listings</Link>
-            <Link href="/news"     style={{ color: linkColor("news"),     fontSize: "13px", textDecoration: "none" }}>News</Link>
-            <Link href="/blog"     style={{ color: linkColor("blog"),     fontSize: "13px", textDecoration: "none" }}>Blog</Link>
-          </div>
-        </div>
-
-        {/* Mobile: hamburger */}
-        <button
-          className="navbar-hamburger"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
+          {/* Mobile: hamburger */}
+          <button
+            className="navbar-hamburger"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
           {menuOpen ? (
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
               <line x1="4" y1="4" x2="18" y2="18" stroke="white" strokeWidth="2" strokeLinecap="round" />
@@ -85,7 +87,8 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
               <line x1="3" y1="16" x2="19" y2="16" stroke="white" strokeWidth="2" strokeLinecap="round" />
             </svg>
           )}
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* ── Mobile dropdown ── */}

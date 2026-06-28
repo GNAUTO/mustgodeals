@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "polestar-us-ban-connected-vehicle-rule",
+    title: "Polestar Banned from US Market Over Chinese Connectivity Rules",
+    excerpt:
+      "The US has blocked Polestar from selling new vehicles from the 2027 model year, citing national security concerns over Chinese-linked hardware and software in connected cars.",
+    category: "NEWS",
+    date: "June 28, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.topgear.com/sites/default/files/2026/06/5193-694911-1-5%20%281%29.jpg?w=892&h=502",
+    lang: "EN",
+  },
+  {
+    slug: "polestar-us-ban-connected-vehicle-rule-ko",
+    title: "폴스타, 미국 시장서 퇴출 — 중국산 커넥티드 차량 규제 직격탄",
+    excerpt:
+      "미국 상무부가 중국 연계 하드웨어·소프트웨어를 탑재한 차량의 판매를 금지하면서, 지리(Geely) 산하 폴스타가 2027년형부터 미국 시장에서 철수하게 됐다.",
+    category: "뉴스",
+    date: "2026년 6월 28일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.topgear.com/sites/default/files/2026/06/5193-694911-1-5%20%281%29.jpg?w=892&h=502",
+    lang: "KO",
+  },
+  {
     slug: "australia-car-recalls-june-2026",
     title: "Every Car Recalled in Australia in June 2026 — Is Yours on the List?",
     excerpt:

@@ -210,8 +210,8 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                 <span style={{ fontSize: "13px", fontWeight: 400, color: "#aaaaaa" }}>{listing.subtitle}</span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "4px", marginTop: "6px" }}>
-                <span style={{ fontSize: "11px", color: "#888888" }}>📍 {listing.location}</span>
-                <span style={{ fontSize: "11px", color: "#888888" }}>🛣 {listing.km.toLocaleString("en-AU")} km driven</span>
+                <span style={{ fontSize: "11px", color: "#888888" }}>Location: {listing.location}</span>
+                <span style={{ fontSize: "11px", color: "#888888" }}>Driven: {listing.km.toLocaleString("en-AU")} km</span>
               </div>
             </div>
 

@@ -245,7 +245,7 @@ export const LISTINGS: Listing[] = [
       { label: "Interior",     value: "M Alcantara Black" },
       { label: "Seats",        value: "5" },
     ],
-    dealerComment: "Fire Red over M Alcantara — a rare combination for the new G45 X3. Fully loaded with M Sport Pro, the Enhancement Package (panorama roof, Harman Kardon, alarm), and 20-inch bicolour alloys. Only 5,900km on the clock with balance of factory warranty. One of the best-value X3s on the market right now.",
+    dealerComment: "The dealer's original listing identifies this vehicle as a former demonstrator. Fire Red over M Alcantara — a rare combination for the new G45 X3. Fully loaded with M Sport Pro, the Enhancement Package (panorama roof, Harman Kardon, alarm), and 20-inch bicolour alloys. Only 5,900km on the clock with balance of factory warranty.",
     features: [
       { name: '20" M Light Alloy Wheels Bicolour',  descEn: "Factory 20-inch M alloy wheels in two-tone bicolour finish",                           descKo: "순정 20인치 M 알로이 휠, 바이컬러 투톤 마감" },
       { name: "Panorama Glass Roof",                 descEn: "Full-width panoramic glass roof with electric blind",                                   descKo: "전동 블라인드 포함 풀 파노라마 글라스 루프" },
@@ -265,7 +265,7 @@ export const LISTINGS: Listing[] = [
       { name: "Enhancement Package (Panorama + Harman Kardon + Alarm)", descEn: "Panoramic roof, Harman Kardon surround sound, and factory alarm system",                  descKo: "파노라마 루프, 하만카돈 서라운드, 순정 알람 시스템 패키지",           price: 6000 },
       { name: "M Sport Package Pro",                                     descEn: "M Alcantara seats, red M Sport brakes, Pro exterior trim and M steering wheel",          descKo: "M 알칸타라 시트, 레드 M 스포츠 브레이크, 프로 익스테리어, M 스티어링", price: 3000 },
     ],
-    dealer: { name: "Parramatta BMW", location: "Parramatta, NSW" },
+    dealer: { name: "Jung In B", location: "Artarmon, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      100900,
       addedOptionsValue: 11000,

@@ -39,6 +39,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
   const [formMobile, setFormMobile]   = useState("");
   const [formMsg, setFormMsg]         = useState("");
   const [sending, setSending]         = useState(false);
+  const [enquiryError, setEnquiryError] = useState(false);
 
   const [showSuccess, setShowSuccess]         = useState(false);
   const [submittedMobile, setSubmittedMobile] = useState("");
@@ -81,8 +82,9 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
     e.preventDefault();
     if (!formName.trim() || !formMobile.trim()) return;
     setSending(true);
+    setEnquiryError(false);
     try {
-      await fetch("/api/enquire", {
+      const res = await fetch("/api/enquire", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -93,6 +95,11 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
           listingUrl: window.location.href,
         }),
       });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        setEnquiryError(true);
+        return;
+      }
       localStorage.setItem(lsKey, String(Date.now()));
       setCooldownLeft(COOLDOWN_MS);
       setSubmittedMobile(formMobile.trim());
@@ -101,6 +108,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
       setFormName(""); setFormMobile(""); setFormMsg("");
     } catch (err) {
       console.error(err);
+      setEnquiryError(true);
     } finally {
       setSending(false);
     }
@@ -265,6 +273,11 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                       <input required type="tel" placeholder="Mobile number" value={formMobile} onChange={(e) => setFormMobile(e.target.value)} style={{ width: "100%", padding: "9px 11px", background: "#1e1e1e", border: "0.5px solid #333", borderRadius: "6px", color: "#ccc", fontSize: "13px", outline: "none", boxSizing: "border-box" }} />
                       <textarea rows={3} placeholder="I'm interested in this car" value={formMsg} onChange={(e) => setFormMsg(e.target.value)} style={{ width: "100%", padding: "9px 11px", background: "#1e1e1e", border: "0.5px solid #333", borderRadius: "6px", color: "#ccc", fontSize: "13px", outline: "none", resize: "none", boxSizing: "border-box" }} />
                       <div style={{ fontSize: "10px", color: "#444", textAlign: "center" }}>Your details will be shared with the dealer only</div>
+                      {enquiryError && (
+                        <div style={{ fontSize: "12px", color: "#e05555", textAlign: "center", background: "#2a1515", border: "0.5px solid #4a2020", borderRadius: "6px", padding: "8px" }}>
+                          Something went wrong. Please try again or contact us directly.
+                        </div>
+                      )}
                       <button type="submit" disabled={sending} style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1, display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
                         {sending && (
                           <svg className="animate-spin" width="15" height="15" viewBox="0 0 24 24" fill="none">

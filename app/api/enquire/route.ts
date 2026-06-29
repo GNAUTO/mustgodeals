@@ -3,21 +3,27 @@ import nodemailer from "nodemailer";
 import { google } from "googleapis";
 
 export async function POST(req: Request) {
-  const { name, mobile, message, carName, listingUrl } = await req.json();
+  let body: { name: string; mobile: string; message: string; carName: string; listingUrl: string };
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ ok: false, error: "Invalid request body" }, { status: 400 });
+  }
+
+  const { name, mobile, message, carName, listingUrl } = body;
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-AU");
   const timeStr = now.toLocaleTimeString("en-AU");
-
   const cleanUrl = listingUrl.replace(/http:\/\/localhost:\d+/, "https://mustgodeals.com.au");
 
-  const smsMsg = `[MustGoDeals] New enquiry\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}`;
+  const failures: string[] = [];
 
-  // 1. Texto SMS
-  const rawPhone = process.env.DEALER_PHONE ?? "";
-  const dealerE164 = "+61" + rawPhone.replace(/^0/, "");
+  // 1. SMS (Texto)
   try {
-    console.log("[enquire] 1. SMS 시작");
+    const rawPhone = process.env.DEALER_PHONE ?? "";
+    const dealerE164 = "+61" + rawPhone.replace(/^0/, "");
+    const smsMsg = `[MustGoDeals] New enquiry\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}`;
     const smsRes = await fetch("https://api.texto.com.au/send", {
       method: "POST",
       headers: {
@@ -26,38 +32,60 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({ to: dealerE164, message: smsMsg }),
     });
-    const smsData = await smsRes.json();
-    console.log("[enquire] SMS response:", JSON.stringify(smsData));
-    console.log("[enquire] 1. SMS 완료");
+    if (!smsRes.ok) {
+      const smsErr = await smsRes.text();
+      console.error("[enquire] SMS failed:", smsErr);
+      failures.push("sms");
+    } else {
+      console.log("[enquire] SMS sent OK");
+    }
   } catch (e) {
     console.error("[enquire] SMS error:", e);
+    failures.push("sms");
   }
 
-  // 2. Nodemailer email
+  // 2. Email (nodemailer)
   try {
-    console.log("[enquire] 2. Email 시작");
+    const toAddresses = [
+      process.env.GMAIL_USER ?? "hello.mustgodeals@gmail.com",
+      process.env.DEALER_EMAIL ?? "jbang@alto.com.au",
+    ].filter(Boolean).join(", ");
+
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
+      secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.GMAIL_USER,
         pass: (process.env.GMAIL_APP_PASSWORD ?? "").replace(/\s/g, ""),
       },
     });
+
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: "hello.mustgodeals@gmail.com, jbang@alto.com.au",
+      to: toAddresses,
       subject: `[MustGoDeals] New Enquiry — ${carName}`,
-      text: `New enquiry received via MustGoDeals\n\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}\nListing: ${cleanUrl}\n\nReceived: ${dateStr} ${timeStr}`,
+      text: [
+        "New enquiry received via MustGoDeals",
+        "",
+        `Car:     ${carName}`,
+        `Name:    ${name}`,
+        `Mobile:  ${mobile}`,
+        `Message: ${message}`,
+        `Listing: ${cleanUrl}`,
+        "",
+        `Received: ${dateStr} ${timeStr}`,
+      ].join("\n"),
     });
-    console.log("[enquire] 2. Email 완료");
+    console.log("[enquire] Email sent OK to:", toAddresses);
   } catch (e) {
     console.error("[enquire] Email error:", e);
+    failures.push("email");
   }
 
   // 3. Google Sheets
   try {
-    console.log("[enquire] 3. Sheets 시작");
     const raw = process.env.GOOGLE_SHEETS_ID ?? "";
     const spreadsheetId = raw.includes("/d/")
       ? raw.split("/d/")[1].split("/")[0]
@@ -77,10 +105,19 @@ export async function POST(req: Request) {
         values: [[dateStr, timeStr, carName, name, mobile, message, cleanUrl]],
       },
     });
-    console.log("[enquire] 3. Sheets 완료");
+    console.log("[enquire] Sheets logged OK");
   } catch (e) {
     console.error("[enquire] Sheets error:", e);
+    failures.push("sheets");
   }
 
-  return NextResponse.json({ ok: true });
+  // Email is the critical channel — return 500 if it failed
+  if (failures.includes("email")) {
+    return NextResponse.json(
+      { ok: false, failures, error: "Failed to send email" },
+      { status: 500 }
+    );
+  }
+
+  return NextResponse.json({ ok: true, warnings: failures });
 }

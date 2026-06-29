@@ -10,6 +10,12 @@ const COOLDOWN_MS = 2 * 60 * 60 * 1000;
 
 const fmt = (n: number) => `$${n.toLocaleString("en-AU")}`;
 
+function seedCount(slug: string): number {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) & 0xfffffff;
+  return 10 + (h % 71);
+}
+
 function formatCooldown(ms: number): string {
   const totalSec = Math.ceil(ms / 1000);
   const h = Math.floor(totalSec / 3600);
@@ -34,6 +40,10 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
   const [activeImg, setActiveImg] = useState(0);
   const [featLang, setFeatLang]   = useState<"EN" | "KO">("EN");
 
+  const [views, setViews]         = useState(0);
+  const [liked, setLiked]         = useState(false);
+  const [showToast, setShowToast] = useState(false);
+
   const [enquireOpen, setEnquireOpen] = useState(false);
   const [formName, setFormName]       = useState("");
   const [formMobile, setFormMobile]   = useState("");
@@ -46,6 +56,30 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
 
   const [cooldownLeft, setCooldownLeft] = useState(0);
   const lsKey = `enquiry_${listing.slug}`;
+
+  // Increment views and load liked state on mount
+  useEffect(() => {
+    const vKey = `mgd_views_${listing.slug}`;
+    const next = parseInt(localStorage.getItem(vKey) ?? "0", 10) + 1;
+    localStorage.setItem(vKey, String(next));
+    setViews(next);
+    setLiked(localStorage.getItem(`mgd_liked_${listing.slug}`) === "1");
+  }, [listing.slug]);
+
+  function handleHeart() {
+    const next = !liked;
+    setLiked(next);
+    localStorage.setItem(`mgd_liked_${listing.slug}`, next ? "1" : "0");
+  }
+
+  function handleShare() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 2000);
+    });
+  }
+
+  const heartCount = seedCount(listing.slug) + (liked ? 1 : 0);
 
   const checkCooldown = useCallback(() => {
     const stored = localStorage.getItem(lsKey);
@@ -150,10 +184,29 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "1.5rem 2rem 3rem", flex: 1, width: "100%" }}>
 
         {/* Breadcrumb */}
-        <div style={{ fontSize: "12px", color: "#CCDA47", marginBottom: "1.5rem" }}>
+        <div style={{ fontSize: "12px", color: "#CCDA47", marginBottom: "0.75rem" }}>
           <Link href="/listings" style={{ color: "#CCDA47", textDecoration: "none" }}>Listings</Link>
           {" › "}
           <span>{listing.name}</span>
+        </div>
+
+        {/* Views / Heart / Share bar */}
+        <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "1.25rem" }}>
+          <button
+            onClick={handleHeart}
+            style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "5px", fontSize: "12px", color: liked ? "#e05555" : "#555", padding: 0, lineHeight: 1 }}
+          >
+            {liked ? "♥" : "♡"} {heartCount}
+          </button>
+          <span style={{ fontSize: "12px", color: "#444" }}>
+            {views > 0 ? `${views.toLocaleString("en-AU")} views` : "—"}
+          </span>
+          <button
+            onClick={handleShare}
+            style={{ background: "none", border: "none", cursor: "pointer", fontSize: "12px", color: "#555", padding: 0 }}
+          >
+            ↗ Share
+          </button>
         </div>
 
         {/* Two-column layout */}
@@ -396,6 +449,12 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
       </div>
 
       <Footer />
+
+      {showToast && (
+        <div style={{ position: "fixed", bottom: "28px", left: "50%", transform: "translateX(-50%)", background: "#1A1A1A", color: "#CCDA47", padding: "10px 22px", borderRadius: "8px", fontSize: "13px", fontWeight: 600, zIndex: 9999, border: "0.5px solid #CCDA47", pointerEvents: "none", whiteSpace: "nowrap" }}>
+          Link copied!
+        </div>
+      )}
     </div>
   );
 }

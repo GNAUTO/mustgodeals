@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import Mazda6eNoBaseModelAustraliaContent from './mazda-6e-no-base-model-australia';
+import Mazda6eNoBaseModelAustraliaKoContent from './mazda-6e-no-base-model-australia-ko';
 import PolestarUsBanConnectedVehicleRuleContent from './polestar-us-ban-connected-vehicle-rule';
 import PolestarUsBanConnectedVehicleRuleKoContent from './polestar-us-ban-connected-vehicle-rule-ko';
 import AustraliaCarRecallsJune2026Content from './australia-car-recalls-june-2026';
@@ -32,6 +34,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'mazda-6e-no-base-model-australia': Mazda6eNoBaseModelAustraliaContent,
+  'mazda-6e-no-base-model-australia-ko': Mazda6eNoBaseModelAustraliaKoContent,
   'polestar-us-ban-connected-vehicle-rule': PolestarUsBanConnectedVehicleRuleContent,
   'polestar-us-ban-connected-vehicle-rule-ko': PolestarUsBanConnectedVehicleRuleKoContent,
   'australia-car-recalls-june-2026': AustraliaCarRecallsJune2026Content,

@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "mazda-6e-no-base-model-australia",
+    title: "Mazda 6e Won't Get a Cheaper Base Model — At Least for Now",
+    excerpt:
+      "Mazda Australia has ruled out a more affordable entry-level grade for the 6e electric sedan, saying the GT is already well-specced for its $49,990 price point.",
+    category: "NEWS",
+    date: "June 29, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a7707aea-83a0-5a72-b6aa-990fa9d50000",
+    lang: "EN",
+  },
+  {
+    slug: "mazda-6e-no-base-model-australia-ko",
+    title: "마쓰다 6e, 저가 베이스 모델 출시 없다 — 현재로선 GT가 최저가",
+    excerpt:
+      "마쓰다 호주가 6e 전기 세단의 엔트리 등급 추가 계획이 없다고 밝혔다. GT 모델이 $49,990에 이미 충분한 사양을 갖췄다는 입장이다.",
+    category: "뉴스",
+    date: "2026년 6월 29일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a7707aea-83a0-5a72-b6aa-990fa9d50000",
+    lang: "KO",
+  },
+  {
     slug: "polestar-us-ban-connected-vehicle-rule",
     title: "Polestar Banned from US Market Over Chinese Connectivity Rules",
     excerpt:

@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import NswPoliceHighPerformanceFleet2026Content from './nsw-police-high-performance-fleet-2026';
+import NswPoliceHighPerformanceFleet2026KoContent from './nsw-police-high-performance-fleet-2026-ko';
 import Mazda6eNoBaseModelAustraliaContent from './mazda-6e-no-base-model-australia';
 import Mazda6eNoBaseModelAustraliaKoContent from './mazda-6e-no-base-model-australia-ko';
 import PolestarUsBanConnectedVehicleRuleContent from './polestar-us-ban-connected-vehicle-rule';
@@ -34,6 +36,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'nsw-police-high-performance-fleet-2026': NswPoliceHighPerformanceFleet2026Content,
+  'nsw-police-high-performance-fleet-2026-ko': NswPoliceHighPerformanceFleet2026KoContent,
   'mazda-6e-no-base-model-australia': Mazda6eNoBaseModelAustraliaContent,
   'mazda-6e-no-base-model-australia-ko': Mazda6eNoBaseModelAustraliaKoContent,
   'polestar-us-ban-connected-vehicle-rule': PolestarUsBanConnectedVehicleRuleContent,

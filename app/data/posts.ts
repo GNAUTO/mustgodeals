@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "nsw-police-high-performance-fleet-2026",
+    title: "NSW Police to Buy Mystery High-Performance Fleet as Part of $94.3M Armed Response Command",
+    excerpt:
+      "NSW Police has announced a fleet of high-performance rapid-response vehicles as part of a new Armed Response Command, but hasn't revealed what cars will be purchased.",
+    category: "NEWS",
+    date: "June 29, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/62ed299e-8f70-5cc3-a037-459f6e650000",
+    lang: "EN",
+  },
+  {
+    slug: "nsw-police-high-performance-fleet-2026-ko",
+    title: "NSW 경찰, 9,430만 달러 규모 신속대응부대 창설 — 고성능 차량 도입 예고",
+    excerpt:
+      "NSW 경찰이 새로운 무장대응사령부 설립의 일환으로 고성능 신속대응 차량을 도입할 예정이지만, 구체적인 차종은 아직 공개되지 않았다.",
+    category: "뉴스",
+    date: "2026년 6월 29일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/62ed299e-8f70-5cc3-a037-459f6e650000",
+    lang: "KO",
+  },
+  {
     slug: "mazda-6e-no-base-model-australia",
     title: "Mazda 6e Won't Get a Cheaper Base Model — At Least for Now",
     excerpt:

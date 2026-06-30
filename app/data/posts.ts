@@ -211,6 +211,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "nsw-toll-cap-rego-discount-2026",
+    title: "Sydney Toll Cap Drops to $50, Car Rego Gets $100 Cheaper from September",
+    excerpt:
+      "The 2026-27 NSW state budget cuts the weekly Sydney toll cap from $60 to $50 and slashes vehicle registration fees by $100, with both changes designed to ease cost of living pressure.",
+    category: "NEWS",
+    date: "June 30, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.mynrma.com.au/-/media/nrmaheadless/open-road/2026/news/budget-news/toll-road-640x360.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "nsw-toll-cap-rego-discount-2026-ko",
+    title: "시드니 톨비 주당 $50로 인하, 9월부터 등록비도 $100 할인",
+    excerpt:
+      "2026-27 NSW 주 예산안에서 시드니 톨 주간 상한이 $60에서 $50로 인하되고, 차량 등록비도 $100 줄어든다. 생활비 부담 완화가 핵심 목표다.",
+    category: "뉴스",
+    date: "2026년 6월 30일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.mynrma.com.au/-/media/nrmaheadless/open-road/2026/news/budget-news/toll-road-640x360.jpg",
+    lang: "KO",
+  },
+  {
     slug: "jas-tensei-honda-nsx-restomod",
     title: "Meet the Tensei, a 420bhp Reborn Honda NSX Built by Honda's Own Race Partner",
     excerpt:

@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "jas-tensei-honda-nsx-restomod",
+    title: "Meet the Tensei, a 420bhp Reborn Honda NSX Built by Honda's Own Race Partner",
+    excerpt:
+      "Italian outfit JAS, a longtime Honda racing partner, has unveiled the Tensei, a full restomod of the original Honda NSX with Pininfarina styling and a 420bhp Judd-built V6.",
+    category: "NEWS",
+    date: "June 30, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.topgear.com/sites/default/files/images/big-read/carousel/2026/06/b710d556570aa46ccb60b98c44f49bbd/NSX%20Resurrection%20%2811%29.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "jas-tensei-honda-nsx-restomod-ko",
+    title: "혼다 공식 파트너가 만든 420마력 NSX 복원판, 텐세이 공개",
+    excerpt:
+      "30년간 혼다의 레이싱 파트너였던 이탈리아 업체 JAS가 오리지널 혼다 NSX를 기반으로 한 완전 복원형 레스토모드 텐세이를 공개했다. 피닌파리나 디자인에 저드가 손본 420마력 V6 엔진을 탑재했다.",
+    category: "뉴스",
+    date: "2026년 6월 30일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.topgear.com/sites/default/files/images/big-read/carousel/2026/06/b710d556570aa46ccb60b98c44f49bbd/NSX%20Resurrection%20%2811%29.jpg",
+    lang: "KO",
+  },
+  {
     slug: "gwm-haval-h10-flagship-suv-2027",
     title: "GWM's New Flagship SUV Finally Has a Name, and It's Bigger Than a LandCruiser",
     excerpt:

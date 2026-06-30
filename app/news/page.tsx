@@ -89,7 +89,7 @@ export default function NewsPage() {
 
       {/* Header */}
       <div style={{ background: "#1A1A1A", padding: "2rem 2rem 2.25rem" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <h1 style={{ color: "white", fontSize: "24px", fontWeight: 500, letterSpacing: "-0.3px", lineHeight: 1.2, marginBottom: "6px" }}>
             Latest news
           </h1>
@@ -101,7 +101,7 @@ export default function NewsPage() {
 
       {/* Grid */}
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 0", color: "#aaa", fontSize: "15px" }}>
               {currentLang.comingSoon}

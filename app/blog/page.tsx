@@ -47,7 +47,7 @@ export default function BlogPage() {
 
       {/* Hero */}
       <div style={{ background: "#1A1A1A", padding: "2rem 2rem 2.25rem" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{
             display: "inline-flex", alignItems: "center",
             background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47",
@@ -67,7 +67,7 @@ export default function BlogPage() {
 
       {/* Posts */}
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2.5rem 2rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2.5rem 2rem" }}>
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#aaa", fontSize: "15px" }}>
               {currentLang.comingSoon}

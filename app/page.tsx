@@ -49,7 +49,7 @@ export default function Home() {
 
       {/* Demo Cars — dynamically driven by LISTINGS */}
       <div style={{ background: "#1A1A1A", padding: "2.5rem 0" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "16px", fontWeight: 600, color: "white", letterSpacing: "0.08em", textTransform: "uppercase" }}>Demo Cars Available Now</h2>
             <Link href="/listings" style={{ fontSize: "13px", color: "#CCDA47", textDecoration: "none", fontWeight: 500 }}>View all listings →</Link>
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* Latest News */}
       <div style={{ background: "#ECEEE7", padding: "2.5rem 0" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
             <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* Blog cards */}
       <div style={{ flex: 1 }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "3rem 2rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
           <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest articles</h2>
           <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
@@ -198,7 +198,7 @@ export default function Home() {
 
       {/* Email signup */}
       <div style={{ background: "#1A1A1A" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
           <div>
             <h3 style={{ color: "white", fontSize: "16px", fontWeight: 500, marginBottom: "4px" }}>Get alerts before deals are gone</h3>
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "13px" }}>New clearance vehicles every week — be first to know</p>

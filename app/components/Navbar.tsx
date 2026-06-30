@@ -29,7 +29,8 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
     <nav style={{ background: "#1A1A1A" }}>
 
       {/* ── Row 1 ── */}
-      <div style={{ padding: "0 2rem", height: "52px", display: "flex", alignItems: "center" }}>
+      <div style={{ padding: "0 2rem" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto", height: "52px", display: "flex", alignItems: "center" }}>
 
         {/* Left: Logo */}
         <div style={{ flex: 1 }}>
@@ -89,6 +90,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
           )}
           </button>
         </div>
+      </div>
       </div>
 
       {/* ── Mobile dropdown ── */}

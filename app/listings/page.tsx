@@ -30,7 +30,7 @@ export default function ListingsPage() {
 
       {/* Header */}
       <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ display: "inline-flex", alignItems: "center", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", color: "#CCDA47", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px" }}>
             Demo Listings
           </div>
@@ -45,7 +45,7 @@ export default function ListingsPage() {
 
       {/* Filter chips */}
       <div style={{ background: "#1A1A1A", borderTop: "0.5px solid #2a2a2a", padding: "0 2rem" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", gap: "8px", padding: "1rem 0", flexWrap: "wrap" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", gap: "8px", padding: "1rem 0", flexWrap: "wrap" }}>
           {FILTERS.map((f) => (
             <button
               key={f}
@@ -68,7 +68,7 @@ export default function ListingsPage() {
 
       {/* Card grid */}
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           <div style={{
             display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",

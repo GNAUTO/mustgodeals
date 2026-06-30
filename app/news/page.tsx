@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { NEWS_ITEMS } from "../data/posts";
-import PostCard from "../components/posts/PostCard";
+import type { NewsItem } from "../data/posts";
 
 const LANGS = [
   { label: "EN", code: "EN", comingSoon: "No news in this language yet." },
@@ -18,6 +19,49 @@ function getPageNumbers(current: number, total: number): (number | "...")[] {
   if (current <= 3) return [1, 2, 3, "...", total];
   if (current >= total - 2) return [1, "...", total - 2, total - 1, total];
   return [1, "...", current - 1, current, current + 1, "...", total];
+}
+
+function MagCard({ item, featured }: { item: NewsItem; featured?: boolean }) {
+  return (
+    <Link
+      href={`/news/${item.slug}`}
+      className={`news-mag-card${featured ? " news-mag-card--featured" : ""}`}
+    >
+      {/* Background image */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={item.image}
+        alt={item.title}
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+      />
+
+      {/* Gradient overlay */}
+      <div style={{
+        position: "absolute", inset: 0,
+        background: "linear-gradient(transparent 45%, rgba(0,0,0,0.82))",
+        pointerEvents: "none",
+      }} />
+
+      {/* Top-left: category tag */}
+      <div style={{
+        position: "absolute", top: "16px", left: "16px",
+        fontSize: "10px", fontWeight: 700, color: "#CCDA47",
+        letterSpacing: "0.8px",
+      }}>
+        {item.category}
+      </div>
+
+      {/* Bottom-left: date + title */}
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
+        <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>
+          {item.date}
+        </div>
+        <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>
+          {item.title}
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default function NewsPage() {
@@ -43,21 +87,13 @@ export default function NewsPage() {
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
-      {/* Hero */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem" }}>
+      {/* Header */}
+      <div style={{ background: "#1A1A1A", padding: "2rem 2rem 2.25rem" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "6px",
-            background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47",
-            color: "#CCDA47", fontSize: "11px", padding: "4px 14px",
-            borderRadius: "20px", marginBottom: "1rem", letterSpacing: "0.5px",
-          }}>
-            Latest News
-          </div>
-          <h1 style={{ color: "white", fontWeight: 500, letterSpacing: "-0.5px", lineHeight: 1.2, marginBottom: "0.5rem" }}>
-            Automotive News
+          <h1 style={{ color: "white", fontSize: "24px", fontWeight: 500, letterSpacing: "-0.3px", lineHeight: 1.2, marginBottom: "6px" }}>
+            Latest news
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "15px" }}>
+          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>
             New model launches, pricing updates, and industry developments for Australian buyers
           </p>
         </div>
@@ -65,23 +101,22 @@ export default function NewsPage() {
 
       {/* Grid */}
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "3rem 2rem" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 0", color: "#aaa", fontSize: "15px" }}>
               {currentLang.comingSoon}
             </div>
           ) : (
             <>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
-                {paginated.map((item) => (
-                  <PostCard key={item.slug} type="news" item={item} />
+              <div className="news-mag-grid">
+                {paginated.map((item, idx) => (
+                  <MagCard key={item.slug} item={item} featured={idx === 0} />
                 ))}
               </div>
 
               {/* Pagination */}
               {totalPages > 1 && (
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "6px", marginTop: "3rem" }}>
-                  {/* Prev */}
                   <button
                     className="page-btn arrow"
                     onClick={() => goTo(currentPage - 1)}
@@ -90,8 +125,6 @@ export default function NewsPage() {
                   >
                     ‹
                   </button>
-
-                  {/* Page numbers */}
                   {getPageNumbers(currentPage, totalPages).map((page, i) =>
                     page === "..." ? (
                       <span key={`ellipsis-${i}`} style={{ color: "#555", fontSize: "13px", padding: "0 4px", lineHeight: "36px" }}>···</span>
@@ -105,8 +138,6 @@ export default function NewsPage() {
                       </button>
                     )
                   )}
-
-                  {/* Next */}
                   <button
                     className="page-btn arrow"
                     onClick={() => goTo(currentPage + 1)}

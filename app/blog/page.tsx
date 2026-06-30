@@ -7,9 +7,8 @@ import { BLOG_POSTS } from "../data/posts";
 import PostCard from "../components/posts/PostCard";
 
 const LANGS = [
-  { label: "EN",   code: "EN", comingSoon: "Articles coming soon." },
-  { label: "한국어", code: "KO", comingSoon: "준비중입니다." },
-  { label: "中文",  code: "ZH", comingSoon: "敬请期待。" },
+  { label: "EN", code: "EN", comingSoon: "Articles coming soon." },
+  { label: "KO", code: "KO", comingSoon: "준비중입니다." },
 ];
 
 const PER_PAGE = 9;

@@ -59,7 +59,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
                   className="navbar-lang-btn"
                   style={{
                     background: "none", border: "none", padding: 0,
-                    color: langTabs.activeLang === l.code ? "#CCDA47" : "rgba(255,255,255,0.4)",
+                    color: langTabs.activeLang === l.code ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
                     fontWeight: langTabs.activeLang === l.code ? 600 : 400,
                     cursor: "pointer", fontFamily: "inherit",
                   }}
@@ -103,7 +103,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
                     onClick={() => langTabs.onLangChange(l.code)}
                     className="navbar-mobile-lang-btn"
                     style={{
-                      color: langTabs.activeLang === l.code ? "#CCDA47" : "rgba(255,255,255,0.5)",
+                      color: langTabs.activeLang === l.code ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
                       fontWeight: langTabs.activeLang === l.code ? 600 : 400,
                     }}
                   >

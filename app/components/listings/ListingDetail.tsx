@@ -343,7 +343,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                   <button
                     key={lang}
                     onClick={() => setFeatLang(lang)}
-                    style={{ padding: "3px 10px", fontSize: "10px", fontWeight: 600, borderRadius: "4px", cursor: "pointer", letterSpacing: "0.3px", background: featLang === lang ? "#CCDA47" : "transparent", color: featLang === lang ? "#1A1A1A" : "#555", border: featLang === lang ? "none" : "0.5px solid #333", transition: "background 0.15s, color 0.15s" }}
+                    style={{ padding: "3px 6px", fontSize: "10px", fontWeight: featLang === lang ? 600 : 400, cursor: "pointer", letterSpacing: "0.3px", background: "none", border: "none", color: featLang === lang ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)", transition: "color 0.15s" }}
                   >
                     {lang}
                   </button>

@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import BmwX52027FivePowertrainsAustraliaContent from './bmw-x5-2027-five-powertrains-australia';
+import BmwX52027FivePowertrainsAustraliaKoContent from './bmw-x5-2027-five-powertrains-australia-ko';
 import NswTollCapRegoDiscount2026Content from './nsw-toll-cap-rego-discount-2026';
 import NswTollCapRegoDiscount2026KoContent from './nsw-toll-cap-rego-discount-2026-ko';
 import JasTenseiHondaNsxRestommodContent from './jas-tensei-honda-nsx-restomod';
@@ -42,6 +44,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'bmw-x5-2027-five-powertrains-australia': BmwX52027FivePowertrainsAustraliaContent,
+  'bmw-x5-2027-five-powertrains-australia-ko': BmwX52027FivePowertrainsAustraliaKoContent,
   'nsw-toll-cap-rego-discount-2026': NswTollCapRegoDiscount2026Content,
   'nsw-toll-cap-rego-discount-2026-ko': NswTollCapRegoDiscount2026KoContent,
   'jas-tensei-honda-nsx-restomod': JasTenseiHondaNsxRestommodContent,

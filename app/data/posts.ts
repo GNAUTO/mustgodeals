@@ -211,6 +211,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "bmw-x5-2027-five-powertrains-australia",
+    title: "2027 BMW X5 Revealed With Five Powertrain Options, Including 845km Electric iX5",
+    excerpt:
+      "The all-new fifth-generation BMW X5 arrives in Australia in late 2026 with petrol, diesel, plug-in hybrid and electric power on offer, topped by an iX5 EV with up to 845km of range.",
+    category: "NEWS",
+    date: "July 1, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000",
+    lang: "EN",
+  },
+  {
+    slug: "bmw-x5-2027-five-powertrains-australia-ko",
+    title: "2027 BMW X5 공개, 5가지 파워트레인에 845km 주행 가능한 iX5 전기차까지",
+    excerpt:
+      "5세대 신형 BMW X5가 2026년 말 호주에 상륙한다. 가솔린, 디젤, 플러그인 하이브리드, 전기차까지 동일 플랫폼으로 제공하며, iX5 전기차는 최대 845km 주행 가능하다고 밝혔다.",
+    category: "뉴스",
+    date: "2026년 7월 1일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000",
+    lang: "KO",
+  },
+  {
     slug: "nsw-toll-cap-rego-discount-2026",
     title: "Sydney Toll Cap Drops to $50, Car Rego Gets $100 Cheaper from September",
     excerpt:

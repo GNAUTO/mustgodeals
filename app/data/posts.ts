@@ -191,6 +191,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "gwm-haval-h10-flagship-suv-2027",
+    title: "GWM's New Flagship SUV Finally Has a Name, and It's Bigger Than a LandCruiser",
+    excerpt:
+      "GWM has revealed the full design and interior of its new Haval H10 flagship SUV, a plug-in hybrid model built on the brand's new modular platform and sized larger than a Toyota LandCruiser 300.",
+    category: "NEWS",
+    date: "June 30, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/cbd076b7-da38-529f-8084-c2e74c150000",
+    lang: "EN",
+  },
+  {
+    slug: "gwm-haval-h10-flagship-suv-2027-ko",
+    title: "GWM 새 플래그십 SUV 정체 공개, 크기는 랜드크루저보다 크다",
+    excerpt:
+      "GWM이 새 플래그십 SUV 할발 H10의 전체 디자인과 실내를 공개했다. 새로운 모듈러 플랫폼을 기반으로 한 플러그인 하이브리드 모델로, 토요타 랜드크루저 300보다 큰 차체를 갖췄다.",
+    category: "뉴스",
+    date: "2026년 6월 30일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/cbd076b7-da38-529f-8084-c2e74c150000",
+    lang: "KO",
+  },
+  {
     slug: "nsw-police-high-performance-fleet-2026",
     title: "NSW Police to Buy Mystery High-Performance Fleet as Part of $94.3M Armed Response Command",
     excerpt:

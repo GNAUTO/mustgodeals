@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import GwmHavalH10FlagshipSuv2027Content from './gwm-haval-h10-flagship-suv-2027';
+import GwmHavalH10FlagshipSuv2027KoContent from './gwm-haval-h10-flagship-suv-2027-ko';
 import NswPoliceHighPerformanceFleet2026Content from './nsw-police-high-performance-fleet-2026';
 import NswPoliceHighPerformanceFleet2026KoContent from './nsw-police-high-performance-fleet-2026-ko';
 import Mazda6eNoBaseModelAustraliaContent from './mazda-6e-no-base-model-australia';
@@ -36,6 +38,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'gwm-haval-h10-flagship-suv-2027': GwmHavalH10FlagshipSuv2027Content,
+  'gwm-haval-h10-flagship-suv-2027-ko': GwmHavalH10FlagshipSuv2027KoContent,
   'nsw-police-high-performance-fleet-2026': NswPoliceHighPerformanceFleet2026Content,
   'nsw-police-high-performance-fleet-2026-ko': NswPoliceHighPerformanceFleet2026KoContent,
   'mazda-6e-no-base-model-australia': Mazda6eNoBaseModelAustraliaContent,

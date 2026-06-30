@@ -1,6 +1,34 @@
 import Link from 'next/link';
 import { AS } from '../../../components/posts/article-styles';
 
+const IMGS = [
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/494bab0f-04d7-53f4-a3de-0013a9350000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e5baf5a8-0fe8-558c-955b-07175a750000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/f47784bc-ad8f-5d50-bc42-edac1a450000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/d798d464-7265-5959-ab1d-6625e3150000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/35a8057c-7460-53fd-b056-23113d450000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/3074b9cf-1ac2-54b0-b928-5d326eb50000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a6d27c47-638f-5faa-a5cf-3de032150000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/bfd62743-8823-54a3-8119-f30f9ac50000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/52842d44-1922-5162-9ea9-e1cd01650000",
+];
+
+function Img({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div style={AS.imgWrap}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        className="article-img"
+        style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+      />
+      <p style={AS.imgCaption}>Image: BMW Media</p>
+    </div>
+  );
+}
+
 export default function BmwX52027FivePowertrainsAustraliaKoContent() {
   return (
     <>
@@ -9,7 +37,7 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
           <div style={AS.imgWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000"
+              src={IMGS[0]}
               alt="2027 BMW X5 5세대 신형"
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
@@ -35,17 +63,7 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             기본이다. 가솔린은 5.3초, 디젤은 6.1초 만에 시속 100km에 도달한다.
           </p>
 
-          {/* Image 2 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/494bab0f-04d7-53f4-a3de-0013a9350000"
-              alt="2027 BMW X5 전면 외관"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[1]} alt="2027 BMW X5 전면 외관" />
 
           <h2 style={AS.h2}>2027년에 합류하는 플러그인 하이브리드</h2>
 
@@ -56,6 +74,8 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             최대토크 700Nm을 발휘하며, 순수 전기 주행거리는 86~102km, 복합 연비는
             5.2~6.0L/100km 수준이다.
           </p>
+
+          <Img src={IMGS[2]} alt="2027 BMW X5 플러그인 하이브리드" />
 
           <h2 style={AS.h2}>라인업의 정점, iX5</h2>
 
@@ -83,17 +103,7 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             지원하는 충전기가 없다.
           </p>
 
-          {/* Image 3 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e5baf5a8-0fe8-558c-955b-07175a750000"
-              alt="2027 BMW iX5 전기차"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[3]} alt="2027 BMW iX5 전기차" />
 
           <h2 style={AS.h2}>노이에 클라세 디자인 언어</h2>
 
@@ -104,6 +114,8 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             최초로 적용된 볼보 EX60과 유사한 차체 일체형 윙릿 도어 핸들이 특징이다.
           </p>
 
+          <Img src={IMGS[4]} alt="2027 BMW X5 노이에 클라세 외관" />
+
           <h2 style={AS.h2}>분리형 테일게이트, 역사 속으로</h2>
 
           <p style={AS.p}>
@@ -113,17 +125,7 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             하이브리드는 배터리로 인해 각각 525리터, 1680리터로 소폭 줄어든다.
           </p>
 
-          {/* Image 4 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/f47784bc-ad8f-5d50-bc42-edac1a450000"
-              alt="2027 BMW X5 파노라믹 아이드라이브 실내"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[5]} alt="2027 BMW X5 리어 테일게이트" />
 
           <h2 style={AS.h2}>전면 개편된 실내</h2>
 
@@ -135,6 +137,10 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             탑재됐다. 유리와 슬레이트 같은 천연 소재도 X5 최초로 적용됐다.
           </p>
 
+          <Img src={IMGS[6]} alt="2027 BMW X5 파노라믹 아이드라이브 실내" />
+
+          <Img src={IMGS[7]} alt="2027 BMW X5 실내 디테일" />
+
           <hr style={AS.divider} />
 
           <h2 style={AS.h2}>가격 및 호주 출시 일정</h2>
@@ -145,6 +151,10 @@ export default function BmwX52027FivePowertrainsAustraliaKoContent() {
             가솔린과 디젤은 2026년 말, 플러그인 하이브리드와 iX5는 2027년에 호주에
             들어올 예정이다.
           </p>
+
+          <Img src={IMGS[8]} alt="2027 BMW X5 사이드 프로파일" />
+
+          <Img src={IMGS[9]} alt="2027 BMW X5 전체 라인업" />
 
           {/* Source */}
           <div style={AS.sourceBox}>

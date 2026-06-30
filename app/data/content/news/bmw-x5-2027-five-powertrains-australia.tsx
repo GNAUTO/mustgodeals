@@ -1,6 +1,34 @@
 import Link from 'next/link';
 import { AS } from '../../../components/posts/article-styles';
 
+const IMGS = [
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/494bab0f-04d7-53f4-a3de-0013a9350000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e5baf5a8-0fe8-558c-955b-07175a750000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/f47784bc-ad8f-5d50-bc42-edac1a450000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/d798d464-7265-5959-ab1d-6625e3150000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/35a8057c-7460-53fd-b056-23113d450000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/3074b9cf-1ac2-54b0-b928-5d326eb50000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a6d27c47-638f-5faa-a5cf-3de032150000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/bfd62743-8823-54a3-8119-f30f9ac50000",
+  "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/52842d44-1922-5162-9ea9-e1cd01650000",
+];
+
+function Img({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div style={AS.imgWrap}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        className="article-img"
+        style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+      />
+      <p style={AS.imgCaption}>Image: BMW Media</p>
+    </div>
+  );
+}
+
 export default function BmwX52027FivePowertrainsAustraliaContent() {
   return (
     <>
@@ -9,7 +37,7 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
           <div style={AS.imgWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/4d9f987a-6096-582c-a04d-183697750000"
+              src={IMGS[0]}
               alt="2027 BMW X5 fifth generation"
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
@@ -37,17 +65,7 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             seconds, the diesel in 6.1 seconds.
           </p>
 
-          {/* Image 2 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/494bab0f-04d7-53f4-a3de-0013a9350000"
-              alt="2027 BMW X5 exterior front"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[1]} alt="2027 BMW X5 exterior front" />
 
           <h2 style={AS.h2}>Plug-In Hybrid Follows in 2027</h2>
 
@@ -58,6 +76,8 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             electric-only range sits between 86 and 102 kilometres, with fuel consumption of 5.2
             to 6.0 litres per 100km.
           </p>
+
+          <Img src={IMGS[2]} alt="2027 BMW X5 plug-in hybrid" />
 
           <h2 style={AS.h2}>iX5 Headlines the Range</h2>
 
@@ -85,17 +105,7 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             to 460kW, though no charger in Australia currently delivers that speed.
           </p>
 
-          {/* Image 3 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e5baf5a8-0fe8-558c-955b-07175a750000"
-              alt="2027 BMW iX5 electric SUV"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[3]} alt="2027 BMW iX5 electric SUV" />
 
           <h2 style={AS.h2}>Neue Klasse Design Direction</h2>
 
@@ -107,6 +117,8 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             similar in concept to the Volvo EX60.
           </p>
 
+          <Img src={IMGS[4]} alt="2027 BMW X5 Neue Klasse design exterior" />
+
           <h2 style={AS.h2}>Split Tailgate Gone</h2>
 
           <p style={AS.p}>
@@ -117,17 +129,7 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             reduced at 525 and 1680 litres respectively due to its battery pack.
           </p>
 
-          {/* Image 4 */}
-          <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/f47784bc-ad8f-5d50-bc42-edac1a450000"
-              alt="2027 BMW X5 interior Panoramic iDrive"
-              className="article-img"
-              style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
-            />
-            <p style={AS.imgCaption}>Image: BMW Media</p>
-          </div>
+          <Img src={IMGS[5]} alt="2027 BMW X5 rear tailgate" />
 
           <h2 style={AS.h2}>Interior Overhaul</h2>
 
@@ -139,6 +141,10 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             glass and slate appear inside for the first time on an X5.
           </p>
 
+          <Img src={IMGS[6]} alt="2027 BMW X5 Panoramic iDrive interior" />
+
+          <Img src={IMGS[7]} alt="2027 BMW X5 interior detail" />
+
           <hr style={AS.divider} />
 
           <h2 style={AS.h2}>Pricing and Australian Timeline</h2>
@@ -149,6 +155,10 @@ export default function BmwX52027FivePowertrainsAustraliaContent() {
             The petrol and diesel models arrive late 2026, with the PHEV and iX5 to follow in
             2027.
           </p>
+
+          <Img src={IMGS[8]} alt="2027 BMW X5 side profile" />
+
+          <Img src={IMGS[9]} alt="2027 BMW X5 full range lineup" />
 
           {/* Source */}
           <div style={AS.sourceBox}>

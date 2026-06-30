@@ -147,12 +147,30 @@ export default function Home() {
           </div>
           {filteredNews.length === 0 ? (
             <div style={{ textAlign: "center", padding: "2rem", color: "#aaa", fontSize: "14px" }}>{currentLang.comingSoon}</div>
-          ) : null}
-          <div className="section-grid">
-            {filteredNews.slice(0, 6).map((item) => (
-              <PostCard key={item.slug} type="news" item={item} compact />
-            ))}
-          </div>
+          ) : (
+            <div className="news-mag-grid">
+              {filteredNews.slice(0, 4).map((item) => (
+                <Link key={item.slug} href={`/news/${item.slug}`} className="news-mag-card">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(transparent 45%, rgba(0,0,0,0.82))", pointerEvents: "none" }} />
+                  <div style={{ position: "absolute", top: "16px", left: "16px", fontSize: "10px", fontWeight: 700, color: "#CCDA47", letterSpacing: "0.8px" }}>
+                    {item.category}
+                  </div>
+                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
+                    <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>{item.date}</div>
+                    <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>
+                      {item.title}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

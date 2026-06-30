@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import BusinessCarGstDemoCarAustraliaContent from './business-car-gst-demo-car-australia';
+import BusinessCarGstDemoCarAustraliaKoContent from './business-car-gst-demo-car-australia-ko';
 import BestTimeToBuyACarAustraliaContent from './best-time-to-buy-a-car-australia';
 import BestTimeToBuyACarAustraliaKoContent from './best-time-to-buy-a-car-australia-ko';
 import CarStampDutyAustraliaExplainedContent from './car-stamp-duty-australia-explained';
@@ -18,6 +20,8 @@ import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
 
 const MAP: Record<string, FC> = {
+  'business-car-gst-demo-car-australia': BusinessCarGstDemoCarAustraliaContent,
+  'business-car-gst-demo-car-australia-ko': BusinessCarGstDemoCarAustraliaKoContent,
   'best-time-to-buy-a-car-australia': BestTimeToBuyACarAustraliaContent,
   'best-time-to-buy-a-car-australia-ko': BestTimeToBuyACarAustraliaKoContent,
   'car-stamp-duty-australia-explained': CarStampDutyAustraliaExplainedContent,

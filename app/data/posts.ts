@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "business-car-gst-demo-car-australia",
+    title: "Running a Business in Australia? Here's What a Demo Car Actually Saves You",
+    excerpt:
+      "A practical breakdown of how buying a demo car under an ABN compares to a new car, including GST claims, depreciation, and real numbers.",
+    category: "Business",
+    readTime: "5 min read",
+    date: "June 30, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "business-car-gst-demo-car-australia-ko",
+    title: "사업자라면 알아야 할 것, 데모카로 절약되는 실제 금액",
+    excerpt:
+      "ABN으로 데모카를 구매했을 때 신차 대비 어떤 차이가 생기는지, GST 환급부터 감가상각까지 실제 숫자로 풀어본다.",
+    category: "비즈니스",
+    readTime: "5분",
+    date: "2026년 6월 30일",
+    lang: "KO",
+  },
+  {
     slug: "luxury-car-tax-australia",
     title: "Luxury Car Tax in Australia — What It Is and How It Affects Your Next Car Purchase",
     excerpt:

@@ -346,7 +346,7 @@ export const LISTINGS: Listing[] = [
       { name: 'Hands Free Boot',                       descEn: 'Kick-to-open hands-free tailgate for easy loading',                                descKo: '발 동작으로 개방되는 핸즈프리 테일게이트' },
     ],
     options: [],
-    dealer: { name: "Audi Alto Artarmon", location: "Artarmon, Sydney" },
+    dealer: { name: "Jung In B", location: "Artarmon, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      135113,
       addedOptionsValue: 0,

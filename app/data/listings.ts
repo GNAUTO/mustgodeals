@@ -525,10 +525,6 @@ export const LISTINGS: Listing[] = [
     warranty: "7 year unlimited km warranty",
     images: [
       "https://d2s8i866417m9.cloudfront.net/photo/44818628/photo/medium-b5ec7023070cb592bc3adc9c1325b656.png",
-      "https://d2s8i866417m9.cloudfront.net/photo/44818629/photo/medium-b5ec7023070cb592bc3adc9c1325b656.png",
-      "https://d2s8i866417m9.cloudfront.net/photo/44818630/photo/medium-b5ec7023070cb592bc3adc9c1325b656.png",
-      "https://d2s8i866417m9.cloudfront.net/photo/44818631/photo/medium-b5ec7023070cb592bc3adc9c1325b656.png",
-      "https://d2s8i866417m9.cloudfront.net/photo/44818632/photo/medium-b5ec7023070cb592bc3adc9c1325b656.png",
     ],
     specs: [
       { label: "Year",         value: "2026" },

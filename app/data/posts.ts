@@ -211,6 +211,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "peugeot-australia-distribution-change-2026",
+    title: "Peugeot's Australian Importer Is Walking Away After Nearly 100 Years",
+    excerpt:
+      "Inchcape has decided not to renew its distribution partnership with Peugeot in Australia, leaving the brand's future in local hands uncertain despite Stellantis vowing to keep it alive.",
+    category: "NEWS",
+    date: "July 1, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/7522076d-30b2-59d8-8262-7b8934550000",
+    lang: "EN",
+  },
+  {
+    slug: "peugeot-australia-distribution-change-2026-ko",
+    title: "푸조 호주 수입사 결별 선언, 100년 가까운 파트너십 종료",
+    excerpt:
+      "푸조의 호주 독립 수입사 인치케이프가 프랑스 브랜드와의 유통 계약을 연장하지 않기로 결정했다. 스텔란티스는 브랜드의 호주 존속을 약속했지만, 향후 유통 구조는 아직 불투명하다.",
+    category: "뉴스",
+    date: "2026년 7월 1일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/7522076d-30b2-59d8-8262-7b8934550000",
+    lang: "KO",
+  },
+  {
     slug: "bmw-x5-2027-five-powertrains-australia",
     title: "2027 BMW X5 Revealed With Five Powertrain Options, Including 845km Electric iX5",
     excerpt:

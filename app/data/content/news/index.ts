@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import Ferrari849TestarosaFrankStephensonOpinionContent from './ferrari-849-testarossa-frank-stephenson-opinion';
+import Ferrari849TestarosaFrankStephensonOpinionKoContent from './ferrari-849-testarossa-frank-stephenson-opinion-ko';
 import CupraRaval2027AustraliaEvContent from './cupra-raval-2027-australia-ev';
 import CupraRaval2027AustraliaEvKoContent from './cupra-raval-2027-australia-ev-ko';
 import PeugeotAustraliaDistributionChange2026Content from './peugeot-australia-distribution-change-2026';
@@ -48,6 +50,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'ferrari-849-testarossa-frank-stephenson-opinion': Ferrari849TestarosaFrankStephensonOpinionContent,
+  'ferrari-849-testarossa-frank-stephenson-opinion-ko': Ferrari849TestarosaFrankStephensonOpinionKoContent,
   'cupra-raval-2027-australia-ev': CupraRaval2027AustraliaEvContent,
   'cupra-raval-2027-australia-ev-ko': CupraRaval2027AustraliaEvKoContent,
   'peugeot-australia-distribution-change-2026': PeugeotAustraliaDistributionChange2026Content,

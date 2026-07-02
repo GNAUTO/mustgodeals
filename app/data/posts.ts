@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "ferrari-849-testarossa-frank-stephenson-opinion",
+    title: "The Ferrari 849 Testarossa Looks the Part But Misses What Made the Original Great",
+    excerpt:
+      "Former Ferrari designer Frank Stephenson says the new 849 Testarossa had big shoes to fill and hasn't filled them, arguing the original's iconic design came from function rather than styling for its own sake.",
+    category: "NEWS",
+    date: "July 2, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.topgear.com/sites/default/files/2026/05/Ferrari%20849%20Testarossa.jpg?w=976&h=549",
+    lang: "EN",
+  },
+  {
+    slug: "ferrari-849-testarossa-frank-stephenson-opinion-ko",
+    title: "페라리 849 테스타로사, 오리지널의 무게를 감당하지 못했다",
+    excerpt:
+      "전직 페라리 디자이너 프랭크 스티븐슨이 신형 849 테스타로사를 혹평했다. 오리지널의 아이코닉한 디자인은 기능에서 비롯된 것이었는데, 신형은 그 본질을 놓쳤다는 주장이다.",
+    category: "뉴스",
+    date: "2026년 7월 2일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.topgear.com/sites/default/files/2026/05/Ferrari%20849%20Testarossa.jpg?w=976&h=549",
+    lang: "KO",
+  },
+  {
     slug: "cupra-raval-2027-australia-ev",
     title: "Cupra Raval Electric Hatchback Confirmed for Australia in 2027",
     excerpt:

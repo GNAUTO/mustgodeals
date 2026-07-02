@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import CupraRaval2027AustraliaEvContent from './cupra-raval-2027-australia-ev';
+import CupraRaval2027AustraliaEvKoContent from './cupra-raval-2027-australia-ev-ko';
 import PeugeotAustraliaDistributionChange2026Content from './peugeot-australia-distribution-change-2026';
 import PeugeotAustraliaDistributionChange2026KoContent from './peugeot-australia-distribution-change-2026-ko';
 import BmwX52027FivePowertrainsAustraliaContent from './bmw-x5-2027-five-powertrains-australia';
@@ -46,6 +48,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'cupra-raval-2027-australia-ev': CupraRaval2027AustraliaEvContent,
+  'cupra-raval-2027-australia-ev-ko': CupraRaval2027AustraliaEvKoContent,
   'peugeot-australia-distribution-change-2026': PeugeotAustraliaDistributionChange2026Content,
   'peugeot-australia-distribution-change-2026-ko': PeugeotAustraliaDistributionChange2026KoContent,
   'bmw-x5-2027-five-powertrains-australia': BmwX52027FivePowertrainsAustraliaContent,

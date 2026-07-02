@@ -211,6 +211,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "cupra-raval-2027-australia-ev",
+    title: "Cupra Raval Electric Hatchback Confirmed for Australia in 2027",
+    excerpt:
+      "Cupra has locked in the Raval electric hatchback for Australian roads, with pricing expected to start below $40,000 and a range of up to 440km on the larger battery option.",
+    category: "NEWS",
+    date: "July 2, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/0aa62438-5756-5c5b-a0d9-3511a7850000",
+    lang: "EN",
+  },
+  {
+    slug: "cupra-raval-2027-australia-ev-ko",
+    title: "쿠프라 라발 전기 해치백, 2027년 호주 출시 확정",
+    excerpt:
+      "쿠프라가 라발 전기 해치백의 호주 출시를 공식 확정했다. 가격은 $40,000 이하에서 시작할 것으로 예상되며, 상위 배터리 모델은 최대 440km 주행이 가능하다.",
+    category: "뉴스",
+    date: "2026년 7월 2일",
+    author: "MustGoDeals 편집팀",
+    image: "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/0aa62438-5756-5c5b-a0d9-3511a7850000",
+    lang: "KO",
+  },
+  {
     slug: "peugeot-australia-distribution-change-2026",
     title: "Peugeot's Australian Importer Is Walking Away After Nearly 100 Years",
     excerpt:

@@ -184,6 +184,7 @@ export default function Home() {
               Guides &amp; Insights
             </span>
             <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.12)" }} />
+            <Link href="/blog" style={{ fontSize: "14px", color: "#7a8a00", fontWeight: 500, textDecoration: "none", whiteSpace: "nowrap" }}>View all articles →</Link>
           </div>
 
           {filtered.length === 0 ? (
@@ -245,9 +246,6 @@ export default function Home() {
                 </div>
               )}
 
-              <div style={{ marginTop: "20px", textAlign: "right" }}>
-                <Link href="/blog" style={{ fontSize: "14px", color: "#7a8a00", fontWeight: 500, textDecoration: "none" }}>View all articles →</Link>
-              </div>
             </>
           )}
         </div>

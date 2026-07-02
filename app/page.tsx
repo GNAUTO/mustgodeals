@@ -181,7 +181,7 @@ export default function Home() {
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
             <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.12)" }} />
             <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.12em", color: "rgba(0,0,0,0.5)", whiteSpace: "nowrap" }}>
-              Buying Guides
+              Guides &amp; Insights
             </span>
             <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.12)" }} />
           </div>
@@ -244,6 +244,10 @@ export default function Home() {
                   ))}
                 </div>
               )}
+
+              <div style={{ marginTop: "20px", textAlign: "right" }}>
+                <Link href="/blog" style={{ fontSize: "14px", color: "#7a8a00", fontWeight: 500, textDecoration: "none" }}>View all articles →</Link>
+              </div>
             </>
           )}
         </div>

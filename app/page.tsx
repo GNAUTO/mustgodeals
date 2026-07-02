@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
-import PostCard from "./components/posts/PostCard";
 
 const LANGS = [
   { label: "EN", code: "EN", comingSoon: "Articles coming soon." },
@@ -174,26 +173,89 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Blog cards */}
-      <div style={{ flex: 1 }}>
-      <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "3rem 2rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
-          <h2 style={{ fontSize: "26px", fontWeight: 500, color: "#1A1A1A" }}>Latest articles</h2>
-          <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All articles →</Link>
-        </div>
+      {/* Blog section */}
+      <div style={{ background: "#F5F5F0", padding: "3rem 0 4rem" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
 
-        {filtered.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#aaa", fontSize: "15px" }}>
-            {currentLang.comingSoon}
+          {/* Section header */}
+          <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "2.5rem" }}>
+            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
+            <span style={{ fontSize: "11px", fontWeight: 500, textTransform: "uppercase" as const, letterSpacing: "0.12em", color: "#111", whiteSpace: "nowrap" }}>
+              Buying Guides
+            </span>
+            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
           </div>
-        ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "16px" }}>
-            {filtered.slice(0, 6).map((post) => (
-              <PostCard key={post.slug} type="blog" item={post} />
-            ))}
-          </div>
-        )}
-      </div>
+
+          {filtered.length === 0 ? (
+            <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#aaa", fontSize: "15px" }}>
+              {currentLang.comingSoon}
+            </div>
+          ) : (
+            <>
+              {/* Main grid: featured (1.4fr) + numbered list (1fr) */}
+              {filtered[0] && (
+                <div className="blog-main-grid">
+                  {/* Featured */}
+                  <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
+                    <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "4px", background: "#1a1a1a", marginBottom: "14px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "20px 22px", boxSizing: "border-box", overflow: "hidden", position: "relative" }}>
+                      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)" }} />
+                      <div style={{ position: "relative" }}>
+                        <div style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#CCDA47", marginBottom: "8px" }}>{filtered[0].category}</div>
+                        <div style={{ fontSize: "20px", fontWeight: 600, color: "white", lineHeight: 1.25, letterSpacing: "-0.3px" }}>{filtered[0].title}</div>
+                      </div>
+                    </div>
+                    <div style={{ marginBottom: "6px" }}>
+                      <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#7a8a00" }}>{filtered[0].category}</span>
+                    </div>
+                    <h2 style={{ fontSize: "19px", fontWeight: 600, color: "#111", lineHeight: 1.3, letterSpacing: "-0.3px", margin: "0 0 8px" }}>{filtered[0].title}</h2>
+                    <p style={{ fontSize: "12px", color: "rgba(0,0,0,0.5)", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
+                    <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{filtered[0].date}&nbsp;&nbsp;·&nbsp;&nbsp;{filtered[0].readTime}</span>
+                  </Link>
+
+                  {/* Numbered list 01-04 */}
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    {filtered.slice(1, 5).map((post, i) => (
+                      <div key={post.slug}>
+                        <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "14px", alignItems: "flex-start", padding: "16px 0" }}>
+                          <span style={{ fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)", lineHeight: 1, flexShrink: 0, minWidth: "28px", paddingTop: "2px" }}>
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <div>
+                            <div style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
+                            <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", lineHeight: 1.35, letterSpacing: "-0.2px", margin: "0 0 6px" }}>{post.title}</h3>
+                            <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                          </div>
+                        </Link>
+                        {i < Math.min(filtered.slice(1, 5).length, 4) - 1 && (
+                          <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Bottom 3-col grid (posts 6-8) */}
+              {filtered.slice(5, 8).length > 0 && (
+                <div className="blog-bottom-grid">
+                  {filtered.slice(5, 8).map((post) => (
+                    <div key={post.slug} className="blog-bottom-cell">
+                      <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+                        <div style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
+                        <h3 style={{ fontSize: "14px", fontWeight: 600, color: "#111", lineHeight: 1.35, letterSpacing: "-0.2px", margin: "0 0 8px" }}>{post.title}</h3>
+                        <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div style={{ marginTop: "2rem", textAlign: "right" }}>
+                <Link href="/blog" style={{ fontSize: "13px", color: "#7a8a00", textDecoration: "none", fontWeight: 500 }}>All buying guides →</Link>
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       {/* Email signup */}

@@ -178,13 +178,9 @@ export default function Home() {
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
 
           {/* Section header */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.12)" }} />
-            <span style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.12em", color: "rgba(0,0,0,0.5)", whiteSpace: "nowrap" }}>
-              Guides &amp; Insights
-            </span>
-            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.12)" }} />
-            <Link href="/blog" style={{ fontSize: "14px", color: "#7a8a00", fontWeight: 500, textDecoration: "none", whiteSpace: "nowrap" }}>View all articles →</Link>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
+            <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Guides &amp; Insights</h2>
+            <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>View all articles →</Link>
           </div>
 
           {filtered.length === 0 ? (

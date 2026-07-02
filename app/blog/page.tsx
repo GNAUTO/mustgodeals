@@ -201,7 +201,7 @@ export default function BlogPage() {
                       {numbered.map((post, i) => (
                         <div key={post.slug}>
                           <div style={{ padding: "16px 0" }}>
-                            <NumberedCard post={post} num={String((currentPage - 1) * PER_PAGE + i + 1).padStart(2, "0")} />
+                            <NumberedCard post={post} num={String(i + 1).padStart(2, "0")} />
                           </div>
                           {i < numbered.length - 1 && (
                             <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />

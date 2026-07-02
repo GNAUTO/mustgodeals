@@ -11,7 +11,7 @@ const LANGS = [
   { label: "KO", code: "KO", comingSoon: "준비중입니다." },
 ];
 
-const PER_PAGE = 8; // 1 featured + 4 numbered + 3 grid slots per page
+const PER_PAGE = 18;
 
 function getPageNumbers(current: number, total: number): (number | "...")[] {
   if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);

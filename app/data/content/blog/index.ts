@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import WhatIsADealerClearanceCarAustraliaContent from './what-is-a-dealer-clearance-car-australia';
+import WhatIsADealerClearanceCarAustraliaKoContent from './what-is-a-dealer-clearance-car-australia-ko';
 import BusinessCarGstDemoCarAustraliaContent from './business-car-gst-demo-car-australia';
 import BusinessCarGstDemoCarAustraliaKoContent from './business-car-gst-demo-car-australia-ko';
 import BestTimeToBuyACarAustraliaContent from './best-time-to-buy-a-car-australia';
@@ -20,6 +22,8 @@ import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
 
 const MAP: Record<string, FC> = {
+  'what-is-a-dealer-clearance-car-australia': WhatIsADealerClearanceCarAustraliaContent,
+  'what-is-a-dealer-clearance-car-australia-ko': WhatIsADealerClearanceCarAustraliaKoContent,
   'business-car-gst-demo-car-australia': BusinessCarGstDemoCarAustraliaContent,
   'business-car-gst-demo-car-australia-ko': BusinessCarGstDemoCarAustraliaKoContent,
   'best-time-to-buy-a-car-australia': BestTimeToBuyACarAustraliaContent,

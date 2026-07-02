@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "what-is-a-dealer-clearance-car-australia",
+    title: "What Is a Dealer Clearance Car and Why Is It Cheaper?",
+    excerpt:
+      "Dealer clearance cars in Australia explained. What they are, why they're cheaper than new, and how to find the best deals on demo and clearance stock near you.",
+    category: "Buying Guide",
+    readTime: "6 min read",
+    date: "July 2, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "what-is-a-dealer-clearance-car-australia-ko",
+    title: "딜러 급처분 차량이란 무엇이고 왜 더 저렴한가?",
+    excerpt:
+      "호주 딜러 급처분 차량의 모든 것. 데모카, 런아웃 모델, 전 법인차의 차이와 왜 신차보다 저렴한지, 그리고 좋은 딜을 찾는 방법까지.",
+    category: "구매 가이드",
+    readTime: "6분",
+    date: "2026년 7월 2일",
+    lang: "KO",
+  },
+  {
     slug: "business-car-gst-demo-car-australia",
     title: "Running a Business in Australia? Here's What a Demo Car Actually Saves You",
     excerpt:

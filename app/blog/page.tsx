@@ -11,7 +11,7 @@ const LANGS = [
   { label: "KO", code: "KO", comingSoon: "준비중입니다." },
 ];
 
-const PER_PAGE = 18;
+const PER_PAGE = 8;
 
 function getPageNumbers(current: number, total: number): (number | "...")[] {
   if (total <= 5) return Array.from({ length: total }, (_, i) => i + 1);
@@ -42,7 +42,6 @@ function Meta({ date, readTime }: { date: string; readTime: string }) {
 function FeaturedCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      {/* Text-image block */}
       <div style={{
         width: "100%", aspectRatio: "16/9", borderRadius: "4px",
         background: "#1a1a1a", marginBottom: "14px",
@@ -141,10 +140,14 @@ export default function BlogPage() {
 
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
-  // Page 1: featured (1) + up to 7 more. Page 2+: 8 per page from rest
-  const featured = filtered[0] ?? null;
-  const rest = filtered.slice(1);
-  const totalPages = Math.max(1, Math.ceil(rest.length / PER_PAGE));
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  const pageSlice = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+
+  // Page 1: featured is first item; page 2+: no featured
+  const featured = currentPage === 1 ? (pageSlice[0] ?? null) : null;
+  const listItems = featured ? pageSlice.slice(1) : pageSlice;
+  const numbered = listItems.slice(0, 4);
+  const gridItems = listItems.slice(4);
 
   function handleLangChange(lang: string) {
     setActiveLang(lang);
@@ -155,10 +158,6 @@ export default function BlogPage() {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
-  const pageSlice = rest.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
-  const numbered = pageSlice.slice(0, 4);
-  const gridItems = pageSlice.slice(4);
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
@@ -173,15 +172,14 @@ export default function BlogPage() {
             </div>
           ) : (
             <>
-              {/* Main grid: featured (left) + numbered list (right) */}
-              {featured && (numbered.length > 0 || currentPage === 1) && (
-                <div className="blog-main-grid">
-                  {/* Featured — only on page 1 */}
-                  {currentPage === 1 && <FeaturedCard post={featured} />}
-
-                  {/* Page 2+: left col is numbered list spanning full width */}
-                  {currentPage > 1 && (
-                    <div style={{ gridColumn: "1 / -1", display: "flex", flexDirection: "column", gap: "0" }}>
+              {/* Page 1: featured left + numbered list right */}
+              {featured && (
+                <>
+                  <div className="blog-main-grid">
+                    <div className="blog-featured-col">
+                      <FeaturedCard post={featured} />
+                    </div>
+                    <div className="blog-numbered-col">
                       {numbered.map((post, i) => (
                         <div key={post.slug}>
                           <div style={{ padding: "16px 0" }}>
@@ -193,32 +191,31 @@ export default function BlogPage() {
                         </div>
                       ))}
                     </div>
-                  )}
+                  </div>
 
-                  {/* Page 1: right col is numbered list */}
-                  {currentPage === 1 && (
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-                      {numbered.map((post, i) => (
-                        <div key={post.slug}>
-                          <div style={{ padding: "16px 0" }}>
-                            <NumberedCard post={post} num={String(i + 1).padStart(2, "0")} />
-                          </div>
-                          {i < numbered.length - 1 && (
-                            <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
-                          )}
+                  {gridItems.length > 0 && (
+                    <div className="blog-bottom-grid">
+                      {gridItems.map((post) => (
+                        <div key={post.slug} className="blog-bottom-cell">
+                          <GridCard post={post} />
                         </div>
                       ))}
                     </div>
                   )}
-                </div>
+                </>
               )}
 
-              {/* Bottom 3-col grid */}
-              {gridItems.length > 0 && (
-                <div className="blog-bottom-grid">
-                  {gridItems.map((post) => (
-                    <div key={post.slug} className="blog-bottom-cell">
-                      <GridCard post={post} />
+              {/* Page 2+: full-width numbered list */}
+              {!featured && (
+                <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)" }}>
+                  {pageSlice.map((post, i) => (
+                    <div key={post.slug}>
+                      <div style={{ padding: "16px 0" }}>
+                        <NumberedCard post={post} num={String(i + 1).padStart(2, "0")} />
+                      </div>
+                      {i < pageSlice.length - 1 && (
+                        <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
+                      )}
                     </div>
                   ))}
                 </div>

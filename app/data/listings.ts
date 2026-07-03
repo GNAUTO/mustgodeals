@@ -33,6 +33,7 @@ export type Listing = {
   dealerComment: string
   features: Feature[]
   options: Option[]
+  sourceUrl?: string
   dealer: {
     name: string
     location: string
@@ -111,6 +112,7 @@ export const LISTINGS: Listing[] = [
       { name: "Style Package",               descEn: "20-inch black metallic wheels, black exterior package, privacy glass",         descKo: "20인치 블랙 메탈릭 휠, 블랙 익스테리어 패키지, 프라이버시 글라스",           price: 3200 },
       { name: "Panoramic Roof (Switchable)", descEn: "Electronically switchable transparency panoramic sunroof",                    descKo: "전동 투명도 조절 선루프",                                                     price: 3800 },
     ],
+    sourceUrl: "https://www.alto.com.au/stock/details/OAG-AD-25197514/2025-audi-a5-demo",
     dealer: { name: "Jung In B", location: "Artarmon, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      128918,
@@ -188,6 +190,7 @@ export const LISTINGS: Listing[] = [
       { name: "HD Matrix LED with Laser + OLED Package",                         descEn: "HD Matrix LED headlights with laser assist and OLED rear taillights",               descKo: "레이저 보조 HD 매트릭스 LED 헤드라이트 + OLED 리어 테일라이트",    price: 3800 },
       { name: "Full Leather Package",                                             descEn: "Nappa leather upholstery with air quality package and electric sunblinds",          descKo: "나파 가죽 풀 업홀스터리, 에어 퀄리티 패키지, 전동 선블라인드",     price: 2500 },
     ],
+    sourceUrl: "https://www.alto.com.au/stock/details/OAG-AD-25718588/2025-audi-sq8-demo",
     dealer: { name: "Jung In B", location: "Artarmon, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      227943,
@@ -265,6 +268,7 @@ export const LISTINGS: Listing[] = [
       { name: "Enhancement Package (Panorama + Harman Kardon + Alarm)", descEn: "Panoramic roof, Harman Kardon surround sound, and factory alarm system",                  descKo: "파노라마 루프, 하만카돈 서라운드, 순정 알람 시스템 패키지",           price: 6000 },
       { name: "M Sport Package Pro",                                     descEn: "M Alcantara seats, red M Sport brakes, Pro exterior trim and M steering wheel",          descKo: "M 알칸타라 시트, 레드 M 스포츠 브레이크, 프로 익스테리어, M 스티어링", price: 3000 },
     ],
+    sourceUrl: "https://simemotors.com.au/stock/details/OAG-AD-24994312/2024-bmw-x3-used",
     dealer: { name: "Jung In B", location: "Parramatta, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      89900,
@@ -346,6 +350,7 @@ export const LISTINGS: Listing[] = [
       { name: 'Hands Free Boot',                       descEn: 'Kick-to-open hands-free tailgate for easy loading',                                descKo: '발 동작으로 개방되는 핸즈프리 테일게이트' },
     ],
     options: [],
+    sourceUrl: "https://www.alto.com.au/stock/details/OAG-AD-25390789/2025-audi-sq5-demo",
     dealer: { name: "Jung In B", location: "Artarmon, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      135113,
@@ -422,6 +427,7 @@ export const LISTINGS: Listing[] = [
       { name: 'ANCAP 5 Star Safety Rating',               descEn: 'Maximum 5-star ANCAP safety rating for 2024',                                          descKo: '2024년 기준 최고 등급 ANCAP 5스타 안전 인증' },
     ],
     options: [],
+    sourceUrl: "https://www.rydekia.com.au/cars/demo-snow-white-pearl-2025-kia-seltos-k883522",
     dealer: { name: "Ryde Kia", location: "West Ryde, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      47000,
@@ -499,6 +505,7 @@ export const LISTINGS: Listing[] = [
       { name: '7 Year Unlimited KM Warranty',          descEn: "Kia's 7-year unlimited kilometre manufacturer warranty",                              descKo: '기아 7년 무제한 km 제조사 보증' },
     ],
     options: [],
+    sourceUrl: "https://www.rydekia.com.au/cars/demo-clear-white-2025-kia-tasman-k011328",
     dealer: { name: "Ryde Kia", location: "West Ryde, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      66490,
@@ -555,6 +562,7 @@ export const LISTINGS: Listing[] = [
       { name: '7 Year Unlimited KM Warranty',          descEn: "Kia's 7-year unlimited kilometre manufacturer warranty",                                descKo: '기아 7년 무제한 km 제조사 보증' },
     ],
     options: [],
+    sourceUrl: "https://www.rydekia.com.au/cars/demo-clear-white-2026-kia-sportage-k465315",
     dealer: { name: "Ryde Kia", location: "West Ryde, Sydney" },
     whyPriceMakesSense: {
       newDriveAway:      43500,

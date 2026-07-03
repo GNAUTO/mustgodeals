@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import FiatTopolinoVaticanCityPope2026Content from './fiat-topolino-vatican-city-pope-2026';
+import FiatTopolinoVaticanCityPope2026KoContent from './fiat-topolino-vatican-city-pope-2026-ko';
 import Ferrari849TestarosaFrankStephensonOpinionContent from './ferrari-849-testarossa-frank-stephenson-opinion';
 import Ferrari849TestarosaFrankStephensonOpinionKoContent from './ferrari-849-testarossa-frank-stephenson-opinion-ko';
 import CupraRaval2027AustraliaEvContent from './cupra-raval-2027-australia-ev';
@@ -50,6 +52,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'fiat-topolino-vatican-city-pope-2026': FiatTopolinoVaticanCityPope2026Content,
+  'fiat-topolino-vatican-city-pope-2026-ko': FiatTopolinoVaticanCityPope2026KoContent,
   'ferrari-849-testarossa-frank-stephenson-opinion': Ferrari849TestarosaFrankStephensonOpinionContent,
   'ferrari-849-testarossa-frank-stephenson-opinion-ko': Ferrari849TestarosaFrankStephensonOpinionKoContent,
   'cupra-raval-2027-australia-ev': CupraRaval2027AustraliaEvContent,

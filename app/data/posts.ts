@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "fiat-topolino-vatican-city-pope-2026",
+    title: "The Pope Just Ordered 20 Fiat Topolinos for Vatican City",
+    excerpt:
+      "Vatican City has taken delivery of 20 all-electric Fiat Topolinos as part of its Ecological Conversion 2030 programme, making the tiny nation one of the few places where a Topolino can cross the entire country on a single charge.",
+    category: "NEWS",
+    date: "July 3, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://www.topgear.com/sites/default/files/2026/07/fiat-governorate-of-the-vatican-city-state-for-sustainable-micromobility-credit-by-governatorato-s-c-v.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "fiat-topolino-vatican-city-pope-2026-ko",
+    title: "교황청이 피아트 토폴리노 20대를 주문했다",
+    excerpt:
+      "바티칸 시국이 생태적 전환 2030 프로그램의 일환으로 전기 소형차 피아트 토폴리노 20대를 도입했다. 세계에서 가장 작은 나라를 한 번 충전으로 여러 바퀴 돌 수 있는 이동수단이다.",
+    category: "뉴스",
+    date: "2026년 7월 3일",
+    author: "MustGoDeals 편집팀",
+    image: "https://www.topgear.com/sites/default/files/2026/07/fiat-governorate-of-the-vatican-city-state-for-sustainable-micromobility-credit-by-governatorato-s-c-v.jpg",
+    lang: "KO",
+  },
+  {
     slug: "ferrari-849-testarossa-frank-stephenson-opinion",
     title: "The Ferrari 849 Testarossa Looks the Part But Misses What Made the Original Great",
     excerpt:

@@ -10,10 +10,19 @@ type AlertDetail = {
 };
 
 export async function GET(req: Request) {
-  const auth = req.headers.get("authorization");
-  const expected = `Bearer ${process.env.CRON_SECRET}`;
-  if (!process.env.CRON_SECRET || auth !== expected) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const isProd = process.env.VERCEL_ENV === "production";
+
+  if (isProd) {
+    // Vercel Cron Jobs automatically attach this header
+    if (req.headers.get("x-vercel-cron") !== "1") {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+  } else {
+    // Local dev: pass ?secret=<CRON_SECRET>
+    const { searchParams } = new URL(req.url);
+    if (searchParams.get("secret") !== process.env.CRON_SECRET) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
   }
 
   const available = LISTINGS.filter((l) => l.status === "available" && l.sourceUrl);

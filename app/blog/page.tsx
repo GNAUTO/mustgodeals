@@ -49,7 +49,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
         display: "flex", flexDirection: "column",
         justifyContent: "flex-end", padding: "20px 22px",
         boxSizing: "border-box", overflow: "hidden", position: "relative",
-      }}>
+      }} className="blog-featured-img-card">
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)",
@@ -92,7 +92,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
 function NumberedCard({ post, num }: { post: BlogPost; num: string }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "14px", alignItems: "flex-start" }}>
-      <span style={{
+      <span className="blog-list-number" style={{
         fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)",
         lineHeight: 1, flexShrink: 0, minWidth: "28px", paddingTop: "2px",
       }}>
@@ -165,23 +165,7 @@ export default function BlogPage() {
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "3rem 2rem 4rem" }}>
-
-          {/* Section header with horizontal rules */}
-          <div style={{
-            display: "flex", alignItems: "center", gap: "14px",
-            marginBottom: "2.5rem",
-          }}>
-            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
-            <span style={{
-              fontSize: "11px", fontWeight: 500,
-              textTransform: "uppercase" as const, letterSpacing: "0.12em",
-              color: "#111", whiteSpace: "nowrap",
-            }}>
-              Buying Guides
-            </span>
-            <div style={{ flex: 1, height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
-          </div>
+        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 4rem" }}>
 
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#aaa", fontSize: "15px" }}>

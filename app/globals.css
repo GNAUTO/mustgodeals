@@ -402,6 +402,12 @@ p  { font-size: 15px; }
   .blog-list-number {
     display: none;
   }
+  .blog-list-item-4th {
+    display: none;
+  }
+  .blog-home-bottom {
+    display: none;
+  }
   .blog-main-grid {
     grid-template-columns: 1fr;
   }

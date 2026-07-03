@@ -211,7 +211,7 @@ export default function Home() {
                 {/* Right: numbered list 01-04 */}
                 <div className="blog-numbered-col">
                   {filtered.slice(1, 5).map((post, i) => (
-                    <div key={post.slug} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
+                    <div key={post.slug} className={i === 3 ? "blog-list-item-4th" : ""} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>
                         <span className="blog-list-number" style={{ fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)", lineHeight: 1, flexShrink: 0, minWidth: "26px", paddingTop: "1px" }}>
                           {String(i + 1).padStart(2, "0")}
@@ -229,7 +229,7 @@ export default function Home() {
 
               {/* Bottom 3-col grid (posts 6-8) */}
               {filtered.slice(5, 8).length > 0 && (
-                <div className="blog-bottom-grid">
+                <div className="blog-bottom-grid blog-home-bottom">
                   {filtered.slice(5, 8).map((post) => (
                     <div key={post.slug} className="blog-bottom-cell">
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>

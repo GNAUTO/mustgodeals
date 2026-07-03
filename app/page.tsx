@@ -196,7 +196,7 @@ export default function Home() {
                   {filtered[0] && (
                     <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
                       {/* Image placeholder (BlogPost has no image field) */}
-                      <div style={{ width: "100%", aspectRatio: "16/9", borderRadius: "4px", background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)", marginBottom: "14px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "18px 20px", boxSizing: "border-box", overflow: "hidden" }}>
+                      <div className="blog-featured-img-card" style={{ width: "100%", aspectRatio: "16/9", borderRadius: "4px", background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)", marginBottom: "14px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "18px 20px", boxSizing: "border-box", overflow: "hidden" }}>
                         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#CCDA47", marginBottom: "6px" }}>{filtered[0].category}</div>
                         <div style={{ fontSize: "17px", fontWeight: 600, color: "white", lineHeight: 1.25 }}>{filtered[0].title}</div>
                       </div>

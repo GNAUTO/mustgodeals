@@ -213,7 +213,7 @@ export default function Home() {
                   {filtered.slice(1, 5).map((post, i) => (
                     <div key={post.slug} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>
-                        <span style={{ fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)", lineHeight: 1, flexShrink: 0, minWidth: "26px", paddingTop: "1px" }}>
+                        <span className="blog-list-number" style={{ fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)", lineHeight: 1, flexShrink: 0, minWidth: "26px", paddingTop: "1px" }}>
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <div>

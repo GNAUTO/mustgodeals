@@ -399,6 +399,9 @@ p  { font-size: 15px; }
   .blog-featured-img-card {
     display: none;
   }
+  .blog-list-number {
+    display: none;
+  }
   .blog-main-grid {
     grid-template-columns: 1fr;
   }

@@ -231,28 +231,6 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
-    slug: "nsw-roadwork-speed-limits-outside-work-hours",
-    title: "NSW Makes It Law: Speed Limit Signs Must Come Down Outside Work Hours",
-    excerpt:
-      "New South Wales has introduced legislation requiring roadwork operators to remove temporary speed limit signs when no workers are present on site, aiming to cut congestion caused by speed zones that outlast the work they were set up for.",
-    category: "NEWS",
-    date: "July 3, 2026",
-    author: "MustGoDeals Editorial",
-    image: "",
-    lang: "EN",
-  },
-  {
-    slug: "nsw-roadwork-speed-limits-outside-work-hours-ko",
-    title: "NSW, 공사 외 시간 제한속도 표지판 철거 의무화 법 시행",
-    excerpt:
-      "뉴사우스웨일스 주가 공사 시간 외 도로공사 구간의 임시 속도 제한 표지판 철거를 의무화하는 법을 시행한다. 작업자가 없는 시간에도 표지판이 남아 발생하던 불필요한 정체를 줄이기 위한 조치다.",
-    category: "뉴스",
-    date: "2026년 7월 3일",
-    author: "MustGoDeals 편집팀",
-    image: "",
-    lang: "KO",
-  },
-  {
     slug: "fiat-topolino-vatican-city-pope-2026",
     title: "The Pope Just Ordered 20 Fiat Topolinos for Vatican City",
     excerpt:

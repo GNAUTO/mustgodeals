@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/check-listings",
+      "path": "/api/check-listings?secret=MGD2026CRON_SECURE_KEY",
       "schedule": "0 0 * * *"
     }
   ]

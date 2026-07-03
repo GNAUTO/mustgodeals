@@ -1,26 +1,15 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 import { LISTINGS } from "../../data/listings";
 
 type AlertDetail = {
   slug: string;
   name: string;
   reason: string;
+  sourceUrl: string;
 };
 
-async function sendTelegram(message: string): Promise<void> {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chatId) return;
-
-  await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: "HTML" }),
-  });
-}
-
 export async function GET(req: Request) {
-  // Verify cron secret
   const auth = req.headers.get("authorization");
   const expected = `Bearer ${process.env.CRON_SECRET}`;
   if (!process.env.CRON_SECRET || auth !== expected) {
@@ -54,7 +43,6 @@ export async function GET(req: Request) {
         ) {
           reason = "Page contains sold/unavailable text";
         } else {
-          // Check if listing price appears on the page
           const priceStr = listing.price.toLocaleString("en-AU");
           const priceNaked = String(listing.price);
           if (!lower.includes(priceStr.toLowerCase()) && !lower.includes(priceNaked)) {
@@ -67,16 +55,52 @@ export async function GET(req: Request) {
     }
 
     if (reason) {
-      alerts.push({ slug: listing.slug, name: listing.name, reason });
+      alerts.push({ slug: listing.slug, name: listing.name, reason, sourceUrl: url });
+    }
+  }
 
-      const message =
-        `[MustGoDeals] 매물 확인 필요\n` +
-        `차량: ${listing.name}\n` +
-        `이유: ${reason}\n` +
-        `딜러 링크: ${url}\n` +
-        `관리: mustgodeals.com.au/listings/${listing.slug}`;
+  if (alerts.length > 0) {
+    const dateStr = new Date().toLocaleDateString("en-AU");
 
-      await sendTelegram(message);
+    const itemLines = alerts
+      .map(
+        (a) =>
+          `차량: ${a.name}\n이유: ${a.reason}\n딜러 원본: ${a.sourceUrl}\nMustGoDeals: https://mustgodeals.com.au/listings/${a.slug}`
+      )
+      .join("\n\n");
+
+    const body = [
+      "아래 매물을 확인해주세요.",
+      "",
+      itemLines,
+      "",
+      "확인 후 listings.ts에서 status를 'sold'로 변경해주세요.",
+    ].join("\n");
+
+    try {
+      const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+          user: process.env.GMAIL_USER,
+          pass: (process.env.GMAIL_APP_PASSWORD ?? "").replace(/\s/g, ""),
+        },
+      });
+
+      await transporter.sendMail({
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER,
+        subject: `[MustGoDeals] 매물 확인 필요 - ${dateStr}`,
+        text: body,
+      });
+    } catch (err) {
+      console.error("[check-listings] Email error:", err);
+      return NextResponse.json(
+        { checked: available.length, alerts: alerts.length, details: alerts, error: "Email failed" },
+        { status: 500 }
+      );
     }
   }
 

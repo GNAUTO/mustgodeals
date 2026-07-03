@@ -31,25 +31,19 @@ export async function GET(req: Request) {
         signal: AbortSignal.timeout(10_000),
       });
 
+      const SOLD_PHRASES = [
+        "this vehicle has been sold",
+        "vehicle sold",
+        "no longer available",
+        "this car has been sold",
+      ];
+
       if (res.status === 404) {
         reason = "HTTP 404 — page not found";
       } else if (res.ok) {
-        const html = await res.text();
-        const lower = html.toLowerCase();
-
-        if (
-          lower.includes("sold") ||
-          lower.includes("unavailable") ||
-          lower.includes("no longer available")
-        ) {
-          reason = "Page contains sold/unavailable text";
-        } else {
-          const priceStr = listing.price.toLocaleString("en-AU");
-          const priceNaked = String(listing.price);
-          if (!lower.includes(priceStr.toLowerCase()) && !lower.includes(priceNaked)) {
-            reason = `Listed price $${priceStr} not found on page`;
-          }
-        }
+        const lower = (await res.text()).toLowerCase();
+        const matched = SOLD_PHRASES.find((p) => lower.includes(p));
+        if (matched) reason = `Page contains: "${matched}"`;
       }
     } catch (err) {
       reason = `Fetch error: ${err instanceof Error ? err.message : String(err)}`;

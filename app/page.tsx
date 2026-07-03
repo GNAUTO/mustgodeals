@@ -6,6 +6,16 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
+import { JsonLd } from "./components/JsonLd";
+
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MustGoDeals",
+  url: "https://mustgodeals.com.au",
+  logo: "https://mustgodeals.com.au/favicon.svg",
+  email: "hello.mustgodeals@gmail.com",
+};
 
 const LANGS = [
   { label: "EN", code: "EN", comingSoon: "Articles coming soon." },
@@ -25,6 +35,7 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
+      <JsonLd data={ORG_SCHEMA} />
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
       {/* Hero */}

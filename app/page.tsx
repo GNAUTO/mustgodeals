@@ -175,7 +175,7 @@ export default function Home() {
 
       {/* Blog section */}
       <div style={{ background: "#f5f5f0", padding: "60px 0", width: "100%" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
+        <div className="blog-section-inner">
 
           {/* Section header */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
@@ -192,7 +192,7 @@ export default function Home() {
               {/* Main grid */}
               <div className="blog-main-grid">
                 {/* Left: featured */}
-                <div style={{ padding: "20px 20px 20px 0", borderRight: "0.5px solid rgba(0,0,0,0.08)" }}>
+                <div className="blog-featured-col">
                   {filtered[0] && (
                     <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
                       {/* Image placeholder (BlogPost has no image field) */}
@@ -209,7 +209,7 @@ export default function Home() {
                 </div>
 
                 {/* Right: numbered list 01-04 */}
-                <div style={{ padding: "20px 0 20px 20px", display: "flex", flexDirection: "column" }}>
+                <div className="blog-numbered-col">
                   {filtered.slice(1, 5).map((post, i) => (
                     <div key={post.slug} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>

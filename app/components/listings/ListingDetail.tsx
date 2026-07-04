@@ -167,7 +167,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
               <img
                 src={listing.images[activeImg]}
                 alt={`Photo ${activeImg + 1}`}
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
               />
 
               {activeImg > 0 && (
@@ -200,7 +200,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                 <img
                   key={i} src={src} alt={`Photo ${i + 1}`}
                   onClick={() => setActiveImg(i)}
-                  style={{ display: "inline-block", width: "80px", height: "54px", objectFit: "cover", borderRadius: "4px", marginRight: "6px", cursor: "pointer", border: activeImg === i ? "2px solid #CCDA47" : "2px solid transparent", opacity: activeImg === i ? 1 : 0.6, transition: "border-color 0.15s, opacity 0.15s", verticalAlign: "top" }}
+                  style={{ display: "inline-block", width: "80px", height: "54px", objectFit: "cover", objectPosition: "center", borderRadius: "4px", marginRight: "6px", cursor: "pointer", border: activeImg === i ? "2px solid #CCDA47" : "2px solid transparent", opacity: activeImg === i ? 1 : 0.6, transition: "border-color 0.15s, opacity 0.15s", verticalAlign: "top" }}
                 />
               ))}
             </div>

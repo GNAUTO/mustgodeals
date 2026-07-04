@@ -34,11 +34,9 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
 
         {/* Left: Logo */}
         <div style={{ flex: 1 }}>
-          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
-            <span style={{ fontSize: "20px", fontWeight: 500, color: "white", letterSpacing: "-0.5px" }}>
-              must<span style={{ color: "#CCDA47" }}>go</span>
-            </span>
-            <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", letterSpacing: "2px", marginTop: "2px" }}>DEALS</span>
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-[#F5F5F0]">mustgo</span>
+            <span className="rounded-full bg-[#CCDA47] px-3 py-1 text-xs font-bold tracking-widest text-[#1A1A1A]">DEALS</span>
           </Link>
         </div>
 

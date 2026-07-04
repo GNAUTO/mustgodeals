@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "li-mega-electric-china-australia",
+    title: "Li Auto Mega Electric MPV Targets Right-Hand Drive Markets",
+    excerpt:
+      "Li Auto has confirmed RHD production for the Mega electric MPV. Australia isn't on the official list, but the specs and tariff environment say otherwise.",
+    category: "NEWS",
+    date: "July 4, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/li-auto-mega-002.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "li-mega-electric-china-australia-ko",
+    title: "리 오토 메가, 우핸들 버전 생산 확정 — 호주 진출 가능성은?",
+    excerpt:
+      "리 오토가 메가 전기 MPV의 우핸들 버전 생산을 공식 확정했다. 호주는 리스트에 없지만, 스펙과 무관세 환경을 보면 얘기가 달라진다.",
+    category: "뉴스",
+    date: "2026년 7월 4일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/li-auto-mega-002.jpg",
+    lang: "KO",
+  },
+  {
     slug: "fiat-topolino-vatican-city-pope-2026",
     title: "The Pope Just Ordered 20 Fiat Topolinos for Vatican City",
     excerpt:

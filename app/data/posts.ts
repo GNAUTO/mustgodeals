@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "ferrari-12cilindri-manuale-manual-v12",
+    title: "Ferrari 12Cilindri Manuale: 820hp V12 With a Manual Gearbox",
+    excerpt:
+      "Ferrari's 12Cilindri Manuale pairs an 820hp naturally aspirated V12 with a by-wire 6-speed open-gate manual. Limited to 1,499 units at €590,000.",
+    category: "NEWS",
+    date: "July 4, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/ferrari-12cilindri-front.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "ferrari-12cilindri-manuale-manual-v12-ko",
+    title: "페라리 12칠린드리 마누알레: 820마력 V12에 수동 변속기를 달다",
+    excerpt:
+      "페라리가 12칠린드리 마누알레를 공개했다. 개방형 게이트 6단 수동 변속기를 탑재하되, 실제로는 바이-와이어 방식으로 8단 DCT를 조작하는 구조. 1,499대 한정, €590,000~.",
+    category: "뉴스",
+    date: "2026년 7월 4일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/ferrari-12cilindri-front.jpg",
+    lang: "KO",
+  },
+  {
     slug: "li-mega-electric-china-australia",
     title: "Li Auto Mega Electric MPV Targets Right-Hand Drive Markets",
     excerpt:

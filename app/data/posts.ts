@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "australia-new-road-rules-july-2026",
+    title: "New Road Rules July 2026: What Changed in Australia",
+    excerpt:
+      "New road rules are now in effect across Australia. Queensland cracks down on e-scooters, SA hikes speeding fines, and NSW cuts its weekly toll cap.",
+    category: "NEWS",
+    date: "July 4, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/australia-speed-sign-60kmh.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "australia-new-road-rules-july-2026-ko",
+    title: "2026년 7월 호주 신규 도로법규 총정리: 주별 변경사항",
+    excerpt:
+      "2026년 7월 1일부터 호주 전역에서 새 도로법규가 시행됐다. QLD 전동킥보드 대대적 규제, SA 과속 벌금 인상, NSW 통행료 상한 인하까지 주별로 정리했다.",
+    category: "뉴스",
+    date: "2026년 7월 4일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/australia-speed-sign-60kmh.jpg",
+    lang: "KO",
+  },
+  {
     slug: "ferrari-12cilindri-manuale-manual-v12",
     title: "Ferrari 12Cilindri Manuale: 820hp V12 With a Manual Gearbox",
     excerpt:

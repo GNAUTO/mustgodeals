@@ -1,0 +1,51 @@
+<svg width="600" height="600" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="340" cy="340" r="300"/>
+    </clipPath>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8e840"/>
+      <stop offset="100%" stop-color="#a8b820"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e4f050"/>
+      <stop offset="100%" stop-color="#8a9a20"/>
+    </linearGradient>
+    <linearGradient id="mgdGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CCDA47"/>
+      <stop offset="60%" stop-color="#b8c830"/>
+      <stop offset="100%" stop-color="#8a9a00"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="340" cy="340" r="300" fill="#111111" clip-path="url(#clip)"/>
+  <rect x="0" y="530" width="680" height="130" fill="url(#limeGrad)" clip-path="url(#clip)"/>
+  <rect x="0" y="530" width="680" height="2" fill="rgba(255,255,255,0.2)" clip-path="url(#clip)"/>
+
+  <text x="346" y="395" text-anchor="middle"
+    font-family="Arial Black, sans-serif"
+    font-size="210" font-weight="900"
+    fill="#000000" opacity="0.6"
+    letter-spacing="-4"
+    clip-path="url(#clip)">MGD</text>
+
+  <text x="340" y="388" text-anchor="middle"
+    font-family="Arial Black, sans-serif"
+    font-size="210" font-weight="900"
+    fill="url(#mgdGrad)"
+    letter-spacing="-4"
+    clip-path="url(#clip)">MGD</text>
+
+  <text x="340" y="585" text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="36" font-weight="700"
+    fill="#1A1A1A"
+    letter-spacing="1"
+    clip-path="url(#clip)">MustGoDeals</text>
+
+  <circle cx="342" cy="342" r="300" fill="none" stroke="#000000" stroke-width="28" opacity="0.4"/>
+  <circle cx="340" cy="340" r="300" fill="none" stroke="url(#borderGrad)" stroke-width="20"/>
+  <circle cx="340" cy="340" r="300" fill="none"
+    stroke="rgba(255,255,255,0.3)" stroke-width="3"
+    stroke-dasharray="280 1600" stroke-dashoffset="-140"/>
+</svg>

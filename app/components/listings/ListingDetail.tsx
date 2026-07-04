@@ -370,15 +370,12 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
         <div style={{ marginBottom: "2rem" }}>
           <SectionTitle>Specifications</SectionTitle>
           <div className="spec-grid">
-            {listing.specs.map((s) => {
-              const hi = ["Power", "Fuel", "0–100 km/h"].includes(s.label);
-              return (
-                <div key={s.label} style={{ background: hi ? "#1d2710" : "#242424", border: hi ? "0.5px solid #3a4a18" : "0.5px solid #2e2e2e", borderRadius: "6px", padding: "8px 10px" }}>
-                  <div style={{ fontSize: "10px", color: hi ? "#9aaa50" : "#888888", marginBottom: "3px" }}>{s.label}</div>
-                  <div style={{ fontSize: "12px", color: hi ? "#CCDA47" : "#ffffff", fontWeight: hi ? 600 : 500 }}>{s.value}</div>
-                </div>
-              );
-            })}
+            {listing.specs.map((s) => (
+              <div key={s.label} style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "6px", padding: "8px 10px" }}>
+                <div style={{ fontSize: "10px", color: "#888888", marginBottom: "3px" }}>{s.label}</div>
+                <div style={{ fontSize: "12px", color: "#ffffff", fontWeight: 500 }}>{s.value}</div>
+              </div>
+            ))}
           </div>
         </div>
 

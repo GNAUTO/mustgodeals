@@ -263,6 +263,15 @@ p  { font-size: 15px; }
   }
 }
 
+/* Homepage "View listing" button */
+.home-view-btn {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.home-view-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
 /* Listing card image height */
 .listings-card-img {
   height: 220px;

@@ -136,7 +136,7 @@ export default function Home() {
                         <span style={{ fontSize: "12px", fontWeight: 700, color: "#CCDA47", background: "#1f2410", border: "0.5px solid #3a4a10", padding: "3px 8px", borderRadius: "4px" }}>SAVE {fmtP(listing.savingsAmount)}</span>
                         <span style={{ fontSize: "10px", color: "#CCDA47" }}>{listing.savingsPct}% below new</span>
                       </div>
-                      <button style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "pointer" }}>
+                      <button className="home-view-btn" style={{ width: "100%", padding: "8px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "11px", fontWeight: 600, letterSpacing: "0.3px", cursor: "pointer" }}>
                         View listing →
                       </button>
                     </div>

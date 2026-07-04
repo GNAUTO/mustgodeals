@@ -120,8 +120,11 @@ export default function Home() {
                     <div style={{ aspectRatio: "16/9", background: "#1e1e1e", overflow: "hidden", position: "relative" }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={listing.images[0]} alt={listing.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
-                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>
-                        {listing.badge}
+                      <div style={{ position: "absolute", top: "10px", left: "10px", display: "flex", gap: "5px" }}>
+                        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
+                        {listing.savingsPct >= 20 && (
+                          <span style={{ background: "#E8460A", color: "#fff", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>HOT DEAL</span>
+                        )}
                       </div>
                     </div>
                     <div style={{ padding: "0.9rem 0.9rem 1rem" }}>

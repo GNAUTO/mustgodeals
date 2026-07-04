@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ListingCard from "../components/listings/ListingCard";
@@ -15,14 +15,6 @@ const PLACEHOLDER_CARDS = [
 
 export default function ListingsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   return (
     <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
@@ -69,11 +61,7 @@ export default function ListingsPage() {
       {/* Card grid */}
       <div style={{ flex: 1 }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
-            gap: "20px",
-          }}>
+          <div className="listings-grid">
             {LISTINGS.map((listing) => (
               <ListingCard key={listing.slug} listing={listing} />
             ))}

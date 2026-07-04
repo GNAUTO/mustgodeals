@@ -161,12 +161,12 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
 
           {/* Left: Image slider */}
           <div>
-            <div style={{ position: "relative", height: "480px", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
+            <div style={{ position: "relative", aspectRatio: "3/2", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={listing.images[activeImg]}
                 alt={`Photo ${activeImg + 1}`}
-                style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
 
               {activeImg > 0 && (

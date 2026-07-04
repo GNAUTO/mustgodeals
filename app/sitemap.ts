@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
+import { LISTINGS } from "./data/listings";
 
 const BASE_URL = "https://mustgodeals.com.au";
 
@@ -40,5 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...newsEntries, ...blogEntries];
+  const listingEntries = LISTINGS.map((item) => ({
+    url: `${BASE_URL}/listings/${item.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...listingEntries, ...newsEntries, ...blogEntries];
 }

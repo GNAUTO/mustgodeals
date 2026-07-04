@@ -226,6 +226,14 @@ p  { font-size: 15px; }
   }
 }
 
+/* Sticky sidebar — desktop only */
+@media (min-width: 769px) {
+  .listing-sidebar {
+    position: sticky;
+    top: 68px;
+  }
+}
+
 /* Listing spec / feature grids */
 .spec-grid {
   display: grid;

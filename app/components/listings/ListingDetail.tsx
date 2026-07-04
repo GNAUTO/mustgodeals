@@ -31,8 +31,9 @@ function SectionTitle({ children, right }: { children: React.ReactNode; right?: 
 }
 
 export default function ListingDetail({ listing }: { listing: Listing }) {
-  const [activeImg, setActiveImg] = useState(0);
-  const [featLang, setFeatLang]   = useState<"EN" | "KO">("EN");
+  const [activeImg, setActiveImg]   = useState(0);
+  const [featLang, setFeatLang]     = useState<"EN" | "KO">("EN");
+  const [optionsOpen, setOptionsOpen] = useState(false);
 
   const [enquireOpen, setEnquireOpen] = useState(false);
   const [formName, setFormName]       = useState("");
@@ -206,7 +207,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
           </div>
 
           {/* Right: Enquire card */}
-          <div style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "8px", padding: "14px", display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div className="listing-sidebar" style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "8px", padding: "14px", display: "flex", flexDirection: "column", gap: "12px" }}>
 
             {/* A. Vehicle info */}
             <div>
@@ -240,12 +241,33 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
               <div style={{ fontSize: "10px", color: "#555", textTransform: "uppercase", letterSpacing: "0.7px", fontWeight: 600, marginBottom: "8px" }}>
                 Why this price makes sense
               </div>
-              {priceRows.map((row, i, arr) => (
-                <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "6px", marginBottom: i < arr.length - 1 ? "6px" : 0, borderBottom: i < arr.length - 1 ? "0.5px solid #252525" : "none" }}>
-                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400 }}>{row.label}</span>
-                  <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400 }}>{row.val}</span>
-                </div>
-              ))}
+              {priceRows.map((row, i, arr) => {
+                const isOptionsRow = row.label === "Added options value";
+                return (
+                  <div key={i}>
+                    <div
+                      onClick={isOptionsRow ? () => setOptionsOpen((o) => !o) : undefined}
+                      style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "6px", marginBottom: i < arr.length - 1 ? "6px" : 0, borderBottom: (!isOptionsRow || !optionsOpen) && i < arr.length - 1 ? "0.5px solid #252525" : "none", cursor: isOptionsRow ? "pointer" : "default" }}
+                    >
+                      <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400, display: "flex", alignItems: "center", gap: "5px" }}>
+                        {row.label}
+                        {isOptionsRow && <span style={{ fontSize: "8px", color: "#555" }}>{optionsOpen ? "▲" : "▼"}</span>}
+                      </span>
+                      <span style={{ fontSize: "11px", color: row.lime ? "#CCDA47" : "#aaaaaa", fontWeight: row.lime ? 600 : 400 }}>{row.val}</span>
+                    </div>
+                    {isOptionsRow && optionsOpen && (
+                      <div style={{ marginBottom: "6px", paddingLeft: "8px", borderLeft: "1.5px solid #2e2e2e" }}>
+                        {listing.options.map((opt, j) => (
+                          <div key={j} style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "0.5px solid #222" }}>
+                            <span style={{ fontSize: "10px", color: "#777" }}>{opt.name}</span>
+                            <span style={{ fontSize: "10px", color: "#CCDA47", fontWeight: 600 }}>+{fmt(opt.price)}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* D. CTA button + form */}
@@ -307,6 +329,29 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
           </div>
         </div>
 
+        {/* Added Options */}
+        <div style={{ marginBottom: "2rem" }}>
+          <SectionTitle>Added Options — included in this vehicle</SectionTitle>
+          {listing.options.map((opt, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px", paddingBottom: "10px", marginBottom: "10px", borderBottom: "0.5px solid #242424" }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "8px", flex: 1 }}>
+                <span style={{ fontSize: "6px", color: "#CCDA47", lineHeight: "18px", flexShrink: 0 }}>●</span>
+                <div>
+                  <div style={{ fontSize: "12px", color: "#dddddd", marginBottom: "2px" }}>{opt.name}</div>
+                  <div style={{ fontSize: "10px", color: "#888888" }}>{featLang === "KO" ? opt.descKo : opt.descEn}</div>
+                </div>
+              </div>
+              <span style={{ fontSize: "12px", color: "#CCDA47", fontWeight: 600, flexShrink: 0, paddingTop: "1px" }}>+{fmt(opt.price)}</span>
+            </div>
+          ))}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "4px" }}>
+            <span style={{ fontSize: "11px", color: "#666" }}>
+              {featLang === "KO" ? "추가 옵션 합계 (이 차량에 포함)" : "Total added options (included in this vehicle)"}
+            </span>
+            <span style={{ fontSize: "13px", color: "#CCDA47", fontWeight: 700 }}>+{fmt(optionsTotal)}</span>
+          </div>
+        </div>
+
         {/* Dealer Comment */}
         <div style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "8px", padding: "14px 16px", marginBottom: "2rem" }}>
           <div style={{ fontSize: "10px", color: "#555", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600, marginBottom: "10px" }}>
@@ -325,12 +370,15 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
         <div style={{ marginBottom: "2rem" }}>
           <SectionTitle>Specifications</SectionTitle>
           <div className="spec-grid">
-            {listing.specs.map((s) => (
-              <div key={s.label} style={{ background: "#242424", border: "0.5px solid #2e2e2e", borderRadius: "6px", padding: "8px 10px" }}>
-                <div style={{ fontSize: "10px", color: "#888888", marginBottom: "3px" }}>{s.label}</div>
-                <div style={{ fontSize: "12px", color: "#ffffff", fontWeight: 500 }}>{s.value}</div>
-              </div>
-            ))}
+            {listing.specs.map((s) => {
+              const hi = ["Power", "Fuel", "0–100 km/h"].includes(s.label);
+              return (
+                <div key={s.label} style={{ background: hi ? "#1d2710" : "#242424", border: hi ? "0.5px solid #3a4a18" : "0.5px solid #2e2e2e", borderRadius: "6px", padding: "8px 10px" }}>
+                  <div style={{ fontSize: "10px", color: hi ? "#9aaa50" : "#888888", marginBottom: "3px" }}>{s.label}</div>
+                  <div style={{ fontSize: "12px", color: hi ? "#CCDA47" : "#ffffff", fontWeight: hi ? 600 : 500 }}>{s.value}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -360,29 +408,6 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                 <div style={{ fontSize: "10px", color: "#888888", lineHeight: 1.5 }}>{featLang === "KO" ? f.descKo : f.descEn}</div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Added Options */}
-        <div style={{ marginBottom: "2rem" }}>
-          <SectionTitle>Added Options — included in this vehicle</SectionTitle>
-          {listing.options.map((opt, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px", paddingBottom: "10px", marginBottom: "10px", borderBottom: "0.5px solid #242424" }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "8px", flex: 1 }}>
-                <span style={{ fontSize: "6px", color: "#CCDA47", lineHeight: "18px", flexShrink: 0 }}>●</span>
-                <div>
-                  <div style={{ fontSize: "12px", color: "#dddddd", marginBottom: "2px" }}>{opt.name}</div>
-                  <div style={{ fontSize: "10px", color: "#888888" }}>{featLang === "KO" ? opt.descKo : opt.descEn}</div>
-                </div>
-              </div>
-              <span style={{ fontSize: "12px", color: "#CCDA47", fontWeight: 600, flexShrink: 0, paddingTop: "1px" }}>+{fmt(opt.price)}</span>
-            </div>
-          ))}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "4px" }}>
-            <span style={{ fontSize: "11px", color: "#666" }}>
-              {featLang === "KO" ? "추가 옵션 합계 (이 차량에 포함)" : "Total added options (included in this vehicle)"}
-            </span>
-            <span style={{ fontSize: "13px", color: "#CCDA47", fontWeight: 700 }}>+{fmt(optionsTotal)}</span>
           </div>
         </div>
 

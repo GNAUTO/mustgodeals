@@ -16,13 +16,6 @@ const PLACEHOLDER_CARDS = [
 export default function ListingsPageClient() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const tickerItems = LISTINGS
-    .filter((l) => l.status === "available")
-    .map((l) => ({
-      save: `SAVE $${l.savingsAmount.toLocaleString("en-AU")}`,
-      vehicle: `on ${l.name}`,
-    }));
-
   return (
     <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <Navbar />
@@ -40,27 +33,6 @@ export default function ListingsPageClient() {
           </p>
         </div>
       </div>
-
-      {/* Deal ticker */}
-      {tickerItems.length > 0 && (
-        <div style={{ background: "#FAFAFA", borderBottom: "1px solid rgba(0,0,0,0.06)", padding: "0" }} aria-hidden="true">
-          <div className="deal-ticker">
-            <div className="deal-ticker-track">
-              {[...tickerItems, ...tickerItems].map((item, i) => (
-                <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
-                  <span style={{ color: "#CCDA47", fontWeight: 700, fontSize: "12px", letterSpacing: "0.02em" }}>
-                    {item.save}
-                  </span>
-                  <span style={{ color: "#6B6B6B", fontSize: "12px" }}>
-                    &nbsp;{item.vehicle}
-                  </span>
-                  <span style={{ color: "rgba(0,0,0,0.18)", fontSize: "12px", margin: "0 20px" }}>·</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       <div style={{ background: "#FAFAFA", borderBottom: "1px solid rgba(0,0,0,0.06)", padding: "0 2rem" }}>
         <div style={{ maxWidth: "1600px", margin: "0 auto", display: "flex", gap: "8px", padding: "0.75rem 0", flexWrap: "wrap" }}>

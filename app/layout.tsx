@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"] });
@@ -39,8 +40,13 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4054288002830029"
           crossOrigin="anonymous"
         />
-        <script
-          type="text/javascript"
+      </head>
+      <body className={geist.className}>
+        {children}
+        <Analytics />
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -49,10 +55,6 @@ export default function RootLayout({
   })(window, document, "clarity", "script", "xfl2p795s0");`,
           }}
         />
-      </head>
-      <body className={geist.className}>
-        {children}
-        <Analytics />
       </body>
     </html>
   );

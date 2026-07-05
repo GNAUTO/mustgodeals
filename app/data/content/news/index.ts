@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 
-import GwmTank300RefreshHi4zLidarContent from './gwm-tank-300-refresh-hi4z-lidar';
-import GwmTank300RefreshHi4zLidarKoContent from './gwm-tank-300-refresh-hi4z-lidar-ko';
 import AustraliaNewRoadRulesJuly2026Content from './australia-new-road-rules-july-2026';
 import AustraliaNewRoadRulesJuly2026KoContent from './australia-new-road-rules-july-2026-ko';
 import Ferrari12CilindriManualeContent from './ferrari-12cilindri-manuale-manual-v12';
@@ -60,8 +58,6 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
-  'gwm-tank-300-refresh-hi4z-lidar': GwmTank300RefreshHi4zLidarContent,
-  'gwm-tank-300-refresh-hi4z-lidar-ko': GwmTank300RefreshHi4zLidarKoContent,
   'australia-new-road-rules-july-2026': AustraliaNewRoadRulesJuly2026Content,
   'australia-new-road-rules-july-2026-ko': AustraliaNewRoadRulesJuly2026KoContent,
   'ferrari-12cilindri-manuale-manual-v12': Ferrari12CilindriManualeContent,

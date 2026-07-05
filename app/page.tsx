@@ -34,6 +34,13 @@ export default function Home() {
   const filteredNews = NEWS_ITEMS.filter((n) => n.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
+  const tickerItems = LISTINGS
+    .filter((l) => l.status === "available")
+    .map((l) => ({
+      save: `SAVE $${l.savingsAmount.toLocaleString("en-AU")}`,
+      vehicle: `on ${l.name}`,
+    }));
+
   return (
     <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <JsonLd data={ORG_SCHEMA} />
@@ -56,6 +63,27 @@ export default function Home() {
             Read buying guides
           </Link>
         </div>
+
+        {/* Deal ticker */}
+        {tickerItems.length > 0 && (
+          <div style={{ marginTop: "2rem" }} aria-hidden="true">
+            <div className="deal-ticker">
+              <div className="deal-ticker-track">
+                {[...tickerItems, ...tickerItems].map((item, i) => (
+                  <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
+                    <span style={{ color: "#CCDA47", fontWeight: 700, fontSize: "12px", letterSpacing: "0.02em" }}>
+                      {item.save}
+                    </span>
+                    <span style={{ color: "#6B6B6B", fontSize: "12px" }}>
+                      &nbsp;{item.vehicle}
+                    </span>
+                    <span style={{ color: "rgba(0,0,0,0.18)", fontSize: "12px", margin: "0 20px" }}>·</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Demo Cars */}

@@ -324,6 +324,59 @@ p  { font-size: 15px; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
+/* ── Deal ticker (hero marquee) ─────────────────────────────── */
+.deal-ticker {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.deal-ticker-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.deal-ticker-track:hover {
+  animation-play-state: paused;
+  cursor: default;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deal-ticker-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    white-space: normal;
+  }
+  .deal-ticker {
+    -webkit-mask-image: none;
+    mask-image: none;
+    overflow: visible;
+  }
+}
+
 /* Demo Cars grid — 4 col desktop, horizontal scroll on mobile */
 .demo-grid {
   display: grid;

@@ -36,15 +36,15 @@ const li = {
 
 export default function PrivacyPolicy() {
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA" }}>
       <Navbar />
 
       {/* Page header */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem" }}>
+      <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.5rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", color: "#CCDA47", letterSpacing: "1px", marginBottom: "0.75rem" }}>LEGAL</div>
-          <h1 style={{ color: "white", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.5rem" }}>Privacy Policy</h1>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", margin: 0 }}>Last updated: June 2026</p>
+          <div style={{ fontSize: "11px", color: "#8A9A10", letterSpacing: "1px", marginBottom: "0.75rem", fontWeight: 600 }}>LEGAL</div>
+          <h1 style={{ color: "#1A1A1A", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.5rem" }}>Privacy Policy</h1>
+          <p style={{ color: "#6B6B6B", fontSize: "13px", margin: 0 }}>Last updated: June 2026</p>
         </div>
       </div>
 

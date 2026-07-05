@@ -3,7 +3,7 @@
 :root {
   --lime: #CCDA47;
   --dark: #1A1A1A;
-  --bg: #F5F5F0;
+  --bg: #FAFAFA;
 }
 
 * {
@@ -66,9 +66,9 @@ p  { font-size: 15px; }
   }
 }
 
-/* ── Navbar responsive ───────────────────────────────────── */
+/* ── Navbar floating pill ──────────────────────────────────── */
 
-/* Desktop: lang tabs (no divider) */
+/* Desktop: lang tabs */
 .navbar-lang-tabs {
   display: flex;
   gap: 0.875rem;
@@ -83,7 +83,7 @@ p  { font-size: 15px; }
   align-items: center;
 }
 
-/* Hamburger — hidden on desktop */
+/* Hamburger — hidden on desktop, shown on mobile */
 .navbar-hamburger {
   display: none;
   background: none;
@@ -91,7 +91,7 @@ p  { font-size: 15px; }
   cursor: pointer;
   padding: 4px;
   align-items: center;
-  color: white;
+  color: #1A1A1A;
   flex-shrink: 0;
 }
 
@@ -106,11 +106,15 @@ p  { font-size: 15px; }
   border-radius: 6px;
 }
 
-/* Dropdown */
-.navbar-mobile-dropdown {
-  display: flex;
-  flex-direction: column;
-  background: #111;
+/* Floating nav outer — responsive padding */
+.navbar-float-outer {
+  padding: 10px 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .navbar-float-outer {
+    padding: 8px 0.75rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -173,16 +177,16 @@ p  { font-size: 15px; }
   }
 }
 
-/* Pagination buttons */
+/* Pagination buttons — light theme */
 .page-btn {
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1A1A1A;
-  border: 0.5px solid #333;
-  color: #aaa;
+  background: white;
+  border: 0.5px solid rgba(0,0,0,0.12);
+  color: #666;
   border-radius: 4px;
   font-size: 13px;
   font-family: inherit;
@@ -191,8 +195,9 @@ p  { font-size: 15px; }
   flex-shrink: 0;
 }
 .page-btn:hover {
-  color: #fff;
-  border-color: #555;
+  color: #1A1A1A;
+  border-color: rgba(0,0,0,0.25);
+  background: #F5F5F5;
 }
 .page-btn.active {
   background: #CCDA47;
@@ -201,11 +206,11 @@ p  { font-size: 15px; }
   border: none;
 }
 .page-btn.arrow {
-  color: #666;
+  color: #888;
 }
 .page-btn.arrow:hover {
-  color: #CCDA47;
-  border-color: #CCDA47;
+  color: #1A1A1A;
+  border-color: rgba(0,0,0,0.2);
 }
 .page-btn:disabled {
   opacity: 0.3;
@@ -226,7 +231,7 @@ p  { font-size: 15px; }
   }
 }
 
-/* Sticky sidebar — desktop only */
+/* Sticky sidebar — desktop only; top accounts for floating nav height */
 @media (min-width: 769px) {
   .listing-sidebar {
     position: sticky;
@@ -250,16 +255,18 @@ p  { font-size: 15px; }
   .feature-grid { grid-template-columns: 1fr; }
 }
 
-/* Listings card — hover border lime (dark theme default) */
+/* Listing card — light theme default */
 .listing-card {
-  border: 0.5px solid #2e2e2e;
-  transition: border-color 0.2s;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
 }
 .listing-card:hover {
-  border-color: #CCDA47;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
 }
 
-/* Homepage light theme card — overrides dark defaults */
+/* Homepage card override (kept for backward compat) */
 .home-card-light {
   border: none !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
@@ -302,7 +309,7 @@ p  { font-size: 15px; }
   }
 }
 
-/* Listing card hover effect (light theme) */
+/* Listing card hover effect */
 .listings-real-card {
   background: #fff;
   border-radius: 8px;
@@ -350,7 +357,6 @@ p  { font-size: 15px; }
 .news-card {
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
-
 .news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.11);

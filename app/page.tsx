@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NavbarLight from "./components/NavbarLight";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <JsonLd data={ORG_SCHEMA} />
-      <NavbarLight langTabs={{ activeLang, onLangChange: setActiveLang }} />
+      <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
       {/* Hero — light theme */}
       <div className="hero-section" style={{ background: "#FAFAFA", textAlign: "center" }}>

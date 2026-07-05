@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA" }}>
       <Navbar />
 
       {/* Page header */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem" }}>
+      <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.5rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", color: "#CCDA47", letterSpacing: "1px", marginBottom: "0.75rem" }}>OUR STORY</div>
-          <h1 style={{ color: "white", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.75rem" }}>
+          <div style={{ fontSize: "11px", color: "#8A9A10", letterSpacing: "1px", marginBottom: "0.75rem", fontWeight: 600 }}>OUR STORY</div>
+          <h1 style={{ color: "#1A1A1A", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.75rem" }}>
             We&apos;re on the buyer&apos;s side
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", margin: 0, lineHeight: 1.7 }}>
+          <p style={{ color: "#6B6B6B", fontSize: "15px", margin: 0, lineHeight: 1.7 }}>
             MustGoDeals gives Australian car buyers the insider knowledge<br />they need to negotiate like they&apos;ve done it a hundred times.
           </p>
         </div>
@@ -30,9 +30,9 @@ export default function About() {
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "3rem 2rem 4rem" }}>
 
         {/* Mission card */}
-        <div style={{ background: "#1A1A1A", borderRadius: "12px", padding: "2rem", marginBottom: "1.5rem", border: "1px solid rgba(204,218,71,0.2)" }}>
-          <div style={{ fontSize: "11px", color: "#CCDA47", letterSpacing: "1px", marginBottom: "0.75rem" }}>MISSION</div>
-          <p style={{ color: "white", fontSize: "18px", fontWeight: 400, lineHeight: 1.7, margin: 0 }}>
+        <div style={{ background: "white", borderRadius: "12px", padding: "2rem", marginBottom: "1.5rem", border: "0.5px solid rgba(0,0,0,0.07)", borderLeft: "3px solid #CCDA47", boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}>
+          <div style={{ fontSize: "11px", color: "#8A9A10", letterSpacing: "1px", marginBottom: "0.75rem", fontWeight: 600 }}>MISSION</div>
+          <p style={{ color: "#1A1A1A", fontSize: "18px", fontWeight: 400, lineHeight: 1.7, margin: 0 }}>
             To close the information gap between Australian car buyers and dealerships — so that everyone can negotiate from the same position.
           </p>
         </div>

@@ -159,7 +159,7 @@ export default function BlogPageClient() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
       <div style={{ flex: 1 }}>

@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <Navbar />
 
       {/* Page header */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 2rem" }}>
+      <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.5rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
-          <div style={{ fontSize: "11px", color: "#CCDA47", letterSpacing: "1px", marginBottom: "0.75rem" }}>GET IN TOUCH</div>
-          <h1 style={{ color: "white", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.5rem" }}>Contact</h1>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", margin: 0 }}>We aim to respond within 2 business days.</p>
+          <div style={{ fontSize: "11px", color: "#8A9A10", letterSpacing: "1px", marginBottom: "0.75rem", fontWeight: 600 }}>GET IN TOUCH</div>
+          <h1 style={{ color: "#1A1A1A", fontSize: "32px", fontWeight: 500, letterSpacing: "-0.3px", marginBottom: "0.5rem" }}>Contact</h1>
+          <p style={{ color: "#6B6B6B", fontSize: "13px", margin: 0 }}>We aim to respond within 2 business days.</p>
         </div>
       </div>
 
@@ -42,14 +42,14 @@ export default function Contact() {
         </div>
 
         {/* Dealer partnership */}
-        <div style={{ background: "#1A1A1A", borderRadius: "12px", padding: "2rem", border: "1px solid rgba(204,218,71,0.2)", marginBottom: "1.25rem" }}>
-          <div style={{ fontSize: "11px", color: "#CCDA47", letterSpacing: "1px", marginBottom: "0.5rem" }}>FOR DEALERS</div>
-          <h2 style={{ fontSize: "18px", fontWeight: 600, color: "white", marginBottom: "0.75rem" }}>Dealer Partnerships</h2>
-          <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
+        <div style={{ background: "white", borderRadius: "12px", padding: "2rem", border: "0.5px solid rgba(0,0,0,0.07)", borderLeft: "3px solid #CCDA47", marginBottom: "1.25rem" }}>
+          <div style={{ fontSize: "11px", color: "#8A9A10", letterSpacing: "1px", marginBottom: "0.5rem", fontWeight: 600 }}>FOR DEALERS</div>
+          <h2 style={{ fontSize: "18px", fontWeight: 600, color: "#1A1A1A", marginBottom: "0.75rem" }}>Dealer Partnerships</h2>
+          <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7, marginBottom: "1.25rem" }}>
             Do you have end-of-month stock that needs to move? We connect clearance vehicles with motivated buyers who are actively looking to purchase. List your month-end deals and reach our subscriber base before the clock runs out.
           </p>
           <div style={{ display: "flex", flexDirection: "column" as const, gap: "6px" }}>
-            <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>Email with subject line: <strong style={{ color: "rgba(255,255,255,0.7)" }}>Dealer Partnership</strong></div>
+            <div style={{ fontSize: "13px", color: "#888" }}>Email with subject line: <strong style={{ color: "#1A1A1A" }}>Dealer Partnership</strong></div>
             <a href="mailto:hello.mustgodeals@gmail.com?subject=Dealer%20Partnership" style={{ display: "inline-block", background: "#CCDA47", color: "#1A1A1A", padding: "10px 18px", borderRadius: "8px", fontSize: "14px", fontWeight: 600, textDecoration: "none", width: "fit-content" }}>
               hello.mustgodeals@gmail.com
             </a>

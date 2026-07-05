@@ -76,12 +76,12 @@ export default function NewsPageClient() {
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
-      <div style={{ background: "#1A1A1A", padding: "2rem 2rem 2.25rem" }}>
+      <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.5rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          <h1 style={{ color: "white", fontSize: "24px", fontWeight: 500, letterSpacing: "-0.3px", lineHeight: 1.2 }}>
+          <h1 style={{ color: "#1A1A1A", fontSize: "24px", fontWeight: 500, letterSpacing: "-0.3px", lineHeight: 1.2 }}>
             Latest news
           </h1>
         </div>

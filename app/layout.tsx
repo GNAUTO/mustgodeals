@@ -6,8 +6,12 @@ import "./globals.css";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mustgodeals.com.au"),
   title: "MustGoDeals - Car Deals Australia",
   description: "Cars dealers must sell before month end. Find the best clearance deals on new, demo and used cars across Australia.",
+  alternates: {
+    canonical: "https://mustgodeals.com.au",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

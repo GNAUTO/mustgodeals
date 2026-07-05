@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -17,6 +17,13 @@ type LangTabsProps = {
 export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const linkColor = (key: string, mobile = false) => {
     if (key === "blog"     && pathname.startsWith("/blog"))     return "#CCDA47";
@@ -26,7 +33,16 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
   };
 
   return (
-    <nav style={{ background: "#1A1A1A" }}>
+    <nav style={{
+      position: "sticky",
+      top: 0,
+      zIndex: 50,
+      background: "rgba(26,26,26,0.85)",
+      backdropFilter: "blur(8px)",
+      WebkitBackdropFilter: "blur(8px)",
+      boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.3)" : "none",
+      transition: "box-shadow 0.2s ease",
+    }}>
 
       {/* ── Row 1 ── */}
       <div style={{ padding: "0 2rem" }}>

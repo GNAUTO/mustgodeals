@@ -28,7 +28,7 @@ export default function ListingsPageClient() {
       <Navbar />
 
       <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.25rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
           <div style={{ display: "inline-flex", alignItems: "center", background: "rgba(204,218,71,0.15)", border: "1px solid rgba(204,218,71,0.4)", color: "#6B6B00", fontSize: "11px", padding: "4px 14px", borderRadius: "20px", marginBottom: "0.75rem", letterSpacing: "0.5px" }}>
             Demo Listings
           </div>
@@ -63,7 +63,7 @@ export default function ListingsPageClient() {
       )}
 
       <div style={{ background: "#FAFAFA", borderBottom: "1px solid rgba(0,0,0,0.06)", padding: "0 2rem" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", gap: "8px", padding: "0.75rem 0", flexWrap: "wrap" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", display: "flex", gap: "8px", padding: "0.75rem 0", flexWrap: "wrap" }}>
           {FILTERS.map((f) => (
             <button
               key={f}
@@ -85,7 +85,7 @@ export default function ListingsPageClient() {
       </div>
 
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           <div className="listings-grid">
             {LISTINGS.map((listing) => (
               <ListingCard key={listing.slug} listing={listing} />

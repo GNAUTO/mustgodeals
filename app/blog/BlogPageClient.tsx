@@ -163,7 +163,7 @@ export default function BlogPageClient() {
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 4rem" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "2rem 2rem 4rem" }}>
 
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#aaa", fontSize: "15px" }}>

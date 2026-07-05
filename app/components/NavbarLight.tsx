@@ -49,7 +49,7 @@ export default function NavbarLight({ langTabs }: { langTabs?: LangTabsProps }) 
     }}>
       {/* Floating pill */}
       <div style={{
-        maxWidth: "1400px",
+        maxWidth: "1600px",
         margin: "0 auto",
         pointerEvents: "all",
         background: "rgba(255,255,255,0.94)",

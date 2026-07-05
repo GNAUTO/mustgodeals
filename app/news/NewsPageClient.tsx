@@ -80,7 +80,7 @@ export default function NewsPageClient() {
       <Navbar langTabs={{ activeLang, onLangChange: handleLangChange }} />
 
       <div style={{ background: "#FAFAFA", padding: "2rem 2rem 1.5rem", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
           <h1 style={{ color: "#1A1A1A", fontSize: "24px", fontWeight: 500, letterSpacing: "-0.3px", lineHeight: 1.2 }}>
             Latest news
           </h1>
@@ -88,7 +88,7 @@ export default function NewsPageClient() {
       </div>
 
       <div style={{ flex: 1 }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           {filtered.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 0", color: "#aaa", fontSize: "15px" }}>
               {currentLang.comingSoon}

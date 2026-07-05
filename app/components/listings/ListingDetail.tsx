@@ -149,7 +149,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
         </div>
       )}
 
-      <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "1.5rem 2rem 3rem", flex: 1, width: "100%" }}>
+      <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "1.5rem 2rem 3rem", flex: 1, width: "100%" }}>
 
         {/* Breadcrumb */}
         <div style={{ fontSize: "12px", color: "#6B6B6B", marginBottom: "1.5rem" }}>

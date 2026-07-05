@@ -88,7 +88,7 @@ export default function Home() {
 
       {/* Demo Cars */}
       <div style={{ background: "#FAFAFA", padding: "2.5rem 0" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "16px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.06em", textTransform: "uppercase" }}>Demo Cars Available Now</h2>
             <Link href="/listings" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>View all listings →</Link>
@@ -181,7 +181,7 @@ export default function Home() {
 
       {/* Latest News */}
       <div style={{ background: "#FAFAFA", padding: "2.5rem 0", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
             <Link href="/news" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>All news →</Link>

@@ -35,11 +35,11 @@ export default function Home() {
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F5F5F0", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <JsonLd data={ORG_SCHEMA} />
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
-      {/* Hero */}
+      {/* Hero — intentionally dark for contrast */}
       <div className="hero-section" style={{ background: "#1A1A1A", textAlign: "center" }}>
         <h1 style={{ color: "white", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
           Cars dealers <span style={{ color: "#CCDA47" }}>must move</span><br />
@@ -58,12 +58,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Demo Cars — dynamically driven by LISTINGS */}
-      <div style={{ background: "#1A1A1A", padding: "2.5rem 0" }}>
+      {/* Demo Cars */}
+      <div style={{ background: "#FAFAFA", padding: "2.5rem 0" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <h2 style={{ fontSize: "16px", fontWeight: 600, color: "white", letterSpacing: "0.08em", textTransform: "uppercase" }}>Demo Cars Available Now</h2>
-            <Link href="/listings" style={{ fontSize: "13px", color: "#CCDA47", textDecoration: "none", fontWeight: 500 }}>View all listings →</Link>
+            <h2 style={{ fontSize: "16px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.06em", textTransform: "uppercase" }}>Demo Cars Available Now</h2>
+            <Link href="/listings" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>View all listings →</Link>
           </div>
 
           <div className="demo-grid">
@@ -74,21 +74,21 @@ export default function Home() {
 
               if (listing.status === "coming_soon") {
                 return (
-                  <div key={listing.slug} className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.5 }}>
-                    <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                      <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
+                  <div key={listing.slug} className="listing-card home-card-light" style={{ background: "#F3F3F3", borderRadius: "8px", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.55 }}>
+                    <div style={{ height: "120px", background: "#E8E8E8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                      <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#D0D0D0" }}>
                         <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
                         <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
-                        <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                        <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="16" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="48" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
                       </svg>
-                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>COMING SOON</div>
+                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#1A1A1A", color: "#CCDA47", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>COMING SOON</div>
                     </div>
                     <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                      <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
-                      <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
-                      <div style={{ background: "#383838", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
-                      <div style={{ width: "100%", padding: "8px", background: "#1f2410", color: "#CCDA47", border: "0.5px solid #3a4a10", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", textAlign: "center" }}>Coming soon</div>
+                      <div style={{ background: "#DCDCDC", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
+                      <div style={{ background: "#E4E4E4", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
+                      <div style={{ background: "#D8D8D8", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
+                      <div style={{ width: "100%", padding: "8px", background: "#E0E0E0", color: "#AAAAAA", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", textAlign: "center" }}>Coming soon</div>
                     </div>
                   </div>
                 );
@@ -96,20 +96,20 @@ export default function Home() {
 
               if (listing.status === "sold") {
                 return (
-                  <div key={listing.slug} style={{ background: "#242424", borderRadius: "8px", border: "0.5px solid #2e2e2e", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.35 }}>
-                    <div style={{ height: "120px", background: "#1e1e1e", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                      <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#2e2e2e" }}>
+                  <div key={listing.slug} style={{ background: "#F3F3F3", borderRadius: "8px", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.4, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
+                    <div style={{ height: "120px", background: "#E8E8E8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                      <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#D0D0D0" }}>
                         <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
                         <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
-                        <circle cx="16" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
-                        <circle cx="48" cy="33" r="5" fill="#1e1e1e" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="16" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
+                        <circle cx="48" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
                       </svg>
-                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#2a1515", color: "#e05555", border: "0.5px solid #4a2020", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>SOLD</div>
+                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#FEE2E2", color: "#DC2626", border: "0.5px solid #FECACA", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>SOLD</div>
                     </div>
                     <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                      <div style={{ background: "#333", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
-                      <div style={{ background: "#292929", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
-                      <button style={{ width: "100%", padding: "8px", background: "#222", color: "#444", border: "0.5px solid #333", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "default" }}>No longer available</button>
+                      <div style={{ background: "#DCDCDC", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
+                      <div style={{ background: "#E4E4E4", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
+                      <button style={{ width: "100%", padding: "8px", background: "#E8E8E8", color: "#AAAAAA", border: "none", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "default" }}>No longer available</button>
                     </div>
                   </div>
                 );
@@ -117,27 +117,27 @@ export default function Home() {
 
               return (
                 <Link key={listing.slug} href={`/listings/${listing.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                  <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
-                    <div style={{ aspectRatio: "16/9", background: "#1e1e1e", overflow: "hidden", position: "relative" }}>
+                  <div className="listing-card home-card-light" style={{ background: "#FFFFFF", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
+                    <div style={{ aspectRatio: "16/9", background: "#F0F0F0", overflow: "hidden", position: "relative" }}>
                       <Image src={listing.images[0]} alt={listing.name} fill style={{ objectFit: "cover", objectPosition: "center" }} />
                       <div style={{ position: "absolute", top: "10px", left: "10px", display: "flex", gap: "5px" }}>
-                        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
+                        <span style={{ background: "#1A1A1A", color: "white", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
                         {listing.savingsPct >= 20 && (
                           <span style={{ background: "#E8460A", color: "#fff", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>HOT DEAL</span>
                         )}
                       </div>
                     </div>
                     <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                      <div style={{ fontSize: "12px", fontWeight: 600, color: "#ddd", lineHeight: 1.3, marginBottom: "3px" }}>{listing.name}</div>
-                      <div style={{ fontSize: "10px", color: "#555", marginBottom: "8px" }}>{listing.km.toLocaleString("en-AU")} km · {listing.colour} · {fuelLabel}</div>
+                      <div style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3, marginBottom: "3px" }}>{listing.name}</div>
+                      <div style={{ fontSize: "10px", color: "#6B6B6B", marginBottom: "8px" }}>{listing.km.toLocaleString("en-AU")} km · {listing.colour} · {fuelLabel}</div>
                       <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-                        <span style={{ fontSize: "12px", color: "#888", textDecoration: "line-through" }}>{fmtP(listing.wasPrice)}</span>
-                        <span style={{ fontSize: "12px", color: "#666" }}>→</span>
-                        <span style={{ fontSize: "22px", fontWeight: 700, color: "#CCDA47" }}>{fmtP(listing.price)}</span>
+                        <span style={{ fontSize: "12px", color: "#BBBBBB", textDecoration: "line-through" }}>{fmtP(listing.wasPrice)}</span>
+                        <span style={{ fontSize: "12px", color: "#BBBBBB" }}>→</span>
+                        <span style={{ fontSize: "22px", fontWeight: 700, color: "#1A1A1A" }}>{fmtP(listing.price)}</span>
                       </div>
                       <div style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "10px" }}>
-                        <span style={{ fontSize: "12px", fontWeight: 700, color: "#CCDA47", background: "#1f2410", border: "0.5px solid #3a4a10", padding: "3px 8px", borderRadius: "4px" }}>SAVE {fmtP(listing.savingsAmount)}</span>
-                        <span style={{ fontSize: "10px", color: "#CCDA47" }}>{listing.savingsPct}% below new</span>
+                        <span style={{ fontSize: "12px", fontWeight: 700, color: "#1A1A1A", background: "#CCDA47", padding: "3px 8px", borderRadius: "4px" }}>SAVE {fmtP(listing.savingsAmount)}</span>
+                        <span style={{ fontSize: "10px", color: "#6B6B6B" }}>{listing.savingsPct}% below new</span>
                       </div>
                       <button className="home-view-btn" style={{ width: "100%", padding: "8px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "11px", fontWeight: 600, letterSpacing: "0.3px", cursor: "pointer" }}>
                         View listing →
@@ -152,14 +152,14 @@ export default function Home() {
       </div>
 
       {/* Latest News */}
-      <div style={{ background: "#ECEEE7", padding: "2.5rem 0" }}>
+      <div style={{ background: "#F2F2EE", padding: "2.5rem 0" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
-            <Link href="/news" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
+            <Link href="/news" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
           </div>
           {filteredNews.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "2rem", color: "#aaa", fontSize: "14px" }}>{currentLang.comingSoon}</div>
+            <div style={{ textAlign: "center", padding: "2rem", color: "#AAAAAA", fontSize: "14px" }}>{currentLang.comingSoon}</div>
           ) : (
             <div className="news-mag-grid">
               {filteredNews.slice(0, 4).map((item) => (
@@ -183,17 +183,17 @@ export default function Home() {
       </div>
 
       {/* Blog section */}
-      <div style={{ background: "#f5f5f0", padding: "60px 0", width: "100%" }}>
+      <div style={{ background: "#FAFAFA", padding: "60px 0", width: "100%" }}>
         <div className="blog-section-inner">
 
           {/* Section header */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Guides &amp; Insights</h2>
-            <Link href="/blog" style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>View all articles →</Link>
+            <Link href="/blog" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>View all articles →</Link>
           </div>
 
           {filtered.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#aaa", fontSize: "15px" }}>
+            <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#AAAAAA", fontSize: "15px" }}>
               {currentLang.comingSoon}
             </div>
           ) : (
@@ -204,15 +204,14 @@ export default function Home() {
                 <div className="blog-featured-col">
                   {filtered[0] && (
                     <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
-                      {/* Image placeholder (BlogPost has no image field) */}
                       <div className="blog-featured-img-card" style={{ width: "100%", aspectRatio: "16/9", borderRadius: "4px", background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)", marginBottom: "14px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "18px 20px", boxSizing: "border-box", overflow: "hidden" }}>
                         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#CCDA47", marginBottom: "6px" }}>{filtered[0].category}</div>
                         <div style={{ fontSize: "17px", fontWeight: 600, color: "white", lineHeight: 1.25 }}>{filtered[0].title}</div>
                       </div>
                       <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "6px" }}>{filtered[0].category}</div>
                       <h2 style={{ fontSize: "19px", fontWeight: 600, color: "#111", lineHeight: 1.25, margin: "0 0 8px" }}>{filtered[0].title}</h2>
-                      <p style={{ fontSize: "12px", color: "rgba(0,0,0,0.5)", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
-                      <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{filtered[0].date}&nbsp;&nbsp;·&nbsp;&nbsp;{filtered[0].readTime}</span>
+                      <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
+                      <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{filtered[0].date}&nbsp;&nbsp;·&nbsp;&nbsp;{filtered[0].readTime}</span>
                     </Link>
                   )}
                 </div>
@@ -227,8 +226,8 @@ export default function Home() {
                         </span>
                         <div>
                           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
-                          <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#222", lineHeight: 1.35, margin: "0 0 5px" }}>{post.title}</h3>
-                          <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                          <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 5px" }}>{post.title}</h3>
+                          <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
                         </div>
                       </Link>
                     </div>
@@ -243,8 +242,8 @@ export default function Home() {
                     <div key={post.slug} className="blog-bottom-cell">
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
                         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
-                        <h3 style={{ fontSize: "12px", fontWeight: 600, color: "#333", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
-                        <span style={{ fontSize: "11px", color: "rgba(0,0,0,0.3)" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                        <h3 style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
+                        <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
                       </Link>
                     </div>
                   ))}

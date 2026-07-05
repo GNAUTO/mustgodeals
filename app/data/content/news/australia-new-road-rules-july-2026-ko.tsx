@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function AustraliaNewRoadRulesJuly2026KoContent() {
@@ -14,10 +15,11 @@ export default function AustraliaNewRoadRulesJuly2026KoContent() {
 
       {/* 이미지 1 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/australia-speed-sign-60kmh.jpg"
           alt="호주 시속 60km 제한 표지판"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />
@@ -60,10 +62,11 @@ export default function AustraliaNewRoadRulesJuly2026KoContent() {
 
       {/* 이미지 2 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/australia-road-speed-sign.jpg"
           alt="호주 지방 도로 속도 표지판"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />

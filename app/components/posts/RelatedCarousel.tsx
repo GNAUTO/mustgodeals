@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -96,8 +97,7 @@ export default function RelatedCarousel({
           <Link key={item.slug} href={`${base}/${item.slug}`} style={{ textDecoration: "none", display: "block" }}>
             {cardStyle === "news" ? (
               <div style={{ background: "#F5F5F0", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.image ?? ""} alt={item.title} style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }} />
+                <Image src={item.image ?? ""} alt={item.title} width={400} height={140} style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }} />
                 <div style={{ padding: "1rem" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.4rem" }}>
                     <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)", padding: "2px 8px", borderRadius: "10px" }}>

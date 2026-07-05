@@ -14,7 +14,18 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/privacy-policy",priority: 0.3, changeFrequency: "yearly"  },
 ];
 
+const KO_MONTHS: Record<string, number> = {
+  "1": 0, "2": 1, "3": 2, "4": 3, "5": 4, "6": 5,
+  "7": 6, "8": 7, "9": 8, "10": 9, "11": 10, "12": 11,
+};
+
 function toDate(str: string): Date {
+  // Korean format: "2026년 7월 4일"
+  const ko = str.match(/(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일/);
+  if (ko) {
+    const [, y, m, d] = ko;
+    return new Date(Date.UTC(Number(y), KO_MONTHS[m], Number(d)));
+  }
   const d = new Date(str);
   return isNaN(d.getTime()) ? new Date() : d;
 }

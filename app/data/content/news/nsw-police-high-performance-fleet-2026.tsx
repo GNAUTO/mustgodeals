@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function NswPoliceHighPerformanceFleet2026Content() {
@@ -7,10 +8,11 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/62ed299e-8f70-5cc3-a037-459f6e650000"
               alt="NSW Police high-performance fleet"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -35,10 +37,11 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/6429f21d-b039-52dd-beda-684f92b50000"
               alt="NSW Police patrol vehicles"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -86,10 +89,11 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/takoqaeyembhyyjpzlls"
               alt="NSW Police Armed Response Command"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function RenaultMeganeEtech2026AustraliaKoContent() {
@@ -7,10 +8,11 @@ export default function RenaultMeganeEtech2026AustraliaKoContent() {
 
           {/* Image 1 — hero */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/23664-megane-studiothomascortesi-4.jpg"
               alt="2026 르노 메간 E-Tech"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -52,10 +54,11 @@ export default function RenaultMeganeEtech2026AustraliaKoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/23660-megane-studiothomascortesi-17.jpg"
               alt="2026 르노 메간 E-Tech 실내"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -84,10 +87,11 @@ export default function RenaultMeganeEtech2026AustraliaKoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/23658-megane-studiothomascortesi-13.jpg"
               alt="2026 르노 메간 E-Tech 외관 디테일"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

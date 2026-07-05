@@ -1,4 +1,5 @@
 import { AS } from '../../../components/posts/article-styles';
+import Image from "next/image";
 
 const IMGS = [
   "https://www.topgear.com/sites/default/files/2026/07/fiat-governorate-of-the-vatican-city-state-for-sustainable-micromobility-credit-by-governatorato-s-c-v.jpg",
@@ -12,10 +13,11 @@ const IMGS = [
 function Img({ src, alt }: { src: string; alt: string }) {
   return (
     <div style={AS.imgWrap}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={src}
         alt={alt}
+        width={1200}
+        height={675}
         className="article-img"
         style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
       />
@@ -30,10 +32,11 @@ export default function FiatTopolinoVaticanCityPope2026Content() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={IMGS[0]}
               alt="Fiat Topolino Vatican City electric car"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

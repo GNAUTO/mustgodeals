@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function Mazda6eCx6eOrdersAustralia2026Content() {
@@ -15,10 +16,11 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
 
           {/* Image 1 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.mazda.com.au/4966d2/globalassets/vehicle-landing-pages/cx-6e/launch-vlp/assets/au41-p00005750_mazda_cx-6e_vlp_introduction_1300x650px.jpg"
               alt="Mazda CX-6e SUV Australia"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -67,10 +69,11 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.mazda.com.au/4966d0/globalassets/vehicle-landing-pages/cx-6e/launch-vlp/assets/au41-p00005750_mazda_cx-6e_exterior_960x480px_01.jpg"
               alt="Mazda CX-6e Exterior"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

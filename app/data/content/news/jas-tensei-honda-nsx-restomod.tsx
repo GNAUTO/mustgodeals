@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function JasTenseiHondaNsxRestommodContent() {
@@ -7,10 +8,11 @@ export default function JasTenseiHondaNsxRestommodContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/images/big-read/carousel/2026/06/b710d556570aa46ccb60b98c44f49bbd/NSX%20Resurrection%20%2811%29.jpg"
               alt="JAS Tensei Honda NSX restomod"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -43,10 +45,11 @@ export default function JasTenseiHondaNsxRestommodContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/images/big-read/carousel/2026/06/b710d556570aa46ccb60b98c44f49bbd/NSX%20Resurrection%20%2810%29.jpg"
               alt="JAS Tensei exterior side profile"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -65,10 +68,11 @@ export default function JasTenseiHondaNsxRestommodContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/images/big-read/carousel/2026/06/b710d556570aa46ccb60b98c44f49bbd/NSX%20Resurrection%20%286%29.jpg"
               alt="JAS Tensei front detail"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -99,10 +103,11 @@ export default function JasTenseiHondaNsxRestommodContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/styles/media_embed/public/2026/06/NSX%20Resurrection%20%283%29.jpg"
               alt="JAS Tensei interior"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -129,10 +134,11 @@ export default function JasTenseiHondaNsxRestommodContent() {
 
           {/* Image 5 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/styles/media_embed/public/2026/06/NSX%20Resurrection.jpg"
               alt="JAS Tensei rear"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

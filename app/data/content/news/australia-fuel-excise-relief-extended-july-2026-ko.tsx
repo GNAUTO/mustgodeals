@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function AustraliaFuelExciseReliefExtendedJuly2026KoContent() {
@@ -14,10 +15,11 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026KoContent() {
 
           {/* Image 1 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/7cb59eee-4c04-5d94-82a8-793a2e150000"
               alt="호주 유류세 인하 연장"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -40,10 +42,11 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026KoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c18fb5f3-1f06-5cae-9ed4-eb5cd3a50000"
               alt="호주 주유소"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -70,10 +73,11 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026KoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a980f00b-f0c4-5fea-bc39-ecc2a6550000"
               alt="호주 주유기"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -98,10 +102,11 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026KoContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/6777d567-7c8d-5626-a043-43b1f8750000"
               alt="호주 주유 가격"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

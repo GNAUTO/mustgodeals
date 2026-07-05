@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function HyundaiI30Sedan2027AustraliaContent() {
@@ -14,10 +15,11 @@ export default function HyundaiI30Sedan2027AustraliaContent() {
 
           {/* Image 1 — hero */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e67acf95-dd06-5ea8-a53b-d688c8c50000"
               alt="2027 Hyundai i30 Sedan exterior"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -61,10 +63,11 @@ export default function HyundaiI30Sedan2027AustraliaContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/51876aef-b2be-5fbb-9042-bda115c50000"
               alt="2027 Hyundai i30 Sedan hybrid powertrain"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -100,10 +103,11 @@ export default function HyundaiI30Sedan2027AustraliaContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/189cea45-88be-5008-a6ae-d9ad31f50000"
               alt="2027 Hyundai i30 Sedan interior"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -131,10 +135,11 @@ export default function HyundaiI30Sedan2027AustraliaContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/21a3a84f-8c94-5008-b54b-8fcb19350000"
               alt="2027 Hyundai i30 Sedan Art of Steel design"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

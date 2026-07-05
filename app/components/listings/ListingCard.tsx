@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import type { Listing } from "../../data/listings";
@@ -96,12 +97,7 @@ export default function ListingCard({ listing }: { listing: Listing }) {
         }}
       >
         <div style={{ aspectRatio: "16/9", background: "#f0f0f0", overflow: "hidden", position: "relative" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={listing.images[0]}
-            alt={listing.name}
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
-          />
+          <Image src={listing.images[0]} alt={listing.name} fill style={{ objectFit: "cover", objectPosition: "center" }} />
           <div style={{ position: "absolute", top: "12px", left: "12px", display: "flex", gap: "5px" }}>
             <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
             {listing.savingsPct >= 20 && (

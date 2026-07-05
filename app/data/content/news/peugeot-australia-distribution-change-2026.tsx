@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 const IMGS = [
@@ -11,10 +12,11 @@ const IMGS = [
 function Img({ src, alt }: { src: string; alt: string }) {
   return (
     <div style={AS.imgWrap}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={src}
         alt={alt}
+        width={1200}
+        height={675}
         className="article-img"
         style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
       />
@@ -29,10 +31,11 @@ export default function PeugeotAustraliaDistributionChange2026Content() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={IMGS[0]}
               alt="Peugeot Australia distribution change 2026"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

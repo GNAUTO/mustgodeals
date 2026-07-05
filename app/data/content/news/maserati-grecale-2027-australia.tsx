@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function MaseratiGrecale2027AustraliaContent() {
@@ -7,10 +8,11 @@ export default function MaseratiGrecale2027AustraliaContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/01_new-maserati-grecale.jpg"
               alt="2027 Maserati Grecale SUV"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

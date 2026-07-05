@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function HyundaiI20NHybridNextgenKoContent() {
@@ -14,10 +15,11 @@ export default function HyundaiI20NHybridNextgenKoContent() {
 
           {/* Image 1 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/i20-n-render.jpg"
               alt="차세대 현대 i20 N 렌더링"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -52,10 +54,11 @@ export default function HyundaiI20NHybridNextgenKoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/i20-n-shadow-edition-02-iot5.jpg"
               alt="현대 i20 N 쉐도우 에디션"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -73,10 +76,11 @@ export default function HyundaiI20NHybridNextgenKoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/hyundai-brazil-spec-i20-1.jpg"
               alt="현대 i20 브라질 스펙"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

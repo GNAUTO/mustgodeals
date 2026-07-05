@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function PolestarUsBanConnectedVehicleRuleKoContent() {
@@ -7,10 +8,11 @@ export default function PolestarUsBanConnectedVehicleRuleKoContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.topgear.com/sites/default/files/2026/06/5193-694911-1-5%20%281%29.jpg?w=892&h=502"
               alt="폴스타 차량"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

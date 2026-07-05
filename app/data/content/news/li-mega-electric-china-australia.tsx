@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function LiMegaElectricChinaAustraliaContent() {
@@ -14,10 +15,11 @@ export default function LiMegaElectricChinaAustraliaContent() {
 
       {/* Image 1 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/li-auto-mega-002.jpg"
           alt="Li Auto Mega electric MPV exterior"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />
@@ -53,10 +55,11 @@ export default function LiMegaElectricChinaAustraliaContent() {
 
       {/* Image 2 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/li-auto-mega-001.jpg"
           alt="Li Auto Mega side profile"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />
@@ -92,10 +95,11 @@ export default function LiMegaElectricChinaAustraliaContent() {
 
       {/* Image 3 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/li-auto-mega-010.jpg"
           alt="Li Auto Mega interior and exterior detail"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />

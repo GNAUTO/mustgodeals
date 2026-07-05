@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -27,12 +28,7 @@ function MagCard({ item, featured }: { item: NewsItem; featured?: boolean }) {
       href={`/news/${item.slug}`}
       className={`news-mag-card${featured ? " news-mag-card--featured" : ""}`}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={item.image}
-        alt={item.title}
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-      />
+      <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
 
       <div style={{
         position: "absolute", inset: 0,

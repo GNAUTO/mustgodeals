@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function GwmHavalH10FlagshipSuv2027KoContent() {
@@ -7,10 +8,11 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/cbd076b7-da38-529f-8084-c2e74c150000"
               alt="GWM 할발 H10 플래그십 SUV"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -34,10 +36,11 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/2c07e966-26ac-5bb3-8ccb-c5378cf50000"
               alt="GWM 할발 H10 측면"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -64,10 +67,11 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/68fb4e4a-94f6-5b2e-980f-bf97a5a50000"
               alt="GWM 할발 H10 실내"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -99,10 +103,11 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/b7153cae-6485-586b-918b-7e6c4ef50000"
               alt="GWM 할발 H10 후면"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -121,10 +126,11 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
 
           {/* Image 5 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/d246350f-df09-5aaa-a13b-f9d14d950000"
               alt="GWM 할발 H10 전면"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

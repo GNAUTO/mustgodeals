@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { NewsItem, BlogPost } from "../../data/posts";
 
@@ -15,10 +16,11 @@ export default function PostCard(props: Props) {
           background: "white", borderRadius: "12px",
           border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden", height: "100%",
         }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={item.image}
             alt={item.title}
+            width={800}
+            height={compact ? 140 : 200}
             style={{ width: "100%", height: imgH, objectFit: "cover", display: "block" }}
           />
           <div style={{ padding: compact ? "1rem" : "1.25rem" }}>

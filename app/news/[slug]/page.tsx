@@ -23,10 +23,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = NEWS_ITEMS.find((p) => p.slug === slug);
   if (!post) return {};
+
+  const isKo = slug.endsWith("-ko");
+  const enSlug = isKo ? slug.slice(0, -3) : slug;
+  const koSlug = isKo ? slug : `${slug}-ko`;
+  const enExists = NEWS_ITEMS.some((p) => p.slug === enSlug);
+  const koExists = NEWS_ITEMS.some((p) => p.slug === koSlug);
+
+  const languages: Record<string, string> = {};
+  if (enExists) { languages["en-AU"] = `/news/${enSlug}`; languages["x-default"] = `/news/${enSlug}`; }
+  if (koExists) languages["ko-KR"] = `/news/${koSlug}`;
+
   return {
     title: `${post.title} | MustGoDeals`,
     description: post.excerpt,
-    alternates: { canonical: `/news/${slug}` },
+    alternates: {
+      canonical: `/news/${slug}`,
+      ...(Object.keys(languages).length > 0 && { languages }),
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,

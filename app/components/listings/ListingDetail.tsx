@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Navbar from "../Navbar";
@@ -163,12 +164,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
           {/* Left: Image slider */}
           <div>
             <div style={{ position: "relative", aspectRatio: "16/9", width: "100%", background: "#111", borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={listing.images[activeImg]}
-                alt={`Photo ${activeImg + 1}`}
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
-              />
+              <Image src={listing.images[activeImg]} alt={`Photo ${activeImg + 1}`} fill style={{ objectFit: "cover", objectPosition: "center" }} />
 
               {activeImg > 0 && (
                 <button
@@ -196,11 +192,11 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
             {/* Thumbnails */}
             <div style={{ overflowX: "auto", whiteSpace: "nowrap", paddingBottom: "4px" }}>
               {listing.images.map((src, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   key={i} src={src} alt={`Photo ${i + 1}`}
+                  width={80} height={54}
                   onClick={() => setActiveImg(i)}
-                  style={{ display: "inline-block", width: "80px", height: "54px", objectFit: "cover", objectPosition: "center", borderRadius: "4px", marginRight: "6px", cursor: "pointer", border: activeImg === i ? "2px solid #CCDA47" : "2px solid transparent", opacity: activeImg === i ? 1 : 0.6, transition: "border-color 0.15s, opacity 0.15s", verticalAlign: "top" }}
+                  style={{ display: "inline-block", objectFit: "cover", objectPosition: "center", borderRadius: "4px", marginRight: "6px", cursor: "pointer", border: activeImg === i ? "2px solid #CCDA47" : "2px solid transparent", opacity: activeImg === i ? 1 : 0.6, transition: "border-color 0.15s, opacity 0.15s", verticalAlign: "top" }}
                 />
               ))}
             </div>

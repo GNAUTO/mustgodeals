@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function PorscheTaycanEShift2027Content() {
@@ -7,10 +8,11 @@ export default function PorscheTaycanEShift2027Content() {
 
           {/* Main image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0407.jpg"
               alt="2027 Porsche Taycan E-Shift"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -61,10 +63,11 @@ export default function PorscheTaycanEShift2027Content() {
 
           {/* Image 2 — after E-Shift explanation */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0406.jpg"
               alt="Porsche Taycan E-Shift paddle shifter detail"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -129,10 +132,11 @@ export default function PorscheTaycanEShift2027Content() {
 
           {/* Image 3 — after battery/infotainment */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0400.jpg"
               alt="2027 Porsche Taycan interior infotainment"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -152,10 +156,11 @@ export default function PorscheTaycanEShift2027Content() {
 
           {/* Image 4 — before conclusion */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0408.jpg"
               alt="2027 Porsche Taycan exterior"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

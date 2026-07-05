@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function BydGoodwood2026EightModelsKoContent() {
@@ -14,10 +15,11 @@ export default function BydGoodwood2026EightModelsKoContent() {
 
           {/* Image 1 — Denza Z hero */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/denza-z-2-rxk7.jpg"
               alt="굿우드 2026 덴자 Z 쿠페"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -56,10 +58,11 @@ export default function BydGoodwood2026EightModelsKoContent() {
 
           {/* Image 2 — BYD Dolphin G */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/090_byd_dolphin_g.jpg"
               alt="BYD 돌핀 G DM-i"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -77,10 +80,11 @@ export default function BydGoodwood2026EightModelsKoContent() {
 
           {/* Image 3 — Denza Z9 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/denza-z9-2-e2ix.jpeg"
               alt="덴자 Z9 퍼포먼스 세단"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -99,10 +103,11 @@ export default function BydGoodwood2026EightModelsKoContent() {
 
           {/* Image 4 — Yangwang U9 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/yangwang-u9-na07-bagh.jpg"
               alt="양왕 U9 익스트림 하이퍼카"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

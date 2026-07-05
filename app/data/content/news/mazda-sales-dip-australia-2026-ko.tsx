@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function MazdaSalesDipAustralia2026KoContent() {
@@ -7,10 +8,11 @@ export default function MazdaSalesDipAustralia2026KoContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c8ff5774-14aa-519c-9dc3-281f4db50000"
               alt="마쯔다 호주 판매 2026"
+              width={1200}
+              height={675}
               style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={AS.imgCaption}>Image: Mazda</p>
@@ -50,10 +52,11 @@ export default function MazdaSalesDipAustralia2026KoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/d270eb1a-01ec-534e-80d4-e6a599250000"
               alt="마쯔다 CX-5 호주"
+              width={1200}
+              height={675}
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={AS.imgCaption}>Image: Mazda</p>
@@ -91,10 +94,11 @@ export default function MazdaSalesDipAustralia2026KoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/0b7efb06-a814-5858-b977-f62687250000"
               alt="마쯔다 MX-5 호주"
+              width={1200}
+              height={675}
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={AS.imgCaption}>Image: Mazda</p>
@@ -122,10 +126,11 @@ export default function MazdaSalesDipAustralia2026KoContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/8fd86744-09c5-5dc8-bf99-59124b850000"
               alt="마쯔다 전기차 라인업 호주 2026"
+              width={1200}
+              height={675}
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
             <p style={AS.imgCaption}>Image: Mazda</p>

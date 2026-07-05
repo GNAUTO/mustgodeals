@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -118,8 +119,7 @@ export default function Home() {
                 <Link key={listing.slug} href={`/listings/${listing.slug}`} style={{ textDecoration: "none", display: "block" }}>
                   <div className="listing-card" style={{ background: "#242424", borderRadius: "8px", overflow: "hidden", cursor: "pointer" }}>
                     <div style={{ aspectRatio: "16/9", background: "#1e1e1e", overflow: "hidden", position: "relative" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={listing.images[0]} alt={listing.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
+                      <Image src={listing.images[0]} alt={listing.name} fill style={{ objectFit: "cover", objectPosition: "center" }} />
                       <div style={{ position: "absolute", top: "10px", left: "10px", display: "flex", gap: "5px" }}>
                         <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
                         {listing.savingsPct >= 20 && (
@@ -164,12 +164,7 @@ export default function Home() {
             <div className="news-mag-grid">
               {filteredNews.slice(0, 4).map((item) => (
                 <Link key={item.slug} href={`/news/${item.slug}`} className="news-mag-card">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  />
+                  <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(transparent 45%, rgba(0,0,0,0.82))", pointerEvents: "none" }} />
                   <div style={{ position: "absolute", top: "16px", left: "16px", fontSize: "10px", fontWeight: 700, color: "#CCDA47", letterSpacing: "0.8px" }}>
                     {item.category}
@@ -258,20 +253,6 @@ export default function Home() {
 
             </>
           )}
-        </div>
-      </div>
-
-      {/* Email signup */}
-      <div style={{ background: "#1A1A1A" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "2.5rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
-          <div>
-            <h3 style={{ color: "white", fontSize: "16px", fontWeight: 500, marginBottom: "4px" }}>Get alerts before deals are gone</h3>
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "13px" }}>New clearance vehicles every week — be first to know</p>
-          </div>
-          <div style={{ display: "flex", gap: "8px" }}>
-            <input placeholder="your@email.com" style={{ padding: "10px 14px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.08)", color: "white", fontSize: "13px", width: "220px" }} />
-            <button style={{ background: "#CCDA47", color: "#1A1A1A", border: "none", padding: "10px 18px", borderRadius: "6px", fontSize: "13px", fontWeight: 500, cursor: "pointer" }}>Get alerts</button>
-          </div>
         </div>
       </div>
 

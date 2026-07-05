@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function AustraliaCarRecallsJune2026Content() {
@@ -6,10 +7,11 @@ export default function AustraliaCarRecallsJune2026Content() {
     <>
       {/* Hero image */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="https://pressroom.toyota.com.au/-/media/toyota/pressroom/banners/2024/02/13/01/06/lnd_my24_0020_v001-copy.jpg"
           alt="Toyota Prado 2024 Australia"
+              width={1200}
+              height={675}
           style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
         />
         <p style={AS.imgCaption}>Image: Toyota Australia Media</p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function Ferrari12CilindriManualeContent() {
@@ -15,10 +16,11 @@ export default function Ferrari12CilindriManualeContent() {
 
       {/* Image 1 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/ferrari-12cilindri-front.jpg"
           alt="Ferrari 12Cilindri front"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />
@@ -62,10 +64,11 @@ export default function Ferrari12CilindriManualeContent() {
 
       {/* Image 2 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/ferrari-12cilindri-rear.jpg"
           alt="Ferrari 12Cilindri rear"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />
@@ -108,10 +111,11 @@ export default function Ferrari12CilindriManualeContent() {
 
       {/* Image 3 */}
       <div style={AS.imgWrap}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/images/news/ferrari-12cilindri-rosso-imola.jpg"
           alt="Ferrari 12Cilindri in Rosso Imola"
+              width={1200}
+              height={675}
           className="article-img"
           style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px', display: 'block' }}
         />

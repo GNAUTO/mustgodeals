@@ -1,4 +1,5 @@
 import { AS } from '../../../components/posts/article-styles';
+import Image from "next/image";
 
 const IMGS = [
   "https://www.topgear.com/sites/default/files/2026/05/Ferrari%20849%20Testarossa.jpg?w=976&h=549",
@@ -11,10 +12,11 @@ const IMGS = [
 function Img({ src, alt }: { src: string; alt: string }) {
   return (
     <div style={AS.imgWrap}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={src}
         alt={alt}
+        width={1200}
+        height={675}
         className="article-img"
         style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
       />
@@ -29,10 +31,11 @@ export default function Ferrari849TestarosaFrankStephensonOpinionKoContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={IMGS[0]}
               alt="2026 Ferrari 849 Testarossa design review"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function NswTollCapRegoDiscount2026Content() {
@@ -7,10 +8,11 @@ export default function NswTollCapRegoDiscount2026Content() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.mynrma.com.au/-/media/nrmaheadless/open-road/2026/news/budget-news/toll-road-640x360.jpg"
               alt="Sydney toll road"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -64,10 +66,11 @@ export default function NswTollCapRegoDiscount2026Content() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://www.mynrma.com.au/-/media/nrmaheadless/open-road/2026/travel/sydney-to-lithgow/pow-lookout-632x421.jpg"
               alt="NSW road infrastructure"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

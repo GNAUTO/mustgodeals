@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
 export default function Mazda6eNoBaseModelAustraliaKoContent() {
@@ -7,10 +8,11 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
 
           {/* Hero image */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/a7707aea-83a0-5a72-b6aa-990fa9d50000"
               alt="마쓰다 6e 전기 세단"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -33,10 +35,11 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
 
           {/* Image 2 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/2c71b633-ce6c-56ce-a8df-53a355350000"
               alt="마쓰다 6e 실내"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -63,10 +66,11 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/24cb4100-4f97-54b1-80c8-72b215c50000"
               alt="마쓰다 6e 외관"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />
@@ -101,10 +105,11 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/61e420dc-dbac-590a-acad-7f452ed50000"
               alt="마쓰다 6e 충전"
+              width={1200}
+              height={675}
               className="article-img"
               style={{ width: "100%", height: "360px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
             />

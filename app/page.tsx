@@ -149,7 +149,7 @@ export default function Home() {
                     <div style={{ aspectRatio: "16/9", background: "#F0F0F0", overflow: "hidden", position: "relative" }}>
                       <Image src={listing.images[0]} alt={listing.name} fill style={{ objectFit: "cover", objectPosition: "center" }} />
                       <div style={{ position: "absolute", top: "10px", left: "10px", display: "flex", gap: "5px" }}>
-                        <span style={{ background: "#1A1A1A", color: "white", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
+                        <span style={{ background: "#CCDA47", color: "#1A1A1A", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>{listing.badge}</span>
                         {listing.savingsPct >= 20 && (
                           <span style={{ background: "#E8460A", color: "#fff", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>HOT DEAL</span>
                         )}

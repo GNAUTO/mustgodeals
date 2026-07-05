@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" role="img" aria-label="MustGoDeals">
+  <text x="4" y="41" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#F5F5F0">mustgo</text>
+  <rect x="126" y="9" width="104" height="40" rx="20" fill="#CCDA47"/>
+  <text x="178" y="35" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" letter-spacing="2" fill="#1A1A1A">DEALS</text>
+</svg>

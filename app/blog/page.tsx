@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://mustgodeals.com.au/images/news/ferrari-12cilindri-front.jpg",
-        width: 1200,
-        height: 800,
-        alt: "Ferrari 12Cilindri — MustGoDeals automotive guides",
+        url: "https://mustgodeals.com.au/images/og-logo.png",
+        width: 600,
+        height: 600,
+        alt: "MustGoDeals — Car Buying Guides",
       },
     ],
   },

@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://d2s8i866417m9.cloudfront.net/photo/32860614/photo/medium-481b6aeb1760ebd3cb5b4fd57f60919b.jpg",
-        width: 1000,
-        height: 667,
+        url: "https://mustgodeals.com.au/images/listings/demo-car-og.jpg",
+        width: 1200,
+        height: 800,
         alt: "Demo car listing — MustGoDeals",
       },
     ],

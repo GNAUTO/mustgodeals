@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "./components/Navbar";
+import NavbarLight from "./components/NavbarLight";
 import Footer from "./components/Footer";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
@@ -37,22 +37,22 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <JsonLd data={ORG_SCHEMA} />
-      <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
+      <NavbarLight langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
-      {/* Hero — intentionally dark for contrast */}
-      <div className="hero-section" style={{ background: "#1A1A1A", textAlign: "center" }}>
-        <h1 style={{ color: "white", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
+      {/* Hero — light theme */}
+      <div className="hero-section" style={{ background: "#FAFAFA", textAlign: "center" }}>
+        <h1 style={{ color: "#1A1A1A", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
           Cars dealers <span style={{ color: "#CCDA47" }}>must move</span><br />
           Savings you didn&rsquo;t expect
         </h1>
-        <p style={{ color: "#999", fontSize: "clamp(0.875rem, 2vw, 1rem)", maxWidth: "420px", margin: "0 auto 2rem" }}>
+        <p style={{ color: "#6B6B6B", fontSize: "clamp(0.875rem, 2vw, 1rem)", maxWidth: "420px", margin: "0 auto 2rem" }}>
           Dealer clearance vehicles. Real discounts. Updated regularly.
         </p>
         <div className="hero-btns">
-          <Link href="/listings" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
+          <Link href="/listings" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
             Browse Demo Cars
           </Link>
-          <Link href="/blog" style={{ background: "transparent", color: "white", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", border: "1px solid rgba(255,255,255,0.2)", textDecoration: "none" }}>
+          <Link href="/blog" style={{ background: "transparent", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, border: "1.5px solid #1A1A1A", textDecoration: "none" }}>
             Read buying guides
           </Link>
         </div>
@@ -152,7 +152,7 @@ export default function Home() {
       </div>
 
       {/* Latest News */}
-      <div style={{ background: "#F2F2EE", padding: "2.5rem 0" }}>
+      <div style={{ background: "#FAFAFA", padding: "2.5rem 0", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
@@ -183,7 +183,7 @@ export default function Home() {
       </div>
 
       {/* Blog section */}
-      <div style={{ background: "#FAFAFA", padding: "60px 0", width: "100%" }}>
+      <div style={{ background: "#FAFAFA", padding: "60px 0", width: "100%", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="blog-section-inner">
 
           {/* Section header */}

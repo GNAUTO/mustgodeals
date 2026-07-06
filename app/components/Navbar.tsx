@@ -9,12 +9,25 @@ const LANGS = [
   { label: "KO", code: "KO" },
 ];
 
+/* list-page mode: state-driven (News/Blog/Listings filters) */
 type LangTabsProps = {
   activeLang: string;
   onLangChange: (lang: string) => void;
 };
 
-export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
+/* article-page mode: link-driven (PostDetail EN↔KO nav) */
+type LangLinksProps = {
+  current: string;
+  links: Partial<Record<string, string | null>>;
+};
+
+export default function Navbar({
+  langTabs,
+  langLinks,
+}: {
+  langTabs?: LangTabsProps;
+  langLinks?: LangLinksProps;
+}) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -37,6 +50,121 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
     textDecoration: "none",
     padding: "4px 10px",
   });
+
+  /* ── Desktop lang section ──────────────────────────────── */
+  const desktopLang = (() => {
+    if (langTabs) {
+      return (
+        <div className="navbar-lang-tabs">
+          {LANGS.map((l, i) => (
+            <span key={l.code} style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              {i > 0 && <span style={{ color: "rgba(0,0,0,0.15)", fontSize: "10px", lineHeight: 1 }}>|</span>}
+              <button
+                onClick={() => langTabs.onLangChange(l.code)}
+                className="navbar-lang-btn"
+                style={{
+                  background: "none", border: "none", padding: 0,
+                  color: langTabs.activeLang === l.code ? "#1A1A1A" : "#6B6B6B",
+                  fontWeight: langTabs.activeLang === l.code ? 600 : 400,
+                  cursor: "pointer", fontFamily: "inherit",
+                }}
+              >
+                {l.label}
+              </button>
+            </span>
+          ))}
+        </div>
+      );
+    }
+    if (langLinks) {
+      return (
+        <div className="navbar-lang-tabs">
+          {LANGS.map((l, i) => {
+            const href = langLinks.links[l.code] ?? null;
+            const isCurrentLang = l.code === langLinks.current;
+            return (
+              <span key={l.code} style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+                {i > 0 && <span style={{ color: "rgba(0,0,0,0.15)", fontSize: "10px", lineHeight: 1 }}>|</span>}
+                {isCurrentLang ? (
+                  <span className="navbar-lang-btn" style={{ color: "#1A1A1A", fontWeight: 600 }}>
+                    {l.label}
+                  </span>
+                ) : href ? (
+                  <Link href={href} className="navbar-lang-btn" style={{ color: "#6B6B6B", fontWeight: 400, textDecoration: "none" }}>
+                    {l.label}
+                  </Link>
+                ) : (
+                  <span className="navbar-lang-btn" style={{ color: "rgba(0,0,0,0.2)", cursor: "not-allowed" }}>
+                    {l.label}
+                  </span>
+                )}
+              </span>
+            );
+          })}
+        </div>
+      );
+    }
+    return null;
+  })();
+
+  /* ── Mobile dropdown lang section ──────────────────────── */
+  const mobileLang = (() => {
+    if (langTabs) {
+      return (
+        <>
+          <div style={{ display: "flex", padding: "10px 1.5rem" }}>
+            {LANGS.map((l) => (
+              <button
+                key={l.code}
+                onClick={() => { langTabs.onLangChange(l.code); setMenuOpen(false); }}
+                className="navbar-mobile-lang-btn"
+                style={{
+                  color: langTabs.activeLang === l.code ? "#1A1A1A" : "rgba(0,0,0,0.32)",
+                  fontWeight: langTabs.activeLang === l.code ? 600 : 400,
+                }}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+          <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.06)" }} />
+        </>
+      );
+    }
+    if (langLinks) {
+      return (
+        <>
+          <div style={{ display: "flex", padding: "10px 1.5rem" }}>
+            {LANGS.map((l) => {
+              const href = langLinks.links[l.code] ?? null;
+              const isCurrentLang = l.code === langLinks.current;
+              if (isCurrentLang) {
+                return (
+                  <span key={l.code} className="navbar-mobile-lang-btn" style={{ color: "#1A1A1A", fontWeight: 600 }}>
+                    {l.label}
+                  </span>
+                );
+              }
+              if (!href) {
+                return (
+                  <span key={l.code} className="navbar-mobile-lang-btn" style={{ color: "rgba(0,0,0,0.2)" }}>
+                    {l.label}
+                  </span>
+                );
+              }
+              return (
+                <Link key={l.code} href={href} onClick={() => setMenuOpen(false)} className="navbar-mobile-lang-btn" style={{ color: "rgba(0,0,0,0.32)", textDecoration: "none" }}>
+                  {l.label}
+                </Link>
+              );
+            })}
+          </div>
+          <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.06)" }} />
+        </>
+      );
+    }
+    return null;
+  })();
 
   return (
     <nav className="navbar-float-outer" style={{
@@ -83,29 +211,9 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
             <Link href="/blog"     style={linkStyle("blog")}>Blog</Link>
           </div>
 
-          {/* Right: lang tabs + hamburger */}
-          <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "0.5rem" }}>
-            {langTabs && (
-              <div className="navbar-lang-tabs">
-                {LANGS.map((l) => (
-                  <button
-                    key={l.code}
-                    onClick={() => langTabs.onLangChange(l.code)}
-                    className="navbar-lang-btn"
-                    style={{
-                      background: "none", border: "none", padding: 0,
-                      color: langTabs.activeLang === l.code ? "#1A1A1A" : "rgba(0,0,0,0.32)",
-                      fontWeight: langTabs.activeLang === l.code ? 600 : 400,
-                      cursor: "pointer", fontFamily: "inherit",
-                    }}
-                  >
-                    {l.label}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {/* Hamburger — mobile only */}
+          {/* Right: lang + hamburger */}
+          <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "0.75rem" }}>
+            {desktopLang}
             <button
               className="navbar-hamburger"
               onClick={() => setMenuOpen((v) => !v)}
@@ -130,26 +238,7 @@ export default function Navbar({ langTabs }: { langTabs?: LangTabsProps }) {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div style={{ background: "white", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-            {langTabs && (
-              <>
-                <div style={{ display: "flex", padding: "10px 1.5rem" }}>
-                  {LANGS.map((l) => (
-                    <button
-                      key={l.code}
-                      onClick={() => langTabs.onLangChange(l.code)}
-                      className="navbar-mobile-lang-btn"
-                      style={{
-                        color: langTabs.activeLang === l.code ? "#1A1A1A" : "rgba(0,0,0,0.32)",
-                        fontWeight: langTabs.activeLang === l.code ? 600 : 400,
-                      }}
-                    >
-                      {l.label}
-                    </button>
-                  ))}
-                </div>
-                <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.06)" }} />
-              </>
-            )}
+            {mobileLang}
             <Link href="/listings" onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Listings</Link>
             <Link href="/news"     onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>News</Link>
             <Link href="/blog"     onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Blog</Link>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import BlogLangTabs from "../BlogLangTabs";
 import { NEWS_ITEMS, BLOG_POSTS, type Lang } from "../../data/posts";
 import RelatedCarousel from "./RelatedCarousel";
 
@@ -75,8 +74,7 @@ export default function PostDetail({ type, slug, title, category, date, author, 
 
   return (
     <div style={H.page}>
-      <Navbar />
-      <BlogLangTabs current={lang} links={langLinks} />
+      <Navbar langLinks={{ current: lang, links: langLinks }} />
 
       {/* Hero */}
       <div style={H.hero}>

@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "gwm-tank-300-facelift-china-reveal-2026",
+    title: "GWM Tank 300 Facelift Revealed: Roof LiDAR and 200km PHEV Range",
+    excerpt:
+      "GWM reveals the 2027 Tank 300 facelift with roof-mounted LiDAR and a new Hi4-Z PHEV claiming 200km of electric range on WLTC. Chinese pre-sale starts July 6.",
+    category: "NEWS",
+    date: "July 7, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/gwm-tank-300-facelift/2027-tank-300-1.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "gwm-tank-300-facelift-china-reveal-2026-ko",
+    title: "GWM 탱크 300 페이스리프트 공개: 루프 라이다, Hi4-Z 200km PHEV 탑재",
+    excerpt:
+      "GWM이 중국에서 탱크 300 페이스리프트를 공개했다. 루프 마운트 라이다, 신규 Hi4-Z PHEV 시스템으로 WLTC 기준 200km 전기 주행거리 구현. 7월 6일 중국 프리세일 시작.",
+    category: "뉴스",
+    date: "2026년 7월 7일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/gwm-tank-300-facelift/2027-tank-300-1.jpg",
+    lang: "KO",
+  },
+  {
     slug: "xpeng-mona-l03-australia-2027",
     title: "XPeng Mona L03 Confirmed for Australia as Brand Relaunches",
     excerpt:

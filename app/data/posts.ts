@@ -231,6 +231,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "xpeng-mona-l03-australia-2027",
+    title: "XPeng Mona L03 Confirmed for Australia as Brand Relaunches",
+    excerpt:
+      "XPeng's Mona L03 electric SUV is confirmed for Australia in 2027. Full specs inside, plus what the TrueEV cashback dispute means for potential buyers.",
+    category: "NEWS",
+    date: "July 7, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/xpeng-mona-l03/xpeng-mona-l03.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "xpeng-mona-l03-australia-2027-ko",
+    title: "XPeng 모나 L03 호주 출시 확정: 스펙, 가격, TrueEV 분쟁까지",
+    excerpt:
+      "XPeng 모나 L03가 2026년 말~2027년 초 호주 출시가 유력해졌다. 쿠페형 전기 SUV 전체 스펙과 함께 TrueEV 분쟁 및 $5,000 캐시백 미지급 이슈도 정리했다.",
+    category: "뉴스",
+    date: "2026년 7월 7일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/xpeng-mona-l03/xpeng-mona-l03.jpg",
+    lang: "KO",
+  },
+  {
     slug: "australia-new-road-rules-july-2026",
     title: "New Road Rules July 2026: What Changed in Australia",
     excerpt:

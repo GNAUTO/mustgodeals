@@ -55,6 +55,14 @@ export default function PostDetail({ type, slug, title, category, date, author, 
 
   const relatedNews = NEWS_ITEMS.filter((n) => n.slug !== slug && n.lang === lang);
 
+  // For news pages — Related Blog: pinned posts first, same lang, 3 cards
+  const relatedBlogPosts = type === "news"
+    ? BLOG_POSTS
+        .filter((p) => p.lang === lang)
+        .sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0))
+        .slice(0, 3)
+    : [];
+
   const breadcrumbSection = type === "news" ? "News" : "Blog";
   const breadcrumbLabel = title.split("—")[0].trim().split(":")[0].trim();
 
@@ -167,6 +175,29 @@ export default function PostDetail({ type, slug, title, category, date, author, 
               allLinkText={isKo ? "전체 뉴스 →" : "All news →"}
               cardStyle="news"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Related Blog — news pages only */}
+      {type === "news" && relatedBlogPosts.length > 0 && (
+        <div style={{ background: "#FAFAFA", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "2.5rem 2rem 3rem" }}>
+          <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+            <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.03em", marginBottom: "1rem" }}>
+              {isKo ? "관련 블로그" : "Related Blog"}
+            </div>
+            <div className="read-next-grid">
+              {relatedBlogPosts.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderRadius: "10px", overflow: "hidden" }}>
+                  <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
+                  <div style={{ padding: "12px 14px 14px" }}>
+                    <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
+                    <div style={{ fontSize: "13px", fontWeight: 600, color: "#111", lineHeight: 1.35, marginBottom: "6px" }}>{post.title}</div>
+                    <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       )}

@@ -39,7 +39,7 @@ export default function BusinessCarGstDemoCarAustraliaKoContent() {
             <div style={AS.calloutTitle}>이중 절약의 원리</div>
             <p style={AS.calloutText}>
               데모카는 이미 신차보다 가격이 낮기 때문에, 그만큼 더 낮은 금액에 대해 GST를
-              청구하게 된다. 결국 초기 현금 지출이 두 번 줄어드는 셈이다 — 할인된 가격에서
+              청구하게 된다. 결국 초기 현금 지출이 두 번 줄어드는 셈이다, 할인된 가격에서
               한 번, GST 환급에서 또 한 번.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function BusinessCarGstDemoCarAustraliaKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>현재 데모카 매물 보기</div>
             <p style={AS.ctaDesc}>
-              거의 신차, 보증 포함, 이미 할인된 가격 — 새 매물이 들어오는 즉시 업데이트
+              거의 신차, 보증 포함, 이미 할인된 가격, 새 매물이 들어오는 즉시 업데이트
             </p>
             <Link href="/listings" style={AS.ctaBtn}>매물 보러가기 →</Link>
           </div>

@@ -44,7 +44,7 @@ export default function WolmalJadongchaDilJongniContent() {
           </p>
 
           <div style={AS.tipBox}>
-            <div style={AS.tipTitle}>딜러 인센티브 구조 — 알아야 할 용어</div>
+            <div style={AS.tipTitle}>딜러 인센티브 구조. 알아야 할 용어</div>
             <ul style={AS.tipList}>
               <li style={AS.tipItem}><strong>Holdback:</strong> 제조사가 딜러에게 되돌려 주는 숨겨진 마진 (보통 차값의 2~3%)</li>
               <li style={AS.tipItem}><strong>Stair-step bonus:</strong> 판매 목표 달성 시 추가 지급되는 제조사 보너스</li>
@@ -59,7 +59,7 @@ export default function WolmalJadongchaDilJongniContent() {
             있습니다. 단지 먼저 꺼내지 않을 뿐입니다.
           </p>
 
-          <h2 style={AS.h2}>월말 타이밍 — 정확히 언제가 "황금 구간"인가</h2>
+          <h2 style={AS.h2}>월말 타이밍. 정확히 언제가 "황금 구간"인가</h2>
 
           <p style={AS.p}>
             단순히 "월말이면 된다"는 생각은 절반만 맞습니다. 더 정밀하게 타이밍을 잡아야 합니다.
@@ -148,7 +148,7 @@ export default function WolmalJadongchaDilJongniContent() {
             </ul>
           </div>
 
-          <h2 style={AS.h2}>실전 협상 전략 — 단계별 접근법</h2>
+          <h2 style={AS.h2}>실전 협상 전략. 단계별 접근법</h2>
 
           <h3 style={AS.h3}>1단계: 감정을 차 밖에 두고 들어가라</h3>
           <p style={AS.p}>
@@ -201,7 +201,7 @@ export default function WolmalJadongchaDilJongniContent() {
 
           <hr style={AS.divider} />
 
-          <h2 style={AS.h2}>딜러가 쓰는 전술 — 미리 알면 당하지 않는다</h2>
+          <h2 style={AS.h2}>딜러가 쓰는 전술. 미리 알면 당하지 않는다</h2>
 
           <h3 style={AS.h3}>&ldquo;4방위 공격(4-square)&rdquo; 전술</h3>
           <p style={AS.p}>
@@ -250,7 +250,7 @@ export default function WolmalJadongchaDilJongniContent() {
             분리해서 처리하는 게 핵심입니다.
           </p>
 
-          <h2 style={AS.h2}>마무리 — 월말 딜의 핵심은 "정보"와 "타이밍"</h2>
+          <h2 style={AS.h2}>마무리. 월말 딜의 핵심은 "정보"와 "타이밍"</h2>
 
           <p style={AS.p}>
             딜러가 월말에 할인을 해주는 건 친절이 아니라 구조적 압박 때문입니다.

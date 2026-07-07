@@ -11,7 +11,7 @@ export default function HyundaiI30Sedan2027AustraliaKoContent() {
             <span style={AS.highlight}>2027년 상반기</span>로 예정돼 있다.
           </p>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/e67acf95-dd06-5ea8-a53b-d688c8c50000"
@@ -24,11 +24,11 @@ export default function HyundaiI30Sedan2027AustraliaKoContent() {
             <p style={AS.imgCaption}>이미지: Hyundai</p>
           </div>
 
-          <h2 style={AS.h2}>이름은 그대로 — 호주만의 i30 세단</h2>
+          <h2 style={AS.h2}>이름은 그대로. 호주만의 i30 세단</h2>
 
           <p style={AS.p}>
             글로벌 시장에서는 엘란트라(Elantra), 한국에서는 아반떼(Avante)라는 이름으로 팔리지만, 호주는 오랫동안 써온{" "}
-            <span style={AS.highlight}>i30 세단</span> 뱃지를 그대로 유지한다. 호주에서 쌓아온 브랜드 인지도를 포기할 이유가 없다는 판단이다. 어디서 팔리든 차는 같다 — 그리고 이번 세대는 꽤 진지하게 봐야 할 이야기다.
+            <span style={AS.highlight}>i30 세단</span> 뱃지를 그대로 유지한다. 호주에서 쌓아온 브랜드 인지도를 포기할 이유가 없다는 판단이다. 어디서 팔리든 차는 같다, 그리고 이번 세대는 꽤 진지하게 봐야 할 이야기다.
           </p>
 
           <h2 style={AS.h2}>전 방향으로 성장한 차체</h2>

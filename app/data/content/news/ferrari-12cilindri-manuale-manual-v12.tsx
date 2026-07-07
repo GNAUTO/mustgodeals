@@ -55,7 +55,7 @@ export default function Ferrari12CilindriManualeContent() {
       </p>
 
       <div style={AS.callout}>
-        <div style={AS.calloutTitle}>12CILINDRI MANUALE — KEY FACTS</div>
+        <div style={AS.calloutTitle}>12CILINDRI MANUALE. KEY FACTS</div>
         <p style={AS.calloutText}>
           6.5L naturally aspirated V12 · 820hp · 500lb-ft · 0-100km/h 2.9 sec (skilled driver) ·
           By-wire 6-speed gate over 8-speed DCT · 1,499 units · Tailor Made only · from €590,000

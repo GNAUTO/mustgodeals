@@ -31,7 +31,7 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
             The new division will comprise <span style={AS.highlight}>250 officers</span> with
             long-arm capability, 28 civilian staff, a Specialist Operation Centre, and an
             as-yet-unspecified number of high-performance vehicles. What those vehicles will be
-            remains unclear — NSW Police has confirmed it is unable to share details at this
+            remains unclear, NSW Police has confirmed it is unable to share details at this
             stage, with the new command still being set up.
           </p>
 
@@ -48,7 +48,7 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
             <p style={AS.imgCaption}>Image: Drive.com.au</p>
           </div>
 
-          <h2 style={AS.h2}>Current Fleet — and What Came Before</h2>
+          <h2 style={AS.h2}>Current Fleet. and What Came Before</h2>
 
           <p style={AS.p}>
             Currently, the force relies on <span style={AS.highlight}>BMW 5 Series diesel sedans</span>{" "}
@@ -62,7 +62,7 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>CURRENT NSW POLICE FLEET</div>
             <p style={AS.calloutText}>
-              BMW 5 Series diesel sedan · BMW X5 petrol SUV (Highway Patrol) — Chrysler 300 SRT
+              BMW 5 Series diesel sedan · BMW X5 petrol SUV (Highway Patrol), Chrysler 300 SRT
               V8 previously in service, now retired following end of production.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
 
           <p style={AS.p}>
             For car enthusiasts, the question of which vehicles NSW Police will choose is an
-            intriguing one — and an answer is expected once the command centre is fully operational.
+            intriguing one, and an answer is expected once the command centre is fully operational.
           </p>
 
           {/* Source */}
@@ -124,7 +124,7 @@ export default function NswPoliceHighPerformanceFleet2026Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

@@ -40,7 +40,7 @@ export default function BusinessCarGstDemoCarAustraliaContent() {
             <div style={AS.calloutTitle}>THE DOUBLE SAVING</div>
             <p style={AS.calloutText}>
               Since a demo car is already discounted from new, you&rsquo;re claiming GST on a
-              smaller number to begin with. Your upfront cash outlay drops twice — once from the
+              smaller number to begin with. Your upfront cash outlay drops twice, once from the
               discount, once from the GST claim.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function BusinessCarGstDemoCarAustraliaContent() {
           <p style={AS.p}>
             Depreciation deductions work the same way. Whether you&rsquo;re using the instant
             asset write-off or standard depreciation schedules, the deduction is calculated on
-            what you paid — not the original new price. A car bought for{" "}
+            what you paid, not the original new price. A car bought for{" "}
             <span style={AS.highlight}>$20,000 less than new</span> still depreciates from that
             lower starting point, but the difference between buying new and buying a demo rarely
             shows up as a meaningful tax disadvantage. You&rsquo;re saving more upfront than
@@ -61,7 +61,7 @@ export default function BusinessCarGstDemoCarAustraliaContent() {
 
           <p style={AS.p}>
             Most demo cars carry the full manufacturer warranty from the original registration
-            date — not from when you bought it — but the difference is usually a matter of weeks.
+            date, not from when you bought it, but the difference is usually a matter of weeks.
             You&rsquo;re not buying a used car in the traditional sense. You&rsquo;re buying a
             barely driven one that{" "}
             <span style={AS.highlight}>a dealer needs off their books</span> before the end of
@@ -88,7 +88,7 @@ export default function BusinessCarGstDemoCarAustraliaContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Browse current demo listings</div>
             <p style={AS.ctaDesc}>
-              Near-new cars, full warranty, already discounted — updated as new stock arrives
+              Near-new cars, full warranty, already discounted, updated as new stock arrives
             </p>
             <Link href="/listings" style={AS.ctaBtn}>View listings →</Link>
           </div>

@@ -46,7 +46,7 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
             <p style={AS.imgCaption}>Image: Mazda Media</p>
           </div>
 
-          <h2 style={AS.h2}>GT vs Atenza — 무엇이 다른가</h2>
+          <h2 style={AS.h2}>GT vs Atenza. 무엇이 다른가</h2>
 
           <p style={AS.p}>
             6e는 E35 GT와 E35 Atenza 두 가지 등급으로 구성되며, 두 모델 모두 동일한 전기
@@ -60,7 +60,7 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
             <div style={AS.calloutTitle}>GT 기본 사양</div>
             <p style={AS.calloutText}>
               파노라마 선루프 · 앞좌석 열선 및 통풍 시트 · 열선 스티어링 휠 ·
-              증강현실 HUD · 14스피커 소니 오디오 — $49,990부터 (온로드 비용 별도).
+              증강현실 HUD · 14스피커 소니 오디오, $49,990부터 (온로드 비용 별도).
             </p>
           </div>
 
@@ -138,7 +138,7 @@ export default function Mazda6eNoBaseModelAustraliaKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

@@ -8,8 +8,8 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
 
           <p style={AS.p}>
             Mazda&rsquo;s electric push in Australia is gathering real momentum. The Mazda 6e sedan
-            launched with a limited pre-order offer — the first 300 customers to order a GT would
-            receive a free upgrade to the Atenza, worth $3,000 — and all{" "}
+            launched with a limited pre-order offer, the first 300 customers to order a GT would
+            receive a free upgrade to the Atenza, worth $3,000, and all{" "}
             <span style={AS.highlight}>300 units sold out within two weeks</span>. Now the CX-6e
             SUV is following the same playbook, and early signs suggest demand could be even stronger.
           </p>
@@ -62,7 +62,7 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
             <div style={AS.calloutTitle}>PRE-ORDER OFFER</div>
             <p style={AS.calloutText}>
               The first 1,000 customers to pre-order the CX-6e GT will receive a free upgrade to
-              the Azami, saving $3,000 — the same offer that sold out the 6e sedan allocation in
+              the Azami, saving $3,000, the same offer that sold out the 6e sedan allocation in
               two weeks.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
           <h2 style={AS.h2}>Why It Matters</h2>
 
           <p style={AS.p}>
-            Both models are built through Mazda&rsquo;s joint venture with Changan in China — a
+            Both models are built through Mazda&rsquo;s joint venture with Changan in China, a
             pragmatic decision that keeps costs down without compromising on the design and driving
             feel Mazda is known for. The 6e was named{" "}
             <span style={AS.highlight}>2026 World Car Design of the Year</span>, and early drive
@@ -119,7 +119,7 @@ export default function Mazda6eCx6eOrdersAustralia2026Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

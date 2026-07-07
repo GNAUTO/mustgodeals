@@ -63,7 +63,7 @@ export default function GwmHavalH10FlagshipSuv2027Content() {
             <div style={AS.calloutTitle}>HAVAL H10 DIMENSIONS</div>
             <p style={AS.calloutText}>
               5-seat: 5138mm L · 1970mm W · 2050mm H · 3000mm wheelbase
-              — longer than a Toyota LandCruiser 300 Series.
+              longer than a Toyota LandCruiser 300 Series.
               6-seat: 5299mm L.
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function GwmHavalH10FlagshipSuv2027Content() {
             <span style={AS.highlight}>Coffee OS 3</span> software, a floating digital
             instrument cluster, and a simplified steering wheel with fewer physical buttons.
             One notable omission is the secondary passenger touchscreen found in the more
-            luxury-focused Wey models — that feature appears to stay exclusive to the Wey
+            luxury-focused Wey models, that feature appears to stay exclusive to the Wey
             badge for now.
           </p>
 
@@ -103,7 +103,7 @@ export default function GwmHavalH10FlagshipSuv2027Content() {
             with either a 1.5-litre or 2.0-litre turbo petrol engine. A 42.8kWh battery pack
             is claimed to deliver up to{" "}
             <span style={AS.highlight}>180km of electric-only range</span> under China&rsquo;s
-            CLTC testing standard — a figure that will likely shrink under stricter international
+            CLTC testing standard, a figure that will likely shrink under stricter international
             testing.
           </p>
 
@@ -125,7 +125,7 @@ export default function GwmHavalH10FlagshipSuv2027Content() {
           <p style={AS.p}>
             Whether the H10 makes its way to Australia remains an open question. GWM&rsquo;s
             local flagship duties currently sit with the Tank 500, and a more powerful{" "}
-            <span style={AS.highlight}>Tank 700</span> — potentially with a V8 — is expected
+            <span style={AS.highlight}>Tank 700</span>, potentially with a V8, is expected
             to join the range. The brand&rsquo;s luxury Wey sub-brand is also set to launch in
             Australia later this year, starting with the G9 plug-in hybrid people mover.
           </p>
@@ -160,7 +160,7 @@ export default function GwmHavalH10FlagshipSuv2027Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

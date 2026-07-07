@@ -10,6 +10,7 @@ export type BlogPost = {
   lang: Lang;
   pinned?: boolean;
   highlight?: string;
+  thumbSubtext?: string;
 };
 
 export type NewsItem = {
@@ -35,10 +36,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "July 7, 2026",
     lang: "EN",
     highlight: "E-Tag",
+    thumbSubtext: "toll road guide",
   },
   {
     slug: "australia-toll-roads-etag-guide-ko",
-    title: "호주에는 톨게이트 창구가 없습니다: 처음 오신 분들을 위한 완전 정리",
+    title: "호주에는 톨게이트 창구가 없습니다. 처음 오신 분들을 위한 완전 정리",
     excerpt:
       "호주의 모든 유료도로는 전자식이다. 창구도, 차단기도, 현금 결제도 없다. Tag와 Pass 차이부터 렌터카 주의사항, 미납 시 단계별 비용까지 한번에 정리했다.",
     category: "호주 생활 정보",
@@ -46,10 +48,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "July 7, 2026",
     lang: "KO",
     highlight: "E-Tag",
+    thumbSubtext: "유료도로 가이드",
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit",
-    title: "NSW Double Demerit Fines: Most Drivers Get This Wrong",
+    title: "NSW Double Demerit Fines. Most Drivers Get This Wrong",
     excerpt:
       "NSW double demerit periods don't double your fine, only your demerit points. Here's what actually changes, when the 2026 periods apply, and how school zone fines stack on top.",
     category: "NSW Road Rules",
@@ -57,6 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "July 7, 2026",
     lang: "EN",
     highlight: "2x",
+    thumbSubtext: "demerit points",
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit-ko",
@@ -68,6 +72,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "July 7, 2026",
     lang: "KO",
     highlight: "2x",
+    thumbSubtext: "벌점 2배",
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia",
@@ -79,6 +84,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "July 2, 2026",
     lang: "EN",
     highlight: "Demo",
+    thumbSubtext: "clearance cars",
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia-ko",
@@ -90,6 +96,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 7월 2일",
     lang: "KO",
     highlight: "Demo",
+    thumbSubtext: "딜러 급처분차",
   },
   {
     slug: "business-car-gst-demo-car-australia",
@@ -101,6 +108,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 30, 2026",
     lang: "EN",
     highlight: "GST",
+    thumbSubtext: "business savings",
   },
   {
     slug: "business-car-gst-demo-car-australia-ko",
@@ -112,10 +120,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 30일",
     lang: "KO",
     highlight: "GST",
+    thumbSubtext: "사업자 절세",
   },
   {
     slug: "luxury-car-tax-australia",
-    title: "Luxury Car Tax in Australia — What It Is and How It Affects Your Next Car Purchase",
+    title: "Luxury Car Tax in Australia. What It Is and How It Affects Your Next Car Purchase",
     excerpt:
       "LCT can add thousands to the cost of a premium vehicle. Here's how the 2025–26 thresholds work, how to calculate your exposure, and how a demo car can legally eliminate the tax entirely.",
     category: "Buying Guide",
@@ -123,6 +132,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 26, 2026",
     lang: "EN",
     highlight: "LCT",
+    thumbSubtext: "luxury car tax",
   },
   {
     slug: "luxury-car-tax-australia-ko",
@@ -134,10 +144,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 26일",
     lang: "KO",
     highlight: "LCT",
+    thumbSubtext: "럭셔리 카 택스",
   },
   {
     slug: "novated-lease-australia",
-    title: "What Is a Novated Lease — And Is It Worth It in Australia?",
+    title: "What Is a Novated Lease and Is It Worth It in Australia?",
     excerpt:
       "A novated lease lets you pay for a car with pre-tax salary. Here's exactly how it works, how much you can save, and whether it's the right move for your situation.",
     category: "Buying Guide",
@@ -145,6 +156,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 25, 2026",
     lang: "EN",
     highlight: "Lease",
+    thumbSubtext: "novated lease",
   },
   {
     slug: "novated-lease-australia-ko",
@@ -156,6 +168,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 25일",
     lang: "KO",
     highlight: "Lease",
+    thumbSubtext: "노베이티드 리스",
   },
   {
     slug: "car-stamp-duty-australia-explained",
@@ -167,10 +180,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 24, 2026",
     lang: "EN",
     highlight: "$",
+    thumbSubtext: "stamp duty",
   },
   {
     slug: "car-stamp-duty-australia-explained-ko",
-    title: "호주에서 차 살 때 스탬프 듀티란? — 아무도 알려주지 않는 숨겨진 비용",
+    title: "호주에서 차 살 때 스탬프 듀티란. 아무도 알려주지 않는 숨겨진 비용",
     excerpt:
       "주마다 세율이 다르다. 같은 차라도 어느 주에서 사느냐에 따라 수백에서 수천 달러 차이가 날 수 있다.",
     category: "구매 가이드",
@@ -178,6 +192,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 24일",
     lang: "KO",
     highlight: "$",
+    thumbSubtext: "스탬프 듀티",
   },
   {
     slug: "eofy-car-tax-benefits-australia",
@@ -189,10 +204,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 24, 2026",
     lang: "EN",
     highlight: "EOFY",
+    thumbSubtext: "tax savings",
   },
   {
     slug: "eofy-car-tax-benefits-australia-ko",
-    title: "회계연도 마감 전에 차를 사면 세금 혜택이 있을까? — ABN 사업자를 위한 가이드",
+    title: "회계연도 마감 전에 차를 사면 세금 혜택이 있을까. ABN 사업자를 위한 가이드",
     excerpt:
       "Instant Asset Write-Off, Car Limit, 업무용 비율 — EOFY 전 차량 구매 시 실제로 적용되는 세금 규정을 정리했다.",
     category: "구매 가이드",
@@ -200,6 +216,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 24일",
     lang: "KO",
     highlight: "EOFY",
+    thumbSubtext: "세금 혜택",
   },
   {
     slug: "why-buy-demo-car-australia",
@@ -212,10 +229,11 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     pinned: true,
     highlight: "10-30%",
+    thumbSubtext: "below new price",
   },
   {
     slug: "why-buy-demo-car-australia-ko",
-    title: "호주에서 데모카를 사야 하는 이유 — 신차보다 현명한 선택",
+    title: "호주에서 데모카를 사야 하는 이유. 신차보다 현명한 선택",
     excerpt:
       "신차와 거의 같은 퀄리티에 가격은 10~30% 낮다. 지금 회계연도 마감 시즌, 데모카 매물이 연중 가장 많이 나오는 시기다.",
     category: "구매 가이드",
@@ -224,10 +242,11 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     pinned: true,
     highlight: "10-30%",
+    thumbSubtext: "신차 대비 할인",
   },
   {
     slug: "how-to-negotiate-car-price-australia",
-    title: "How to Negotiate a Car Price at an Australian Dealership — A Practical Guide That Actually Works",
+    title: "How to Negotiate a Car Price at an Australian Dealership",
     excerpt:
       "The price on the sticker is almost never the final price. Here's what to research beforehand, what not to say in the showroom, and the tactics that actually get dealers to move.",
     category: "Buying Guide",
@@ -235,10 +254,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 23, 2026",
     lang: "EN",
     highlight: "-15%",
+    thumbSubtext: "off sticker price",
   },
   {
     slug: "how-to-negotiate-car-price-australia-ko",
-    title: "호주 딜러십에서 자동차 가격을 깎는 법 — 현장에서 통하는 실전 가이드",
+    title: "호주 딜러십에서 자동차 가격을 깎는 법. 현장에서 통하는 실전 가이드",
     excerpt:
       "쇼룸에 들어서기 전 준비해야 할 것들, 절대 먼저 말하면 안 되는 것, 딜러를 움직이게 만드는 협상 전술까지.",
     category: "구매 가이드",
@@ -246,6 +266,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 23일",
     lang: "KO",
     highlight: "-15%",
+    thumbSubtext: "협상 가이드",
   },
   {
     slug: "best-time-to-buy-a-car-australia",
@@ -257,6 +278,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 2026",
     lang: "EN",
     highlight: "EOFY",
+    thumbSubtext: "best timing",
   },
   {
     slug: "best-time-to-buy-a-car-australia-ko",
@@ -268,10 +290,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월",
     lang: "KO",
     highlight: "EOFY",
+    thumbSubtext: "구매 적기",
   },
   {
     slug: "end-of-month-car-deals-explained",
-    title: "End of month car deals explained — secrets dealers will never tell you",
+    title: "End of Month Car Deals Explained. Secrets Dealers Won't Tell You",
     excerpt:
       "Dealers face huge pressure from manufacturers at month end. Here's exactly how that pressure works — and how to use it to negotiate thousands off your next car.",
     category: "Insider Guide",
@@ -279,10 +302,11 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 2026",
     lang: "EN",
     highlight: "EOM",
+    thumbSubtext: "month end deals",
   },
   {
     slug: "wolmal-jadongcha-dil-jongni",
-    title: "월말 자동차 딜 총정리 — 딜러가 절대 말 안해주는 비밀",
+    title: "월말 자동차 딜 총정리. 딜러가 절대 말 안해주는 비밀",
     excerpt:
       "월말 마지막 3~5 영업일, 딜러에게 가장 강한 압박이 걸리는 시간. 이 타이밍과 협상 전술만 알면 수천 달러를 아낄 수 있습니다.",
     category: "한국어 가이드",
@@ -290,6 +314,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월",
     lang: "KO",
     highlight: "EOM",
+    thumbSubtext: "월말 딜 비밀",
   },
 ];
 
@@ -297,7 +322,7 @@ export const BLOG_POSTS: BlogPost[] = [
 export const NEWS_ITEMS: NewsItem[] = [
   {
     slug: "gwm-tank-300-facelift-china-reveal-2026",
-    title: "GWM Tank 300 Facelift Revealed: Roof LiDAR and 200km PHEV Range",
+    title: "GWM Tank 300 Facelift Revealed with Roof LiDAR and 200km PHEV Range",
     excerpt:
       "GWM reveals the 2027 Tank 300 facelift with roof-mounted LiDAR and a new Hi4-Z PHEV claiming 200km of electric range on WLTC. Chinese pre-sale starts July 6.",
     category: "NEWS",
@@ -308,7 +333,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "gwm-tank-300-facelift-china-reveal-2026-ko",
-    title: "GWM 탱크 300 페이스리프트 공개: 루프 라이다, Hi4-Z 200km PHEV 탑재",
+    title: "GWM 탱크 300 페이스리프트 공개. 루프 라이다와 Hi4-Z 200km PHEV 탑재",
     excerpt:
       "GWM이 중국에서 탱크 300 페이스리프트를 공개했다. 루프 마운트 라이다, 신규 Hi4-Z PHEV 시스템으로 WLTC 기준 200km 전기 주행거리 구현. 7월 6일 중국 프리세일 시작.",
     category: "뉴스",
@@ -330,7 +355,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "xpeng-mona-l03-australia-2027-ko",
-    title: "XPeng 모나 L03 호주 출시 확정: 스펙, 가격, TrueEV 분쟁까지",
+    title: "XPeng 모나 L03 호주 출시 확정. 스펙, 가격, TrueEV 분쟁까지",
     excerpt:
       "XPeng 모나 L03가 2026년 말~2027년 초 호주 출시가 유력해졌다. 쿠페형 전기 SUV 전체 스펙과 함께 TrueEV 분쟁 및 $5,000 캐시백 미지급 이슈도 정리했다.",
     category: "뉴스",
@@ -341,7 +366,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "australia-new-road-rules-july-2026",
-    title: "New Road Rules July 2026: What Changed in Australia",
+    title: "New Road Rules July 2026. What Changed in Australia",
     excerpt:
       "New road rules are now in effect across Australia. Queensland cracks down on e-scooters, SA hikes speeding fines, and NSW cuts its weekly toll cap.",
     category: "NEWS",
@@ -352,7 +377,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "australia-new-road-rules-july-2026-ko",
-    title: "2026년 7월 호주 신규 도로법규 총정리: 주별 변경사항",
+    title: "2026년 7월 호주 신규 도로법규 총정리. 주별 변경사항",
     excerpt:
       "2026년 7월 1일부터 호주 전역에서 새 도로법규가 시행됐다. QLD 전동킥보드 대대적 규제, SA 과속 벌금 인상, NSW 통행료 상한 인하까지 주별로 정리했다.",
     category: "뉴스",
@@ -363,7 +388,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "ferrari-12cilindri-manuale-manual-v12",
-    title: "Ferrari 12Cilindri Manuale: 820hp V12 With a Manual Gearbox",
+    title: "Ferrari 12Cilindri Manuale. 820hp V12 With a Manual Gearbox",
     excerpt:
       "Ferrari's 12Cilindri Manuale pairs an 820hp naturally aspirated V12 with a by-wire 6-speed open-gate manual. Limited to 1,499 units at €590,000.",
     category: "NEWS",
@@ -374,7 +399,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "ferrari-12cilindri-manuale-manual-v12-ko",
-    title: "페라리 12칠린드리 마누알레: 820마력 V12에 수동 변속기를 달다",
+    title: "페라리 12칠린드리 마누알레. 820마력 V12에 수동 변속기를 달다",
     excerpt:
       "페라리가 12칠린드리 마누알레를 공개했다. 개방형 게이트 6단 수동 변속기를 탑재하되, 실제로는 바이-와이어 방식으로 8단 DCT를 조작하는 구조. 1,499대 한정, €590,000~.",
     category: "뉴스",
@@ -396,7 +421,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "li-mega-electric-china-australia-ko",
-    title: "리 오토 메가, 우핸들 버전 생산 확정 — 호주 진출 가능성은?",
+    title: "리 오토 메가 우핸들 버전 생산 확정. 호주 진출 가능성은?",
     excerpt:
       "리 오토가 메가 전기 MPV의 우핸들 버전 생산을 공식 확정했다. 호주는 리스트에 없지만, 스펙과 무관세 환경을 보면 얘기가 달라진다.",
     category: "뉴스",
@@ -594,7 +619,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "nsw-police-high-performance-fleet-2026-ko",
-    title: "NSW 경찰, 9,430만 달러 규모 신속대응부대 창설 — 고성능 차량 도입 예고",
+    title: "NSW 경찰, 9,430만 달러 규모 신속대응부대 창설. 고성능 차량 도입 예고",
     excerpt:
       "NSW 경찰이 새로운 무장대응사령부 설립의 일환으로 고성능 신속대응 차량을 도입할 예정이지만, 구체적인 차종은 아직 공개되지 않았다.",
     category: "뉴스",
@@ -605,7 +630,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "mazda-6e-no-base-model-australia",
-    title: "Mazda 6e Won't Get a Cheaper Base Model — At Least for Now",
+    title: "Mazda 6e Won't Get a Cheaper Base Model for Now",
     excerpt:
       "Mazda Australia has ruled out a more affordable entry-level grade for the 6e electric sedan, saying the GT is already well-specced for its $49,990 price point.",
     category: "NEWS",
@@ -616,7 +641,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "mazda-6e-no-base-model-australia-ko",
-    title: "마쓰다 6e, 저가 베이스 모델 출시 없다 — 현재로선 GT가 최저가",
+    title: "마쓰다 6e, 저가 베이스 모델 출시 없다. 현재로선 GT가 최저가",
     excerpt:
       "마쓰다 호주가 6e 전기 세단의 엔트리 등급 추가 계획이 없다고 밝혔다. GT 모델이 $49,990에 이미 충분한 사양을 갖췄다는 입장이다.",
     category: "뉴스",
@@ -649,7 +674,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "australia-car-recalls-june-2026",
-    title: "Every Car Recalled in Australia in June 2026 — Is Yours on the List?",
+    title: "Every Car Recalled in Australia in June 2026. Is Yours on the List?",
     excerpt:
       "Nine manufacturers issued 11 recalls covering 16 models in June 2026. Here's the full list, how to check your vehicle, and what to do if your car is affected.",
     category: "NEWS",
@@ -660,7 +685,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "australia-car-recalls-june-2026-ko",
-    title: "2026년 6월 호주 리콜 차량 전체 목록 — 내 차 포함됐나요?",
+    title: "2026년 6월 호주 리콜 차량 전체 목록. 내 차 포함됐나요?",
     excerpt:
       "2026년 6월 호주에서 9개 제조사가 11건 리콜을 발령했다. 체리·폭스바겐·현대·렉서스·토요타 등 16개 모델 전체 목록과 리콜 확인 방법을 정리했다.",
     category: "뉴스",
@@ -671,7 +696,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "mazda-sales-dip-australia-2026",
-    title: "Mazda Explains Sudden Sales Dip in Australia — New Models on the Way",
+    title: "Mazda Explains Sudden Sales Dip in Australia. New Models on the Way",
     excerpt:
       "Mazda has slipped to 6th–7th in Australia's sales rankings — its lowest position in 15 years. May sales fell 27.4%, but a CX-5 changeover and incoming EVs will reverse the slide.",
     category: "NEWS",
@@ -682,7 +707,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "mazda-sales-dip-australia-2026-ko",
-    title: "마쯔다, 호주 판매 15년 만에 최저 — 신형 CX-5·전기차로 반등 노린다",
+    title: "마쯔다, 호주 판매 15년 만에 최저. 신형 CX-5·전기차로 반등 노린다",
     excerpt:
       "마쯔다가 호주 판매 순위 6~7위로 밀려나며 15년 만에 최저 성적을 기록했다. 5월 판매는 27.4% 급감했지만, 신형 CX-5와 전기차 라인업으로 하반기 반등을 자신하고 있다.",
     category: "뉴스",
@@ -693,7 +718,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "hyundai-i30-sedan-2027-australia",
-    title: "2027 Hyundai i30 Sedan Revealed — Bigger, Hybrid-Focused, and Coming to Australia Next Year",
+    title: "2027 Hyundai i30 Sedan Revealed. Bigger, Hybrid-Focused, Coming to Australia",
     excerpt:
       "The eighth-generation i30 Sedan grows in every dimension, drops the 1.6T petrol, and upgrades the hybrid to 117kW. Australian arrival is confirmed for the first half of 2027.",
     category: "NEWS",
@@ -704,7 +729,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "hyundai-i30-sedan-2027-australia-ko",
-    title: "2027 현대 i30 세단 공개 — 더 커지고, 하이브리드 중심으로, 내년 호주 상륙",
+    title: "2027 현대 i30 세단 공개. 더 커지고, 하이브리드 중심으로, 내년 호주 상륙",
     excerpt:
       "전장 4,765mm로 성장하고, 1.6T 삭제, 117kW 하이브리드로 재편된 8세대 i30 세단. 호주 출시는 2027년 상반기로 예정돼 있다.",
     category: "뉴스",
@@ -715,7 +740,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "audi-a3-s3-rs3-2027-update",
-    title: "2027 Audi A3, S3 and RS3 Updated — Bigger Screens, Fewer Buttons, and a Redesigned Interior",
+    title: "2027 Audi A3, S3 and RS3 Updated. Bigger Screens, Fewer Buttons, Redesigned Interior",
     excerpt:
       "Audi's entire A3 family gets the curved Digital Stage cockpit from the A5 and A6 — a 12.8-inch MMI, 11.9-inch Virtual Cockpit under one piece of glass, and upgraded driver assistance. European launch September 2026.",
     category: "NEWS",
@@ -726,7 +751,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "audi-a3-s3-rs3-2027-update-ko",
-    title: "2027 아우디 A3·S3·RS3 업데이트 — 더 커진 스크린, 줄어든 버튼, 완전히 달라진 실내",
+    title: "2027 아우디 A3·S3·RS3 업데이트. 더 커진 스크린, 줄어든 버튼, 달라진 실내",
     excerpt:
       "A5·A6의 디지털 스테이지 아키텍처가 A3까지 내려왔다. 12.8인치 MMI + 11.9인치 버추얼 콕핏이 단일 곡면 유리로 통합되고, 주행 보조 시스템도 전면 강화됐다. 유럽 출시 2026년 9월.",
     category: "뉴스",
@@ -737,7 +762,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "skoda-peaq-2027-australia",
-    title: "Skoda Peaq Revealed: Seven-Seat Electric SUV with 640km Range Confirmed for Australia",
+    title: "Skoda Peaq Revealed. Seven-Seat Electric SUV with 640km Range for Australia",
     excerpt:
       "Skoda's largest-ever SUV arrives as a direct Kia EV9 rival — with up to 640km range, V2L/V2H/V2G bidirectional charging, and a price expected to start in the low-to-mid $70,000s.",
     category: "NEWS",
@@ -748,7 +773,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "skoda-peaq-2027-australia-ko",
-    title: "스코다 피크 공개 — 640km 항속, 7인승 전기 SUV 호주 상륙 예고",
+    title: "스코다 피크 공개. 640km 항속, 7인승 전기 SUV 호주 상륙 예고",
     excerpt:
       "스코다 역대 최대 SUV 피크가 베일을 벗었다. 기아 EV9의 직접 경쟁 상대로, 최대 640km 주행거리와 V2L/V2H/V2G를 탑재한 채 호주 출시가 확정됐다.",
     category: "뉴스",
@@ -770,7 +795,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "australia-fuel-excise-relief-extended-july-2026-ko",
-    title: "호주 유류세 인하 연장 — 7월도 리터당 16센트 저렴하게",
+    title: "호주 유류세 인하 연장. 7월도 리터당 16센트 저렴하게",
     excerpt:
       "알바니즈 정부가 유류세 인하를 2026년 8월 2일까지 연장한다고 발표했다. 휘발유·경유 가격이 정상 대비 리터당 16센트 낮게 유지된다.",
     category: "뉴스",
@@ -803,7 +828,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "hyundai-i20-n-hybrid-nextgen",
-    title: "Next-Gen Hyundai i20 N Is Coming — With Hybrid Power That Could Beat the i30 N",
+    title: "Next-Gen Hyundai i20 N Is Coming with Hybrid Power That Could Beat the i30 N",
     excerpt:
       "Hyundai R&D boss confirms a second-gen i20 N with hybrid power is coming sooner rather than later — expected outputs of up to 224kW could make it stronger than any current i30 N.",
     category: "NEWS",
@@ -814,7 +839,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "hyundai-i20-n-hybrid-nextgen-ko",
-    title: "차세대 현대 i20 N 확정 — 하이브리드 탑재로 i30 N을 넘어설 수도",
+    title: "차세대 현대 i20 N 확정. 하이브리드 탑재로 i30 N을 넘어설 수도",
     excerpt:
       "현대 글로벌 R&D 총괄이 2세대 i20 N 출시를 공식 확인했다. 최대 224kW 출력의 하이브리드 파워트레인 탑재가 예상되며, 2028년 판매 시작이 유력하다.",
     category: "뉴스",
@@ -825,7 +850,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "byd-goodwood-2026-eight-models",
-    title: "BYD Is Bringing Eight New Models to Goodwood — Including a Porsche 911 Rival",
+    title: "BYD Is Bringing Eight New Models to Goodwood Including a Porsche 911 Rival",
     excerpt:
       "BYD debuts eight models at Goodwood 2026 across BYD, Denza, and Yangwang brands — headlined by the world premiere of the Denza Z Coupe, a 350km/h EV targeting the Porsche 911.",
     category: "NEWS",
@@ -836,7 +861,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "byd-goodwood-2026-eight-models-ko",
-    title: "BYD, 굿우드에서 8개 신모델 공개 — 포르쉐 911 라이벌도 등장",
+    title: "BYD, 굿우드에서 8개 신모델 공개. 포르쉐 911 라이벌도 등장",
     excerpt:
       "BYD가 굿우드 2026에서 덴자 Z 쿠페 세계 최초 공개를 포함해 BYD·덴자·양왕 3개 브랜드의 신모델 8개를 선보인다. 부스 면적은 행사 역사상 최대인 2,016㎡다.",
     category: "뉴스",
@@ -847,7 +872,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "renault-megane-etech-2026-australia",
-    title: "2026 Renault Megane E-Tech: A Complete Overhaul for Australia",
+    title: "2026 Renault Megane E-Tech. A Complete Overhaul for Australia",
     excerpt:
       "The 2026 Megane E-Tech arrives with a 67kWh LFP battery, 500km WLTP range, 165kW DC fast charging, and Google Gemini inside. Australian launch expected first half of 2027.",
     category: "NEWS",
@@ -858,7 +883,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "renault-megane-etech-2026-australia-ko",
-    title: "2026 르노 메간 E-Tech: 완전히 달라진 호주 출시 예정 모델",
+    title: "2026 르노 메간 E-Tech. 완전히 달라진 호주 출시 예정 모델",
     excerpt:
       "67kWh LFP 배터리, WLTP 500km, 165kW 급속충전, Google Gemini — 완전히 새로워진 메간 E-Tech가 2027년 상반기 호주에 상륙한다.",
     category: "뉴스",
@@ -869,7 +894,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "kia-pv5-passenger-australia-2027",
-    title: "Kia PV5 Passenger: Australia's First Electric People Mover Is Coming",
+    title: "Kia PV5 Passenger. Australia's First Electric People Mover Is Coming",
     excerpt:
       "Kia Australia confirms the PV5 Passenger electric people mover arrives in Q4 2026 — the first EV people mover on the local market, with ~390km range and pricing around $60,000.",
     category: "NEWS",
@@ -891,7 +916,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "bmw-x5-2027-five-powertrains",
-    title: "2027 BMW X5: One SUV, Five Ways to Power It",
+    title: "2027 BMW X5. One SUV, Five Ways to Power It",
     excerpt:
       "Five powertrains in one body — petrol, diesel, PHEV, BEV, and hydrogen. The 2027 X5 is BMW's most ambitious model yet, arriving in Australia late 2026.",
     category: "NEWS",
@@ -902,7 +927,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "bmw-x5-2027-five-powertrains-ko",
-    title: "2027 BMW X5: 하나의 SUV, 다섯 가지 파워트레인",
+    title: "2027 BMW X5. 하나의 SUV, 다섯 가지 파워트레인",
     excerpt:
       "하나의 차체에 다섯 가지 파워트레인. 가솔린, 디젤, PHEV, 순수 전기, 수소까지 — BMW 역사상 가장 복잡한 X5가 2026년 말 호주에 상륙한다.",
     category: "뉴스",
@@ -935,7 +960,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "porsche-taycan-e-shift-2027",
-    title: "Porsche Taycan gets simulated gear shifts — and it's more interesting than it sounds",
+    title: "Porsche Taycan Gets Simulated Gear Shifts and It's More Interesting Than It Sounds",
     excerpt:
       "The 2027 Taycan's E-Shift system simulates an 8-speed DCT with paddle shifters and a virtual rev limiter. Here's what it is, how to get it, and what else changes for MY27.",
     category: "NEWS",
@@ -946,7 +971,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "porsche-taycan-e-shift-2027-ko",
-    title: "포르쉐 타이칸, 가상 변속기를 달다 — 전기차가 기어를 흉내 내는 이유",
+    title: "포르쉐 타이칸, 가상 변속기를 달다. 전기차가 기어를 흉내 내는 이유",
     excerpt:
       "2027년형 타이칸의 E-Shift 시스템은 패들 시프터와 가상 레브 리미터를 갖춘 8단 DCT를 시뮬레이션한다. 작동 원리와 MY27의 주요 변경사항을 정리했다.",
     category: "뉴스",

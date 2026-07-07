@@ -21,7 +21,7 @@ export default function Mazda6eNoBaseModelAustraliaContent() {
 
           <p style={AS.p}>
             Mazda Australia has confirmed it has no plans to introduce a cheaper base model
-            beneath the current GT grade for its 6e electric sedan — at least in the near term.
+            beneath the current GT grade for its 6e electric sedan, at least in the near term.
           </p>
 
           <h2 style={AS.h2}>Where the 6e Sits in the Market</h2>
@@ -47,10 +47,10 @@ export default function Mazda6eNoBaseModelAustraliaContent() {
             <p style={AS.imgCaption}>Image: Mazda Media</p>
           </div>
 
-          <h2 style={AS.h2}>GT vs Atenza — What You Get</h2>
+          <h2 style={AS.h2}>GT vs Atenza. What You Get</h2>
 
           <p style={AS.p}>
-            The 6e is offered in two grades — E35 GT and E35 Atenza — both sharing the same
+            The 6e is offered in two grades, E35 GT and E35 Atenza, both sharing the same
             electric motor and battery pack. The <span style={AS.highlight}>$3,000 step</span> to
             the Atenza at $52,990 adds genuine leather upholstery, synthetic suede trim, and a
             two-tone leather steering wheel. Both grades come standard with a panoramic glass
@@ -62,7 +62,7 @@ export default function Mazda6eNoBaseModelAustraliaContent() {
             <div style={AS.calloutTitle}>GT STANDARD EQUIPMENT</div>
             <p style={AS.calloutText}>
               Panoramic glass roof · Heated &amp; ventilated front seats · Heated steering wheel ·
-              AR head-up display · 14-speaker Sony audio — all from $49,990 before on-road costs.
+              AR head-up display · 14-speaker Sony audio, all from $49,990 before on-road costs.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ export default function Mazda6eNoBaseModelAustraliaContent() {
 
           <p style={AS.p}>
             For Australian buyers, the 6e&rsquo;s GT grade offers strong value at its price
-            point — but those looking for an even more accessible entry into Mazda&rsquo;s EV
+            point, but those looking for an even more accessible entry into Mazda&rsquo;s EV
             lineup may need to wait.
           </p>
 
@@ -142,7 +142,7 @@ export default function Mazda6eNoBaseModelAustraliaContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

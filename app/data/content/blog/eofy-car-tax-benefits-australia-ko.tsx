@@ -12,7 +12,7 @@ export default function EofyCarTaxBenefitsAustraliaKoContent() {
             어떤 조건에서 유리할까?
           </p>
 
-          <h2 style={AS.h2}>먼저 알아야 할 것 — Instant Asset Write-Off</h2>
+          <h2 style={AS.h2}>먼저 알아야 할 것. Instant Asset Write-Off</h2>
 
           <p style={AS.p}>
             2025-26 회계연도 기준, 연간 매출{" "}
@@ -23,7 +23,7 @@ export default function EofyCarTaxBenefitsAustraliaKoContent() {
           </p>
 
           <p style={AS.p}>
-            쉽게 말하면 — $20,000 미만의 사업용 자산을 구입하면 그 비용 전액을 올해 세금 신고에서
+            쉽게 말하면, $20,000 미만의 사업용 자산을 구입하면 그 비용 전액을 올해 세금 신고에서
             바로 공제할 수 있다는 뜻이다.
           </p>
 
@@ -41,7 +41,7 @@ export default function EofyCarTaxBenefitsAustraliaKoContent() {
             공제받게 된다.
           </p>
 
-          <h2 style={AS.h2}>Car Limit — 공제 가능한 최대 금액</h2>
+          <h2 style={AS.h2}>Car Limit. 공제 가능한 최대 금액</h2>
 
           <p style={AS.p}>
             2025-26 회계연도 기준 차량 공제 한도(Car Limit)는{" "}
@@ -86,11 +86,11 @@ export default function EofyCarTaxBenefitsAustraliaKoContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>ABN 사업자 핵심 요약</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}>즉시 공제는 $20,000 미만 자산에만 적용 — 대부분의 차량은 해당 없음</li>
+              <li style={AS.tipItem}>즉시 공제는 $20,000 미만 자산에만 적용, 대부분의 차량은 해당 없음</li>
               <li style={AS.tipItem}>$20,000 초과 차량은 감가상각 풀 적용: 1년차 15%, 이후 30%</li>
               <li style={AS.tipItem}>감가상각은 Car Limit인 $69,674까지만 계산</li>
-              <li style={AS.tipItem}>업무용 비율만 공제 가능 — 로그북 필수</li>
-              <li style={AS.tipItem}>진짜 EOFY 이점은 세금보다 협상력 — 재고 처분 압박이 가장 높은 시기</li>
+              <li style={AS.tipItem}>업무용 비율만 공제 가능, 로그북 필수</li>
+              <li style={AS.tipItem}>진짜 EOFY 이점은 세금보다 협상력, 재고 처분 압박이 가장 높은 시기</li>
             </ul>
           </div>
 

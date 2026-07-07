@@ -7,14 +7,14 @@ export default function SkodaPeaq2027AustraliaContent() {
     <>
 
           <p style={AS.p}>
-            Skoda has just pulled the covers off its biggest, most ambitious product yet — and it
+            Skoda has just pulled the covers off its biggest, most ambitious product yet, and it
             has its sights set squarely on the Kia EV9. The{" "}
             <span style={AS.highlight}>Skoda Peaq</span> is a full-size, seven-seat electric SUV
             confirmed for Australian buyers, bringing up to 640km of claimed range and a
             specification sheet that punches well above what the price tag is expected to be.
           </p>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c4d60c30-2aac-5ab1-a8e5-57f962a50000"
@@ -30,12 +30,12 @@ export default function SkodaPeaq2027AustraliaContent() {
           <h2 style={AS.h2}>What&rsquo;s in a Name?</h2>
 
           <p style={AS.p}>
-            The name &ldquo;Peaq&rdquo; is borrowed from the English word &ldquo;peak&rdquo; —
+            The name &ldquo;Peaq&rdquo; is borrowed from the English word &ldquo;peak&rdquo;, 
             and Skoda means it literally. This is the brand&rsquo;s largest SUV ever, sitting above
             the Kodiaq in the lineup and representing the high point of the Czech brand&rsquo;s
             growing electric portfolio. At <span style={AS.highlight}>4,874mm long</span> with a
             wheelbase of <span style={AS.highlight}>2,965mm</span>, it&rsquo;s a genuinely
-            substantial machine — longer than a BMW X7, and only a handful of millimetres shy of a
+            substantial machine, longer than a BMW X7, and only a handful of millimetres shy of a
             full-size Land Cruiser in overall length.
           </p>
 
@@ -56,17 +56,17 @@ export default function SkodaPeaq2027AustraliaContent() {
 
           <p style={AS.p}>
             Built on Volkswagen Group&rsquo;s proven{" "}
-            <span style={AS.highlight}>MEB electric platform</span> — the same architecture
-            underpinning the VW ID.4, Audi Q4 e-tron, and Skoda&rsquo;s own Enyaq — the Peaq
+            <span style={AS.highlight}>MEB electric platform</span>, the same architecture
+            underpinning the VW ID.4, Audi Q4 e-tron, and Skoda&rsquo;s own Enyaq, the Peaq
             launches with three powertrain options that cover a wide spread of range and performance.
           </p>
 
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>POWERTRAIN LINEUP</div>
             <p style={AS.calloutText}>
-              <strong>Peaq 60</strong> — 63kWh battery · 150kW rear-wheel drive · 450km+ range<br /><br />
-              <strong>Peaq 90</strong> — 91kWh battery · 210kW rear-wheel drive · 640km+ range<br /><br />
-              <strong>Peaq 90x</strong> — 91kWh battery · AWD · 220kW combined · 610km+ range
+              <strong>Peaq 60</strong>. 63kWh battery · 150kW rear-wheel drive · 450km+ range<br /><br />
+              <strong>Peaq 90</strong>. 91kWh battery · 210kW rear-wheel drive · 640km+ range<br /><br />
+              <strong>Peaq 90x</strong>. 91kWh battery · AWD · 220kW combined · 610km+ range
             </p>
           </div>
 
@@ -90,11 +90,11 @@ export default function SkodaPeaq2027AustraliaContent() {
             <p style={AS.imgCaption}>Image: Skoda Media</p>
           </div>
 
-          <h2 style={AS.h2}>Space for Seven — and Then Some</h2>
+          <h2 style={AS.h2}>Space for Seven. and Then Some</h2>
 
           <p style={AS.p}>
             The Peaq&rsquo;s wheelbase pays dividends inside. In five-seat configuration, boot
-            space reaches <span style={AS.highlight}>935 litres</span> — more than most wagons.
+            space reaches <span style={AS.highlight}>935 litres</span>, more than most wagons.
             Fold the third row up for seven passengers and you still have{" "}
             <span style={AS.highlight}>299 litres</span> behind the rearmost seats. There&rsquo;s
             also a <span style={AS.highlight}>37-litre frunk</span> (front boot) for cables and
@@ -102,7 +102,7 @@ export default function SkodaPeaq2027AustraliaContent() {
           </p>
 
           <p style={AS.p}>
-            Bidirectional charging — <span style={AS.highlight}>V2L, V2H, and V2G</span> — comes
+            Bidirectional charging, <span style={AS.highlight}>V2L, V2H, and V2G</span>, comes
             standard. V2L (Vehicle-to-Load) lets you power devices directly from the car. V2H
             (Vehicle-to-Home) and V2G (Vehicle-to-Grid) take things further, allowing the Peaq to
             act as a home battery backup or feed power back into the electricity grid. For a family
@@ -126,7 +126,7 @@ export default function SkodaPeaq2027AustraliaContent() {
 
           <p style={AS.p}>
             Inside, the Peaq debuts Skoda&rsquo;s first{" "}
-            <span style={AS.highlight}>13.6-inch portrait-oriented infotainment screen</span> — a
+            <span style={AS.highlight}>13.6-inch portrait-oriented infotainment screen</span>, a
             significant step up in screen real estate for the brand. There&rsquo;s also an
             augmented reality head-up display that projects navigation and safety information onto
             the road ahead, and Travel Assist 3.0, Skoda&rsquo;s most capable suite of semi-autonomous
@@ -135,7 +135,7 @@ export default function SkodaPeaq2027AustraliaContent() {
 
           <p style={AS.p}>
             The panoramic sunroof is split into nine individually dimmable zones with
-            electrochromic glass — meaning different passengers can adjust the tint over their
+            electrochromic glass, meaning different passengers can adjust the tint over their
             section without affecting the rest of the cabin. It&rsquo;s the kind of thoughtful
             feature that a family with kids and glare-sensitive adults will genuinely appreciate.
           </p>
@@ -158,7 +158,7 @@ export default function SkodaPeaq2027AustraliaContent() {
           <h2 style={AS.h2}>Design: Modern Solid</h2>
 
           <p style={AS.p}>
-            Skoda is calling the Peaq&rsquo;s design language &ldquo;Modern Solid&rdquo; — and the
+            Skoda is calling the Peaq&rsquo;s design language &ldquo;Modern Solid&rdquo;, and the
             numbers back up the description. A drag coefficient of just{" "}
             <span style={AS.highlight}>0.249Cd</span> makes it among the most aerodynamically
             efficient seven-seat SUVs on the market. Flush door handles, T-shaped LED lighting
@@ -172,13 +172,13 @@ export default function SkodaPeaq2027AustraliaContent() {
             Skoda Australia has confirmed the Peaq is coming but hasn&rsquo;t published a local
             price or launch date. Based on the brand&rsquo;s recent pricing strategy and the Peaq&rsquo;s
             positioning in Europe, a starting price in the{" "}
-            <span style={AS.highlight}>low-to-mid $70,000s</span> seems realistic — which would
+            <span style={AS.highlight}>low-to-mid $70,000s</span> seems realistic, which would
             place it meaningfully below the Kia EV9, which starts above $90,000 in Australia.
           </p>
 
           <p style={AS.p}>
             If Skoda can land this SUV at that price point with the specification it&rsquo;s
-            showing, the Peaq won&rsquo;t just compete with the EV9 — it could redefine what value
+            showing, the Peaq won&rsquo;t just compete with the EV9, it could redefine what value
             looks like in the seven-seat electric segment.
           </p>
 
@@ -197,7 +197,7 @@ export default function SkodaPeaq2027AustraliaContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get EV clearance deal alerts</div>
             <p style={AS.ctaDesc}>
-              Be first to know when electric vehicles hit the clearance market — updated weekly
+              Be first to know when electric vehicles hit the clearance market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

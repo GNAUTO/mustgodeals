@@ -49,7 +49,7 @@ export default function HyundaiI20NHybridNextgenContent() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>EXPECTED OUTPUTS</div>
             <p style={AS.calloutText}>
-              Up to <strong>224kW and 380Nm</strong> — significantly more powerful than
+              Up to <strong>224kW and 380Nm</strong>. significantly more powerful than
               the outgoing i20 N and stronger than any current i30 N variant on sale today.
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function HyundaiI20NHybridNextgenContent() {
             The current i20 N has been a strong seller in Australia, sitting at an
             accessible price point for hot hatch buyers. The news comes less than a week
             after the local release of the{" "}
-            <span style={AS.highlight}>2026 Hyundai i20 N Shadow Edition</span> — the last
+            <span style={AS.highlight}>2026 Hyundai i20 N Shadow Edition</span>, the last
             of the current generation. If the next model arrives with hybrid power outputs
             beyond the i30 N, it would shake up the hot hatch segment considerably.
           </p>
@@ -120,7 +120,7 @@ export default function HyundaiI20NHybridNextgenContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

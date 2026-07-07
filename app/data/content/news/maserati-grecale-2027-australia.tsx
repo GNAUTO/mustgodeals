@@ -29,7 +29,7 @@ export default function MaseratiGrecale2027AustraliaContent() {
             The Grecale, which first arrived in Australia in 2023 as the brand&rsquo;s entry
             into the premium mid-size SUV segment, receives its first major product update for
             2027. The headline change is the broader availability of the 3.0-litre twin-turbo
-            V6 engine — previously exclusive to the range-topping Trofeo — across a new
+            V6 engine, previously exclusive to the range-topping Trofeo, across a new
             mid-range configuration.
           </p>
 
@@ -56,7 +56,7 @@ export default function MaseratiGrecale2027AustraliaContent() {
             The all-electric Folgore receives an updated battery pack for 2027, with capacity
             increasing from 105kWh to 118kWh. Maserati claims WLTP range improves from 464 to
             approximately <span style={AS.highlight}>535 kilometres</span> in the standard
-            configuration — a meaningful step for a market where real-world EV range in warm
+            configuration, a meaningful step for a market where real-world EV range in warm
             climates has been a persistent concern.
           </p>
 
@@ -81,7 +81,7 @@ export default function MaseratiGrecale2027AustraliaContent() {
           <p style={AS.p}>
             Interior changes across the Grecale range centre on a revised Maserati Touch Control
             Plus infotainment system, now running on updated processor hardware. Response times
-            and interface fluidity — two common criticisms of earlier models — should improve
+            and interface fluidity, two common criticisms of earlier models, should improve
             as a result.
           </p>
 
@@ -138,7 +138,7 @@ export default function MaseratiGrecale2027AustraliaContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

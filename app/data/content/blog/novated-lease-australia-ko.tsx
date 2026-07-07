@@ -18,21 +18,21 @@ export default function NovatedLeaseAustraliaKoContent() {
           <p style={AS.p}>
             노베이티드 리스(Novated Lease)는 회사가 중간에 끼는 차량 리스 계약이다. 본인이 차를
             고르고, 차량 비용과 유지비를{" "}
-            <span style={AS.highlight}>급여에서 세전으로 공제</span>받는 구조 — 세금 떼기 전
+            <span style={AS.highlight}>급여에서 세전으로 공제</span>받는 구조, 세금 떼기 전
             돈으로 차를 굴리는 셈이다.
           </p>
 
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>세 주체가 움직인다</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}><strong>직원</strong> — 차를 고르고 HR에 신청</li>
-              <li style={AS.tipItem}><strong>고용주</strong> — 리스 비용을 대신 납부한 뒤 급여에서 공제</li>
-              <li style={AS.tipItem}><strong>리스 회사</strong> — 차량 구매와 유지비 관리를 대행</li>
+              <li style={AS.tipItem}><strong>직원</strong>. 차를 고르고 HR에 신청</li>
+              <li style={AS.tipItem}><strong>고용주</strong>. 리스 비용을 대신 납부한 뒤 급여에서 공제</li>
+              <li style={AS.tipItem}><strong>리스 회사</strong>. 차량 구매와 유지비 관리를 대행</li>
             </ul>
           </div>
 
           <p style={AS.p}>
-            본인이 실제로 해야 할 일은 차 고르기, HR 신청, 급여명세서 확인 — 그게 전부다.
+            본인이 실제로 해야 할 일은 차 고르기, HR 신청, 급여명세서 확인, 그게 전부다.
             핵심은 세전 공제다. 이미 세금을 낸 돈으로 차를 사는 대신, 세금 내기 전 돈으로
             차를 굴리니 정부가 차 비용 일부를 보조해주는 구조인 셈이다.
           </p>
@@ -63,7 +63,7 @@ export default function NovatedLeaseAustraliaKoContent() {
             </p>
           </div>
 
-          <h2 style={AS.h2}>FBT — 반드시 알아야 할 변수</h2>
+          <h2 style={AS.h2}>FBT. 반드시 알아야 할 변수</h2>
 
           <p style={AS.p}>
             노베이티드 리스의 함정은{" "}
@@ -80,7 +80,7 @@ export default function NovatedLeaseAustraliaKoContent() {
           <p style={AS.p}>
             <strong>ECM(Employee Contribution Method).</strong> 세후 급여 일부를 직접 납부해
             FBT 과세 대상 금액 자체를 낮추는 방법이다. 대부분의 리스 회사는 견적 단계에서
-            이 부분을 함께 설계해준다 — 반드시 확인해야 한다.
+            이 부분을 함께 설계해준다, 반드시 확인해야 한다.
           </p>
 
           <p style={AS.p}>
@@ -108,7 +108,7 @@ export default function NovatedLeaseAustraliaKoContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>유리한 경우</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}>연봉 $70,000 이상 — 세율이 높을수록 절세 효과 커짐</li>
+              <li style={AS.tipItem}>연봉 $70,000 이상, 세율이 높을수록 절세 효과 커짐</li>
               <li style={AS.tipItem}>주행거리가 많은 직장인</li>
               <li style={AS.tipItem}>EV 또는 PHEV 구입을 고려 중인 경우</li>
             </ul>
@@ -118,8 +118,8 @@ export default function NovatedLeaseAustraliaKoContent() {
             <div style={AS.tipTitle}>주의가 필요한 경우</div>
             <ul style={AS.tipList}>
               <li style={AS.tipItem}>계약 기간 중 이직 가능성이 높은 경우 (이전 가능하지만 절차가 복잡)</li>
-              <li style={AS.tipItem}>자영업자 또는 프리랜서 — 고용주가 없으면 구조 자체가 성립하지 않는다</li>
-              <li style={AS.tipItem}>연간 주행거리가 적은 경우 — FBT 부담이 혜택을 상쇄할 수 있다</li>
+              <li style={AS.tipItem}>자영업자 또는 프리랜서, 고용주가 없으면 구조 자체가 성립하지 않는다</li>
+              <li style={AS.tipItem}>연간 주행거리가 적은 경우, FBT 부담이 혜택을 상쇄할 수 있다</li>
             </ul>
           </div>
 
@@ -134,7 +134,7 @@ export default function NovatedLeaseAustraliaKoContent() {
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>지금 나온 클리어런스 딜 확인하기</div>
-            <p style={AS.ctaDesc}>딜러가 처분해야 하는 재고 차량 — 매주 업데이트</p>
+            <p style={AS.ctaDesc}>딜러가 처분해야 하는 재고 차량, 매주 업데이트</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>
 

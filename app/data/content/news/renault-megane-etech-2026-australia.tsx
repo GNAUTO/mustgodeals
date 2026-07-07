@@ -6,7 +6,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
   return (
     <>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/23664-megane-studiothomascortesi-4.jpg"
@@ -21,7 +21,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
 
           <p style={AS.p}>
             The 2026 Renault Megane E-Tech has been comprehensively updated with a new look,
-            more technology, faster charging, and longer range — the latter two courtesy of
+            more technology, faster charging, and longer range, the latter two courtesy of
             a new <span style={AS.highlight}>67kWh LFP battery</span>.
           </p>
 
@@ -38,7 +38,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
 
           <p style={AS.p}>
             The new battery is the centrepiece of everything. It unlocks the extra range,
-            faster charging, and even the new design — the Megane E-Tech stands{" "}
+            faster charging, and even the new design, the Megane E-Tech stands{" "}
             <span style={AS.highlight}>20mm taller</span> than before to accommodate
             the updated pack.
           </p>
@@ -47,7 +47,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
             <div style={AS.calloutTitle}>FAST CHARGING</div>
             <p style={AS.calloutText}>
               165kW DC fast charging brings the battery from 15 to 80 percent in just
-              24 minutes — 35kW more than the outgoing model and fast enough to add
+              24 minutes, 35kW more than the outgoing model and fast enough to add
               roughly 300km of range in a single coffee stop.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
 
           <p style={AS.p}>
             The updated Megane E-Tech is marginally slower to 100km/h than its predecessor
-            — <span style={AS.highlight}>7.6 seconds</span> versus 7.4 — but gains 46km
+            <span style={AS.highlight}>7.6 seconds</span> versus 7.4, but gains 46km
             more WLTP range and 35kW more DC charging power. For most buyers, that&rsquo;s
             an easy trade.
           </p>
@@ -133,7 +133,7 @@ export default function RenaultMeganeEtech2026AustraliaContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

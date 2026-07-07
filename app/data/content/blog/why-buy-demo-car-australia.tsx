@@ -6,7 +6,7 @@ export default function WhyBuyDemoCarAustraliaContent() {
     <>
 
           <p style={AS.p}>
-            When most people go car shopping, they picture something brand new — zero kilometres,
+            When most people go car shopping, they picture something brand new, zero kilometres,
             untouched, straight from the factory. That feeling is understandable. But spend a
             little time looking at the Australian car market and it becomes clear that demo cars
             offer something hard to ignore:{" "}
@@ -18,7 +18,7 @@ export default function WhyBuyDemoCarAustraliaContent() {
           <p style={AS.p}>
             A demo car is a vehicle that a dealership has registered and used for display or test
             drive purposes. It might have sat in the showroom for customers to inspect, or been
-            used for test drives. Either way, it started life as a new car — the key difference
+            used for test drives. Either way, it started life as a new car, the key difference
             is that it was registered in the dealership&rsquo;s name before being sold to a buyer.
           </p>
 
@@ -32,15 +32,15 @@ export default function WhyBuyDemoCarAustraliaContent() {
           <h2 style={AS.h2}>The Biggest Reason: The Price</h2>
 
           <p style={AS.p}>
-            The most compelling argument for a demo car is straightforward — price. Compared to
+            The most compelling argument for a demo car is straightforward, price. Compared to
             the same model and spec in new condition, demo cars are typically priced anywhere from{" "}
             <span style={AS.highlight}>10 to 30 percent lower</span>. Depending on the vehicle,
             that gap can represent thousands or even tens of thousands of dollars.
           </p>
 
           <p style={AS.p}>
-            Why the difference? Once a car has been registered — even in a dealership&rsquo;s name
-            — it can no longer be sold as new. That single fact is what drives the price down. Add
+            Why the difference? Once a car has been registered, even in a dealership&rsquo;s name
+            it can no longer be sold as new. That single fact is what drives the price down. Add
             in the pressure of month-end or financial year-end targets, when dealers are motivated
             to clear stock quickly, and the discount can stretch even further.
           </p>
@@ -48,7 +48,7 @@ export default function WhyBuyDemoCarAustraliaContent() {
           <h2 style={AS.h2}>Near-New Quality, Same Warranty</h2>
 
           <p style={AS.p}>
-            The most common hesitation about demo cars is psychological — someone else has driven
+            The most common hesitation about demo cars is psychological, someone else has driven
             it. But the reality is that demo cars occupy a completely different category from
             typical used cars. They&rsquo;ve been maintained by the dealership, kept in good
             condition, and rarely subjected to hard use.
@@ -60,7 +60,7 @@ export default function WhyBuyDemoCarAustraliaContent() {
               Most Australian brands extend their full manufacturer&rsquo;s warranty to demo
               vehicles, starting from the date the car was first registered. A brand offering a
               seven-year warranty on new cars will generally apply the same coverage to its demo
-              stock. The financial protection is essentially the same — at a lower price.
+              stock. The financial protection is essentially the same, at a lower price.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function WhyBuyDemoCarAustraliaContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>DEMO CAR CHECKLIST</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}>Ask for the full service history — reputable dealers keep records</li>
+              <li style={AS.tipItem}>Ask for the full service history, reputable dealers keep records</li>
               <li style={AS.tipItem}>Confirm the warranty start date and how much coverage remains</li>
               <li style={AS.tipItem}>Check exterior and interior condition, especially steering wheel, driver&rsquo;s seat and door trims</li>
               <li style={AS.tipItem}>Ask whether it was primarily a display or test drive vehicle</li>
@@ -105,14 +105,14 @@ export default function WhyBuyDemoCarAustraliaContent() {
           </p>
 
           <p style={AS.p}>
-            Near-new quality, full warranty coverage, and a meaningfully lower price — demo cars
+            Near-new quality, full warranty coverage, and a meaningfully lower price, demo cars
             offer all three at once. If you&rsquo;ve been considering a new car, it&rsquo;s worth
             taking a look at what&rsquo;s available in demo stock before you decide.
           </p>
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get demo car alerts</div>
-            <p style={AS.ctaDesc}>Be first to know when demo stock hits the market — updated weekly</p>
+            <p style={AS.ctaDesc}>Be first to know when demo stock hits the market, updated weekly</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>
 

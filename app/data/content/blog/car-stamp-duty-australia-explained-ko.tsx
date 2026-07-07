@@ -8,7 +8,7 @@ export default function CarStampDutyAustraliaExplainedKoContent() {
           <p style={AS.p}>
             호주에서 차를 처음 사는 사람들이 가장 많이 놀라는 순간이 있다. 딜러에게 최종 견적을
             받았는데, 생각보다 훨씬 높은 금액이 나오는 것이다. 차량 가격에 포함되지 않은 항목들
-            — 그 중에서 가장 큰 부분을 차지하는 것이 바로{" "}
+            그 중에서 가장 큰 부분을 차지하는 것이 바로{" "}
             <span style={AS.highlight}>스탬프 듀티(Stamp Duty)</span>다.
           </p>
 
@@ -21,7 +21,7 @@ export default function CarStampDutyAustraliaExplainedKoContent() {
           </p>
 
           <p style={AS.p}>
-            중요한 점은 —{" "}
+            중요한 점은, 
             <span style={AS.highlight}>호주에는 전국 통일 세율이 없다</span>. 주마다 계산 방식과
             세율이 전혀 다르다. 같은 차를 사더라도 어느 주에서 사느냐에 따라 수백에서 수천 달러
             차이가 날 수 있다.
@@ -53,7 +53,7 @@ export default function CarStampDutyAustraliaExplainedKoContent() {
           </p>
 
           <div style={AS.callout}>
-            <div style={AS.calloutTitle}>계산 예시 — NSW에서 $50,000 차량 구매</div>
+            <div style={AS.calloutTitle}>계산 예시. NSW에서 $50,000 차량 구매</div>
             <p style={AS.calloutText}>
               차량 가격: $50,000<br />
               적용 세율: 5% ($45,000 초과)<br />
@@ -98,16 +98,16 @@ export default function CarStampDutyAustraliaExplainedKoContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>주별 공식 스탬프 듀티 계산기</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}><strong>NSW</strong> — Service NSW 차량 스탬프 듀티 계산기</li>
-              <li style={AS.tipItem}><strong>QLD</strong> — Queensland Government 차량 등록 세금 계산기</li>
-              <li style={AS.tipItem}><strong>VIC</strong> — State Revenue Office 자동차 세금 계산기</li>
-              <li style={AS.tipItem}><strong>NT</strong> — Territory Revenue Office (단일 3% 요율)</li>
+              <li style={AS.tipItem}><strong>NSW</strong>. Service NSW 차량 스탬프 듀티 계산기</li>
+              <li style={AS.tipItem}><strong>QLD</strong>. Queensland Government 차량 등록 세금 계산기</li>
+              <li style={AS.tipItem}><strong>VIC</strong>. State Revenue Office 자동차 세금 계산기</li>
+              <li style={AS.tipItem}><strong>NT</strong>. Territory Revenue Office (단일 3% 요율)</li>
             </ul>
           </div>
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>지금 나온 클리어런스 딜 확인하기</div>
-            <p style={AS.ctaDesc}>딜러가 처분해야 하는 재고 차량 — 매주 업데이트</p>
+            <p style={AS.ctaDesc}>딜러가 처분해야 하는 재고 차량, 매주 업데이트</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>
 

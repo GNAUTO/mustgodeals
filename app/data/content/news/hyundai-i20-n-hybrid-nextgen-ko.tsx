@@ -47,7 +47,7 @@ export default function HyundaiI20NHybridNextgenKoContent() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>예상 출력</div>
             <p style={AS.calloutText}>
-              최대 <strong>224kW / 380Nm</strong> — 현재 판매 중인 어떤 i30 N
+              최대 <strong>224kW / 380Nm</strong>. 현재 판매 중인 어떤 i30 N
               변형 모델보다도 강력한 수치다.
             </p>
           </div>

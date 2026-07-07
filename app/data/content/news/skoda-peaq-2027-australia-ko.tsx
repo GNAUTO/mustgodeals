@@ -7,13 +7,13 @@ export default function SkodaPeaq2027AustraliaKoContent() {
     <>
 
           <p style={AS.p}>
-            스코다가 역대 가장 크고 야심 찬 신차의 베일을 벗었다. 목표는 단 하나 — 기아 EV9.
+            스코다가 역대 가장 크고 야심 찬 신차의 베일을 벗었다. 목표는 단 하나, 기아 EV9.
             새로운 <span style={AS.highlight}>스코다 피크(Peaq)</span>는 풀사이즈 7인승 전기 SUV로
             호주 출시가 공식 확정됐다. 최대 640km의 주행거리와 함께, 가격 대비 스펙 경쟁력에서
             기존 강자들을 뒤흔들 가능성을 품고 있다는 이야기다.
           </p>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/c4d60c30-2aac-5ab1-a8e5-57f962a50000"
@@ -33,7 +33,7 @@ export default function SkodaPeaq2027AustraliaKoContent() {
             이 작명에 진심이다. 피크는 코디악(Kodiaq) 위에 위치하며 스코다 전기차 라인업의
             꼭대기를 차지한다. 전장{" "}
             <span style={AS.highlight}>4,874mm</span>, 휠베이스{" "}
-            <span style={AS.highlight}>2,965mm</span> — 스코다 역대 최대 SUV인 셈이다. BMW X7보다
+            <span style={AS.highlight}>2,965mm</span>, 스코다 역대 최대 SUV인 셈이다. BMW X7보다
             길고, 전체 길이에서 랜드크루저와 불과 몇 밀리미터 차이에 불과한 진짜 '빅 SUV'다.
           </p>
 
@@ -62,9 +62,9 @@ export default function SkodaPeaq2027AustraliaKoContent() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>파워트레인 라인업</div>
             <p style={AS.calloutText}>
-              <strong>피크 60</strong> — 63kWh 배터리 · 150kW 후륜구동 · 450km 이상<br /><br />
-              <strong>피크 90</strong> — 91kWh 배터리 · 210kW 후륜구동 · 640km 이상<br /><br />
-              <strong>피크 90x</strong> — 91kWh 배터리 · AWD · 220kW 합산 · 610km 이상
+              <strong>피크 60</strong>. 63kWh 배터리 · 150kW 후륜구동 · 450km 이상<br /><br />
+              <strong>피크 90</strong>. 91kWh 배터리 · 210kW 후륜구동 · 640km 이상<br /><br />
+              <strong>피크 90x</strong>. 91kWh 배터리 · AWD · 220kW 합산 · 610km 이상
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function SkodaPeaq2027AustraliaKoContent() {
 
           <p style={AS.p}>
             넓은 휠베이스는 실내 공간에 직결된다. 5인승 구성 시 트렁크 용량은{" "}
-            <span style={AS.highlight}>935리터</span> — 대부분의 왜건보다 크다. 3열을 세워
+            <span style={AS.highlight}>935리터</span>, 대부분의 왜건보다 크다. 3열을 세워
             7인승으로 활용할 때도 맨 뒷좌석 뒤에{" "}
             <span style={AS.highlight}>299리터</span>가 남고, 앞쪽에는 충전 케이블 보관용{" "}
             <span style={AS.highlight}>37리터 프렁크</span>도 있다.
@@ -130,7 +130,7 @@ export default function SkodaPeaq2027AustraliaKoContent() {
 
           <p style={AS.p}>
             파노라마 선루프는 9개 구역으로 나뉘어 각각 독립적으로 전기변색 조절이 가능하다.
-            뒷자리 아이와 앞자리 운전자가 각자 원하는 밝기로 조절할 수 있다는 뜻 — 가족 차에서
+            뒷자리 아이와 앞자리 운전자가 각자 원하는 밝기로 조절할 수 있다는 뜻, 가족 차에서
             이런 세심함이 빛나는 순간이다.
           </p>
 
@@ -189,7 +189,7 @@ export default function SkodaPeaq2027AustraliaKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>전기차 클리어런스 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              전기차 재고 출시 소식을 가장 먼저 받아보세요 — 매주 업데이트
+              전기차 재고 출시 소식을 가장 먼저 받아보세요, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

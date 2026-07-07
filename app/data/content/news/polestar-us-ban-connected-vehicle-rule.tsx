@@ -32,7 +32,7 @@ export default function PolestarUsBanConnectedVehicleRuleContent() {
             The rule targets vehicles with hardware or software linked to China or Russia,
             citing national security risks. Polestar, owned by Chinese automotive giant{" "}
             <span style={AS.highlight}>Geely</span>, builds its 2, 4, and new 5 saloon in
-            China — placing all three squarely in the crosshairs of the regulation. Even the
+            China, placing all three squarely in the crosshairs of the regulation. Even the
             Polestar 3 SUV, which is manufactured in the United States, will not be exempt
             from the ban.
           </p>
@@ -54,7 +54,7 @@ export default function PolestarUsBanConnectedVehicleRuleContent() {
             the US until supplies run out, and has committed to ongoing service support for
             existing customers after its market exit. The US currently accounts for just{" "}
             <span style={AS.highlight}>six per cent</span> of Polestar&rsquo;s global retail
-            sales — limiting the financial impact of the exit on the brand overall.
+            sales, limiting the financial impact of the exit on the brand overall.
           </p>
 
           <h2 style={AS.h2}>What&rsquo;s Next for Polestar</h2>
@@ -73,7 +73,7 @@ export default function PolestarUsBanConnectedVehicleRuleContent() {
           <h2 style={AS.h2}>What This Means for Australia</h2>
 
           <p style={AS.p}>
-            For Australian buyers, the ban has no direct impact — Polestar continues to operate
+            For Australian buyers, the ban has no direct impact, Polestar continues to operate
             freely in this market. However, the development signals a broader shift in how Western
             governments are approaching Chinese-linked automotive technology, a trend that may
             eventually shape which vehicles are available globally.
@@ -96,7 +96,7 @@ export default function PolestarUsBanConnectedVehicleRuleContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

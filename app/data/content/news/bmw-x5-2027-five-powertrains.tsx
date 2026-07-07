@@ -22,7 +22,7 @@ export default function BmwX52027FivePowertrainsContent() {
           <p style={AS.p}>
             BMW has confirmed the next-generation X5 is in its final stages of development,
             with a world premiere expected in the coming weeks. What makes this particular
-            model unlike anything BMW has produced before is its powertrain lineup — the
+            model unlike anything BMW has produced before is its powertrain lineup, the
             2027 X5 is the first BMW model built to house{" "}
             <span style={AS.highlight}>five separate powertrains</span> in a single body:
             petrol, diesel, plug-in hybrid, battery-electric, and eventually a hydrogen
@@ -51,7 +51,7 @@ export default function BmwX52027FivePowertrainsContent() {
             <div style={AS.calloutTitle}>IX5 CHARGING</div>
             <p style={AS.calloutText}>
               Based on EPA and CARB certification data, the iX5 60 xDrive is expected to
-              complete a 10&ndash;80% DC fast-charge in approximately 25 minutes — putting
+              complete a 10&ndash;80% DC fast-charge in approximately 25 minutes, putting
               it on par with the best fast-charging EVs currently on sale.
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function BmwX52027FivePowertrainsContent() {
 
           <p style={AS.p}>
             Hydrogen variants are likely to remain limited in volume at launch, tied closely
-            to the availability of hydrogen refuelling infrastructure — a network that
+            to the availability of hydrogen refuelling infrastructure, a network that
             remains in early development in Australia.
           </p>
 
@@ -76,7 +76,7 @@ export default function BmwX52027FivePowertrainsContent() {
 
           <p style={AS.p}>
             Front and rear axle carrier mounting points are identical across the ICE, PHEV,
-            and BEV versions — only the hardware bolted to them changes. This single-platform
+            and BEV versions, only the hardware bolted to them changes. This single-platform
             approach is central to BMW&rsquo;s Neue Klasse strategy, allowing the same
             production line to accommodate radically different drivetrains without retooling.
           </p>
@@ -84,7 +84,7 @@ export default function BmwX52027FivePowertrainsContent() {
           <p style={AS.p}>
             BMW also targeted even front-to-rear weight distribution on every version, with
             the BEV battery sitting low between the axles. The result is a centre of gravity
-            lower than the outgoing X5 across all powertrain variants — a meaningful gain
+            lower than the outgoing X5 across all powertrain variants, a meaningful gain
             for a vehicle that is now considerably heavier in its electric form.
           </p>
 
@@ -122,7 +122,7 @@ export default function BmwX52027FivePowertrainsContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

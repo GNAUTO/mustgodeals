@@ -8,7 +8,7 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
           <p style={AS.p}>
             Every June, Australian dealerships push hard on &ldquo;EOFY deals.&rdquo; For business
             owners with an ABN, there&rsquo;s a real question worth asking: does buying a car before
-            30 June actually deliver a tax advantage? The answer is yes — but with some important
+            30 June actually deliver a tax advantage? The answer is yes, but with some important
             caveats worth understanding before you sign anything.
           </p>
 
@@ -38,7 +38,7 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
 
           <p style={AS.p}>
             So buying a car before 30 June doesn&rsquo;t mean you can deduct the full cost in one
-            hit — it means you start depreciating it from this financial year instead of next.
+            hit, it means you start depreciating it from this financial year instead of next.
           </p>
 
           <h2 style={AS.h2}>The Car Limit</h2>
@@ -47,7 +47,7 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
             For 2025–26, the car limit is <span style={AS.highlight}>$69,674</span>. Even if you
             spend more than this, the maximum you can use to calculate depreciation is $69,674. The
             maximum GST credit is also capped at{" "}
-            <span style={AS.highlight}>$6,334</span> — one-eleventh of the car limit — regardless
+            <span style={AS.highlight}>$6,334</span>, one-eleventh of the car limit, regardless
             of what you paid.
           </p>
 
@@ -79,7 +79,7 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
           <h2 style={AS.h2}>So What&rsquo;s the Real Advantage of Buying Before 30 June?</h2>
 
           <p style={AS.p}>
-            The tax benefit of buying before EOFY versus after is largely one of timing — you bring
+            The tax benefit of buying before EOFY versus after is largely one of timing, you bring
             the deduction forward rather than creating a larger one. The bigger advantage is often
             the commercial one: dealerships are under the most pressure to clear stock before 30
             June, which means more negotiating room and more demo vehicles on the market.
@@ -88,10 +88,10 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>QUICK SUMMARY FOR ABN HOLDERS</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}>Instant write-off only applies to assets under $20,000 — most cars don&rsquo;t qualify</li>
+              <li style={AS.tipItem}>Instant write-off only applies to assets under $20,000, most cars don&rsquo;t qualify</li>
               <li style={AS.tipItem}>Cars over $20,000 go into the depreciation pool: 15% year 1, 30% each year after</li>
               <li style={AS.tipItem}>Depreciation is capped at the car limit: $69,674 for 2025–26</li>
-              <li style={AS.tipItem}>Only the business-use percentage is deductible — keep a logbook</li>
+              <li style={AS.tipItem}>Only the business-use percentage is deductible, keep a logbook</li>
               <li style={AS.tipItem}>The real EOFY advantage is commercial: more stock, more motivated dealers</li>
             </ul>
           </div>
@@ -100,21 +100,21 @@ export default function EofyCarTaxBenefitsAustraliaContent() {
 
           <p style={AS.p}>
             The asset must be physically ready for use in your business before 30 June 2026. Simply
-            paying for it or signing a contract is not enough — the vehicle must actually be{" "}
+            paying for it or signing a contract is not enough, the vehicle must actually be{" "}
             <span style={AS.highlight}>delivered and available for use</span>.
           </p>
 
           <div style={AS.disclaimer}>
             <p style={AS.disclaimerText}>
               This article is for general information purposes only and does not constitute tax
-              advice. Individual circumstances vary significantly — speak with a registered tax
+              advice. Individual circumstances vary significantly, speak with a registered tax
               agent or accountant before making any purchasing decisions based on tax considerations.
             </p>
           </div>
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Find EOFY clearance deals near you</div>
-            <p style={AS.ctaDesc}>Demo cars and run-out stock — updated every week before they&rsquo;re gone</p>
+            <p style={AS.ctaDesc}>Demo cars and run-out stock, updated every week before they&rsquo;re gone</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>
 

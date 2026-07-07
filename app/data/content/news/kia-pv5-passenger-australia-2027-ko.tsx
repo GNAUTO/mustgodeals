@@ -6,7 +6,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
   return (
     <>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg"
@@ -24,7 +24,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
             출시 시기는 <span style={AS.highlight}>2026년 4분기(10&ndash;12월)</span>로,
             호주 시장에 등장하는 최초의 전기 미니밴이 된다. 오랫동안 이 세그먼트를
             지배해온 카니발(디젤·하이브리드)과 나란히 서게 되지만, 방향성은 전혀
-            다르다 — 무공해, 낮은 유지비, 그리고 실용적인 실내 설계가 핵심이다.
+            다르다, 무공해, 낮은 유지비, 그리고 실용적인 실내 설계가 핵심이다.
           </p>
 
           <h2 style={AS.h2}>어떤 차인가</h2>
@@ -39,7 +39,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
 
           <p style={AS.p}>
             7개 좌석은 <span style={AS.highlight}>2+2+3 배열</span>이며, 2열 두 좌석이
-            오른쪽으로 오프셋되어 좌측 슬라이딩 도어 쪽으로 3열까지 통로가 확보된다 —
+            오른쪽으로 오프셋되어 좌측 슬라이딩 도어 쪽으로 3열까지 통로가 확보된다, 
             도로변에서 탑승할 때 특히 편리한 구조다. 실내에는 7.5인치 디지털
             클러스터와 12.9인치 인포테인먼트 스크린이 탑재되며, 애플 카플레이와
             안드로이드 오토가 기본이다.
@@ -71,7 +71,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
             <span style={AS.highlight}>A$42,400</span> 수준이며, PV5 카고는 현지에서
             $55,990에 출시됐다. 카고와 패신저 간 가격 차이가 다른 시장과 비슷하게
             형성된다면, PV5 패신저는 온로드 비용 전{" "}
-            <span style={AS.highlight}>$60,000 안팎</span>에 출시될 가능성이 높다 —
+            <span style={AS.highlight}>$60,000 안팎</span>에 출시될 가능성이 높다, 
             $75,990부터 시작하는 폭스바겐 ID. Buzz보다 훨씬 낮은 가격이다.
           </p>
 
@@ -81,7 +81,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
 
           <p style={AS.p}>
             호주 미니밴 시장은 오랫동안 기아 카니발과 토요타 하이에이스의 영역이었다.
-            PV5 패신저는 이 둘을 정면으로 대체하려는 차가 아니다 — 더 짧고, 더 가볍고,
+            PV5 패신저는 이 둘을 정면으로 대체하려는 차가 아니다, 더 짧고, 더 가볍고,
             도심 친화적이다. 하지만 전기차 프리미엄 없이 전동화를 원하는 가족,
             셔틀 운영자, 플릿 바이어에게는 타이밍이 맞는 선택지가 될 수 있다.
           </p>
@@ -107,7 +107,7 @@ export default function KiaPv5PassengerAustralia2027KoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

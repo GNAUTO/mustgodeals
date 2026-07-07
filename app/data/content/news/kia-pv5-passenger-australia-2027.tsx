@@ -6,7 +6,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
   return (
     <>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://www.kia.com/content/dam/kwcms/kme/global/en/assets/contents/pbv/5/freecoding/pv5-passenger/Usecase_KV_01_m.jpg"
@@ -23,8 +23,8 @@ export default function KiaPv5PassengerAustralia2027Content() {
             Kia Australia has confirmed the PV5 Passenger electric people mover is coming to
             Australia in the <span style={AS.highlight}>fourth quarter of 2026</span>, making
             it the first electric people mover available in the local market. It will sit
-            alongside the diesel and hybrid Carnival — a segment the Carnival has dominated
-            for years — but with a very different pitch: zero emissions, lower running costs,
+            alongside the diesel and hybrid Carnival, a segment the Carnival has dominated
+            for years, but with a very different pitch: zero emissions, lower running costs,
             and a clever cabin layout.
           </p>
 
@@ -32,7 +32,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
 
           <p style={AS.p}>
             The PV5 Passenger is a seven-seat, three-row electric van built on Kia&rsquo;s
-            dedicated <span style={AS.highlight}>E-GMP.S platform</span> — the same
+            dedicated <span style={AS.highlight}>E-GMP.S platform</span>, the same
             underpinning the PV5 Cargo that launched in Australia from $55,990 earlier this
             year. It measures 4,695mm long, 1,895mm wide, and 1,905mm tall, making it nearly
             400mm shorter than a Carnival, though it sits about 150mm taller.
@@ -42,7 +42,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
             Seven seats are arranged in a{" "}
             <span style={AS.highlight}>2+2+3 configuration</span>, with the two second-row
             seats offset to allow walkthrough access to the third row from the left-hand
-            sliding door — a practical touch for kerbside boarding. Inside, a 7.5-inch
+            sliding door, a practical touch for kerbside boarding. Inside, a 7.5-inch
             digital instrument cluster pairs with a 12.9-inch infotainment touchscreen running
             Android Automotive OS, with Apple CarPlay and Android Auto as standard.
           </p>
@@ -60,7 +60,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>FAST CHARGING</div>
             <p style={AS.calloutText}>
-              DC fast charging from 10 to 80 percent takes approximately 30 minutes —
+              DC fast charging from 10 to 80 percent takes approximately 30 minutes, 
               enough to add around 280km of range during a typical motorway stop.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
             launched locally at $55,990. If the gap between Cargo and Passenger pricing
             follows a similar pattern to what&rsquo;s been seen elsewhere, expect the
             PV5 Passenger to land somewhere in the{" "}
-            <span style={AS.highlight}>$60,000 range</span> before on-road costs — well
+            <span style={AS.highlight}>$60,000 range</span> before on-road costs, well
             below the Volkswagen ID. Buzz, which starts at $75,990.
           </p>
 
@@ -84,7 +84,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
 
           <p style={AS.p}>
             The people mover segment in Australia has long been the domain of the Kia Carnival
-            and Toyota HiAce. The PV5 Passenger doesn&rsquo;t try to replace them outright —
+            and Toyota HiAce. The PV5 Passenger doesn&rsquo;t try to replace them outright, 
             it&rsquo;s shorter, lighter, and more urban-focused. But for families, shuttle
             operators, and fleet buyers looking to electrify without paying EV premium prices,
             it arrives at the right time.
@@ -112,7 +112,7 @@ export default function KiaPv5PassengerAustralia2027Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

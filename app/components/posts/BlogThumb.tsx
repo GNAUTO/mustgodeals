@@ -2,9 +2,7 @@ import type { CSSProperties } from "react";
 
 export type ThumbSize = "featured" | "grid" | "small";
 
-const COLORS: Record<string, { bg: string; fg: string }> = {
-  "buying guide":        { bg: "#CCDA47", fg: "#1A1A1A" },
-  "구매 가이드":         { bg: "#CCDA47", fg: "#1A1A1A" },
+const CATEGORY_COLORS: Record<string, { bg: string; fg: string }> = {
   "nsw road rules":      { bg: "#1A1A1A", fg: "#CCDA47" },
   "nsw 도로법규":        { bg: "#1A1A1A", fg: "#CCDA47" },
   "road rules":          { bg: "#1A1A1A", fg: "#CCDA47" },
@@ -15,7 +13,30 @@ const COLORS: Record<string, { bg: string; fg: string }> = {
   "insider guide":       { bg: "#2A2A2A", fg: "#CCDA47" },
   "한국어 가이드":       { bg: "#2A2A2A", fg: "#CCDA47" },
 };
-const DEFAULT_COLOR = { bg: "#1A1A1A", fg: "#CCDA47" };
+
+const LIME = { bg: "#CCDA47", fg: "#1A1A1A" };
+
+const AUX_PALETTE = [
+  { bg: "#8FA888", fg: "#1A1A1A" }, // sage green
+  { bg: "#C4B8A8", fg: "#1A1A1A" }, // warm gray
+  { bg: "#3A4A5C", fg: "#CCDA47" }, // navy
+  { bg: "#C17A5C", fg: "#1A1A1A" }, // terracotta
+];
+
+function slugHash(slug: string): number {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) {
+    h = (h * 31 + slug.charCodeAt(i)) & 0xffff;
+  }
+  return h;
+}
+
+function getColor(category: string, slug: string, size: ThumbSize): { bg: string; fg: string } {
+  const cat = category.toLowerCase();
+  if (CATEGORY_COLORS[cat]) return CATEGORY_COLORS[cat];
+  if (size === "featured") return LIME;
+  return AUX_PALETTE[slugHash(slug) % AUX_PALETTE.length];
+}
 
 function getFontSize(text: string, size: ThumbSize): string {
   const n = text.length;
@@ -33,49 +54,57 @@ function getFontSize(text: string, size: ThumbSize): string {
     if (n <= 6) return "clamp(13px, 2.5vw, 18px)";
     return "clamp(10px, 2vw, 14px)";
   }
-  // small (52×52)
-  if (n <= 1) return "22px";
-  if (n <= 2) return "18px";
-  if (n <= 4) return "13px";
-  if (n <= 6) return "10px";
-  return "8px";
+  // small (100×100)
+  if (n <= 1) return "40px";
+  if (n <= 2) return "32px";
+  if (n <= 4) return "22px";
+  if (n <= 6) return "18px";
+  return "14px";
 }
 
 export default function BlogThumb({
   category,
   highlight,
+  slug,
+  subtext,
   size,
 }: {
   category: string;
   highlight?: string;
+  slug: string;
+  subtext?: string;
   size: ThumbSize;
 }) {
-  const { bg, fg } = COLORS[category.toLowerCase()] ?? DEFAULT_COLOR;
-  const isDark = bg === "#1A1A1A" || bg === "#2A2A2A";
+  const { bg, fg } = getColor(category, slug, size);
+  const isDark = bg === "#1A1A1A" || bg === "#2A2A2A" || bg === "#3A4A5C";
   const patternColor = isDark ? "rgba(204,218,71,0.055)" : "rgba(0,0,0,0.05)";
 
   const containerStyle: CSSProperties =
     size === "small"
       ? {
-          width: "52px",
-          height: "52px",
-          borderRadius: "6px",
+          width: "100px",
+          height: "100px",
+          borderRadius: "8px",
           background: bg,
           position: "relative",
           overflow: "hidden",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           flexShrink: 0,
         }
       : {
           width: "100%",
-          aspectRatio: "16/9",
+          ...(size === "featured"
+            ? { height: "clamp(160px, 18vw, 240px)" }
+            : { aspectRatio: "16/9" }),
           borderRadius: "4px",
           background: bg,
           position: "relative",
           overflow: "hidden",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           marginBottom: size === "featured" ? "14px" : "10px",
@@ -86,7 +115,6 @@ export default function BlogThumb({
 
   return (
     <div style={containerStyle}>
-      {/* Diagonal stripe pattern */}
       <div
         style={{
           position: "absolute",
@@ -94,7 +122,6 @@ export default function BlogThumb({
           backgroundImage: `repeating-linear-gradient(-45deg, ${patternColor} 0px, ${patternColor} 1px, transparent 1px, transparent 14px)`,
         }}
       />
-      {/* Text */}
       <span
         style={{
           position: "relative",
@@ -102,7 +129,7 @@ export default function BlogThumb({
           fontWeight: isHighlight ? 800 : 700,
           fontSize: isHighlight
             ? getFontSize(displayText, size)
-            : size === "small" ? "7px" : "10px",
+            : size === "small" ? "9px" : "10px",
           letterSpacing: isHighlight
             ? size === "featured" ? "-0.03em" : "0"
             : "1.5px",
@@ -116,6 +143,23 @@ export default function BlogThumb({
       >
         {displayText}
       </span>
+      {size === "featured" && subtext && (
+        <span
+          style={{
+            position: "relative",
+            color: fg,
+            fontSize: "10px",
+            fontWeight: 500,
+            opacity: 0.6,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            marginTop: "7px",
+            textAlign: "center",
+          }}
+        >
+          {subtext}
+        </span>
+      )}
     </div>
   );
 }

@@ -13,9 +13,9 @@ export default function BestTimeToBuyACarAustraliaContent() {
           </p>
 
           <div style={AS.callout}>
-            <div style={AS.calloutTitle}>IF YOU&rsquo;RE READING THIS RIGHT NOW — END OF JUNE IS YOUR WINDOW</div>
+            <div style={AS.calloutTitle}>IF YOU&rsquo;RE READING THIS RIGHT NOW. END OF JUNE IS YOUR WINDOW</div>
             <p style={AS.calloutText}>
-              Today is June 22. There are just 8 days left until June 30 — the end of the
+              Today is June 22. There are just 8 days left until June 30, the end of the
               Australian financial year. For dealerships, this date is far more than just the end
               of a month. It&rsquo;s when annual sales figures are locked in and manufacturer
               incentives are determined. Dealer flexibility on pricing peaks at this time of year.
@@ -58,7 +58,7 @@ export default function BestTimeToBuyACarAustraliaContent() {
 
           <p style={AS.p}>
             Dealership sales targets reset every month. In the final 3–5 days, it becomes clear
-            whether a dealer is going to hit their number or not — and that pressure changes
+            whether a dealer is going to hit their number or not, and that pressure changes
             everything. Deals that were knocked back at the start of the month have a way of
             getting approved at the end. Dealers who wouldn&rsquo;t budge on price suddenly find
             room to move. If you can time your visit to those final days, you&rsquo;re walking in
@@ -73,7 +73,7 @@ export default function BestTimeToBuyACarAustraliaContent() {
             rather than miss the threshold entirely.
           </p>
 
-          <h2 style={AS.h2}>Just Before a New Model Drops — Hidden Opportunity</h2>
+          <h2 style={AS.h2}>Just Before a New Model Drops. Hidden Opportunity</h2>
 
           <p style={AS.p}>
             When a new model is announced, existing stock becomes a headache for dealers. They
@@ -85,12 +85,12 @@ export default function BestTimeToBuyACarAustraliaContent() {
 
           <p style={AS.p}>
             If you don&rsquo;t need the latest version, this is one of the smartest ways to buy.
-            Dealers will often reach out proactively during this window — &ldquo;if you decide
-            this month, I can offer you something special&rdquo; — which is a strong signal that
+            Dealers will often reach out proactively during this window, &ldquo;if you decide
+            this month, I can offer you something special&rdquo;, which is a strong signal that
             the outgoing stock is costing them money every week it sits unsold.
           </p>
 
-          <h2 style={AS.h2}>Demo Cars — Peak Stock Hits in June and July</h2>
+          <h2 style={AS.h2}>Demo Cars. Peak Stock Hits in June and July</h2>
 
           <p style={AS.p}>
             Every year around the end of the financial year, dealership demo vehicles flood the
@@ -98,7 +98,7 @@ export default function BestTimeToBuyACarAustraliaContent() {
             but they&rsquo;re priced{" "}
             <span style={AS.highlight}>10–15% below new</span>. If you want near-new quality
             without the new-car price tag, June and July is when to look. Ask the dealer
-            specifically whether any demos are available in the model you want — they won&rsquo;t
+            specifically whether any demos are available in the model you want, they won&rsquo;t
             always volunteer this information.
           </p>
 
@@ -116,7 +116,7 @@ export default function BestTimeToBuyACarAustraliaContent() {
               <li style={AS.tipItem}>
                 When negotiating, try this line:{" "}
                 <strong>&ldquo;What&rsquo;s the best price you can do on this one?&rdquo;</strong>{" "}
-                — say it casually, and let the dealer make the first move
+                say it casually, and let the dealer make the first move
               </li>
             </ul>
           </div>
@@ -128,7 +128,7 @@ export default function BestTimeToBuyACarAustraliaContent() {
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get month-end deal alerts</div>
-            <p style={AS.ctaDesc}>Clearance vehicles dealers need to move — delivered to your inbox every week</p>
+            <p style={AS.ctaDesc}>Clearance vehicles dealers need to move, delivered to your inbox every week</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>
 

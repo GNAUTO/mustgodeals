@@ -74,7 +74,7 @@ export default function Ferrari849TestarosaFrankStephensonOpinionContent() {
           <p style={AS.p}>
             Stephenson&rsquo;s central argument is that the original Testarossa&rsquo;s design
             wasn&rsquo;t arbitrary. The wide side strakes, the broad rear haunches, the flat
-            profile — all of it existed because the car needed enormous side-mounted radiators to
+            profile, all of it existed because the car needed enormous side-mounted radiators to
             cool its flat-twelve engine. The design followed the engineering. That relationship
             between form and function is what gave the original its visual authority.
           </p>
@@ -118,7 +118,7 @@ export default function Ferrari849TestarosaFrankStephensonOpinionContent() {
           </p>
 
           <p style={AS.p}>
-            For some buyers, the 849 will be exactly what they want — a modern Ferrari with a famous
+            For some buyers, the 849 will be exactly what they want, a modern Ferrari with a famous
             badge and a magnificent engine. For others, the Testarossa name carries a weight that the
             new car simply doesn&rsquo;t match. Stephenson is firmly in the second camp.
           </p>

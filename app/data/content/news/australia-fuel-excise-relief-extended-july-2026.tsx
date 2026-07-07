@@ -10,7 +10,7 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026Content() {
             The Albanese Government has announced an extension to Australia&rsquo;s fuel excise
             relief, keeping petrol and diesel prices{" "}
             <span style={AS.highlight}>16 cents per litre cheaper</span> than normal rates through
-            July — saving drivers around <span style={AS.highlight}>$11 per tank</span>.
+            July, saving drivers around <span style={AS.highlight}>$11 per tank</span>.
           </p>
 
           {/* Image 1 */}
@@ -124,7 +124,7 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026Content() {
             prices are expected to gradually rise. The cost of the extension to the fuel excise
             cut and the reduction in the Heavy Vehicle Road User Charge will be around{" "}
             <span style={AS.highlight}>$400 million</span>. For anyone considering a new car
-            purchase — particularly a petrol or diesel vehicle — the next few weeks represent the
+            purchase, particularly a petrol or diesel vehicle, the next few weeks represent the
             lowest pump prices Australian drivers are likely to see for some time.
           </p>
 
@@ -143,7 +143,7 @@ export default function AustraliaFuelExciseReliefExtendedJuly2026Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

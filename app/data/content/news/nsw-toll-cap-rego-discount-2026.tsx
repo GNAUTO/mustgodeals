@@ -37,7 +37,7 @@ export default function NswTollCapRegoDiscount2026Content() {
           </p>
 
           <div style={AS.callout}>
-            <div style={AS.calloutTitle}>TOLL RELIEF — KEY NUMBERS</div>
+            <div style={AS.calloutTitle}>TOLL RELIEF. KEY NUMBERS</div>
             <p style={AS.calloutText}>
               Weekly cap: $60 → $50 from July 1 · Extra 200,000 drivers now eligible ·
               Total eligible motorists: 1.1M+ · Additional saving for existing claimants: ~$520/year ·
@@ -47,7 +47,7 @@ export default function NswTollCapRegoDiscount2026Content() {
 
           <p style={AS.p}>
             On top of the lower cap, the state is scrapping the $10 administration fee currently
-            charged per toll relief notice — a change worth roughly{" "}
+            charged per toll relief notice, a change worth roughly{" "}
             <span style={AS.highlight}>$60 million annually</span> across the system. Much of
             that saving comes from a shift toward digital communication with toll account holders.
           </p>
@@ -58,7 +58,7 @@ export default function NswTollCapRegoDiscount2026Content() {
             Vehicle registration is also getting cheaper. From{" "}
             <span style={AS.highlight}>September 1</span>, car owners will pay $100 less to renew
             their registration, while motorcycle owners save $80. The discount applies
-            automatically to all renewal notices — no application required. The government
+            automatically to all renewal notices, no application required. The government
             estimates the combined saving across the state&rsquo;s{" "}
             <span style={AS.highlight}>4.4 million registered vehicles</span> at around
             $435 million.
@@ -122,7 +122,7 @@ export default function NswTollCapRegoDiscount2026Content() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
             <p style={AS.ctaDesc}>
-              Be first to know when clearance vehicles hit the market — updated weekly
+              Be first to know when clearance vehicles hit the market, updated weekly
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>

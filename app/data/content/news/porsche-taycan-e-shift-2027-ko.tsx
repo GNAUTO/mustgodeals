@@ -57,7 +57,7 @@ export default function PorscheTaycanEShift2027KoContent() {
             데 그치지 않고, 각 모델의 성격을 사운드에까지 녹여낸 것이다.
           </p>
 
-          {/* Image 2 — after E-Shift explanation */}
+          {/* Image 2, after E-Shift explanation */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0406.jpg"
@@ -121,7 +121,7 @@ export default function PorscheTaycanEShift2027KoContent() {
             실질적인 개선이다.
           </p>
 
-          {/* Image 3 — after battery/infotainment */}
+          {/* Image 3, after battery/infotainment */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0400.jpg"
@@ -144,7 +144,7 @@ export default function PorscheTaycanEShift2027KoContent() {
 
           <hr style={AS.divider} />
 
-          {/* Image 4 — before conclusion */}
+          {/* Image 4, before conclusion */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0408.jpg"

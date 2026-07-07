@@ -43,7 +43,7 @@ function Meta({ date, readTime }: { date: string; readTime: string }) {
 function FeaturedCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      <BlogThumb category={post.category} highlight={post.highlight} size="featured" />
+      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} subtext={post.thumbSubtext} size="featured" />
       <div style={{ marginBottom: "6px" }}>
         <Tag label={post.category} />
         {post.pinned && (
@@ -76,7 +76,7 @@ function FeaturedCard({ post }: { post: BlogPost }) {
 function NumberedCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start" }}>
-      <BlogThumb category={post.category} highlight={post.highlight} size="small" />
+      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="small" />
       <div>
         <div style={{ marginBottom: "5px" }}>
           <Tag label={post.category} />
@@ -96,7 +96,7 @@ function NumberedCard({ post }: { post: BlogPost }) {
 function GridCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      <BlogThumb category={post.category} highlight={post.highlight} size="grid" />
+      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
       <div style={{ marginBottom: "4px" }}>
         <Tag label={post.category} />
       </div>

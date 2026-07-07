@@ -6,7 +6,7 @@ export default function RenaultMeganeEtech2026AustraliaKoContent() {
   return (
     <>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/23664-megane-studiothomascortesi-4.jpg"
@@ -131,7 +131,7 @@ export default function RenaultMeganeEtech2026AustraliaKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

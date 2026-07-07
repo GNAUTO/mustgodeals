@@ -76,7 +76,7 @@ export default function JasTenseiHondaNsxRestommodKoContent() {
             <p style={AS.imgCaption}>Image: JAS Motorsport / Top Gear</p>
           </div>
 
-          <h2 style={AS.h2}>저드 V6, 420마력 — VTEC는 없다</h2>
+          <h2 style={AS.h2}>저드 V6, 420마력. VTEC는 없다</h2>
 
           <p style={AS.p}>
             파워트레인은 혼다의 오리지널 V6 엔진을 대대적으로 손본 버전이다. 영국 엔진
@@ -91,7 +91,7 @@ export default function JasTenseiHondaNsxRestommodKoContent() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>텐세이 파워트레인</div>
             <p style={AS.calloutText}>
-              3.5L 저드 V6 · 420마력 · 레드라인 8,500rpm · 6단 수동 · 후륜구동 —
+              3.5L 저드 V6 · 420마력 · 레드라인 8,500rpm · 6단 수동 · 후륜구동, 
               오리지널 NSX 대비 약 140마력 향상. VTEC 삭제.
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function JasTenseiHondaNsxRestommodKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

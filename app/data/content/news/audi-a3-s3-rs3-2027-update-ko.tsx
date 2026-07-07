@@ -7,12 +7,12 @@ export default function AudiA3S3Rs32027UpdateKoContent() {
     <>
 
           <p style={AS.p}>
-            아우디가 A3 전 라인업 — A3, S3, RS3 — 의 실내를 대폭 손봤다. A5와 A6에 먼저 적용된 커브드{" "}
+            아우디가 A3 전 라인업, A3, S3, RS3, 의 실내를 대폭 손봤다. A5와 A6에 먼저 적용된 커브드{" "}
             <span style={AS.highlight}>디지털 스테이지(Digital Stage)</span> 콕핏 아키텍처가 이번에 A3까지 내려온 것이다. 유럽 출시는{" "}
             <span style={AS.highlight}>2026년 9월</span>로 예정돼 있으며, 호주 출시 시기는 아직 미확정이다.
           </p>
 
-          {/* Image 1 — hero */}
+          {/* Image 1, hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/dd218bf3-401e-53e2-a2c4-ed4470650000"
@@ -56,18 +56,18 @@ export default function AudiA3S3Rs32027UpdateKoContent() {
           </p>
 
           <p style={AS.p}>
-            이 디지털 스테이지 아키텍처는 A5, A6, Q5, Q7에서 먼저 선보인 것인데, 이제 아우디의 엔트리 모델에까지 적용됐다. 최근 신형 A6에 앉아본 적이 있다면, 업데이트된 A3 실내는 익숙하게 느껴질 것이다 — 그리고 그건 분명히 칭찬이 맞다.
+            이 디지털 스테이지 아키텍처는 A5, A6, Q5, Q7에서 먼저 선보인 것인데, 이제 아우디의 엔트리 모델에까지 적용됐다. 최근 신형 A6에 앉아본 적이 있다면, 업데이트된 A3 실내는 익숙하게 느껴질 것이다, 그리고 그건 분명히 칭찬이 맞다.
           </p>
 
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>스크린 업그레이드 한눈에 보기</div>
             <p style={AS.calloutText}>
               현행 A3: 12.3&quot; 디지털 클러스터 + 10.1&quot; MMI 터치스크린<br /><br />
-              2027 A3: <strong>11.9&quot; 버추얼 콕핏 + 12.8&quot; MMI</strong> — 단일 곡면 유리 통합
+              2027 A3: <strong>11.9&quot; 버추얼 콕핏 + 12.8&quot; MMI</strong>. 단일 곡면 유리 통합
             </p>
           </div>
 
-          <h2 style={AS.h2}>버튼은 줄었다 — 하지만 전부는 아니다</h2>
+          <h2 style={AS.h2}>버튼은 줄었다. 하지만 전부는 아니다</h2>
 
           {/* Image 3 */}
           <div style={AS.imgWrap}>
@@ -86,7 +86,7 @@ export default function AudiA3S3Rs32027UpdateKoContent() {
             에어컨 조작 버튼이 센터콘솔에서 사라지고 MMI 터치스크린 하단 스트립으로 통합됐다. 센터 에어벤트도 아래쪽으로 위치가 바뀌었다. 반응이 엇갈릴 수 있는 변화지만, 아우디는 드라이브 모드 선택, 비상등 등 자주 쓰는 물리 버튼을 센터 스택에 남겨뒀다. 경쟁사들이 올인 터치로 갔다가 역풍을 맞은 것을 학습한 듯 보인다. 대시보드 장식 인레이(Decorative Inlay)는 더 넓어졌으며, 탄소섬유와 디나미카 마이크로파이버 트림이 선택지에 추가됐다.
           </p>
 
-          <h2 style={AS.h2}>파워트레인은 그대로 — S3에 시각적 차별화 추가</h2>
+          <h2 style={AS.h2}>파워트레인은 그대로. S3에 시각적 차별화 추가</h2>
 
           {/* Image 4 */}
           <div style={AS.imgWrap}>

@@ -67,7 +67,7 @@ export default function LuxuryCarTaxAustraliaKoContent() {
             결국 소비자가 실제로 내는 금액은 차량 가격 $95,000에 LCT $4,763이 더해진 셈이다. 딜러십 가격표에 이미 포함된 경우가 대부분이지만, 드라이브어웨이 가격 기준으로 반드시 확인하는 것이 좋다.
           </p>
 
-          <h2 style={AS.h2}>데모카와 LCT — 중요한 차이</h2>
+          <h2 style={AS.h2}>데모카와 LCT. 중요한 차이</h2>
 
           <p style={AS.p}>
             여기서 데모카 구매자에게 중요한 포인트가 하나 있다. LCT는 차량 판매 가격 기준으로 부과된다. 즉, 같은 차라도 데모카로 구입하면 신차보다 낮은 가격에 거래되기 때문에 LCT 부담이 줄어들거나 아예 한도 이하로 내려갈 수 있다.
@@ -76,7 +76,7 @@ export default function LuxuryCarTaxAustraliaKoContent() {
           <div style={AS.callout}>
             <p style={AS.calloutTitle}>데모카 절세 시나리오</p>
             <p style={AS.calloutText}>
-              신차 가격 $88,000인 아우디 모델이 데모카로 <strong>$78,500</strong>에 나왔다면 — 일반 차량 LCT 한도 $80,567 <strong>아래</strong>다. LCT 전혀 없음.
+              신차 가격 $88,000인 아우디 모델이 데모카로 <strong>$78,500</strong>에 나왔다면, 일반 차량 LCT 한도 $80,567 <strong>아래</strong>다. LCT 전혀 없음.
             </p>
           </div>
 
@@ -149,9 +149,9 @@ export default function LuxuryCarTaxAustraliaKoContent() {
           <div style={AS.tipBox}>
             <p style={AS.tipTitle}>LCT 환급 가능 케이스</p>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}><strong>수출 목적 구매</strong> — 차량을 호주 밖으로 수출하는 경우</li>
-              <li style={AS.tipItem}><strong>농업용 차량</strong> — 1차 산업 종사자가 업무용으로 구입하는 경우</li>
-              <li style={AS.tipItem}><strong>장애인 관련 개조 차량</strong> — 특정 조건 충족 시</li>
+              <li style={AS.tipItem}><strong>수출 목적 구매</strong>. 차량을 호주 밖으로 수출하는 경우</li>
+              <li style={AS.tipItem}><strong>농업용 차량</strong>. 1차 산업 종사자가 업무용으로 구입하는 경우</li>
+              <li style={AS.tipItem}><strong>장애인 관련 개조 차량</strong>. 특정 조건 충족 시</li>
             </ul>
           </div>
 

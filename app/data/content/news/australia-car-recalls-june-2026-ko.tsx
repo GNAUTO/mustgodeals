@@ -20,7 +20,7 @@ export default function AustraliaCarRecallsJune2026KoContent() {
       <p style={AS.p}>
         2026년 6월, 호주 정부의 리콜 시스템이 유난히 바쁘게 돌아갔다.{" "}
         <span style={AS.highlight}>9개 제조사가 11건의 리콜을 발령</span>했고, 총 16개 모델이 영향을
-        받았다. 중국산 신진 브랜드부터 유럽 전통 강자까지 — 아래 목록에 내 차가 있다면, 가까운
+        받았다. 중국산 신진 브랜드부터 유럽 전통 강자까지, 아래 목록에 내 차가 있다면, 가까운
         공식 딜러에서 무상 수리를 받을 수 있다.
       </p>
 
@@ -71,7 +71,7 @@ export default function AustraliaCarRecallsJune2026KoContent() {
       <p style={AS.p}>
         리콜이라는 단어를 들으면 괜히 불안해지는 게 사실이다. 그런데 사실 리콜은 제조사가
         &lsquo;우리가 책임지겠다&rsquo;고 나서는 행위다. 에어백 인플레이터 결함, 소프트웨어 오류,
-        연료 누유, 브레이크 이슈 — 원인이 무엇이든, 수리는 무조건 무료이고, 비용은 제조사가
+        연료 누유, 브레이크 이슈, 원인이 무엇이든, 수리는 무조건 무료이고, 비용은 제조사가
         전액 부담한다.
       </p>
 
@@ -79,7 +79,7 @@ export default function AustraliaCarRecallsJune2026KoContent() {
         이번 달 주목할 항목은 두 가지다. 먼저{" "}
         <span style={AS.highlight}>폭스바겐 폴로·T-Roc·T-Cross</span>는 2024~2025년식 세 모델이
         한꺼번에 이름을 올렸다. 그리고{" "}
-        <span style={AS.highlight}>렉서스 RC F</span>는 무려 2015년식까지 범위가 확대된다 —
+        <span style={AS.highlight}>렉서스 RC F</span>는 무려 2015년식까지 범위가 확대된다, 
         중고차로 구매했더라도 VIN(차대번호)이 해당 범위에 들어가면 리콜 대상이다.
       </p>
 
@@ -128,7 +128,7 @@ export default function AustraliaCarRecallsJune2026KoContent() {
 
       <p style={AS.p}>
         리콜이 등록되면 공식 딜러십으로 수리 지침과 부품이 공급된다. 예약을 잡고 차를 맡기면
-        제조사 의무에 따라 무상으로 수리가 진행된다 — 공임비, 부품값 어느 것도 청구되지 않는다.
+        제조사 의무에 따라 무상으로 수리가 진행된다, 공임비, 부품값 어느 것도 청구되지 않는다.
         그것이 리콜의 본질이다. 제조사가 자신들의 실수를 인정하고 책임지는 방식인 셈이다.
       </p>
 

@@ -9,7 +9,7 @@ export default function CarStampDutyAustraliaExplainedContent() {
             One of the most common surprises for first-time car buyers in Australia is the final
             price. You&rsquo;ve negotiated hard, agreed on a number, and then the paperwork reveals
             a figure higher than expected. The culprit is usually{" "}
-            <span style={AS.highlight}>stamp duty</span> — a state government tax that applies to
+            <span style={AS.highlight}>stamp duty</span>, a state government tax that applies to
             every car purchase, new or used.
           </p>
 
@@ -18,7 +18,7 @@ export default function CarStampDutyAustraliaExplainedContent() {
           <p style={AS.p}>
             Stamp duty, also known as motor vehicle duty or registration duty, is a tax imposed by
             state governments on the purchase of vehicles. It applies to both new and used cars.
-            Think of it as a transfer tax — the cost of putting the vehicle in your name.
+            Think of it as a transfer tax, the cost of putting the vehicle in your name.
           </p>
 
           <p style={AS.p}>
@@ -96,23 +96,23 @@ export default function CarStampDutyAustraliaExplainedContent() {
             Stamp duty isn&rsquo;t negotiable. Unlike the car price, which you can work on with
             the dealer, stamp duty is{" "}
             <span style={AS.highlight}>fixed by the state government</span>. That makes it essential
-            to factor into your total budget before you start shopping — not after you&rsquo;ve
+            to factor into your total budget before you start shopping, not after you&rsquo;ve
             already fallen in love with a car.
           </p>
 
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>OFFICIAL STAMP DUTY CALCULATORS</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}><strong>NSW</strong> — Service NSW vehicle stamp duty calculator</li>
-              <li style={AS.tipItem}><strong>QLD</strong> — Queensland Government vehicle registration duty calculator</li>
-              <li style={AS.tipItem}><strong>VIC</strong> — State Revenue Office motor vehicle duty calculator</li>
-              <li style={AS.tipItem}><strong>NT</strong> — Territory Revenue Office (flat 3% rate)</li>
+              <li style={AS.tipItem}><strong>NSW</strong>. Service NSW vehicle stamp duty calculator</li>
+              <li style={AS.tipItem}><strong>QLD</strong>. Queensland Government vehicle registration duty calculator</li>
+              <li style={AS.tipItem}><strong>VIC</strong>. State Revenue Office motor vehicle duty calculator</li>
+              <li style={AS.tipItem}><strong>NT</strong>. Territory Revenue Office (flat 3% rate)</li>
             </ul>
           </div>
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>See what clearance deals are available now</div>
-            <p style={AS.ctaDesc}>End-of-month stock dealers need to move — updated every week</p>
+            <p style={AS.ctaDesc}>End-of-month stock dealers need to move, updated every week</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>
 

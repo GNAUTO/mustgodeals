@@ -20,7 +20,7 @@ export default function AustraliaCarRecallsJune2026Content() {
       <p style={AS.p}>
         June 2026 has been a busy month for Australia&rsquo;s vehicle recall system. Across 27 days,{" "}
         <span style={AS.highlight}>nine manufacturers issued 11 separate recalls</span>, covering 16
-        individual models. The list spans everything from Chinese newcomers to European stalwarts —
+        individual models. The list spans everything from Chinese newcomers to European stalwarts, 
         and if you own any of the vehicles below, a free repair is waiting for you at your nearest
         authorised dealer.
       </p>
@@ -70,7 +70,7 @@ export default function AustraliaCarRecallsJune2026Content() {
       <h2 style={AS.h2}>What the Recalls Actually Mean</h2>
 
       <p style={AS.p}>
-        Recalls don&rsquo;t always mean your car is about to break down — but they do mean a
+        Recalls don&rsquo;t always mean your car is about to break down, but they do mean a
         manufacturer has identified a defect serious enough to notify the government and fix it
         at no cost to you. Common triggers include faulty airbag inflators, software errors in
         safety systems, fuel leaks, or brake issues. In each case, the fix is free and mandatory
@@ -80,7 +80,7 @@ export default function AustraliaCarRecallsJune2026Content() {
       <p style={AS.p}>
         A few notable entries this month: the{" "}
         <span style={AS.highlight}>Volkswagen trio (Polo, T-Roc, T-Cross)</span> and{" "}
-        <span style={AS.highlight}>Lexus RC F</span> covering models stretching back to 2015 —
+        <span style={AS.highlight}>Lexus RC F</span> covering models stretching back to 2015, 
         which means if you bought one second-hand, your vehicle could still be eligible. Age of
         purchase doesn&rsquo;t matter; what matters is the VIN and build date.
       </p>
@@ -98,7 +98,7 @@ export default function AustraliaCarRecallsJune2026Content() {
 
       <p style={AS.p}>
         The quickest way is the Australian Government&rsquo;s official recall database. You can
-        search by make, model, or VIN (Vehicle Identification Number) — the 17-digit code stamped
+        search by make, model, or VIN (Vehicle Identification Number), the 17-digit code stamped
         on your dashboard or door frame.
       </p>
 
@@ -123,7 +123,7 @@ export default function AustraliaCarRecallsJune2026Content() {
       </div>
 
       <p style={AS.p}>
-        Your manufacturer may also contact you directly by post or email — but don&rsquo;t wait
+        Your manufacturer may also contact you directly by post or email, but don&rsquo;t wait
         for that letter. If you recognise your car in the table above, check the database and
         book in proactively. There&rsquo;s no cost to you, and in most cases the repair takes
         less than a day.
@@ -134,14 +134,14 @@ export default function AustraliaCarRecallsJune2026Content() {
       <p style={AS.p}>
         Once a recall is registered, your authorised dealership receives the relevant parts and
         a technical service bulletin explaining the fix. You book an appointment, drop the car
-        off, and the repair is completed under the manufacturer&rsquo;s obligation — no invoice,
+        off, and the repair is completed under the manufacturer&rsquo;s obligation, no invoice,
         no labour charge, no parts cost.
       </p>
 
       <p style={AS.p}>
         If you&rsquo;re in the market for a used car or a demo vehicle, a quick recall check is
         a smart step before signing anything. An open recall doesn&rsquo;t necessarily mean you
-        shouldn&rsquo;t buy the car — but it does mean the seller should complete the repair before
+        shouldn&rsquo;t buy the car, but it does mean the seller should complete the repair before
         delivery, or give you a clear timeline for when it will be done.
       </p>
 

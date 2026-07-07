@@ -13,7 +13,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
             함께 등장할 예정이다.
           </p>
 
-          {/* Image 1 — Denza Z hero */}
+          {/* Image 1, Denza Z hero */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/denza-z-2-rxk7.jpg"
@@ -38,7 +38,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
           </p>
 
           <div style={AS.callout}>
-            <div style={AS.calloutTitle}>덴자 Z 쿠페 — 핵심 제원</div>
+            <div style={AS.calloutTitle}>덴자 Z 쿠페. 핵심 제원</div>
             <p style={AS.calloutText}>
               전기 모터 3개 · 최고속도 약 350km/h · 4인승 + 트렁크 ·
               레이싱 버전: 카본 파이버 에어로 패키지 · 굿우드 2026 세계 최초 공개
@@ -56,7 +56,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
             플러그인 하이브리드 모델로 2열 마사지 시트와 전 좌석 열선·통풍을 갖췄다.
           </p>
 
-          {/* Image 2 — BYD Dolphin G */}
+          {/* Image 2, BYD Dolphin G */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/090_byd_dolphin_g.jpg"
@@ -78,7 +78,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
             하이브리드 두 가지 버전의 U7 럭셔리 세단, U8L 럭셔리 SUV와 함께 선보인다.
           </p>
 
-          {/* Image 3 — Denza Z9 */}
+          {/* Image 3, Denza Z9 */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/denza-z9-2-e2ix.jpeg"
@@ -101,7 +101,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
             역사상 최대 규모다. 숫자 하나가 이 브랜드의 현재 위치를 말해준다.
           </p>
 
-          {/* Image 4 — Yangwang U9 */}
+          {/* Image 4, Yangwang U9 */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/yangwang-u9-na07-bagh.jpg"
@@ -131,7 +131,7 @@ export default function BydGoodwood2026EightModelsKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

@@ -8,7 +8,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
           <p style={AS.p}>
             If you&rsquo;ve bought a car in Australia, chances are you&rsquo;ve had this thought
             afterwards: &ldquo;I probably could have paid less.&rdquo; You&rsquo;re probably right.
-            The price on the sticker — or the first number a salesperson quotes — is almost never
+            The price on the sticker, or the first number a salesperson quotes, is almost never
             the final price. The question is how to negotiate it down.
           </p>
 
@@ -17,7 +17,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
           <p style={AS.p}>
             Good negotiation starts with understanding the other side. Dealership salespeople work
             in a variety of different structures, but in many cases there are monthly sales targets
-            and performance incentives involved. That means closing deals matters — especially as
+            and performance incentives involved. That means closing deals matters, especially as
             the end of the month approaches. Knowing this changes how and when you negotiate.
           </p>
 
@@ -44,7 +44,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
 
           <p style={AS.p}>
             Second, what the competition looks like. Saying &ldquo;I&rsquo;m also looking at a
-            couple of other options&rdquo; carries real weight — but only if it&rsquo;s true. Know
+            couple of other options&rdquo; carries real weight, but only if it&rsquo;s true. Know
             what comparable models are priced at so you can back it up.
           </p>
 
@@ -60,7 +60,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
           <p style={AS.p}>
             <strong>Don&rsquo;t reveal your budget first.</strong> When a salesperson asks
             &ldquo;what are you looking to spend?&rdquo;, giving a specific number hands them the
-            upper hand. A dealer won&rsquo;t work down to your budget — they&rsquo;ll work up to it.
+            upper hand. A dealer won&rsquo;t work down to your budget, they&rsquo;ll work up to it.
           </p>
 
           <p style={AS.p}>
@@ -82,14 +82,14 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
               <strong>&ldquo;What&rsquo;s the best price you can do on this one?&rdquo;</strong>
               <br /><br />
               Say it casually, and wait. This signals that price matters to you and that
-              you&rsquo;re weighing up your options — without revealing anything about your budget.
+              you&rsquo;re weighing up your options, without revealing anything about your budget.
               Once the dealer puts a number on the table, the real negotiation begins.
             </p>
           </div>
 
           <p style={AS.p}>
             If they come down on price, don&rsquo;t accept immediately. Pause, think it over, then
-            ask about extras — free first service, accessories thrown in, an extended warranty,
+            ask about extras, free first service, accessories thrown in, an extended warranty,
             floor mats. Cash discounts aren&rsquo;t the only way to get value.
           </p>
 
@@ -110,7 +110,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
             If the dealer stops moving, be willing to walk. Standing up and saying
             &ldquo;I&rsquo;ll think about it and come back&rdquo; is one of the most effective
             moves in the playbook. Dealers often find more flexibility the moment a buyer heads for
-            the door. Just make sure you mean it — walking out works best when it&rsquo;s genuine.
+            the door. Just make sure you mean it, walking out works best when it&rsquo;s genuine.
           </p>
 
           <h2 style={AS.h2}>Your Pre-Visit Checklist</h2>
@@ -135,7 +135,7 @@ export default function HowToNegotiateCarPriceAustraliaContent() {
 
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>Get month-end deal alerts</div>
-            <p style={AS.ctaDesc}>Clearance vehicles dealers need to move — delivered to your inbox every week</p>
+            <p style={AS.ctaDesc}>Clearance vehicles dealers need to move, delivered to your inbox every week</p>
             <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts →</Link>
           </div>
 

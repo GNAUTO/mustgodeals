@@ -49,7 +49,7 @@ export default function NswPoliceHighPerformanceFleet2026KoContent() {
             <p style={AS.imgCaption}>Image: Drive.com.au</p>
           </div>
 
-          <h2 style={AS.h2}>현재 운용 차량 — 그리고 퇴역한 모델들</h2>
+          <h2 style={AS.h2}>현재 운용 차량. 그리고 퇴역한 모델들</h2>
 
           <p style={AS.p}>
             현재 NSW 경찰은 고속도로 순찰에{" "}
@@ -63,7 +63,7 @@ export default function NswPoliceHighPerformanceFleet2026KoContent() {
           <div style={AS.callout}>
             <div style={AS.calloutTitle}>현재 NSW 경찰 주요 차량</div>
             <p style={AS.calloutText}>
-              BMW 5 시리즈 디젤 세단 · BMW X5 가솔린 SUV (고속도로 순찰) —
+              BMW 5 시리즈 디젤 세단 · BMW X5 가솔린 SUV (고속도로 순찰), 
               크라이슬러 300 SRT V8, 생산 종료로 퇴역.
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function NswPoliceHighPerformanceFleet2026KoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

@@ -21,7 +21,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
           <p style={AS.p}>
             최근 호주 월간 판매 순위를 유심히 살펴봤다면 뭔가 낯선 광경을 마주했을 것이다.
             오랫동안 상위권을 지켜온 마쯔다가 보이지 않는다. 20년 가까이 호주 중위권 판매를
-            꽉 쥐고 있던 브랜드가 6~7위로 밀려났다는 건, 그 자체로 하나의 뉴스다 —{" "}
+            꽉 쥐고 있던 브랜드가 6~7위로 밀려났다는 건, 그 자체로 하나의 뉴스다, 
             <span style={AS.highlight}>15년 만에 가장 낮은 순위</span>다.
           </p>
 
@@ -29,7 +29,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
             숫자가 말해준다. 2026년 5월, 마쯔다는{" "}
             <span style={AS.highlight}>5,636대를 판매하며 전년 동기 대비 27.4% 감소</span>했다.
             4월도 마찬가지였다. 5,698대, 전년 대비 14.3% 줄었다. 그 사이 토요타, BYD, 기아,
-            현대, 포드가 차례로 앞질러 나갔다 — 일부는 공격적으로 성장하고, 일부는 그냥
+            현대, 포드가 차례로 앞질러 나갔다, 일부는 공격적으로 성장하고, 일부는 그냥
             제자리를 지켰을 뿐인데도 마쯔다가 뒤처진 셈이다.
           </p>
 
@@ -68,7 +68,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
             헤드라인 수치만 보면 CX-5가 무너진 것처럼 보이지만, 실상은 다르다. 4월에도{" "}
             <span style={AS.highlight}>1,230대</span>가 팔렸고, 5월엔{" "}
             <span style={AS.highlight}>1,368대</span>로 연초 대비 6% 줄어드는 데 그쳤다.
-            중요한 차이가 있다 — 이건 소비자들이 CX-5에 등을 돌린 게 아니라는 뜻이다.
+            중요한 차이가 있다, 이건 소비자들이 CX-5에 등을 돌린 게 아니라는 뜻이다.
             수요 문제가 아니라 공급 문제인 셈이다.
           </p>
 
@@ -80,7 +80,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
             얘기고, 빈디는 그에 대해 자신감을 보이고 있다.
           </p>
 
-          <h2 style={AS.h2}>나머지 라인업 — 복잡한 그림</h2>
+          <h2 style={AS.h2}>나머지 라인업. 복잡한 그림</h2>
 
           <p style={AS.p}>
             CX-5 교체기 공백 외에도, 일부 볼륨 모델들은 실질적인 부진을 겪고 있다.
@@ -108,7 +108,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
             그나마 빛나는 예외는 MX-5다. 2인승 로드스터가{" "}
             <span style={AS.highlight}>48.1% 급등, 1,623대</span>를 기록했다.
             볼륨 기준으론 틈새시장이지만, 마쯔다 모델이 제대로 불을 붙였을 때 어떤
-            반응이 나오는지를 여실히 보여주는 수치다 — 말 그대로, 그리고 비유적으로도.
+            반응이 나오는지를 여실히 보여주는 수치다, 말 그대로, 그리고 비유적으로도.
           </p>
 
           <hr style={AS.divider} />
@@ -118,7 +118,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
           <p style={AS.p}>
             CX-5 신형 외에도, 마쯔다는 처음으로 진지한 EV 공세를 펼치고 있다. 마쯔다
             6e 세단과 CX-6e SUV가 이미{" "}
-            <span style={AS.highlight}>합산 2,000건 이상의 사전 계약</span>을 달성했다 —
+            <span style={AS.highlight}>합산 2,000건 이상의 사전 계약</span>을 달성했다, 
             호주의 전기차 붐을 사실상 관망만 해온 브랜드치고는 놀라운 수치다. 6e 세단의
             초도 300대 물량은 2주 만에 완판됐고, 가격도 확정되지 않은 CX-6e SUV는
             더 큰 관심을 받고 있다.
@@ -138,7 +138,7 @@ export default function MazdaSalesDipAustralia2026KoContent() {
 
           <p style={AS.p}>
             경쟁사 대부분보다 늦게 EV 시장에 뛰어든 브랜드로선 고무적인 신호다.
-            디자인 중심, 프리미엄한 질감, 실용적인 일상 주행 가능 거리 — 마쯔다의 EV 접근법은
+            디자인 중심, 프리미엄한 질감, 실용적인 일상 주행 가능 거리, 마쯔다의 EV 접근법은
             타협 없는 전기차를 원하는 소비자들에게 먹히고 있는 것이다.
           </p>
 
@@ -148,8 +148,8 @@ export default function MazdaSalesDipAustralia2026KoContent() {
             계획대로 된다면 마쯔다의 2026년 하반기는 진짜 반등 이야기가 될 수 있다.
             곧 출시될 신형 CX-5는 브랜드의 가장 강력한 무기를 다시 전선에 세운다.
             6e와 CX-6e는 마쯔다를 한 번도 진지하게 고려하지 않았던 소비자들에게
-            새로운 접점을 만든다. 그리고 MX-5는 — 조용히 몇 년 만에 최고의 해를
-            보내며 — 마쯔다가 여전히 사람들이 진심으로 원하는 차를 만든다는 사실을
+            새로운 접점을 만든다. 그리고 MX-5는, 조용히 몇 년 만에 최고의 해를
+            보내며, 마쯔다가 여전히 사람들이 진심으로 원하는 차를 만든다는 사실을
             증명하고 있다.
           </p>
 

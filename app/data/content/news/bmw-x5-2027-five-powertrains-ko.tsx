@@ -21,7 +21,7 @@ export default function BmwX52027FivePowertrainsKoContent() {
 
           <p style={AS.p}>
             BMW가 차세대 X5의 최종 개발 단계를 공식 확인했다. 세계 최초 공개는 수 주 안에
-            이뤄질 전망이다. 이번 모델이 주목받는 이유는 단 하나 — 2027 X5는 하나의 차체에{" "}
+            이뤄질 전망이다. 이번 모델이 주목받는 이유는 단 하나, 2027 X5는 하나의 차체에{" "}
             <span style={AS.highlight}>다섯 가지 파워트레인</span>을 모두 품은 BMW 최초의
             모델이다. 가솔린, 디젤, 플러그인 하이브리드, 순수 전기, 그리고 수소 연료전지까지.
           </p>
@@ -66,7 +66,7 @@ export default function BmwX52027FivePowertrainsKoContent() {
             상당한 시간이 필요할 것으로 보인다.
           </p>
 
-          <h2 style={AS.h2}>다섯 가지를 하나로 — 엔지니어링의 묘수</h2>
+          <h2 style={AS.h2}>다섯 가지를 하나로. 엔지니어링의 묘수</h2>
 
           <p style={AS.p}>
             내연기관, PHEV, 순수 전기 모델 모두 전후 액슬 캐리어 마운팅 포인트가
@@ -117,7 +117,7 @@ export default function BmwX52027FivePowertrainsKoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

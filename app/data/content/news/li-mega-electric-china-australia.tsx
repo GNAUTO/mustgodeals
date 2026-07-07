@@ -46,7 +46,7 @@ export default function LiMegaElectricChinaAustraliaContent() {
       </p>
 
       <div style={AS.callout}>
-        <div style={AS.calloutTitle}>LI MEGA — KEY SPECS</div>
+        <div style={AS.calloutTitle}>LI MEGA. KEY SPECS</div>
         <p style={AS.calloutText}>
           102.7kWh battery · Dual motor 400kW / 542Nm · 0{'–'}100km/h in 5.5 sec ·
           CLTC range 710km · 520kW ultra-fast charging · 7 seats · Larger than Kia Carnival
@@ -173,7 +173,7 @@ export default function LiMegaElectricChinaAustraliaContent() {
       <div style={AS.ctaBox}>
         <div style={AS.ctaTitle}>Get deal alerts on new arrivals</div>
         <p style={AS.ctaDesc}>
-          Be first to know when clearance vehicles hit the market{'—'}updated weekly
+          Be first to know when clearance vehicles hit the market, updated weekly
         </p>
         <Link href="/coming-soon" style={AS.ctaBtn}>Get free alerts &rarr;</Link>
       </div>

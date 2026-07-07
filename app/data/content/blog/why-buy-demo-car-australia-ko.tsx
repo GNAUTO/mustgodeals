@@ -9,7 +9,7 @@ export default function WhyBuyDemoCarAustraliaKoContent() {
             차를 살 때 많은 사람들이 &lsquo;새 차&rsquo;에 집착한다. 아무도 타지 않은 차,
             0킬로미터의 차. 그 기분은 이해할 수 있다. 하지만 호주 자동차 시장을 조금만 들여다보면,
             데모카가 얼마나 현명한 선택인지 금방 알게 된다.{" "}
-            <span style={AS.highlight}>신차와 거의 같은 퀄리티에, 가격은 훨씬 낮은</span> — 이게
+            <span style={AS.highlight}>신차와 거의 같은 퀄리티에, 가격은 훨씬 낮은</span>, 이게
             데모카의 본질이다.
           </p>
 
@@ -28,7 +28,7 @@ export default function WhyBuyDemoCarAustraliaKoContent() {
             대부분이다.
           </p>
 
-          <h2 style={AS.h2}>가장 큰 이유 — 가격 차이</h2>
+          <h2 style={AS.h2}>가장 큰 이유. 가격 차이</h2>
 
           <p style={AS.p}>
             데모카의 가장 강력한 장점은 가격이다. 동일한 모델, 동일한 사양의 신차와 비교했을 때
@@ -64,7 +64,7 @@ export default function WhyBuyDemoCarAustraliaKoContent() {
 
           <p style={AS.p}>
             호주에서 데모카 매물이 집중되는 시기가 있다. 바로{" "}
-            <span style={AS.highlight}>6월과 7월</span> — 회계연도가 바뀌는 시점이다.
+            <span style={AS.highlight}>6월과 7월</span>, 회계연도가 바뀌는 시점이다.
             딜러십은 새로운 회계연도를 앞두고 기존 데모카를 정리하고 새 전시 차량을 들여오는
             사이클을 반복한다. 이 시기에 시장에 나오는 데모카 물량이 연중 가장 많다.
           </p>
@@ -79,8 +79,8 @@ export default function WhyBuyDemoCarAustraliaKoContent() {
           <div style={AS.tipBox}>
             <div style={AS.tipTitle}>데모카 체크리스트</div>
             <ul style={AS.tipList}>
-              <li style={AS.tipItem}>서비스 기록 요청 — 언제 어떤 점검을 받았는지 확인</li>
-              <li style={AS.tipItem}>보증 잔여 기간 확인 — 출고일 기준으로 보증이 시작됨</li>
+              <li style={AS.tipItem}>서비스 기록 요청, 언제 어떤 점검을 받았는지 확인</li>
+              <li style={AS.tipItem}>보증 잔여 기간 확인, 출고일 기준으로 보증이 시작됨</li>
               <li style={AS.tipItem}>스티어링 휠, 운전석, 도어 트림 등 마모 상태 직접 확인</li>
               <li style={AS.tipItem}>전시용인지, 시승용인지 딜러에게 직접 문의</li>
               <li style={AS.tipItem}>동일 사양 신차의 드라이브어웨이 가격과 비교</li>
@@ -97,7 +97,7 @@ export default function WhyBuyDemoCarAustraliaKoContent() {
           </p>
 
           <p style={AS.p}>
-            신차의 퀄리티와 보증, 중고차의 가격 — 데모카는 이 두 가지를 동시에 가져갈 수 있는
+            신차의 퀄리티와 보증, 중고차의 가격, 데모카는 이 두 가지를 동시에 가져갈 수 있는
             선택지다. 새 차를 고려하고 있다면, 결정하기 전에 데모카 재고를 한 번 살펴볼 것을
             권한다.
           </p>

@@ -233,7 +233,7 @@ export default function Home() {
                 <div className="blog-featured-col">
                   {filtered[0] && (
                     <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
-                      <BlogThumb category={filtered[0].category} highlight={filtered[0].highlight} size="featured" />
+                      <BlogThumb category={filtered[0].category} highlight={filtered[0].highlight} slug={filtered[0].slug} subtext={filtered[0].thumbSubtext} size="featured" />
                       <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "6px" }}>{filtered[0].category}</div>
                       <h2 style={{ fontSize: "19px", fontWeight: 600, color: "#111", lineHeight: 1.25, margin: "0 0 8px" }}>{filtered[0].title}</h2>
                       <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
@@ -247,7 +247,7 @@ export default function Home() {
                   {filtered.slice(1, 5).map((post, i) => (
                     <div key={post.slug} className={i === 3 ? "blog-list-item-4th" : ""} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>
-                        <BlogThumb category={post.category} highlight={post.highlight} size="small" />
+                        <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="small" />
                         <div>
                           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
                           <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 5px" }}>{post.title}</h3>
@@ -265,7 +265,7 @@ export default function Home() {
                   {filtered.slice(5, 8).map((post) => (
                     <div key={post.slug} className="blog-bottom-cell">
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                        <BlogThumb category={post.category} highlight={post.highlight} size="grid" />
+                        <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
                         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
                         <h3 style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
                         <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>

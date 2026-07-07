@@ -13,7 +13,7 @@ export default function BestTimeToBuyACarAustraliaKoContent() {
           </p>
 
           <div style={AS.callout}>
-            <div style={AS.calloutTitle}>지금 이 글을 읽고 있다면 — 6월 말이 바로 그 타이밍이다</div>
+            <div style={AS.calloutTitle}>지금 이 글을 읽고 있다면. 6월 말이 바로 그 타이밍이다</div>
             <p style={AS.calloutText}>
               오늘은 6월 22일이다. 호주 회계연도 마감(6월 30일)까지 단 8일이 남았다.
               딜러십 입장에서 6월 30일은 단순한 월말이 아니다. 연간 판매 실적이 확정되는 날이자,
@@ -22,7 +22,7 @@ export default function BestTimeToBuyACarAustraliaKoContent() {
             </p>
           </div>
 
-          <h2 style={AS.h2}>1년 타이밍 캘린더 — 월별로 보는 구매 적기</h2>
+          <h2 style={AS.h2}>1년 타이밍 캘린더. 월별로 보는 구매 적기</h2>
 
           <table style={AS.table}>
             <thead>
@@ -68,7 +68,7 @@ export default function BestTimeToBuyACarAustraliaKoContent() {
             편이 훨씬 유리하다.
           </p>
 
-          <h2 style={AS.h2}>신형 모델 출시 직전 — 재고 부담이 기회가 되는 순간</h2>
+          <h2 style={AS.h2}>신형 모델 출시 직전. 재고 부담이 기회가 되는 순간</h2>
 
           <p style={AS.p}>
             새 모델 출시 소식이 들리기 시작하면, 기존 재고는 딜러십에게 부담이 된다.
@@ -83,7 +83,7 @@ export default function BestTimeToBuyACarAustraliaKoContent() {
             연락을 먼저 해오는 경우도 많다.
           </p>
 
-          <h2 style={AS.h2}>데모카를 노려라 — 6~7월이 최고 물량</h2>
+          <h2 style={AS.h2}>데모카를 노려라. 6~7월이 최고 물량</h2>
 
           <p style={AS.p}>
             매년 회계연도가 바뀌는 6~7월, 딜러십 시승차(데모카)가 대거 시장에 풀린다.
@@ -105,7 +105,7 @@ export default function BestTimeToBuyACarAustraliaKoContent() {
               <li style={AS.tipItem}>파이낸스 옵션 사전 검토 (은행 vs 딜러 파이낸스)</li>
               <li style={AS.tipItem}>데모카 재고 별도 문의</li>
               <li style={AS.tipItem}>
-                협상 시 이 한 마디 —{" "}
+                협상 시 이 한 마디, 
                 <strong>&ldquo;이 차, 베스트프라이스로 해주실 수 있어요?&rdquo;</strong>{" "}
                 (다른 딜러도 보고 있다는 뉘앙스를 풍기면서 던지면, 딜러가 먼저 카드를 꺼내게 된다)
               </li>

@@ -61,7 +61,7 @@ export default function PorscheTaycanEShift2027Content() {
             restrained. Porsche has tuned the personality of each variant, not just the mechanism.
           </p>
 
-          {/* Image 2 — after E-Shift explanation */}
+          {/* Image 2, after E-Shift explanation */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0406.jpg"
@@ -96,7 +96,7 @@ export default function PorscheTaycanEShift2027Content() {
             a driver to a machine in a way that a single linear torque curve simply doesn&rsquo;t.
           </p>
 
-          <h2 style={AS.h2}>How to get it — and who gets it free</h2>
+          <h2 style={AS.h2}>How to get it. and who gets it free</h2>
 
           <p style={AS.p}>
             On most Taycan variants &mdash; the sedan, Cross Turismo, and Sport Turismo &mdash;
@@ -130,7 +130,7 @@ export default function PorscheTaycanEShift2027Content() {
             specify up. That&rsquo;s a real win for the segment.
           </p>
 
-          {/* Image 3 — after battery/infotainment */}
+          {/* Image 3, after battery/infotainment */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0400.jpg"
@@ -154,7 +154,7 @@ export default function PorscheTaycanEShift2027Content() {
 
           <hr style={AS.divider} />
 
-          {/* Image 4 — before conclusion */}
+          {/* Image 4, before conclusion */}
           <div style={AS.imgWrap}>
             <Image
               src="https://editorial.pxcrush.net/carsales/general/editorial/s26_0408.jpg"

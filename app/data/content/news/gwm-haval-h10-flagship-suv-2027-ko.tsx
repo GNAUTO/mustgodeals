@@ -60,7 +60,7 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
             <div style={AS.calloutTitle}>할발 H10 제원</div>
             <p style={AS.calloutText}>
               5인승: 전장 5138mm · 전폭 1970mm · 전고 2050mm · 휠베이스 3000mm
-              — 토요타 랜드크루저 300 시리즈보다 길다.
+              토요타 랜드크루저 300 시리즈보다 길다.
               6인승: 전장 5299mm.
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function GwmHavalH10FlagshipSuv2027KoContent() {
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>신차 딜 알림 받기</div>
             <p style={AS.ctaDesc}>
-              재고 정리 차량이 나오면 가장 먼저 알려드립니다 — 매주 업데이트
+              재고 정리 차량이 나오면 가장 먼저 알려드립니다, 매주 업데이트
             </p>
             <Link href="/coming-soon" style={AS.ctaBtn}>무료 알림 신청 →</Link>
           </div>

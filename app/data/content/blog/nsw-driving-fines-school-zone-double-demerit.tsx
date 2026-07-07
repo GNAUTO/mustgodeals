@@ -52,9 +52,9 @@ export default function NswDrivingFinesSchoolZoneDoubleDemeritContent() {
           </tr>
         </thead>
         <tbody>
-          <tr><td style={AS.td}>NSW</td><td style={AS.td}>Yes — public holiday periods</td></tr>
-          <tr><td style={AS.td}>ACT</td><td style={AS.td}>Yes — public holiday periods</td></tr>
-          <tr><td style={AS.td}>WA</td><td style={AS.td}>Yes — public holiday periods</td></tr>
+          <tr><td style={AS.td}>NSW</td><td style={AS.td}>Yes, public holiday periods</td></tr>
+          <tr><td style={AS.td}>ACT</td><td style={AS.td}>Yes, public holiday periods</td></tr>
+          <tr><td style={AS.td}>WA</td><td style={AS.td}>Yes, public holiday periods</td></tr>
           <tr><td style={AS.td}>VIC, QLD, SA, TAS, NT</td><td style={AS.td}>No</td></tr>
         </tbody>
       </table>

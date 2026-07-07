@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "nsw-driving-fines-school-zone-double-demerit",
+    title: "NSW Double Demerit Fines: Most Drivers Get This Wrong",
+    excerpt:
+      "NSW double demerit periods don't double your fine, only your demerit points. Here's what actually changes, when the 2026 periods apply, and how school zone fines stack on top.",
+    category: "NSW Road Rules",
+    readTime: "6 min read",
+    date: "July 7, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "nsw-driving-fines-school-zone-double-demerit-ko",
+    title: "더블 데메리트 기간, 벌금이 2배가 되는 게 아닙니다",
+    excerpt:
+      "NSW 더블 데메리트 기간에 벌금이 2배로 오른다고 생각하는 운전자가 많다. 그건 오해다. 벌금은 그대로, 벌점만 2배가 된다. 2026년 적용 기간과 스쿨존 벌금 구조를 정리했다.",
+    category: "NSW 도로법규",
+    readTime: "6분",
+    date: "July 7, 2026",
+    lang: "KO",
+  },
+  {
     slug: "what-is-a-dealer-clearance-car-australia",
     title: "What Is a Dealer Clearance Car and Why Is It Cheaper?",
     excerpt:

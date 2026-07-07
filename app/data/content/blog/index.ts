@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import NswDrivingFinesSchoolZoneDoubleDemeritContent from './nsw-driving-fines-school-zone-double-demerit';
+import NswDrivingFinesSchoolZoneDoubleDemeritKoContent from './nsw-driving-fines-school-zone-double-demerit-ko';
 import WhatIsADealerClearanceCarAustraliaContent from './what-is-a-dealer-clearance-car-australia';
 import WhatIsADealerClearanceCarAustraliaKoContent from './what-is-a-dealer-clearance-car-australia-ko';
 import BusinessCarGstDemoCarAustraliaContent from './business-car-gst-demo-car-australia';
@@ -22,6 +24,8 @@ import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
 
 const MAP: Record<string, FC> = {
+  'nsw-driving-fines-school-zone-double-demerit': NswDrivingFinesSchoolZoneDoubleDemeritContent,
+  'nsw-driving-fines-school-zone-double-demerit-ko': NswDrivingFinesSchoolZoneDoubleDemeritKoContent,
   'what-is-a-dealer-clearance-car-australia': WhatIsADealerClearanceCarAustraliaContent,
   'what-is-a-dealer-clearance-car-australia-ko': WhatIsADealerClearanceCarAustraliaKoContent,
   'business-car-gst-demo-car-australia': BusinessCarGstDemoCarAustraliaContent,

@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 const LINKS = [
-  { label: "About",       href: "/about" },
-  { label: "For Dealers", href: "/contact" },
-  { label: "Privacy",     href: "/privacy-policy" },
-  { label: "Contact",     href: "/contact" },
+  { label: "About",        href: "/about" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "For Dealers",  href: "/for-dealers" },
+  { label: "Privacy",      href: "/privacy-policy" },
+  { label: "Contact",      href: "/contact" },
 ];
 
 export default function Footer() {

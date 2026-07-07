@@ -239,9 +239,11 @@ export default function Navbar({
         {menuOpen && (
           <div style={{ background: "white", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
             {mobileLang}
-            <Link href="/listings" onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Listings</Link>
-            <Link href="/news"     onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>News</Link>
-            <Link href="/blog"     onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Blog</Link>
+            <Link href="/listings"    onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Listings</Link>
+            <Link href="/news"        onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>News</Link>
+            <Link href="/blog"        onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Blog</Link>
+            <Link href="/how-it-works" onClick={() => setMenuOpen(false)} style={{ color: "#777", fontSize: "14px", textDecoration: "none", padding: "12px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>How It Works</Link>
+            <Link href="/for-dealers" onClick={() => setMenuOpen(false)} style={{ color: "#777", fontSize: "14px", textDecoration: "none", padding: "12px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>For Dealers</Link>
           </div>
         )}
       </div>

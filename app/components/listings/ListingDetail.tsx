@@ -31,6 +31,17 @@ function SectionTitle({ children, right }: { children: React.ReactNode; right?: 
   );
 }
 
+function StepRow({ num, text }: { num: number; text: string }) {
+  return (
+    <div style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+      <span style={{ minWidth: "16px", height: "16px", background: "#CCDA47", color: "#1A1A1A", borderRadius: "50%", fontSize: "8px", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px" }}>
+        {num}
+      </span>
+      <span style={{ fontSize: "11px", color: "#6B6B6B", lineHeight: 1.55 }}>{text}</span>
+    </div>
+  );
+}
+
 export default function ListingDetail({ listing }: { listing: Listing }) {
   const [activeImg, setActiveImg]   = useState(0);
   const [featLang, setFeatLang]     = useState<"EN" | "KO">("EN");
@@ -38,13 +49,15 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
 
   const [enquireOpen, setEnquireOpen] = useState(false);
   const [formName, setFormName]       = useState("");
-  const [formMobile, setFormMobile]   = useState("");
+  const [formContact, setFormContact] = useState("");
+  const [formContactMethod, setFormContactMethod] = useState<"Phone" | "Email" | "SMS">("Phone");
   const [formMsg, setFormMsg]         = useState("");
   const [sending, setSending]         = useState(false);
   const [enquiryError, setEnquiryError] = useState(false);
 
-  const [showSuccess, setShowSuccess]         = useState(false);
-  const [submittedMobile, setSubmittedMobile] = useState("");
+  const [showSuccess, setShowSuccess]       = useState(false);
+  const [submittedContact, setSubmittedContact] = useState("");
+  const [submittedMethod, setSubmittedMethod]   = useState("");
 
   const [cooldownLeft, setCooldownLeft] = useState(0);
   const lsKey = `enquiry_${listing.slug}`;
@@ -82,7 +95,7 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!formName.trim() || !formMobile.trim()) return;
+    if (!formName.trim() || !formContact.trim()) return;
     setSending(true);
     setEnquiryError(false);
     try {
@@ -91,7 +104,8 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formName.trim(),
-          mobile: formMobile.trim(),
+          mobile: formContact.trim(),
+          contactMethod: formContactMethod,
           message: formMsg.trim() || "I'm interested in this car",
           carName: listing.name,
           listingUrl: window.location.href,
@@ -104,10 +118,11 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
       }
       localStorage.setItem(lsKey, String(Date.now()));
       setCooldownLeft(COOLDOWN_MS);
-      setSubmittedMobile(formMobile.trim());
+      setSubmittedContact(formContact.trim());
+      setSubmittedMethod(formContactMethod);
       setShowSuccess(true);
       setEnquireOpen(false);
-      setFormName(""); setFormMobile(""); setFormMsg("");
+      setFormName(""); setFormContact(""); setFormMsg("");
     } catch (err) {
       console.error(err);
       setEnquiryError(true);
@@ -136,9 +151,11 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
               </svg>
             </div>
             <div style={{ color: "#1A1A1A", fontSize: "20px", fontWeight: 500 }}>Enquiry sent!</div>
-            <div style={{ color: "#888", fontSize: "12px" }}>The dealer will be in touch at</div>
-            <div style={{ color: "#1A1A1A", fontSize: "13px", fontWeight: 600 }}>{submittedMobile}</div>
-            <div style={{ color: "#888", fontSize: "12px", lineHeight: 1.6 }}>Usually responds within a few hours during business hours.</div>
+            <div style={{ color: "#888", fontSize: "12px" }}>
+              {listing.dealer.name} will reply by {submittedMethod.toLowerCase()} to
+            </div>
+            <div style={{ color: "#1A1A1A", fontSize: "13px", fontWeight: 600 }}>{submittedContact}</div>
+            <div style={{ color: "#888", fontSize: "12px", lineHeight: 1.6 }}>Usually within a few hours during business hours.</div>
             <button
               onClick={() => setShowSuccess(false)}
               style={{ marginTop: "12px", width: "100%", padding: "12px", background: "transparent", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#888", fontSize: "13px", cursor: "pointer" }}
@@ -264,6 +281,10 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                   </div>
                 );
               })}
+              {/* Demo car note */}
+              <div style={{ marginTop: "10px", paddingTop: "8px", borderTop: "0.5px solid rgba(0,0,0,0.06)", fontSize: "10px", color: "#AAAAAA", lineHeight: 1.55 }}>
+                Demo cars are dealer-registered display vehicles with delivery kilometres. Full manufacturer warranty applies.
+              </div>
             </div>
 
             {/* D. CTA button + form */}
@@ -283,20 +304,93 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
                     onClick={() => setEnquireOpen((o) => !o)}
                     style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: "pointer", letterSpacing: "0.2px" }}
                   >
-                    {enquireOpen ? "Cancel" : "Enquire Now"}
+                    {enquireOpen ? "Cancel" : "Check Availability"}
                   </button>
-                  <div style={{ overflow: "hidden", maxHeight: enquireOpen ? "600px" : "0", transition: "max-height 0.3s ease" }}>
+
+                  {/* Microcopy — only when form is closed */}
+                  {!enquireOpen && (
+                    <div style={{ textAlign: "center", marginTop: "6px", fontSize: "10px", color: "#AAAAAA", lineHeight: 1.5 }}>
+                      No obligation. No account needed. The dealer replies directly.
+                    </div>
+                  )}
+
+                  {/* What happens next — only when form is closed */}
+                  {!enquireOpen && (
+                    <div style={{ marginTop: "12px", padding: "10px 12px", background: "#F8F8F8", border: "0.5px solid rgba(0,0,0,0.06)", borderRadius: "6px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                      <div style={{ fontSize: "9px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.7px", fontWeight: 600, marginBottom: "2px" }}>
+                        What happens next
+                      </div>
+                      <StepRow num={1} text="Send a quick enquiry (takes 30 seconds)" />
+                      <StepRow num={2} text={`${listing.dealer.name} replies directly, usually within a few hours`} />
+                      <StepRow num={3} text="You decide. No pressure, no spam." />
+                    </div>
+                  )}
+
+                  {/* Enquiry form */}
+                  <div style={{ overflow: "hidden", maxHeight: enquireOpen ? "700px" : "0", transition: "max-height 0.3s ease" }}>
                     <form onSubmit={handleSubmit} style={{ paddingTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                      <input required type="text" placeholder="Your name" value={formName} onChange={(e) => setFormName(e.target.value)} style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", boxSizing: "border-box" }} />
-                      <input required type="tel" placeholder="Mobile number" value={formMobile} onChange={(e) => setFormMobile(e.target.value)} style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", boxSizing: "border-box" }} />
-                      <textarea rows={3} placeholder="I'm interested in this car" value={formMsg} onChange={(e) => setFormMsg(e.target.value)} style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", resize: "none", boxSizing: "border-box" }} />
-                      <div style={{ fontSize: "10px", color: "#AAAAAA", textAlign: "center" }}>Your details will be shared with the dealer only</div>
+                      <input
+                        required
+                        type="text"
+                        placeholder="Your name"
+                        value={formName}
+                        onChange={(e) => setFormName(e.target.value)}
+                        style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", boxSizing: "border-box" }}
+                      />
+
+                      {/* Preferred contact method */}
+                      <div>
+                        <div style={{ fontSize: "10px", color: "#AAAAAA", marginBottom: "5px", letterSpacing: "0.3px" }}>Preferred contact method</div>
+                        <div style={{ display: "flex", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", overflow: "hidden" }}>
+                          {(["Phone", "Email", "SMS"] as const).map((method) => (
+                            <button
+                              key={method}
+                              type="button"
+                              onClick={() => { setFormContactMethod(method); setFormContact(""); }}
+                              style={{ flex: 1, padding: "8px 4px", background: formContactMethod === method ? "#1A1A1A" : "transparent", color: formContactMethod === method ? "white" : "#6B6B6B", border: "none", fontSize: "12px", fontWeight: formContactMethod === method ? 600 : 400, cursor: "pointer", fontFamily: "inherit", transition: "background 0.15s, color 0.15s" }}
+                            >
+                              {method}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      <input
+                        required
+                        type={formContactMethod === "Email" ? "email" : "tel"}
+                        placeholder={
+                          formContactMethod === "Email" ? "Your email address" :
+                          formContactMethod === "SMS"   ? "Your mobile (for SMS)" :
+                                                          "Your mobile number"
+                        }
+                        value={formContact}
+                        onChange={(e) => setFormContact(e.target.value)}
+                        style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", boxSizing: "border-box" }}
+                      />
+
+                      <textarea
+                        rows={3}
+                        placeholder="I'm interested in this car"
+                        value={formMsg}
+                        onChange={(e) => setFormMsg(e.target.value)}
+                        style={{ width: "100%", padding: "9px 11px", background: "#F5F5F5", border: "0.5px solid rgba(0,0,0,0.12)", borderRadius: "6px", color: "#1A1A1A", fontSize: "13px", outline: "none", resize: "none", boxSizing: "border-box" }}
+                      />
+
+                      <div style={{ fontSize: "10px", color: "#AAAAAA", textAlign: "center" }}>
+                        Your details will be shared with the dealer only
+                      </div>
+
                       {enquiryError && (
                         <div style={{ fontSize: "12px", color: "#c0392b", textAlign: "center", background: "#fef2f2", border: "0.5px solid rgba(192,57,43,0.2)", borderRadius: "6px", padding: "8px" }}>
                           Something went wrong. Please try again or contact us directly.
                         </div>
                       )}
-                      <button type="submit" disabled={sending} style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1, display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
+
+                      <button
+                        type="submit"
+                        disabled={sending}
+                        style={{ width: "100%", padding: "11px", background: "#CCDA47", color: "#1A1A1A", border: "none", borderRadius: "6px", fontSize: "14px", fontWeight: 700, cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1, display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}
+                      >
                         {sending && (
                           <svg className="animate-spin" width="15" height="15" viewBox="0 0 24 24" fill="none">
                             <circle cx="12" cy="12" r="10" stroke="rgba(26,26,26,0.2)" strokeWidth="3" />
@@ -315,7 +409,10 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
             <div style={{ background: "#F8F8F8", border: "0.5px solid rgba(0,0,0,0.06)", borderRadius: "6px", padding: "10px 12px" }}>
               <div style={{ fontSize: "10px", color: "#AAAAAA", textTransform: "uppercase", letterSpacing: "0.7px", fontWeight: 600, marginBottom: "8px" }}>Your dealer contact</div>
               <div style={{ fontSize: "13px", color: "#1A1A1A", fontWeight: 500, marginBottom: "5px" }}>{listing.dealer.name}</div>
-              <div style={{ fontSize: "11px", color: "#6B6B6B" }}>📍 {listing.dealer.location}</div>
+              <div style={{ fontSize: "11px", color: "#6B6B6B", marginBottom: "8px" }}>📍 {listing.dealer.location}</div>
+              <div style={{ fontSize: "10px", color: "#AAAAAA", lineHeight: 1.5 }}>
+                You&apos;ll hear back from {listing.dealer.name} directly, not a call centre.
+              </div>
             </div>
 
             {/* F. Interstate note */}

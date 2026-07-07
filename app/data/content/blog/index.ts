@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import AustraliaTollRoadsEtagGuideContent from './australia-toll-roads-etag-guide';
+import AustraliaTollRoadsEtagGuideKoContent from './australia-toll-roads-etag-guide-ko';
 import NswDrivingFinesSchoolZoneDoubleDemeritContent from './nsw-driving-fines-school-zone-double-demerit';
 import NswDrivingFinesSchoolZoneDoubleDemeritKoContent from './nsw-driving-fines-school-zone-double-demerit-ko';
 import WhatIsADealerClearanceCarAustraliaContent from './what-is-a-dealer-clearance-car-australia';
@@ -24,6 +26,8 @@ import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
 
 const MAP: Record<string, FC> = {
+  'australia-toll-roads-etag-guide': AustraliaTollRoadsEtagGuideContent,
+  'australia-toll-roads-etag-guide-ko': AustraliaTollRoadsEtagGuideKoContent,
   'nsw-driving-fines-school-zone-double-demerit': NswDrivingFinesSchoolZoneDoubleDemeritContent,
   'nsw-driving-fines-school-zone-double-demerit-ko': NswDrivingFinesSchoolZoneDoubleDemeritKoContent,
   'what-is-a-dealer-clearance-car-australia': WhatIsADealerClearanceCarAustraliaContent,

@@ -25,6 +25,26 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "australia-toll-roads-etag-guide",
+    title: "Australia Has No Toll Booths. Here's What That Means.",
+    excerpt:
+      "Australia has no cash toll booths. Every toll road uses cameras that read your number plate. Here's how tags, passes, and rental cars actually work before you drive.",
+    category: "Living in Australia",
+    readTime: "7 min read",
+    date: "July 7, 2026",
+    lang: "EN",
+  },
+  {
+    slug: "australia-toll-roads-etag-guide-ko",
+    title: "호주에는 톨게이트 창구가 없습니다: 처음 오신 분들을 위한 완전 정리",
+    excerpt:
+      "호주의 모든 유료도로는 전자식이다. 창구도, 차단기도, 현금 결제도 없다. Tag와 Pass 차이부터 렌터카 주의사항, 미납 시 단계별 비용까지 한번에 정리했다.",
+    category: "호주 생활 정보",
+    readTime: "7분",
+    date: "July 7, 2026",
+    lang: "KO",
+  },
+  {
     slug: "nsw-driving-fines-school-zone-double-demerit",
     title: "NSW Double Demerit Fines: Most Drivers Get This Wrong",
     excerpt:

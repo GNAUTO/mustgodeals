@@ -112,7 +112,7 @@ export default function StampDutyCalculatorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
+      <Navbar langLinks={{ current: "EN", links: { EN: "/tools/stamp-duty-calculator", KO: "/tools/stamp-duty-calculator-ko" } }} />
 
       {/* Hero */}
       <div style={S.hero}>
@@ -133,7 +133,7 @@ export default function StampDutyCalculatorPage() {
 
       {/* Calculator */}
       <div style={S.calc}>
-        <StampDutyCalculator />
+        <StampDutyCalculator lang="EN" />
       </div>
 
       {/* SEO content */}

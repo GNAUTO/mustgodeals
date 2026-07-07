@@ -12,7 +12,8 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/about",         priority: 0.5, changeFrequency: "yearly"  },
   { path: "/contact",       priority: 0.5, changeFrequency: "yearly"  },
   { path: "/privacy-policy",             priority: 0.3, changeFrequency: "yearly"  },
-  { path: "/tools/stamp-duty-calculator", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/tools/stamp-duty-calculator",    priority: 0.9, changeFrequency: "monthly" },
+  { path: "/tools/stamp-duty-calculator-ko", priority: 0.8, changeFrequency: "monthly" },
 ];
 
 const KO_MONTHS: Record<string, number> = {

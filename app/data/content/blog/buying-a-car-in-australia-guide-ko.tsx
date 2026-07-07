@@ -130,6 +130,18 @@ export default function BuyingACarInAustraliaGuideKoContent() {
         수 있고, 데모카를 사업용으로 구매하면 가격 할인에 더해 GST 절세 효과도 얻을 수 있습니다.
       </p>
 
+      <Link
+        href="/tools/stamp-duty-calculator"
+        style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(204,218,71,0.09)", border: "0.5px solid rgba(204,218,71,0.35)", borderRadius: "10px", padding: "14px 18px", textDecoration: "none", marginBottom: "10px", gap: "12px" }}
+      >
+        <div>
+          <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.08em", marginBottom: "4px" }}>무료 계산기</div>
+          <div style={{ fontSize: "15px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>스탬프 듀티 계산기 (전 주 지원)</div>
+          <div style={{ fontSize: "12px", color: "#888", marginTop: "3px" }}>주와 차량 가격을 입력하면 즉시 계산됩니다</div>
+        </div>
+        <div style={{ fontSize: "20px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+      </Link>
+
       <ArticleCard
         href="/blog/car-stamp-duty-australia-explained-ko"
         category="구매 가이드"

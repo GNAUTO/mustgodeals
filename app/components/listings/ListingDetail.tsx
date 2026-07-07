@@ -5,7 +5,8 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import type { Listing } from "../../data/listings";
+import { LISTINGS, type Listing } from "../../data/listings";
+import ListingCard from "./ListingCard";
 
 const COOLDOWN_MS = 2 * 60 * 60 * 1000;
 
@@ -19,6 +20,70 @@ function formatCooldown(ms: number): string {
   if (h > 0) return `${h}h`;
   return `${m}min`;
 }
+
+function getBrand(name: string): string {
+  return name.split(" ")[1] ?? "";
+}
+
+function getSimilarListings(current: Listing, all: Listing[]): Listing[] {
+  const currentBrand = getBrand(current.name);
+  const others = all.filter((l) => l.slug !== current.slug && l.status === "available");
+  const sameBrand = others.filter((l) => getBrand(l.name) === currentBrand);
+  const priceMin = current.price * 0.7;
+  const priceMax = current.price * 1.3;
+  const nearPrice = others.filter(
+    (l) => getBrand(l.name) !== currentBrand && l.price >= priceMin && l.price <= priceMax
+  );
+  return [...sameBrand, ...nearPrice].slice(0, 3);
+}
+
+type FaqItem = {
+  qEn: string;
+  qKo: string;
+  aEn: React.ReactNode;
+  aKo: React.ReactNode;
+};
+
+const FAQ_ITEMS: FaqItem[] = [
+  {
+    qEn: "What's a demo car?",
+    qKo: "데모카란 무엇인가요?",
+    aEn: (
+      <>
+        A demo car is a dealer-registered vehicle used for test drives or display. It has low delivery kilometres but has never been privately owned. You get the full manufacturer warranty from the original registration date, making it one of the best-value buys in the market.{" "}
+        <Link href="/blog/what-is-a-dealer-clearance-car-australia" style={{ color: "#1A1A1A", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "2px" }}>
+          Read more →
+        </Link>
+      </>
+    ),
+    aKo: (
+      <>
+        데모카(시승차)는 딜러가 시승 또는 전시 목적으로 등록한 차량으로, 일반 소비자에게 판매된 적이 없습니다. 신차와 거의 동일한 상태지만 딜러 등록 주행거리(delivery km)가 있어 더 저렴합니다. 제조사 보증은 최초 등록일부터 전액 적용됩니다.{" "}
+        <Link href="/blog/what-is-a-dealer-clearance-car-australia-ko" style={{ color: "#1A1A1A", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: "2px" }}>
+          자세히 읽기 →
+        </Link>
+      </>
+    ),
+  },
+  {
+    qEn: "Does the warranty still apply?",
+    qKo: "보증은 그대로 적용되나요?",
+    aEn: "Yes, the full manufacturer warranty transfers with the vehicle. See the warranty details above for this specific car.",
+    aKo: "네, 제조사 보증은 차량과 함께 이전됩니다. 위 보증 세부 정보를 확인해 주세요.",
+  },
+  {
+    qEn: "Can I buy this if I'm interstate?",
+    qKo: "타주에서도 구매할 수 있나요?",
+    aEn: "Yes, interstate buyers are welcome. The dealer can arrange delivery — contact them via 'Check Availability' to discuss options.",
+    aKo: "네, 타주 구매자도 환영합니다. 딜러에게 배송 조율을 요청할 수 있습니다. 'Check Availability' 버튼으로 문의해 보세요.",
+  },
+  {
+    qEn: "How is the price calculated?",
+    qKo: "가격은 어떻게 산정되나요?",
+    aEn: "Demo car pricing reflects the drive-away value minus a discount for delivery kilometres and demo status. See 'Why this price makes sense' above for the full breakdown.",
+    aKo: "신차 출고가에서 주행거리 및 데모 상태에 따른 할인이 반영된 가격입니다. 위 'Why this price makes sense' 섹션에서 세부 구조를 확인할 수 있습니다.",
+  },
+];
 
 function SectionTitle({ children, right }: { children: React.ReactNode; right?: React.ReactNode }) {
   return (
@@ -43,9 +108,12 @@ function StepRow({ num, text }: { num: number; text: string }) {
 }
 
 export default function ListingDetail({ listing }: { listing: Listing }) {
-  const [activeImg, setActiveImg]   = useState(0);
-  const [featLang, setFeatLang]     = useState<"EN" | "KO">("EN");
+  const [activeImg, setActiveImg]     = useState(0);
+  const [featLang, setFeatLang]       = useState<"EN" | "KO">("EN");
   const [optionsOpen, setOptionsOpen] = useState(false);
+  const [openFaq, setOpenFaq]         = useState<number | null>(null);
+
+  const similarListings = getSimilarListings(listing, LISTINGS);
 
   const [enquireOpen, setEnquireOpen] = useState(false);
   const [formName, setFormName]       = useState("");
@@ -500,6 +568,59 @@ export default function ListingDetail({ listing }: { listing: Listing }) {
             ))}
           </div>
         </div>
+
+        {/* FAQ Accordion */}
+        <div style={{ marginBottom: "2rem" }}>
+          <SectionTitle>
+            {featLang === "KO" ? "자주 묻는 질문" : "Common questions"}
+          </SectionTitle>
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            {FAQ_ITEMS.map((item, i) => {
+              const isOpen = openFaq === i;
+              return (
+                <div
+                  key={i}
+                  style={{ background: "white", border: "0.5px solid rgba(0,0,0,0.08)", borderRadius: "8px", overflow: "hidden", boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}
+                >
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                    style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "13px 16px", background: "none", border: "none", cursor: "pointer", textAlign: "left", gap: "12px" }}
+                  >
+                    <span style={{ fontSize: "13px", color: "#1A1A1A", fontWeight: 500, lineHeight: 1.4 }}>
+                      {featLang === "KO" ? item.qKo : item.qEn}
+                    </span>
+                    <span style={{ flexShrink: 0, width: "18px", height: "18px", borderRadius: "50%", background: isOpen ? "#CCDA47" : "#F0F0F0", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.15s" }}>
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" style={{ transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>
+                        <path d="M1 2.5L4 5.5L7 2.5" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div style={{ overflow: "hidden", maxHeight: isOpen ? "300px" : "0", transition: "max-height 0.25s ease" }}>
+                    <div style={{ padding: "0 16px 14px", fontSize: "13px", color: "#555", lineHeight: 1.65, borderTop: "0.5px solid rgba(0,0,0,0.06)" }}>
+                      <div style={{ paddingTop: "12px" }}>
+                        {featLang === "KO" ? item.aKo : item.aEn}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Similar Deals */}
+        {similarListings.length > 0 && (
+          <div style={{ marginBottom: "2rem" }}>
+            <SectionTitle>
+              {featLang === "KO" ? "이런 매물은 어떠세요" : "Similar deals you might like"}
+            </SectionTitle>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "16px" }}>
+              {similarListings.map((l) => (
+                <ListingCard key={l.slug} listing={l} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Disclaimer */}
         <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.06)", paddingTop: "1rem" }}>

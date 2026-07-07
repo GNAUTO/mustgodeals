@@ -3,14 +3,15 @@ import nodemailer from "nodemailer";
 import { google } from "googleapis";
 
 export async function POST(req: Request) {
-  let body: { name: string; mobile: string; message: string; carName: string; listingUrl: string };
+  let body: { name: string; mobile: string; contactMethod?: string; message: string; carName: string; listingUrl: string };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid request body" }, { status: 400 });
   }
 
-  const { name, mobile, message, carName, listingUrl } = body;
+  const { name, mobile, contactMethod, message, carName, listingUrl } = body;
+  const contactLabel = contactMethod ?? "Mobile";
 
   const now = new Date();
   const dateStr = now.toLocaleDateString("en-AU");
@@ -23,7 +24,7 @@ export async function POST(req: Request) {
   try {
     const rawPhone = process.env.DEALER_PHONE ?? "";
     const dealerE164 = "+61" + rawPhone.replace(/^0/, "");
-    const smsMsg = `[MustGoDeals] New enquiry\nCar: ${carName}\nName: ${name}\nMobile: ${mobile}\nMessage: ${message}`;
+    const smsMsg = `[MustGoDeals] New enquiry\nCar: ${carName}\nName: ${name}\n${contactLabel}: ${mobile}\nMessage: ${message}`;
     const smsRes = await fetch("https://api.texto.com.au/send", {
       method: "POST",
       headers: {
@@ -71,7 +72,7 @@ export async function POST(req: Request) {
         "",
         `Car:     ${carName}`,
         `Name:    ${name}`,
-        `Mobile:  ${mobile}`,
+        `${contactLabel}: ${mobile}`,
         `Message: ${message}`,
         `Listing: ${cleanUrl}`,
         "",
@@ -102,7 +103,7 @@ export async function POST(req: Request) {
       range: "Sheet1!A:G",
       valueInputOption: "RAW",
       requestBody: {
-        values: [[dateStr, timeStr, carName, name, mobile, message, cleanUrl]],
+        values: [[dateStr, timeStr, carName, name, `${mobile} (${contactLabel})`, message, cleanUrl]],
       },
     });
     console.log("[enquire] Sheets logged OK");

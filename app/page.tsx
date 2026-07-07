@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BlogThumb from "./components/posts/BlogThumb";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
 import { JsonLd } from "./components/JsonLd";
@@ -232,10 +233,7 @@ export default function Home() {
                 <div className="blog-featured-col">
                   {filtered[0] && (
                     <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
-                      <div className="blog-featured-img-card" style={{ width: "100%", aspectRatio: "16/9", borderRadius: "4px", background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)", marginBottom: "14px", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "18px 20px", boxSizing: "border-box", overflow: "hidden" }}>
-                        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#CCDA47", marginBottom: "6px" }}>{filtered[0].category}</div>
-                        <div style={{ fontSize: "17px", fontWeight: 600, color: "white", lineHeight: 1.25 }}>{filtered[0].title}</div>
-                      </div>
+                      <BlogThumb category={filtered[0].category} highlight={filtered[0].highlight} size="featured" />
                       <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "6px" }}>{filtered[0].category}</div>
                       <h2 style={{ fontSize: "19px", fontWeight: 600, color: "#111", lineHeight: 1.25, margin: "0 0 8px" }}>{filtered[0].title}</h2>
                       <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
@@ -249,9 +247,7 @@ export default function Home() {
                   {filtered.slice(1, 5).map((post, i) => (
                     <div key={post.slug} className={i === 3 ? "blog-list-item-4th" : ""} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>
-                        <span className="blog-list-number" style={{ fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)", lineHeight: 1, flexShrink: 0, minWidth: "26px", paddingTop: "1px" }}>
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
+                        <BlogThumb category={post.category} highlight={post.highlight} size="small" />
                         <div>
                           <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
                           <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 5px" }}>{post.title}</h3>
@@ -269,7 +265,8 @@ export default function Home() {
                   {filtered.slice(5, 8).map((post) => (
                     <div key={post.slug} className="blog-bottom-cell">
                       <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
+                        <BlogThumb category={post.category} highlight={post.highlight} size="grid" />
+                        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
                         <h3 style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
                         <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
                       </Link>

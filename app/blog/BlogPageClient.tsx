@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import BlogThumb from "../components/posts/BlogThumb";
 import { BLOG_POSTS, type BlogPost } from "../data/posts";
 
 const LANGS = [
@@ -42,34 +43,18 @@ function Meta({ date, readTime }: { date: string; readTime: string }) {
 function FeaturedCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      <div style={{
-        width: "100%", aspectRatio: "16/9", borderRadius: "4px",
-        background: "#1a1a1a", marginBottom: "14px",
-        display: "flex", flexDirection: "column",
-        justifyContent: "flex-end", padding: "20px 22px",
-        boxSizing: "border-box", overflow: "hidden", position: "relative",
-      }} className="blog-featured-img-card">
-        <div style={{
-          position: "absolute", inset: 0,
-          background: "linear-gradient(135deg, #2a2a2a 0%, #111 100%)",
-        }} />
-        <div style={{ position: "relative" }}>
-          <div style={{
-            fontSize: "10px", fontWeight: 500, letterSpacing: "0.1em",
-            textTransform: "uppercase" as const, color: "#CCDA47", marginBottom: "8px",
-          }}>
-            {post.category}
-          </div>
-          <div style={{
-            fontSize: "20px", fontWeight: 600, color: "white",
-            lineHeight: 1.25, letterSpacing: "-0.3px",
-          }}>
-            {post.title}
-          </div>
-        </div>
-      </div>
+      <BlogThumb category={post.category} highlight={post.highlight} size="featured" />
       <div style={{ marginBottom: "6px" }}>
         <Tag label={post.category} />
+        {post.pinned && (
+          <span style={{
+            marginLeft: "8px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px",
+            color: "#CCDA47", background: "rgba(204,218,71,0.15)",
+            border: "1px solid #CCDA47", padding: "2px 8px", borderRadius: "4px",
+          }}>
+            FEATURED
+          </span>
+        )}
       </div>
       <h2 style={{
         fontSize: "19px", fontWeight: 600, color: "#111",
@@ -88,15 +73,10 @@ function FeaturedCard({ post }: { post: BlogPost }) {
   );
 }
 
-function NumberedCard({ post, num }: { post: BlogPost; num: string }) {
+function NumberedCard({ post }: { post: BlogPost }) {
   return (
-    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "14px", alignItems: "flex-start" }}>
-      <span className="blog-list-number" style={{
-        fontSize: "18px", fontWeight: 300, color: "rgba(0,0,0,0.1)",
-        lineHeight: 1, flexShrink: 0, minWidth: "28px", paddingTop: "2px",
-      }}>
-        {num}
-      </span>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start" }}>
+      <BlogThumb category={post.category} highlight={post.highlight} size="small" />
       <div>
         <div style={{ marginBottom: "5px" }}>
           <Tag label={post.category} />
@@ -116,7 +96,8 @@ function NumberedCard({ post, num }: { post: BlogPost; num: string }) {
 function GridCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      <div style={{ marginBottom: "5px" }}>
+      <BlogThumb category={post.category} highlight={post.highlight} size="grid" />
+      <div style={{ marginBottom: "4px" }}>
         <Tag label={post.category} />
       </div>
       <h3 style={{
@@ -178,12 +159,12 @@ export default function BlogPageClient() {
                       <FeaturedCard post={featured} />
                     </div>
                     <div className="blog-numbered-col">
-                      {numbered.map((post, i) => (
+                      {numbered.map((post) => (
                         <div key={post.slug}>
                           <div style={{ padding: "16px 0" }}>
-                            <NumberedCard post={post} num={String(i + 1).padStart(2, "0")} />
+                            <NumberedCard post={post} />
                           </div>
-                          {i < numbered.length - 1 && (
+                          {numbered.indexOf(post) < numbered.length - 1 && (
                             <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
                           )}
                         </div>
@@ -208,7 +189,7 @@ export default function BlogPageClient() {
                   {pageSlice.map((post, i) => (
                     <div key={post.slug}>
                       <div style={{ padding: "16px 0" }}>
-                        <NumberedCard post={post} num={String(i + 1).padStart(2, "0")} />
+                        <NumberedCard post={post} />
                       </div>
                       {i < pageSlice.length - 1 && (
                         <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />

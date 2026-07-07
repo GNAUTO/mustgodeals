@@ -9,6 +9,7 @@ export type BlogPost = {
   date: string;
   lang: Lang;
   pinned?: boolean;
+  highlight?: string;
 };
 
 export type NewsItem = {
@@ -33,6 +34,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "July 7, 2026",
     lang: "EN",
+    highlight: "E-Tag",
   },
   {
     slug: "australia-toll-roads-etag-guide-ko",
@@ -43,6 +45,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7분",
     date: "July 7, 2026",
     lang: "KO",
+    highlight: "E-Tag",
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit",
@@ -53,6 +56,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     date: "July 7, 2026",
     lang: "EN",
+    highlight: "2x",
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit-ko",
@@ -63,6 +67,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6분",
     date: "July 7, 2026",
     lang: "KO",
+    highlight: "2x",
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia",
@@ -73,6 +78,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     date: "July 2, 2026",
     lang: "EN",
+    highlight: "Demo",
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia-ko",
@@ -83,6 +89,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6분",
     date: "2026년 7월 2일",
     lang: "KO",
+    highlight: "Demo",
   },
   {
     slug: "business-car-gst-demo-car-australia",
@@ -93,6 +100,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     date: "June 30, 2026",
     lang: "EN",
+    highlight: "GST",
   },
   {
     slug: "business-car-gst-demo-car-australia-ko",
@@ -103,6 +111,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5분",
     date: "2026년 6월 30일",
     lang: "KO",
+    highlight: "GST",
   },
   {
     slug: "luxury-car-tax-australia",
@@ -113,6 +122,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read",
     date: "June 26, 2026",
     lang: "EN",
+    highlight: "LCT",
   },
   {
     slug: "luxury-car-tax-australia-ko",
@@ -123,6 +133,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8분",
     date: "2026년 6월 26일",
     lang: "KO",
+    highlight: "LCT",
   },
   {
     slug: "novated-lease-australia",
@@ -133,6 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read",
     date: "June 25, 2026",
     lang: "EN",
+    highlight: "Lease",
   },
   {
     slug: "novated-lease-australia-ko",
@@ -143,6 +155,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8분",
     date: "2026년 6월 25일",
     lang: "KO",
+    highlight: "Lease",
   },
   {
     slug: "car-stamp-duty-australia-explained",
@@ -153,6 +166,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     date: "June 24, 2026",
     lang: "EN",
+    highlight: "$",
   },
   {
     slug: "car-stamp-duty-australia-explained-ko",
@@ -163,6 +177,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6분",
     date: "2026년 6월 24일",
     lang: "KO",
+    highlight: "$",
   },
   {
     slug: "eofy-car-tax-benefits-australia",
@@ -173,6 +188,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "June 24, 2026",
     lang: "EN",
+    highlight: "EOFY",
   },
   {
     slug: "eofy-car-tax-benefits-australia-ko",
@@ -183,6 +199,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7분",
     date: "2026년 6월 24일",
     lang: "KO",
+    highlight: "EOFY",
   },
   {
     slug: "why-buy-demo-car-australia",
@@ -194,6 +211,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "June 24, 2026",
     lang: "EN",
     pinned: true,
+    highlight: "10-30%",
   },
   {
     slug: "why-buy-demo-car-australia-ko",
@@ -205,6 +223,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026년 6월 24일",
     lang: "KO",
     pinned: true,
+    highlight: "10-30%",
   },
   {
     slug: "how-to-negotiate-car-price-australia",
@@ -215,6 +234,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read",
     date: "June 23, 2026",
     lang: "EN",
+    highlight: "-15%",
   },
   {
     slug: "how-to-negotiate-car-price-australia-ko",
@@ -225,6 +245,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8분",
     date: "2026년 6월 23일",
     lang: "KO",
+    highlight: "-15%",
   },
   {
     slug: "best-time-to-buy-a-car-australia",
@@ -235,6 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "June 2026",
     lang: "EN",
+    highlight: "EOFY",
   },
   {
     slug: "best-time-to-buy-a-car-australia-ko",
@@ -245,6 +267,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7분 읽기",
     date: "2026년 6월",
     lang: "KO",
+    highlight: "EOFY",
   },
   {
     slug: "end-of-month-car-deals-explained",
@@ -255,6 +278,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "June 2026",
     lang: "EN",
+    highlight: "EOM",
   },
   {
     slug: "wolmal-jadongcha-dil-jongni",
@@ -265,6 +289,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8분 읽기",
     date: "2026년 6월",
     lang: "KO",
+    highlight: "EOM",
   },
 ];
 

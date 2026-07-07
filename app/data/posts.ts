@@ -663,7 +663,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     slug: "polestar-us-ban-connected-vehicle-rule-ko",
-    title: "폴스타, 미국 시장서 퇴출 — 중국산 커넥티드 차량 규제 직격탄",
+    title: "폴스타, 미국 시장서 퇴출. 중국산 커넥티드 차량 규제 직격탄",
     excerpt:
       "미국 상무부가 중국 연계 하드웨어·소프트웨어를 탑재한 차량의 판매를 금지하면서, 지리(Geely) 산하 폴스타가 2027년형부터 미국 시장에서 철수하게 됐다.",
     category: "뉴스",

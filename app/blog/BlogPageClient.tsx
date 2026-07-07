@@ -40,15 +40,15 @@ function Meta({ date, readTime }: { date: string; readTime: string }) {
   );
 }
 
-function FeaturedCard({ post }: { post: BlogPost }) {
+function HeroCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
       <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} subtext={post.thumbSubtext} size="featured" />
-      <div style={{ marginBottom: "6px" }}>
+      <div style={{ marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
         <Tag label={post.category} />
         {post.pinned && (
           <span style={{
-            marginLeft: "8px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px",
+            fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px",
             color: "#CCDA47", background: "rgba(204,218,71,0.15)",
             border: "1px solid #CCDA47", padding: "2px 8px", borderRadius: "4px",
           }}>
@@ -57,8 +57,8 @@ function FeaturedCard({ post }: { post: BlogPost }) {
         )}
       </div>
       <h2 style={{
-        fontSize: "19px", fontWeight: 600, color: "#111",
-        lineHeight: 1.3, letterSpacing: "-0.3px", margin: "0 0 8px",
+        fontSize: "19px", fontWeight: 700, color: "#111",
+        lineHeight: 1.25, letterSpacing: "-0.3px", margin: "0 0 8px",
       }}>
         {post.title}
       </h2>
@@ -68,6 +68,24 @@ function FeaturedCard({ post }: { post: BlogPost }) {
       }}>
         {post.excerpt}
       </p>
+      <Meta date={post.date} readTime={post.readTime} />
+    </Link>
+  );
+}
+
+function QuadCard({ post }: { post: BlogPost }) {
+  return (
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
+      <div style={{ marginBottom: "4px" }}>
+        <Tag label={post.category} />
+      </div>
+      <h3 style={{
+        fontSize: "14px", fontWeight: 700, color: "#111",
+        lineHeight: 1.35, letterSpacing: "-0.2px", margin: "0 0 6px",
+      }}>
+        {post.title}
+      </h3>
       <Meta date={post.date} readTime={post.readTime} />
     </Link>
   );
@@ -93,24 +111,6 @@ function NumberedCard({ post }: { post: BlogPost }) {
   );
 }
 
-function GridCard({ post }: { post: BlogPost }) {
-  return (
-    <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
-      <div style={{ marginBottom: "4px" }}>
-        <Tag label={post.category} />
-      </div>
-      <h3 style={{
-        fontSize: "14px", fontWeight: 600, color: "#111",
-        lineHeight: 1.35, letterSpacing: "-0.2px", margin: "0 0 8px",
-      }}>
-        {post.title}
-      </h3>
-      <Meta date={post.date} readTime={post.readTime} />
-    </Link>
-  );
-}
-
 export default function BlogPageClient() {
   const [activeLang, setActiveLang] = useState("EN");
   const [currentPage, setCurrentPage] = useState(1);
@@ -124,10 +124,10 @@ export default function BlogPageClient() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const pageSlice = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
 
-  const featured = currentPage === 1 ? (pageSlice[0] ?? null) : null;
-  const listItems = featured ? pageSlice.slice(1) : pageSlice;
-  const numbered = listItems.slice(0, 4);
-  const gridItems = listItems.slice(4);
+  const isFirstPage = currentPage === 1;
+  const heroPosts = isFirstPage ? pageSlice.slice(0, 2) : [];
+  const quadPosts = isFirstPage ? pageSlice.slice(2, 6) : [];
+  const listPosts = isFirstPage ? pageSlice.slice(6) : pageSlice;
 
   function handleLangChange(lang: string) {
     setActiveLang(lang);
@@ -152,46 +152,33 @@ export default function BlogPageClient() {
             </div>
           ) : (
             <>
-              {featured && (
-                <>
-                  <div className="blog-main-grid">
-                    <div className="blog-featured-col">
-                      <FeaturedCard post={featured} />
-                    </div>
-                    <div className="blog-numbered-col">
-                      {numbered.map((post) => (
-                        <div key={post.slug}>
-                          <div style={{ padding: "16px 0" }}>
-                            <NumberedCard post={post} />
-                          </div>
-                          {numbered.indexOf(post) < numbered.length - 1 && (
-                            <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {gridItems.length > 0 && (
-                    <div className="blog-bottom-grid">
-                      {gridItems.map((post) => (
-                        <div key={post.slug} className="blog-bottom-cell">
-                          <GridCard post={post} />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </>
+              {/* Hero pair — top 2 posts (page 1 only) */}
+              {heroPosts.length > 0 && (
+                <div className="blog-hero-pair">
+                  {heroPosts.map((post) => (
+                    <HeroCard key={post.slug} post={post} />
+                  ))}
+                </div>
               )}
 
-              {!featured && (
-                <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)" }}>
-                  {pageSlice.map((post, i) => (
+              {/* Quad grid — posts 3–6 (page 1 only) */}
+              {quadPosts.length > 0 && (
+                <div className="blog-quad-grid">
+                  {quadPosts.map((post) => (
+                    <QuadCard key={post.slug} post={post} />
+                  ))}
+                </div>
+              )}
+
+              {/* Overflow / paginated list */}
+              {listPosts.length > 0 && (
+                <div style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)", marginTop: isFirstPage ? "24px" : "0" }}>
+                  {listPosts.map((post, i) => (
                     <div key={post.slug}>
                       <div style={{ padding: "16px 0" }}>
                         <NumberedCard post={post} />
                       </div>
-                      {i < pageSlice.length - 1 && (
+                      {i < listPosts.length - 1 && (
                         <div style={{ height: "0.5px", background: "rgba(0,0,0,0.08)" }} />
                       )}
                     </div>

@@ -227,54 +227,39 @@ export default function Home() {
             </div>
           ) : (
             <>
-              {/* Main grid */}
-              <div className="blog-main-grid">
-                {/* Left: featured */}
-                <div className="blog-featured-col">
-                  {filtered[0] && (
-                    <Link href={`/blog/${filtered[0].slug}`} style={{ textDecoration: "none", display: "block" }}>
-                      <BlogThumb category={filtered[0].category} highlight={filtered[0].highlight} slug={filtered[0].slug} subtext={filtered[0].thumbSubtext} size="featured" />
-                      <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "6px" }}>{filtered[0].category}</div>
-                      <h2 style={{ fontSize: "19px", fontWeight: 600, color: "#111", lineHeight: 1.25, margin: "0 0 8px" }}>{filtered[0].title}</h2>
-                      <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{filtered[0].excerpt}</p>
-                      <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{filtered[0].date}&nbsp;&nbsp;·&nbsp;&nbsp;{filtered[0].readTime}</span>
-                    </Link>
-                  )}
-                </div>
-
-                {/* Right: numbered list 01-04 */}
-                <div className="blog-numbered-col">
-                  {filtered.slice(1, 5).map((post, i) => (
-                    <div key={post.slug} className={i === 3 ? "blog-list-item-4th" : ""} style={{ borderBottom: i < Math.min(filtered.slice(1, 5).length, 4) - 1 ? "0.5px solid rgba(0,0,0,0.07)" : "none" }}>
-                      <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "flex", gap: "12px", alignItems: "flex-start", padding: "14px 0" }}>
-                        <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="small" />
-                        <div>
-                          <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
-                          <h3 style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 5px" }}>{post.title}</h3>
-                          <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
-                        </div>
-                      </Link>
+              {/* Hero pair — top 2 posts */}
+              <div className="blog-hero-pair">
+                {filtered.slice(0, 2).map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+                    <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} subtext={post.thumbSubtext} size="featured" />
+                    <div style={{ marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00" }}>{post.category}</span>
+                      {post.pinned && (
+                        <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "2px 8px", borderRadius: "4px" }}>FEATURED</span>
+                      )}
                     </div>
-                  ))}
-                </div>
+                    <h2 style={{ fontSize: "19px", fontWeight: 700, color: "#111", lineHeight: 1.25, letterSpacing: "-0.3px", margin: "0 0 8px" }}>{post.title}</h2>
+                    <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{post.excerpt}</p>
+                    <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                  </Link>
+                ))}
               </div>
 
-              {/* Bottom 3-col grid (posts 6-8) */}
-              {filtered.slice(5, 8).length > 0 && (
-                <div className="blog-bottom-grid blog-home-bottom">
-                  {filtered.slice(5, 8).map((post) => (
-                    <div key={post.slug} className="blog-bottom-cell">
-                      <Link href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                        <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
-                        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "4px" }}>{post.category}</div>
-                        <h3 style={{ fontSize: "12px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
-                        <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
-                      </Link>
-                    </div>
+              {/* Quad grid — posts 3–6 */}
+              {filtered.slice(2, 6).length > 0 && (
+                <div className="blog-quad-grid">
+                  {filtered.slice(2, 6).map((post) => (
+                    <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
+                      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
+                      <div style={{ marginBottom: "4px" }}>
+                        <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00" }}>{post.category}</span>
+                      </div>
+                      <h3 style={{ fontSize: "13px", fontWeight: 700, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
+                      <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
+                    </Link>
                   ))}
                 </div>
               )}
-
             </>
           )}
         </div>

@@ -450,9 +450,28 @@ p  { font-size: 15px; }
   margin: 0 auto;
   padding: 0 2rem;
 }
-.blog-featured-img-card {
-  display: block;
+
+/* Hero pair — 2 large cards side by side */
+.blog-hero-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 0.5px solid rgba(0,0,0,0.1);
 }
+
+/* Quad grid — 4 smaller cards */
+.blog-quad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 0.5px solid rgba(0,0,0,0.08);
+}
+
+/* Legacy classes kept for compatibility */
+.blog-featured-img-card { display: block; }
 .blog-main-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -476,47 +495,44 @@ p  { font-size: 15px; }
   padding: 16px;
   border-right: 0.5px solid rgba(0,0,0,0.07);
 }
-.blog-bottom-cell:last-child {
-  border-right: none;
+.blog-bottom-cell:last-child { border-right: none; }
+
+@media (max-width: 900px) {
+  .blog-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .blog-section-inner {
-    padding: 0 20px;
-  }
-  .blog-featured-img-card {
-    display: none;
-  }
-  .blog-list-number {
-    display: none;
-  }
-  .blog-list-item-4th {
-    display: none;
-  }
-  .blog-home-bottom {
-    display: none;
-  }
-  .blog-main-grid {
+  .blog-section-inner { padding: 0 20px; }
+  .blog-hero-pair {
     grid-template-columns: 1fr;
+    gap: 0;
   }
-  .blog-featured-col {
-    padding: 20px 0;
-    border-right: none;
+  .blog-hero-pair > * + * {
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+    padding-top: 20px;
+    margin-top: 20px;
   }
+  .blog-main-grid { grid-template-columns: 1fr; }
+  .blog-featured-col { padding: 20px 0; border-right: none; }
   .blog-numbered-col {
     padding: 20px 0;
     border-left: none;
     border-top: 0.5px solid rgba(0,0,0,0.08);
   }
-  .blog-bottom-grid {
-    grid-template-columns: 1fr;
-  }
+  .blog-bottom-grid { grid-template-columns: 1fr; }
   .blog-bottom-cell {
     border-right: none;
     border-bottom: 0.5px solid rgba(0,0,0,0.07);
     padding: 16px 0;
   }
-  .blog-bottom-cell:last-child {
-    border-bottom: none;
+  .blog-bottom-cell:last-child { border-bottom: none; }
+}
+
+@media (max-width: 480px) {
+  .blog-quad-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 }

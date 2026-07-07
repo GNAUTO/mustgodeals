@@ -11,6 +11,7 @@ export type BlogPost = {
   pinned?: boolean;
   highlight?: string;
   thumbSubtext?: string;
+  relatedSlugs?: string[];
 };
 
 export type NewsItem = {
@@ -27,6 +28,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "buying-a-car-in-australia-guide",
+    title: "The Complete Guide to Buying a Car in Australia",
+    excerpt:
+      "Everything you need to know before buying a car in Australia. Clearance vehicles, on-road costs, stamp duty, LCT, finance options, and negotiation tactics all in one place.",
+    category: "Buying Guide",
+    readTime: "12 min read",
+    date: "July 8, 2026",
+    lang: "EN",
+    pinned: true,
+    highlight: "Guide",
+    thumbSubtext: "complete guide",
+  },
+  {
+    slug: "buying-a-car-in-australia-guide-ko",
+    title: "호주에서 차 사는 법 완벽 가이드",
+    excerpt:
+      "호주에서 차를 사기 전 알아야 할 모든 것. 클리어런스 차량부터 세금, 금융, 협상 전술까지 한곳에 정리했습니다.",
+    category: "구매 가이드",
+    readTime: "12분",
+    date: "2026년 7월 8일",
+    lang: "KO",
+    pinned: true,
+    highlight: "Guide",
+    thumbSubtext: "완벽 가이드",
+  },
+  {
     slug: "australia-toll-roads-etag-guide",
     title: "Australia Has No Toll Booths. Here's What That Means.",
     excerpt:
@@ -37,6 +64,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "E-Tag",
     thumbSubtext: "toll road guide",
+    relatedSlugs: ["nsw-driving-fines-school-zone-double-demerit", "buying-a-car-in-australia-guide"],
   },
   {
     slug: "australia-toll-roads-etag-guide-ko",
@@ -49,6 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "E-Tag",
     thumbSubtext: "유료도로 가이드",
+    relatedSlugs: ["nsw-driving-fines-school-zone-double-demerit-ko", "buying-a-car-in-australia-guide-ko"],
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit",
@@ -61,6 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "2x",
     thumbSubtext: "demerit points",
+    relatedSlugs: ["australia-toll-roads-etag-guide", "buying-a-car-in-australia-guide"],
   },
   {
     slug: "nsw-driving-fines-school-zone-double-demerit-ko",
@@ -73,6 +103,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "2x",
     thumbSubtext: "벌점 2배",
+    relatedSlugs: ["australia-toll-roads-etag-guide-ko", "buying-a-car-in-australia-guide-ko"],
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia",
@@ -85,6 +116,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "Demo",
     thumbSubtext: "clearance cars",
+    relatedSlugs: ["why-buy-demo-car-australia", "how-to-negotiate-car-price-australia"],
   },
   {
     slug: "what-is-a-dealer-clearance-car-australia-ko",
@@ -97,6 +129,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "Demo",
     thumbSubtext: "딜러 급처분차",
+    relatedSlugs: ["why-buy-demo-car-australia-ko", "how-to-negotiate-car-price-australia-ko"],
   },
   {
     slug: "business-car-gst-demo-car-australia",
@@ -109,6 +142,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "GST",
     thumbSubtext: "business savings",
+    relatedSlugs: ["eofy-car-tax-benefits-australia", "luxury-car-tax-australia"],
   },
   {
     slug: "business-car-gst-demo-car-australia-ko",
@@ -121,6 +155,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "GST",
     thumbSubtext: "사업자 절세",
+    relatedSlugs: ["eofy-car-tax-benefits-australia-ko", "luxury-car-tax-australia-ko"],
   },
   {
     slug: "luxury-car-tax-australia",
@@ -133,6 +168,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "LCT",
     thumbSubtext: "luxury car tax",
+    relatedSlugs: ["car-stamp-duty-australia-explained", "business-car-gst-demo-car-australia"],
   },
   {
     slug: "luxury-car-tax-australia-ko",
@@ -145,6 +181,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "LCT",
     thumbSubtext: "럭셔리 카 택스",
+    relatedSlugs: ["car-stamp-duty-australia-explained-ko", "business-car-gst-demo-car-australia-ko"],
   },
   {
     slug: "novated-lease-australia",
@@ -157,6 +194,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "Lease",
     thumbSubtext: "novated lease",
+    relatedSlugs: ["eofy-car-tax-benefits-australia", "business-car-gst-demo-car-australia"],
   },
   {
     slug: "novated-lease-australia-ko",
@@ -169,6 +207,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "Lease",
     thumbSubtext: "노베이티드 리스",
+    relatedSlugs: ["eofy-car-tax-benefits-australia-ko", "business-car-gst-demo-car-australia-ko"],
   },
   {
     slug: "car-stamp-duty-australia-explained",
@@ -181,6 +220,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "$",
     thumbSubtext: "stamp duty",
+    relatedSlugs: ["luxury-car-tax-australia", "best-time-to-buy-a-car-australia"],
   },
   {
     slug: "car-stamp-duty-australia-explained-ko",
@@ -193,6 +233,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "$",
     thumbSubtext: "스탬프 듀티",
+    relatedSlugs: ["luxury-car-tax-australia-ko", "best-time-to-buy-a-car-australia-ko"],
   },
   {
     slug: "eofy-car-tax-benefits-australia",
@@ -205,6 +246,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "EOFY",
     thumbSubtext: "tax savings",
+    relatedSlugs: ["novated-lease-australia", "best-time-to-buy-a-car-australia"],
   },
   {
     slug: "eofy-car-tax-benefits-australia-ko",
@@ -217,6 +259,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "EOFY",
     thumbSubtext: "세금 혜택",
+    relatedSlugs: ["novated-lease-australia-ko", "best-time-to-buy-a-car-australia-ko"],
   },
   {
     slug: "why-buy-demo-car-australia",
@@ -230,6 +273,7 @@ export const BLOG_POSTS: BlogPost[] = [
     pinned: true,
     highlight: "10-30%",
     thumbSubtext: "below new price",
+    relatedSlugs: ["what-is-a-dealer-clearance-car-australia", "how-to-negotiate-car-price-australia"],
   },
   {
     slug: "why-buy-demo-car-australia-ko",
@@ -243,6 +287,7 @@ export const BLOG_POSTS: BlogPost[] = [
     pinned: true,
     highlight: "10-30%",
     thumbSubtext: "신차 대비 할인",
+    relatedSlugs: ["what-is-a-dealer-clearance-car-australia-ko", "how-to-negotiate-car-price-australia-ko"],
   },
   {
     slug: "how-to-negotiate-car-price-australia",
@@ -255,6 +300,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "-15%",
     thumbSubtext: "off sticker price",
+    relatedSlugs: ["best-time-to-buy-a-car-australia", "end-of-month-car-deals-explained"],
   },
   {
     slug: "how-to-negotiate-car-price-australia-ko",
@@ -267,6 +313,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "-15%",
     thumbSubtext: "협상 가이드",
+    relatedSlugs: ["best-time-to-buy-a-car-australia-ko", "wolmal-jadongcha-dil-jongni"],
   },
   {
     slug: "best-time-to-buy-a-car-australia",
@@ -279,6 +326,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "EOFY",
     thumbSubtext: "best timing",
+    relatedSlugs: ["end-of-month-car-deals-explained", "how-to-negotiate-car-price-australia"],
   },
   {
     slug: "best-time-to-buy-a-car-australia-ko",
@@ -291,6 +339,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "EOFY",
     thumbSubtext: "구매 적기",
+    relatedSlugs: ["wolmal-jadongcha-dil-jongni", "how-to-negotiate-car-price-australia-ko"],
   },
   {
     slug: "end-of-month-car-deals-explained",
@@ -303,6 +352,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "EN",
     highlight: "EOM",
     thumbSubtext: "month end deals",
+    relatedSlugs: ["how-to-negotiate-car-price-australia", "best-time-to-buy-a-car-australia"],
   },
   {
     slug: "wolmal-jadongcha-dil-jongni",
@@ -315,6 +365,7 @@ export const BLOG_POSTS: BlogPost[] = [
     lang: "KO",
     highlight: "EOM",
     thumbSubtext: "월말 딜 비밀",
+    relatedSlugs: ["how-to-negotiate-car-price-australia-ko", "best-time-to-buy-a-car-australia-ko"],
   },
 ];
 

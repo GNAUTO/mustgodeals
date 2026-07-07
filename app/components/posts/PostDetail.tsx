@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import BlogThumb from "./BlogThumb";
 import { NEWS_ITEMS, BLOG_POSTS, type Lang } from "../../data/posts";
 import RelatedCarousel from "./RelatedCarousel";
 
@@ -34,6 +35,16 @@ export default function PostDetail({ type, slug, title, category, date, author, 
     [lang]: `${base}/${slug}`,
     ...(siblingSlug ? { [lang === "EN" ? "KO" : "EN"]: `${base}/${siblingSlug}` } : {}),
   };
+
+  const thisPost = BLOG_POSTS.find((p) => p.slug === slug);
+  const relatedSlugs = thisPost?.relatedSlugs ?? [];
+  const relatedPosts = relatedSlugs
+    .map((s) => BLOG_POSTS.find((p) => p.slug === s))
+    .filter(Boolean) as typeof BLOG_POSTS;
+
+  const HUB_SLUG = lang === "KO" ? "buying-a-car-in-australia-guide-ko" : "buying-a-car-in-australia-guide";
+  const isHubPage = slug === "buying-a-car-in-australia-guide" || slug === "buying-a-car-in-australia-guide-ko";
+  const showHubLink = type === "blog" && !isHubPage;
 
   const relatedNews = NEWS_ITEMS.filter((n) => n.slug !== slug && n.lang === lang);
   const latestBlogs = BLOG_POSTS.filter((p) => p.slug !== slug && p.lang === lang);
@@ -103,6 +114,39 @@ export default function PostDetail({ type, slug, title, category, date, author, 
         <div style={H.body}>
           {children}
         </div>
+
+        {/* Hub page backlink */}
+        {showHubLink && (
+          <div style={{ marginTop: "2.5rem", padding: "1rem 1.25rem", background: "rgba(204,218,71,0.08)", border: "0.5px solid rgba(204,218,71,0.3)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
+            <span style={{ fontSize: "13px", color: "#555", lineHeight: 1.5 }}>
+              {isKo ? "호주 차량 구매의 모든 것을 한곳에서 정리한 종합 가이드입니다." : "Part of our complete guide to buying a car in Australia."}
+            </span>
+            <Link href={`/blog/${HUB_SLUG}`} style={{ fontSize: "13px", fontWeight: 600, color: "#7a8a00", textDecoration: "none", whiteSpace: "nowrap" }}>
+              {isKo ? "전체 가이드 보기 →" : "View full guide →"}
+            </Link>
+          </div>
+        )}
+
+        {/* Next reads */}
+        {type === "blog" && relatedPosts.length > 0 && (
+          <div style={{ marginTop: "2.5rem", borderTop: "0.5px solid rgba(0,0,0,0.08)", paddingTop: "2rem" }}>
+            <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.03em", marginBottom: "1rem" }}>
+              {isKo ? "다음으로 읽어보세요" : "Read next"}
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+              {relatedPosts.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderRadius: "10px", overflow: "hidden" }}>
+                  <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
+                  <div style={{ padding: "12px 14px 14px" }}>
+                    <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00", marginBottom: "5px" }}>{post.category}</div>
+                    <div style={{ fontSize: "13px", fontWeight: 600, color: "#111", lineHeight: 1.35, marginBottom: "6px" }}>{post.title}</div>
+                    <div style={{ fontSize: "11px", color: "#aaa" }}>{post.readTime}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </article>
 
       {/* Related News */}

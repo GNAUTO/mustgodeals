@@ -444,6 +444,25 @@ p  { font-size: 15px; }
   .news-mag-title { font-size: 14px; }
 }
 
+/* Read next — 3-col desktop, 2-col tablet, 1-col mobile */
+.read-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .read-next-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .read-next-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Blog magazine grid */
 .blog-section-inner {
   max-width: 1600px;

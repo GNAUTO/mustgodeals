@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import BlogThumb from "./BlogThumb";
 import { NEWS_ITEMS, BLOG_POSTS, type Lang } from "../../data/posts";
-import RelatedCarousel from "./RelatedCarousel";
+import RelatedCarousel from "./RelatedCarousel"; // used by Related News
 
 const BLOG_SLUG_PAIRS: Record<string, string> = {
   "end-of-month-car-deals-explained": "wolmal-jadongcha-dil-jongni",
@@ -46,8 +46,14 @@ export default function PostDetail({ type, slug, title, category, date, author, 
   const isHubPage = slug === "buying-a-car-in-australia-guide" || slug === "buying-a-car-in-australia-guide-ko";
   const showHubLink = type === "blog" && !isHubPage;
 
+  // Fill Read next to 3 cards: relatedSlugs first, then fallback (pinned preferred)
+  const usedSlugs = new Set([slug, ...relatedSlugs]);
+  const fallbacks = BLOG_POSTS
+    .filter((p) => p.lang === lang && !usedSlugs.has(p.slug))
+    .sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+  const readNextPosts = [...relatedPosts, ...fallbacks].slice(0, 3);
+
   const relatedNews = NEWS_ITEMS.filter((n) => n.slug !== slug && n.lang === lang);
-  const latestBlogs = BLOG_POSTS.filter((p) => p.slug !== slug && p.lang === lang);
 
   const breadcrumbSection = type === "news" ? "News" : "Blog";
   const breadcrumbLabel = title.split("—")[0].trim().split(":")[0].trim();
@@ -127,14 +133,14 @@ export default function PostDetail({ type, slug, title, category, date, author, 
           </div>
         )}
 
-        {/* Next reads */}
-        {type === "blog" && relatedPosts.length > 0 && (
+        {/* Read next — 3 cards */}
+        {type === "blog" && readNextPosts.length > 0 && (
           <div style={{ marginTop: "2.5rem", borderTop: "0.5px solid rgba(0,0,0,0.08)", paddingTop: "2rem" }}>
             <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.03em", marginBottom: "1rem" }}>
               {isKo ? "다음으로 읽어보세요" : "Read next"}
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
-              {relatedPosts.map((post) => (
+            <div className="read-next-grid">
+              {readNextPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderRadius: "10px", overflow: "hidden" }}>
                   <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
                   <div style={{ padding: "12px 14px 14px" }}>
@@ -165,21 +171,6 @@ export default function PostDetail({ type, slug, title, category, date, author, 
         </div>
       )}
 
-      {/* Latest Articles */}
-      {latestBlogs.length > 0 && (
-        <div style={{ background: "#FAFAFA", borderTop: "1px solid rgba(0,0,0,0.06)", padding: "2.5rem 2rem" }}>
-          <div style={{ maxWidth: "780px", margin: "0 auto" }}>
-            <RelatedCarousel
-              items={latestBlogs.map(p => ({ slug: p.slug, title: p.title, category: p.category, date: p.date, excerpt: p.excerpt, readTime: p.readTime }))}
-              base="/blog"
-              title={isKo ? "관련 아티클" : "Related Articles"}
-              allLink="/blog"
-              allLinkText={isKo ? "전체 아티클 →" : "All articles →"}
-              cardStyle="blog"
-            />
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>

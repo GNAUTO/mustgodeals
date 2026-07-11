@@ -9,6 +9,16 @@ type AlertDetail = {
   sourceUrl: string;
 };
 
+type DebugDetail = {
+  slug: string;
+  sourceUrl: string;
+  httpStatus: number | null;
+  finalUrl: string | null;
+  redirected: boolean;
+  matchedPhrase: string | null;
+  error: string | null;
+};
+
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const secret = url.searchParams.get("secret");
@@ -17,12 +27,26 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const debug = url.searchParams.get("debug") === "1";
   const available = LISTINGS.filter((l) => l.status === "available" && l.sourceUrl);
   const alerts: AlertDetail[] = [];
+  const debugDetails: DebugDetail[] = [];
+
+  const SOLD_PHRASES = [
+    "this vehicle has been sold",
+    "this car has been sold",
+    "vehicle sold",
+    "no longer available",
+    '"status":"sold"',
+    '"sold":true',
+    'data-status="sold"',
+    "<title>sold ",
+  ];
 
   for (const listing of available) {
     const sourceUrl = listing.sourceUrl!;
     let reason: string | null = null;
+    const dbg: DebugDetail = { slug: listing.slug, sourceUrl, httpStatus: null, finalUrl: null, redirected: false, matchedPhrase: null, error: null };
 
     try {
       const res = await fetch(sourceUrl, {
@@ -31,33 +55,28 @@ export async function GET(req: Request) {
         signal: AbortSignal.timeout(10_000),
       });
 
-      const SOLD_PHRASES = [
-        // Generic phrases
-        "this vehicle has been sold",
-        "this car has been sold",
-        "vehicle sold",
-        "no longer available",
-        // alto.com.au and similar: JSON/data attributes
-        '"status":"sold"',
-        '"sold":true',
-        'data-status="sold"',
-        // rydekia.com.au: title prefix pattern
-        "<title>sold ",
-      ];
+      dbg.httpStatus = res.status;
+      dbg.finalUrl = res.url;
+      dbg.redirected = res.url !== sourceUrl;
 
       if (res.status === 404) {
         reason = "HTTP 404 page not found";
       } else if (res.url !== sourceUrl) {
-        // Page redirected to a different URL — vehicle likely removed or sold
         reason = `Redirected to ${res.url}`;
       } else if (res.ok) {
         const lower = (await res.text()).toLowerCase();
         const matched = SOLD_PHRASES.find((p) => lower.includes(p.toLowerCase()));
-        if (matched) reason = `Page indicates sold: "${matched}"`;
+        if (matched) {
+          dbg.matchedPhrase = matched;
+          reason = `Page indicates sold: "${matched}"`;
+        }
       }
     } catch (err) {
-      reason = `Fetch error: ${err instanceof Error ? err.message : String(err)}`;
+      dbg.error = err instanceof Error ? err.message : String(err);
+      reason = `Fetch error: ${dbg.error}`;
     }
+
+    if (debug) debugDetails.push(dbg);
 
     if (reason) {
       alerts.push({ slug: listing.slug, name: listing.name, reason, sourceUrl: sourceUrl });
@@ -113,5 +132,6 @@ export async function GET(req: Request) {
     checked: available.length,
     alerts: alerts.length,
     details: alerts,
+    ...(debug && { debug: debugDetails }),
   });
 }

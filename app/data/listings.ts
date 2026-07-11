@@ -51,7 +51,7 @@ export type Listing = {
 export const LISTINGS: Listing[] = [
   {
     slug: "2025-audi-a5-sport",
-    status: "available",
+    status: "sold",
     badge: "DEMO",
     name: "2025 Audi A5 TFSI 200kW S line",
     subtitle: "2.0L Turbo · Quattro AWD · S tronic",
@@ -124,7 +124,7 @@ export const LISTINGS: Listing[] = [
 
   {
     slug: "2025-audi-sq8",
-    status: "available",
+    status: "sold",
     badge: "DEMO",
     name: "2025 Audi SQ8 TFSI Quattro",
     subtitle: "4.0L V8 Twin Turbo · Quattro AWD · Tiptronic",
@@ -517,7 +517,7 @@ export const LISTINGS: Listing[] = [
 
   {
     slug: "2026-kia-sportage-s-demo",
-    status: "available",
+    status: "sold",
     badge: "DEMO",
     name: "2026 Kia Sportage S",
     subtitle: "2.0L Petrol · FWD · Auto",

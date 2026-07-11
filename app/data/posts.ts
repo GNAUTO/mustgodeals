@@ -451,6 +451,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "freelander-8-cockpit-panoramic-display-8k",
+    title: "Freelander 8 Cockpit Revealed With 46.3 Inch 8K Panoramic Display",
+    excerpt:
+      "Chery JLR's revived Freelander brand has released interior details for the Freelander 8. The centrepiece is a 46.3-inch 8K panoramic display spanning 1.2 metres, paired with Huawei ADS 4.1, a Snapdragon 8397 chip, and 896-line LiDAR across all trims.",
+    category: "NEWS",
+    date: "July 11, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/Freelander/e59bbee78987-43-e1783590439397-800x452.png",
+    lang: "EN",
+  },
+  {
+    slug: "freelander-8-cockpit-panoramic-display-8k-ko",
+    title: "프리랜더 8 콕핏 공개. 46.3인치 8K 파노라마 디스플레이 탑재",
+    excerpt:
+      "체리 JLR 합작 브랜드 Freelander가 첫 모델 Freelander 8의 실내를 공개했다. 너비 1.2미터의 46.3인치 8K 파노라마 디스플레이, 화웨이 ADS 4.1, 스냅드래곤 8397, 896라인 라이다가 전 트림 기본 탑재된다.",
+    category: "뉴스",
+    date: "2026년 7월 11일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/Freelander/e59bbee78987-43-e1783590439397-800x452.png",
+    lang: "KO",
+  },
+  {
     slug: "byd-wrong-model-year-australia-full-refund",
     title: "BYD Offers Full Refunds After Selling Customers Cars From Wrong Model Year",
     excerpt:

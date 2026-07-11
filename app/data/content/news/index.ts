@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import Freelander8CockpitPanoramicDisplay8kContent from './freelander-8-cockpit-panoramic-display-8k';
+import Freelander8CockpitPanoramicDisplay8kKoContent from './freelander-8-cockpit-panoramic-display-8k-ko';
 import BydWrongModelYearAustraliaFullRefundContent from './byd-wrong-model-year-australia-full-refund';
 import BydWrongModelYearAustraliaFullRefundKoContent from './byd-wrong-model-year-australia-full-refund-ko';
 import LandRoverDefender2027AustraliaPriceContent from './2027-land-rover-defender-australia-price';
@@ -66,6 +68,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'freelander-8-cockpit-panoramic-display-8k': Freelander8CockpitPanoramicDisplay8kContent,
+  'freelander-8-cockpit-panoramic-display-8k-ko': Freelander8CockpitPanoramicDisplay8kKoContent,
   'byd-wrong-model-year-australia-full-refund': BydWrongModelYearAustraliaFullRefundContent,
   'byd-wrong-model-year-australia-full-refund-ko': BydWrongModelYearAustraliaFullRefundKoContent,
   '2027-land-rover-defender-australia-price': LandRoverDefender2027AustraliaPriceContent,

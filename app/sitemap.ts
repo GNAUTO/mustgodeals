@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
+import { getAllRecallSlugs, getAllBrands } from "./data/recallsDb";
 
 const BASE_URL = "https://mustgodeals.com.au";
 
@@ -16,6 +17,7 @@ const STATIC_PAGES: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/tools/stamp-duty-calculator",    priority: 0.9, changeFrequency: "monthly" },
   { path: "/tools/stamp-duty-calculator-ko", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tools/rego-calculator",          priority: 0.9, changeFrequency: "monthly" },
+  { path: "/recalls",                        priority: 0.9, changeFrequency: "daily"   },
 ];
 
 const KO_MONTHS: Record<string, number> = {
@@ -34,7 +36,7 @@ function toDate(str: string): Date {
   return isNaN(d.getTime()) ? new Date() : d;
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries = STATIC_PAGES.map(({ path, priority, changeFrequency }) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
@@ -63,5 +65,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...listingEntries, ...newsEntries, ...blogEntries];
+  const [recallSlugs, recallBrands] = await Promise.all([
+    getAllRecallSlugs().catch(() => []),
+    getAllBrands().catch(() => []),
+  ]);
+
+  const recallDetailEntries = recallSlugs.map(r => ({
+    url: `${BASE_URL}/recalls/${r.slug}`,
+    lastModified: r.announced_date ? toDate(r.announced_date) : new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const recallBrandEntries = recallBrands.map(b => ({
+    url: `${BASE_URL}/recalls/brand/${b.brand.toLowerCase().replace(/\s+/g, "")}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticEntries, ...listingEntries, ...newsEntries, ...blogEntries, ...recallDetailEntries, ...recallBrandEntries];
 }

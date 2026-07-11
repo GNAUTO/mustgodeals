@@ -132,6 +132,18 @@ export default function NovatedLeaseAustraliaKoContent() {
             것이 시작이다.
           </p>
 
+          <div style={{ margin: "2rem 0" }}>
+            <div style={{ fontSize: "11px", fontWeight: 700, color: "#888", letterSpacing: "0.09em", textTransform: "uppercase" as const, marginBottom: "10px" }}>관련 가이드</div>
+            <Link href="/blog/novated-lease-worth-it-australia-ko" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderLeft: "3px solid #CCDA47", borderRadius: "8px", padding: "0.875rem 1.25rem", textDecoration: "none", marginBottom: "8px", gap: "12px" }}>
+              <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>노베이티드 리스가 실제로 이득일까. 상황별 정직한 답변</div>
+              <div style={{ fontSize: "16px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+            <Link href="/blog/novated-lease-vs-car-loan-australia-ko" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderLeft: "3px solid #CCDA47", borderRadius: "8px", padding: "0.875rem 1.25rem", textDecoration: "none", marginBottom: "8px", gap: "12px" }}>
+              <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>노베이티드 리스 대 일반 차량 대출. 총비용 비교</div>
+              <div style={{ fontSize: "16px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+          </div>
+
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>지금 나온 클리어런스 딜 확인하기</div>
             <p style={AS.ctaDesc}>딜러가 처분해야 하는 재고 차량, 매주 업데이트</p>

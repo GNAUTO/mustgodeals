@@ -28,6 +28,58 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "novated-lease-worth-it-australia",
+    title: "Is a Novated Lease Worth It in Australia",
+    excerpt:
+      "The honest answer depends on your salary, how much you drive, and whether you are buying an EV. Here is exactly who benefits, who does not, and what the numbers actually look like.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "July 11, 2026",
+    lang: "EN",
+    highlight: "Worth it?",
+    thumbSubtext: "novated lease",
+    relatedSlugs: ["novated-lease-australia", "novated-lease-vs-car-loan-australia", "car-stamp-duty-australia-explained"],
+  },
+  {
+    slug: "novated-lease-worth-it-australia-ko",
+    title: "노베이티드 리스, 정말 이득일까. 연봉과 상황별 정직한 답변",
+    excerpt:
+      "정답은 연봉, 주행거리, 전기차 여부에 따라 달라진다. 누구에게 유리하고 누구에게 불리한지, 실제 숫자와 함께 정리했다.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 7월 11일",
+    lang: "KO",
+    highlight: "이득?",
+    thumbSubtext: "노베이티드 리스",
+    relatedSlugs: ["novated-lease-australia-ko", "novated-lease-vs-car-loan-australia-ko", "car-stamp-duty-australia-explained-ko"],
+  },
+  {
+    slug: "novated-lease-vs-car-loan-australia",
+    title: "Novated Lease vs Car Loan. Which Option Costs Less Over Five Years",
+    excerpt:
+      "Both get you the same car. The difference is how much you actually pay over the full term. Here is what the numbers look like side by side, including the costs most quotes do not show upfront.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "July 11, 2026",
+    lang: "EN",
+    highlight: "vs",
+    thumbSubtext: "total cost comparison",
+    relatedSlugs: ["novated-lease-australia", "novated-lease-worth-it-australia", "business-car-gst-demo-car-australia"],
+  },
+  {
+    slug: "novated-lease-vs-car-loan-australia-ko",
+    title: "노베이티드 리스 대 일반 차량 대출. 총비용 비교 가이드",
+    excerpt:
+      "두 방식 모두 같은 차를 손에 넣는다. 차이는 실제로 얼마를 내느��다. 총비용 기준으로 숫자를 비교하고, 견적서에 잘 안 보이는 항목까지 정리했다.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 7월 11일",
+    lang: "KO",
+    highlight: "비교",
+    thumbSubtext: "총비용 분석",
+    relatedSlugs: ["novated-lease-australia-ko", "novated-lease-worth-it-australia-ko", "business-car-gst-demo-car-australia-ko"],
+  },
+  {
     slug: "buying-a-car-in-australia-guide",
     title: "The Complete Guide to Buying a Car in Australia",
     excerpt:

@@ -183,6 +183,18 @@ export default function BuyingACarInAustraliaGuideKoContent() {
         readTime="8분"
       />
       <ArticleCard
+        href="/blog/novated-lease-worth-it-australia-ko"
+        category="구매 가이드"
+        title="노베이티드 리스가 실제로 이득일까. 상황별 정직한 답변"
+        readTime="8분"
+      />
+      <ArticleCard
+        href="/blog/novated-lease-vs-car-loan-australia-ko"
+        category="구매 가이드"
+        title="노베이티드 리스 대 일반 차량 대출. 총비용 비교"
+        readTime="8분"
+      />
+      <ArticleCard
         href="/blog/eofy-car-tax-benefits-australia-ko"
         category="구매 가이드"
         title="회계연도 마감 전에 차를 사면 세금 혜택이 있을까. ABN 사업자를 위한 가이드"

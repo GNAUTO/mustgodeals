@@ -146,6 +146,18 @@ export default function NovatedLeaseAustraliaContent() {
             habits, it&rsquo;s absolutely worth a proper quote.
           </p>
 
+          <div style={{ margin: "2rem 0" }}>
+            <div style={{ fontSize: "11px", fontWeight: 700, color: "#888", letterSpacing: "0.09em", textTransform: "uppercase" as const, marginBottom: "10px" }}>Related Guides</div>
+            <Link href="/blog/novated-lease-worth-it-australia" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderLeft: "3px solid #CCDA47", borderRadius: "8px", padding: "0.875rem 1.25rem", textDecoration: "none", marginBottom: "8px", gap: "12px" }}>
+              <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>Is a Novated Lease Worth It in Australia</div>
+              <div style={{ fontSize: "16px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+            <Link href="/blog/novated-lease-vs-car-loan-australia" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "white", border: "0.5px solid rgba(0,0,0,0.09)", borderLeft: "3px solid #CCDA47", borderRadius: "8px", padding: "0.875rem 1.25rem", textDecoration: "none", marginBottom: "8px", gap: "12px" }}>
+              <div style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 }}>Novated Lease vs Car Loan. Which Option Costs Less Over Five Years</div>
+              <div style={{ fontSize: "16px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+          </div>
+
           <div style={AS.ctaBox}>
             <div style={AS.ctaTitle}>See what clearance deals are available now</div>
             <p style={AS.ctaDesc}>End-of-month stock dealers need to move, updated every week</p>

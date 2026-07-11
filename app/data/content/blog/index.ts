@@ -23,6 +23,10 @@ import LuxuryCarTaxAustraliaContent from './luxury-car-tax-australia';
 import LuxuryCarTaxAustraliaKoContent from './luxury-car-tax-australia-ko';
 import NovatedLeaseAustraliaContent from './novated-lease-australia';
 import NovatedLeaseAustraliaKoContent from './novated-lease-australia-ko';
+import NovatedLeaseWorthItAustraliaContent from './novated-lease-worth-it-australia';
+import NovatedLeaseWorthItAustraliaKoContent from './novated-lease-worth-it-australia-ko';
+import NovatedLeaseVsCarLoanAustraliaContent from './novated-lease-vs-car-loan-australia';
+import NovatedLeaseVsCarLoanAustraliaKoContent from './novated-lease-vs-car-loan-australia-ko';
 import WhyBuyDemoCarAustraliaContent from './why-buy-demo-car-australia';
 import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
@@ -51,6 +55,10 @@ const MAP: Record<string, FC> = {
   'luxury-car-tax-australia-ko': LuxuryCarTaxAustraliaKoContent,
   'novated-lease-australia': NovatedLeaseAustraliaContent,
   'novated-lease-australia-ko': NovatedLeaseAustraliaKoContent,
+  'novated-lease-worth-it-australia': NovatedLeaseWorthItAustraliaContent,
+  'novated-lease-worth-it-australia-ko': NovatedLeaseWorthItAustraliaKoContent,
+  'novated-lease-vs-car-loan-australia': NovatedLeaseVsCarLoanAustraliaContent,
+  'novated-lease-vs-car-loan-australia-ko': NovatedLeaseVsCarLoanAustraliaKoContent,
   'why-buy-demo-car-australia': WhyBuyDemoCarAustraliaContent,
   'why-buy-demo-car-australia-ko': WhyBuyDemoCarAustraliaKoContent,
   'wolmal-jadongcha-dil-jongni': WolmalJadongchaDilJongniContent,

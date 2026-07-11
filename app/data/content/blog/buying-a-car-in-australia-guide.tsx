@@ -192,6 +192,18 @@ export default function BuyingACarInAustraliaGuideContent() {
         readTime="8 min read"
       />
       <ArticleCard
+        href="/blog/novated-lease-worth-it-australia"
+        category="Buying Guide"
+        title="Is a Novated Lease Worth It in Australia"
+        readTime="8 min read"
+      />
+      <ArticleCard
+        href="/blog/novated-lease-vs-car-loan-australia"
+        category="Buying Guide"
+        title="Novated Lease vs Car Loan. Which Option Costs Less Over Five Years"
+        readTime="8 min read"
+      />
+      <ArticleCard
         href="/blog/eofy-car-tax-benefits-australia"
         category="Buying Guide"
         title="Should You Buy a Car Before EOFY? A Guide for Australian ABN Holders"

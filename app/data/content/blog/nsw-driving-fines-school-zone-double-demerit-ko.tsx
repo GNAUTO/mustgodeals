@@ -217,6 +217,13 @@ export default function NswDrivingFinesSchoolZoneDoubleDemeritKoContent() {
         </p>
       </div>
 
+      <div style={{ borderLeft: "3px solid #CCDA47", padding: "10px 16px", background: "white", borderRadius: "6px", marginBottom: "10px" }}>
+        <div style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.7px", textTransform: "uppercase" as const, marginBottom: "4px" }}>NSW 도로법규</div>
+        <Link href="/news/australia-new-road-rules-july-2026-ko" style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", textDecoration: "none", lineHeight: 1.4, display: "block" }}>
+          2026년 7월 호주 신규 도로법규 총정리. 주별 변경사항
+        </Link>
+      </div>
+
       <div style={AS.ctaBox}>
         <div style={AS.ctaTitle}>새 차를 고민 중이라면</div>
         <p style={AS.ctaDesc}>호주 딜러십의 데모카 및 클리어런스 재고를 한눈에</p>

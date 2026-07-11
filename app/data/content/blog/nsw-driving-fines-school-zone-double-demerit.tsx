@@ -233,6 +233,13 @@ export default function NswDrivingFinesSchoolZoneDoubleDemeritContent() {
         </p>
       </div>
 
+      <div style={{ borderLeft: "3px solid #CCDA47", padding: "10px 16px", background: "white", borderRadius: "6px", marginBottom: "10px" }}>
+        <div style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.7px", textTransform: "uppercase" as const, marginBottom: "4px" }}>NSW Road Rules</div>
+        <Link href="/news/australia-new-road-rules-july-2026" style={{ fontSize: "14px", fontWeight: 600, color: "#1A1A1A", textDecoration: "none", lineHeight: 1.4, display: "block" }}>
+          New Road Rules July 2026. What Changed Across Australia This Month
+        </Link>
+      </div>
+
       <div style={AS.ctaBox}>
         <div style={AS.ctaTitle}>Looking for a new car?</div>
         <p style={AS.ctaDesc}>Browse demo and clearance stock from Australian dealerships</p>

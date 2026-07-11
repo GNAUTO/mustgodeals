@@ -268,6 +268,12 @@ export default function BuyingACarInAustraliaGuideKoContent() {
         title="호주에는 톨게이트 창구가 없습니다. 처음 오신 분들을 위한 완전 정리"
         readTime="7분"
       />
+      <ArticleCard
+        href="/news/australia-new-road-rules-july-2026-ko"
+        category="도로법규"
+        title="2026년 7월 호주 신규 도로법규 총정리. 주별 변경사항"
+        readTime="5분"
+      />
 
       <hr style={AS.divider} />
 

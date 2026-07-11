@@ -282,6 +282,12 @@ export default function BuyingACarInAustraliaGuideContent() {
         title="Australia Has No Toll Booths. Here's What That Means."
         readTime="7 min read"
       />
+      <ArticleCard
+        href="/news/australia-new-road-rules-july-2026"
+        category="Road Rules"
+        title="New Road Rules July 2026. What Changed Across Australia"
+        readTime="5 min read"
+      />
 
       <hr style={AS.divider} />
 

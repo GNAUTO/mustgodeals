@@ -61,6 +61,7 @@ export default async function Page({ params }: Props) {
   if (!Content) notFound();
 
   const iso = toIsoDate(post.date);
+  const isoModified = post.dateModified ? toIsoDate(post.dateModified) : iso;
   const newsArticleSchema = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -68,7 +69,7 @@ export default async function Page({ params }: Props) {
     description: post.excerpt,
     image: post.image || LOGO,
     datePublished: iso,
-    dateModified: iso,
+    dateModified: isoModified,
     url: `${SITE}/news/${post.slug}`,
     author: {
       "@type": "Organization",

@@ -21,36 +21,46 @@ export async function GET(req: Request) {
   const alerts: AlertDetail[] = [];
 
   for (const listing of available) {
-    const url = listing.sourceUrl!;
+    const sourceUrl = listing.sourceUrl!;
     let reason: string | null = null;
 
     try {
-      const res = await fetch(url, {
+      const res = await fetch(sourceUrl, {
         method: "GET",
         headers: { "User-Agent": "MustGoDeals-Checker/1.0" },
         signal: AbortSignal.timeout(10_000),
       });
 
       const SOLD_PHRASES = [
+        // Generic phrases
         "this vehicle has been sold",
+        "this car has been sold",
         "vehicle sold",
         "no longer available",
-        "this car has been sold",
+        // alto.com.au and similar: JSON/data attributes
+        '"status":"sold"',
+        '"sold":true',
+        'data-status="sold"',
+        // rydekia.com.au: title prefix pattern
+        "<title>sold ",
       ];
 
       if (res.status === 404) {
-        reason = "HTTP 404 — page not found";
+        reason = "HTTP 404 page not found";
+      } else if (res.url !== sourceUrl) {
+        // Page redirected to a different URL — vehicle likely removed or sold
+        reason = `Redirected to ${res.url}`;
       } else if (res.ok) {
         const lower = (await res.text()).toLowerCase();
-        const matched = SOLD_PHRASES.find((p) => lower.includes(p));
-        if (matched) reason = `Page contains: "${matched}"`;
+        const matched = SOLD_PHRASES.find((p) => lower.includes(p.toLowerCase()));
+        if (matched) reason = `Page indicates sold: "${matched}"`;
       }
     } catch (err) {
       reason = `Fetch error: ${err instanceof Error ? err.message : String(err)}`;
     }
 
     if (reason) {
-      alerts.push({ slug: listing.slug, name: listing.name, reason, sourceUrl: url });
+      alerts.push({ slug: listing.slug, name: listing.name, reason, sourceUrl: sourceUrl });
     }
   }
 

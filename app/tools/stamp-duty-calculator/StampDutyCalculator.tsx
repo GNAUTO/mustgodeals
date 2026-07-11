@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   State,
   QldCylinders,
@@ -238,6 +239,17 @@ export default function StampDutyCalculator({ lang = "EN" }: Props) {
           </a>
         </div>
       )}
+
+      {/* Cross-link */}
+      <div style={{ marginTop: "20px", padding: "16px", background: "rgba(0,0,0,0.03)", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <span style={{ fontSize: "13px", color: "#888" }}>Also calculate rego costs</span>
+        <Link
+          href="/tools/rego-calculator"
+          style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", textDecoration: "none" }}
+        >
+          Rego Calculator →
+        </Link>
+      </div>
     </div>
   );
 }

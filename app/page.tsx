@@ -247,25 +247,51 @@ export default function Home() {
       {/* Tools banner */}
       <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", padding: "2rem 2rem" }}>
         <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
-          <Link
-            href={activeLang === "KO" ? "/tools/stamp-duty-calculator-ko" : "/tools/stamp-duty-calculator"}
-            style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", background: "white", border: "0.5px solid rgba(0,0,0,0.1)", borderLeft: "4px solid #CCDA47", borderRadius: "12px", padding: "20px 24px", textDecoration: "none" }}
-          >
-            <div>
-              <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em", marginBottom: "5px" }}>
-                {activeLang === "KO" ? "무료 도구" : "FREE TOOL"}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+            <h2 style={{ fontSize: "16px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+              {activeLang === "KO" ? "무료 도구" : "Free Tools"}
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+            <Link
+              href={activeLang === "KO" ? "/tools/stamp-duty-calculator-ko" : "/tools/stamp-duty-calculator"}
+              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", background: "white", border: "0.5px solid rgba(0,0,0,0.1)", borderLeft: "4px solid #CCDA47", borderRadius: "12px", padding: "20px 24px", textDecoration: "none" }}
+            >
+              <div>
+                <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em", marginBottom: "5px" }}>
+                  {activeLang === "KO" ? "스탬프 듀티" : "STAMP DUTY"}
+                </div>
+                <div style={{ fontSize: "17px", fontWeight: 700, color: "#1A1A1A", marginBottom: "4px" }}>
+                  {activeLang === "KO" ? "스탬프 듀티 계산기" : "Stamp Duty Calculator"}
+                </div>
+                <div style={{ fontSize: "13px", color: "#888" }}>
+                  {activeLang === "KO"
+                    ? "전 주 차량 구매세 즉시 계산"
+                    : "Instant estimate for all Australian states"}
+                </div>
               </div>
-              <div style={{ fontSize: "17px", fontWeight: 700, color: "#1A1A1A", marginBottom: "4px" }}>
-                {activeLang === "KO" ? "스탬프 듀티 계산기" : "Stamp Duty Calculator"}
+              <div style={{ fontSize: "24px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+            <Link
+              href="/tools/rego-calculator"
+              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", background: "white", border: "0.5px solid rgba(0,0,0,0.1)", borderLeft: "4px solid #CCDA47", borderRadius: "12px", padding: "20px 24px", textDecoration: "none" }}
+            >
+              <div>
+                <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em", marginBottom: "5px" }}>
+                  {activeLang === "KO" ? "레고" : "REGISTRATION"}
+                </div>
+                <div style={{ fontSize: "17px", fontWeight: 700, color: "#1A1A1A", marginBottom: "4px" }}>
+                  {activeLang === "KO" ? "레고 계산기" : "Rego Calculator"}
+                </div>
+                <div style={{ fontSize: "13px", color: "#888" }}>
+                  {activeLang === "KO"
+                    ? "전 주 연간 레고 비용 즉시 계산"
+                    : "Annual rego estimate for all Australian states"}
+                </div>
               </div>
-              <div style={{ fontSize: "13px", color: "#888" }}>
-                {activeLang === "KO"
-                  ? "NSW, VIC, QLD 등 전 주 차량 구매세를 즉시 계산"
-                  : "Instant stamp duty estimate for all Australian states"}
-              </div>
-            </div>
-            <div style={{ fontSize: "24px", color: "#CCDA47", flexShrink: 0 }}>→</div>
-          </Link>
+              <div style={{ fontSize: "24px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+            </Link>
+          </div>
         </div>
       </div>
 

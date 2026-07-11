@@ -372,6 +372,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "2027-land-rover-defender-australia-price",
+    title: "2027 Land Rover Defender Opens for Order in Australia as Vertex Joins the Lineup",
+    excerpt:
+      "Prices across the 2027 Defender range rise by up to $8,400, with the new Vertex flagship sitting at $181,000. Australia also keeps the 5.0L V8 and the 467kW Octa engine that Europe has already dropped.",
+    category: "NEWS",
+    date: "July 11, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/2027%20Land%20Rover%20Defender%20price/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
+    lang: "EN",
+  },
+  {
+    slug: "2027-land-rover-defender-australia-price-ko",
+    title: "2027 랜드로버 디펜더 호주 주문 개시, 버텍스 신설 및 최대 $8,400 가격 인상",
+    excerpt:
+      "2027년형 디펜더 가격이 최대 $8,400 올랐다. 신규 버텍스 트림이 최상위로 추가됐고, 호주는 유럽에서 사라진 5.0리터 V8과 467kW 옥타 엔진을 그대로 유지한다.",
+    category: "뉴스",
+    date: "2026년 7월 11일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/2027%20Land%20Rover%20Defender%20price/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
+    lang: "KO",
+  },
+  {
     slug: "gwm-tank-300-facelift-china-reveal-2026",
     title: "GWM Tank 300 Facelift Revealed with Roof LiDAR and 200km PHEV Range",
     excerpt:

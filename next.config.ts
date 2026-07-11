@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.mazda.com.au" },
       { protocol: "https", hostname: "www.mynrma.com.au" },
       { protocol: "https", hostname: "www.topgear.com" },
-      { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
   },
 };

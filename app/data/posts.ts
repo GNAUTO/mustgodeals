@@ -458,7 +458,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 11, 2026",
     author: "MustGoDeals Editorial",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BYD_Company%2C_Ltd._-_Logo.svg/320px-BYD_Company%2C_Ltd._-_Logo.svg.png",
+    image: "/images/news/BYD Offers Full Refunds/BYD Logo images.png",
     lang: "EN",
   },
   {
@@ -469,7 +469,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 11일",
     author: "MustGoDeals 편집팀",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BYD_Company%2C_Ltd._-_Logo.svg/320px-BYD_Company%2C_Ltd._-_Logo.svg.png",
+    image: "/images/news/BYD Offers Full Refunds/BYD Logo images.png",
     lang: "KO",
   },
   {

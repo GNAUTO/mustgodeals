@@ -19,12 +19,11 @@ export default function BydWrongModelYearAustraliaFullRefundContent() {
       {/* BYD logo */}
       <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "1.75rem 0 1.5rem", padding: "1rem 1.25rem", background: "#F8F8F4", borderRadius: "8px", border: "0.5px solid rgba(0,0,0,0.08)" }}>
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BYD_Company%2C_Ltd._-_Logo.svg/320px-BYD_Company%2C_Ltd._-_Logo.svg.png"
+          src="/images/news/BYD Offers Full Refunds/BYD Logo images.png"
           alt="BYD Company logo"
           width={120}
           height={48}
           style={{ objectFit: "contain", flexShrink: 0 }}
-          unoptimized
         />
         <p style={{ fontSize: "11px", color: "#888", margin: 0, lineHeight: 1.5 }}>
           Image: BYD Company Ltd logo, Wikimedia Commons,{" "}

@@ -234,6 +234,12 @@ export default function BuyingACarInAustraliaGuideKoContent() {
         title="월말 자동차 딜 총정리. 딜러가 절대 말 안해주는 비밀"
         readTime="8분"
       />
+      <ArticleCard
+        href="/blog/how-low-can-dealer-go-new-car-price-ko"
+        category="구매 가이드"
+        title="딜러가 신차 가격을 얼마나 내릴 수 있나. 업계 구조로 보는 진짜 답"
+        readTime="8분"
+      />
 
       <h2 style={AS.h2}>알아두면 좋은 도로 법규</h2>
 

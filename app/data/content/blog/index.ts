@@ -17,6 +17,8 @@ import CarStampDutyAustraliaExplainedKoContent from './car-stamp-duty-australia-
 import EndOfMonthCarDealsExplainedContent from './end-of-month-car-deals-explained';
 import EofyCarTaxBenefitsAustraliaContent from './eofy-car-tax-benefits-australia';
 import EofyCarTaxBenefitsAustraliaKoContent from './eofy-car-tax-benefits-australia-ko';
+import HowLowCanDealerGoNewCarPriceContent from './how-low-can-dealer-go-new-car-price';
+import HowLowCanDealerGoNewCarPriceKoContent from './how-low-can-dealer-go-new-car-price-ko';
 import HowToNegotiateCarPriceAustraliaContent from './how-to-negotiate-car-price-australia';
 import HowToNegotiateCarPriceAustraliaKoContent from './how-to-negotiate-car-price-australia-ko';
 import LuxuryCarTaxAustraliaContent from './luxury-car-tax-australia';
@@ -49,6 +51,8 @@ const MAP: Record<string, FC> = {
   'end-of-month-car-deals-explained': EndOfMonthCarDealsExplainedContent,
   'eofy-car-tax-benefits-australia': EofyCarTaxBenefitsAustraliaContent,
   'eofy-car-tax-benefits-australia-ko': EofyCarTaxBenefitsAustraliaKoContent,
+  'how-low-can-dealer-go-new-car-price': HowLowCanDealerGoNewCarPriceContent,
+  'how-low-can-dealer-go-new-car-price-ko': HowLowCanDealerGoNewCarPriceKoContent,
   'how-to-negotiate-car-price-australia': HowToNegotiateCarPriceAustraliaContent,
   'how-to-negotiate-car-price-australia-ko': HowToNegotiateCarPriceAustraliaKoContent,
   'luxury-car-tax-australia': LuxuryCarTaxAustraliaContent,

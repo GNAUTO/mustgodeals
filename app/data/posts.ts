@@ -28,6 +28,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "how-low-can-dealer-go-new-car-price",
+    title: "How Low Can a Dealer Go on a New Car Price in Australia",
+    excerpt:
+      "The honest answer has little to do with the sticker. Here is where the real room comes from, why timing matters more than persistence, and the questions that actually shift the conversation.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "July 11, 2026",
+    lang: "EN",
+    highlight: "Dealer pricing",
+    thumbSubtext: "how dealers price",
+    relatedSlugs: ["what-is-a-dealer-clearance-car-australia", "how-to-negotiate-car-price-australia", "best-time-to-buy-a-car-australia"],
+  },
+  {
+    slug: "how-low-can-dealer-go-new-car-price-ko",
+    title: "딜러가 신차 가격을 얼마나 내릴 수 있나. 업계 구조로 보는 진짜 답",
+    excerpt:
+      "스티커 가격을 깎는 것보다 딜러가 왜 움직일 수 있는지를 이해하는 것이 먼저다. 재고 금융비용, 제조사 보너스, 타이밍이 실제로 어떻게 작동하는지 업계 구조로 설명한다.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 7월 11일",
+    lang: "KO",
+    highlight: "딜러 가격",
+    thumbSubtext: "딜러 가격 구조",
+    relatedSlugs: ["what-is-a-dealer-clearance-car-australia-ko", "how-to-negotiate-car-price-australia-ko", "best-time-to-buy-a-car-australia-ko"],
+  },
+  {
     slug: "novated-lease-worth-it-australia",
     title: "Is a Novated Lease Worth It in Australia",
     excerpt:

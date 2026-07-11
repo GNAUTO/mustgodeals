@@ -246,6 +246,12 @@ export default function BuyingACarInAustraliaGuideContent() {
         title="End of Month Car Deals Explained. Secrets Dealers Won't Tell You"
         readTime="7 min read"
       />
+      <ArticleCard
+        href="/blog/how-low-can-dealer-go-new-car-price"
+        category="Buying Guide"
+        title="How Low Can a Dealer Go on a New Car Price in Australia"
+        readTime="8 min read"
+      />
 
       <h2 style={AS.h2}>Road Rules Worth Knowing Before You Drive</h2>
 

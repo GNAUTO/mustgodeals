@@ -7,7 +7,7 @@ import { JsonLd } from "../../components/JsonLd";
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return LISTINGS.map((l) => ({ slug: l.slug }));
+  return LISTINGS.filter((l) => l.status !== "sold").map((l) => ({ slug: l.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ListingPage({ params }: Props) {
   const { slug } = await params;
   const listing = LISTINGS.find((l) => l.slug === slug);
-  if (!listing) return notFound();
+  if (!listing || listing.status === "sold") return notFound();
 
   const year = listing.specs.find((s) => s.label === "Year")?.value ?? listing.name.split(" ")[0];
   const brand = listing.name.split(" ")[1] ?? "";

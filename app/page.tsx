@@ -96,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className="demo-grid">
-            {LISTINGS.map((listing) => {
+            {LISTINGS.filter((l) => l.status !== "sold").map((listing) => {
               const engSpec = listing.specs.find((s) => s.label === "Engine")?.value ?? "";
               const fuelLabel = engSpec.includes("Electric") ? "EV" : engSpec.includes("Hybrid") ? "Hybrid" : "Petrol";
               const fmtP = (n: number) => `$${n.toLocaleString("en-AU")}`;
@@ -118,27 +118,6 @@ export default function Home() {
                       <div style={{ background: "#E4E4E4", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
                       <div style={{ background: "#D8D8D8", height: "13px", borderRadius: "4px", width: "42%", marginBottom: "10px" }} />
                       <div style={{ width: "100%", padding: "8px", background: "#E0E0E0", color: "#AAAAAA", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", textAlign: "center" }}>Coming soon</div>
-                    </div>
-                  </div>
-                );
-              }
-
-              if (listing.status === "sold") {
-                return (
-                  <div key={listing.slug} style={{ background: "#F3F3F3", borderRadius: "8px", overflow: "hidden", pointerEvents: "none", cursor: "default", opacity: 0.4, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-                    <div style={{ height: "120px", background: "#E8E8E8", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                      <svg width="64" height="38" viewBox="0 0 64 38" fill="none" style={{ color: "#D0D0D0" }}>
-                        <path d="M8 24 L18 10 C19.5 8 21.5 7 23.5 7 L40.5 7 C42.5 7 44.5 8 46 10 L56 24 Z" fill="currentColor"/>
-                        <rect x="5" y="24" width="54" height="9" rx="3" fill="currentColor"/>
-                        <circle cx="16" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
-                        <circle cx="48" cy="33" r="5" fill="#E8E8E8" stroke="currentColor" strokeWidth="2"/>
-                      </svg>
-                      <div style={{ position: "absolute", top: "10px", left: "10px", background: "#FEE2E2", color: "#DC2626", border: "0.5px solid #FECACA", fontSize: "9px", fontWeight: 700, letterSpacing: "0.8px", padding: "3px 8px", borderRadius: "4px" }}>SOLD</div>
-                    </div>
-                    <div style={{ padding: "0.9rem 0.9rem 1rem" }}>
-                      <div style={{ background: "#DCDCDC", height: "10px", borderRadius: "4px", width: "70%", marginBottom: "8px" }} />
-                      <div style={{ background: "#E4E4E4", height: "8px", borderRadius: "4px", width: "50%", marginBottom: "12px" }} />
-                      <button style={{ width: "100%", padding: "8px", background: "#E8E8E8", color: "#AAAAAA", border: "none", borderRadius: "6px", fontSize: "11px", fontWeight: 500, letterSpacing: "0.3px", cursor: "default" }}>No longer available</button>
                     </div>
                   </div>
                 );

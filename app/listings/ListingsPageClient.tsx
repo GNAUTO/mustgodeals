@@ -10,7 +10,6 @@ const FILTERS = ["All", "Audi", "Land Rover", "Under $80k", "EV"];
 
 const PLACEHOLDER_CARDS = [
   { status: "coming_soon" as const },
-  { status: "sold" as const },
 ];
 
 export default function ListingsPageClient() {
@@ -59,7 +58,7 @@ export default function ListingsPageClient() {
       <div style={{ flex: 1 }}>
         <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "2rem 2rem 3rem" }}>
           <div className="listings-grid">
-            {LISTINGS.map((listing) => (
+            {LISTINGS.filter((l) => l.status !== "sold").map((listing) => (
               <ListingCard key={listing.slug} listing={listing} />
             ))}
             {PLACEHOLDER_CARDS.map((p, i) => (

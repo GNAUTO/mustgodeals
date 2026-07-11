@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import BydWrongModelYearAustraliaFullRefundContent from './byd-wrong-model-year-australia-full-refund';
+import BydWrongModelYearAustraliaFullRefundKoContent from './byd-wrong-model-year-australia-full-refund-ko';
 import LandRoverDefender2027AustraliaPriceContent from './2027-land-rover-defender-australia-price';
 import LandRoverDefender2027AustraliaPriceKoContent from './2027-land-rover-defender-australia-price-ko';
 import XpengMonaL03Australia2027Content from './xpeng-mona-l03-australia-2027';
@@ -64,6 +66,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'byd-wrong-model-year-australia-full-refund': BydWrongModelYearAustraliaFullRefundContent,
+  'byd-wrong-model-year-australia-full-refund-ko': BydWrongModelYearAustraliaFullRefundKoContent,
   '2027-land-rover-defender-australia-price': LandRoverDefender2027AustraliaPriceContent,
   '2027-land-rover-defender-australia-price-ko': LandRoverDefender2027AustraliaPriceKoContent,
   'gwm-tank-300-facelift-china-reveal-2026': GwmTank300FaceliftChinaReveal2026Content,

@@ -451,6 +451,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "byd-wrong-model-year-australia-full-refund",
+    title: "BYD Offers Full Refunds After Selling Customers Cars From Wrong Model Year",
+    excerpt:
+      "More than 1,200 Australian buyers contracted for 2026 model year BYD vehicles but received 2025 models instead. After ABC News reporting, BYD dropped its initial $1,100 offer and committed to full refunds for all 1,265 affected customers.",
+    category: "NEWS",
+    date: "July 11, 2026",
+    author: "MustGoDeals Editorial",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BYD_Company%2C_Ltd._-_Logo.svg/320px-BYD_Company%2C_Ltd._-_Logo.svg.png",
+    lang: "EN",
+  },
+  {
+    slug: "byd-wrong-model-year-australia-full-refund-ko",
+    title: "BYD, 잘못된 연식 차량 판매 후 1265명 전원 전액 환불 결정",
+    excerpt:
+      "2026년형으로 계약했으나 2025년형을 인도받은 호주 고객 1,265명에게 BYD가 전액 환불을 결정했다. ABC 뉴스 단독 취재 이후 기존 1,100달러 보상안을 철회하고 전액 환불로 전환한 것이다.",
+    category: "뉴스",
+    date: "2026년 7월 11일",
+    author: "MustGoDeals 편집팀",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BYD_Company%2C_Ltd._-_Logo.svg/320px-BYD_Company%2C_Ltd._-_Logo.svg.png",
+    lang: "KO",
+  },
+  {
     slug: "2027-land-rover-defender-australia-price",
     title: "2027 Land Rover Defender Opens for Order in Australia as Vertex Joins the Lineup",
     excerpt:

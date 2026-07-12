@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import BlogThumb from "./components/posts/BlogThumb";
+import { BlogGridCard } from "./components/posts/BlogCard";
 import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
 import { JsonLd } from "./components/JsonLd";
@@ -191,55 +191,31 @@ export default function Home() {
       </div>
 
       {/* Blog section */}
-      <div style={{ background: "#FAFAFA", padding: "60px 0", width: "100%", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+      <div style={{ background: "#FFFFFF", padding: "60px 0", width: "100%", borderTop: "1px solid #EDECE5" }}>
         <div className="blog-section-inner">
 
           {/* Section header */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Guides &amp; Insights</h2>
-            <Link href="/blog" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>View all articles →</Link>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+            <h2 style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A", margin: 0 }}>
+              {activeLang === "KO" ? "가이드" : "Guides"}
+            </h2>
+            <Link href="/blog" style={{ fontSize: "13px", color: "#1A1A1A", textDecoration: "none", fontWeight: 500 }}>
+              {activeLang === "KO" ? "전체 보기" : "View all"}
+            </Link>
           </div>
 
           {filtered.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#AAAAAA", fontSize: "15px" }}>
+            <div style={{ textAlign: "center", padding: "4rem 2rem", color: "#B4B2A9", fontSize: "15px" }}>
               {currentLang.comingSoon}
             </div>
           ) : (
-            <>
-              {/* Hero pair — top 2 posts */}
-              <div className="blog-hero-pair">
-                {filtered.slice(0, 2).map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                    <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} subtext={post.thumbSubtext} size="featured" />
-                    <div style={{ marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00" }}>{post.category}</span>
-                      {post.pinned && (
-                        <span style={{ fontSize: "10px", fontWeight: 500, letterSpacing: "0.5px", color: "#CCDA47", background: "rgba(204,218,71,0.15)", border: "1px solid #CCDA47", padding: "2px 8px", borderRadius: "4px" }}>FEATURED</span>
-                      )}
-                    </div>
-                    <h2 style={{ fontSize: "19px", fontWeight: 700, color: "#111", lineHeight: 1.25, letterSpacing: "-0.3px", margin: "0 0 8px" }}>{post.title}</h2>
-                    <p style={{ fontSize: "12px", color: "#6B6B6B", lineHeight: 1.6, margin: "0 0 10px" }}>{post.excerpt}</p>
-                    <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
-                  </Link>
-                ))}
-              </div>
-
-              {/* Quad grid — posts 3–6 */}
-              {filtered.slice(2, 6).length > 0 && (
-                <div className="blog-quad-grid">
-                  {filtered.slice(2, 6).map((post) => (
-                    <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", display: "block" }}>
-                      <BlogThumb category={post.category} highlight={post.highlight} slug={post.slug} size="grid" />
-                      <div style={{ marginBottom: "4px" }}>
-                        <span style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" as const, color: "#7a8a00" }}>{post.category}</span>
-                      </div>
-                      <h3 style={{ fontSize: "13px", fontWeight: 700, color: "#1A1A1A", lineHeight: 1.35, margin: "0 0 6px" }}>{post.title}</h3>
-                      <span style={{ fontSize: "11px", color: "#AAAAAA" }}>{post.date}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}</span>
-                    </Link>
-                  ))}
+            <div className="blog-home-grid">
+              {filtered.slice(0, 4).map((post, i) => (
+                <div key={post.slug} className={i === 3 ? "blog-home-card-4" : ""}>
+                  <BlogGridCard post={post} index={i} />
                 </div>
-              )}
-            </>
+              ))}
+            </div>
           )}
         </div>
       </div>

@@ -32,6 +32,8 @@ import NovatedLeaseVsCarLoanAustraliaKoContent from './novated-lease-vs-car-loan
 import WhyBuyDemoCarAustraliaContent from './why-buy-demo-car-australia';
 import WhyBuyDemoCarAustraliaKoContent from './why-buy-demo-car-australia-ko';
 import WolmalJadongchaDilJongniContent from './wolmal-jadongcha-dil-jongni';
+import DemoCarWarrantyStartAustraliaContent from './demo-car-warranty-start-australia';
+import DemoCarWarrantyStartAustraliaKoContent from './demo-car-warranty-start-australia-ko';
 
 const MAP: Record<string, FC> = {
   'buying-a-car-in-australia-guide': BuyingACarInAustraliaGuideContent,
@@ -66,6 +68,8 @@ const MAP: Record<string, FC> = {
   'why-buy-demo-car-australia': WhyBuyDemoCarAustraliaContent,
   'why-buy-demo-car-australia-ko': WhyBuyDemoCarAustraliaKoContent,
   'wolmal-jadongcha-dil-jongni': WolmalJadongchaDilJongniContent,
+  'demo-car-warranty-start-australia': DemoCarWarrantyStartAustraliaContent,
+  'demo-car-warranty-start-australia-ko': DemoCarWarrantyStartAustraliaKoContent,
 };
 
 export function getBlogContent(slug: string): FC | null {

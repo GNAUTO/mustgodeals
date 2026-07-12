@@ -29,6 +29,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "demo-car-warranty-start-australia",
+    title: "When Does a Demo Car Warranty Actually Start in Australia",
+    excerpt:
+      "The warranty clock on a demo car starts the day the dealer registered it, not the day you buy it. A six month old demo means six months of coverage already gone. Here is what to confirm before you sign.",
+    category: "Buying Guide",
+    readTime: "8 min read",
+    date: "July 12, 2026",
+    lang: "EN",
+    highlight: "Day one?",
+    thumbSubtext: "warranty explained",
+    relatedSlugs: ["why-buy-demo-car-australia", "how-low-can-dealer-go-new-car-price", "what-is-a-dealer-clearance-car-australia"],
+  },
+  {
+    slug: "demo-car-warranty-start-australia-ko",
+    title: "호주 데모카 워런티는 정확히 언제부터 시작될까",
+    excerpt:
+      "데모카 워런티는 구매일이 아닌 딜러가 처음 등록한 날부터 시작된다. 6개월 된 데모카를 사면 워런티 6개월이 이미 소모된 상태다. 계약 전에 반드시 확인해야 할 것들을 정리했다.",
+    category: "구매 가이드",
+    readTime: "8분",
+    date: "2026년 7월 12일",
+    lang: "KO",
+    highlight: "Day one?",
+    thumbSubtext: "워런티 기산일",
+    relatedSlugs: ["why-buy-demo-car-australia-ko", "how-low-can-dealer-go-new-car-price-ko", "what-is-a-dealer-clearance-car-australia-ko"],
+  },
+  {
     slug: "how-low-can-dealer-go-new-car-price",
     title: "How Low Can a Dealer Go on a New Car Price in Australia",
     excerpt:

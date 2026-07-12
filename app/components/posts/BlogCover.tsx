@@ -10,7 +10,7 @@ const TEXT_ON_WARM = "#1A1A1A";
 const TEXT_ON_DARK = "#F5F5F0";
 
 export function coverIsDark(index: number): boolean {
-  return index % 3 === 2;
+  return index % 4 === 1;
 }
 
 function isPointChar(text: string): boolean {

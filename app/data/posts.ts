@@ -477,6 +477,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "zeekr-9x-five-seat-australia-launch-2027",
+    title: "2027 Zeekr 9X Gains a Five Seat Variant as Its Australian Launch Nears",
+    excerpt:
+      "Zeekr has added a five-seat configuration to the 9X ahead of its Australian launch. The new layout replaces the second-row bench with captain chairs and a floor console, while the dual-motor AWD powertrain remains at 544 kW and 710 Nm.",
+    category: "NEWS",
+    date: "July 13, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/zeekr_9x/zeekr_9x_1.avif",
+    lang: "EN",
+  },
+  {
+    slug: "zeekr-9x-five-seat-australia-launch-2027-ko",
+    title: "2027 지커 9X에 5인승이 추가됐다. 호주 출시도 가까워지는 중",
+    excerpt:
+      "지커가 9X에 5인승 구성을 추가했다. 2열 벤치 시트를 캡틴 체어와 플로어 콘솔로 대체한 구성이며, 듀얼 모터 AWD 파워트레인은 544 kW, 710 Nm 그대로다.",
+    category: "뉴스",
+    date: "2026년 7월 13일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/zeekr_9x/zeekr_9x_1.avif",
+    lang: "KO",
+  },
+  {
     slug: "genesis-gv60-magma-australia-price-130000",
     title: "Genesis GV60 Magma Lands in Australia at $130,000 Before On Road Costs",
     excerpt:
@@ -528,7 +550,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 11, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/Freelander/e59bbee78987-43-e1783590439397-800x452.png",
+    image: "/images/news/freelander_8/freelander_8_1.png",
     lang: "EN",
   },
   {
@@ -539,7 +561,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 11일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/Freelander/e59bbee78987-43-e1783590439397-800x452.png",
+    image: "/images/news/freelander_8/freelander_8_1.png",
     lang: "KO",
   },
   {
@@ -550,7 +572,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 11, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/BYD Offers Full Refunds/BYD Logo images.png",
+    image: "/images/news/byd_full_refunds/byd_logo.png",
     lang: "EN",
   },
   {
@@ -561,7 +583,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 11일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/BYD Offers Full Refunds/BYD Logo images.png",
+    image: "/images/news/byd_full_refunds/byd_logo.png",
     lang: "KO",
   },
   {
@@ -572,7 +594,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 11, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/2027%20Land%20Rover%20Defender%20price/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
+    image: "/images/news/land_rover_defender_2027/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
     lang: "EN",
   },
   {
@@ -583,7 +605,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 11일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/2027%20Land%20Rover%20Defender%20price/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
+    image: "/images/news/land_rover_defender_2027/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif",
     lang: "KO",
   },
   {

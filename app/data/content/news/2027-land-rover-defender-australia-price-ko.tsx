@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const BASE = "/images/news/2027%20Land%20Rover%20Defender%20price";
+const BASE = "/images/news/land_rover_defender_2027";
 
 const IMGS = [
   `${BASE}/10fa9603-bc1f-5dee-a235-f7e7cb650000.avif`,

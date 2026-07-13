@@ -18,7 +18,7 @@ export default function BydWrongModelYearAustraliaFullRefundKoContent() {
       {/* BYD logo */}
       <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "1.75rem 0 1.5rem", padding: "1rem 1.25rem", background: "#F8F8F4", borderRadius: "8px", border: "0.5px solid rgba(0,0,0,0.08)" }}>
         <Image
-          src="/images/news/BYD Offers Full Refunds/BYD Logo images.png"
+          src="/images/news/byd_full_refunds/byd_logo.png"
           alt="BYD 회사 로고"
           width={120}
           height={48}

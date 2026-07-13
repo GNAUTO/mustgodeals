@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const IMG = "/images/news/Freelander/";
+const IMG = "/images/news/freelander_8/";
 
 export default function Freelander8CockpitPanoramicDisplay8kKoContent() {
   return (
@@ -16,7 +16,7 @@ export default function Freelander8CockpitPanoramicDisplay8kKoContent() {
       {/* 외관 히어로 */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-43-e1783590439397-800x452.png`}
+          src={`${IMG}freelander_8_1.png`}
           alt="야간 배경 앞에 서 있는 딥 퍼플 외장의 Freelander 8 외관"
           width={800}
           height={452}
@@ -39,7 +39,7 @@ export default function Freelander8CockpitPanoramicDisplay8kKoContent() {
       {/* 계기판 실제 데이터 표시 */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-45-edited.webp`}
+          src={`${IMG}freelander_8_3.webp`}
           alt="타이어 공기압과 주행 정보를 표시 중인 Freelander 8 파노라마 계기판 전경"
           width={1100}
           height={515}
@@ -51,7 +51,7 @@ export default function Freelander8CockpitPanoramicDisplay8kKoContent() {
       {/* 스티어링 휠 너머 콕핏 */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-44-edited.webp`}
+          src={`${IMG}freelander_8_2.webp`}
           alt="저조도 환경에서 스티어링 휠 너머로 보이는 Freelander 8 콕핏과 파노라마 디스플레이"
           width={1100}
           height={619}
@@ -91,7 +91,7 @@ export default function Freelander8CockpitPanoramicDisplay8kKoContent() {
       {/* 디스플레이 시계 클로즈업 */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-46-edited-768x432.webp`}
+          src={`${IMG}freelander_8_4.webp`}
           alt="굵은 폰트로 09시 07분을 표시 중인 Freelander 8 파노라마 디스플레이 우측 클로즈업"
           width={768}
           height={432}

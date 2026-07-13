@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const IMG = "/images/news/Freelander/";
+const IMG = "/images/news/freelander_8/";
 
 export default function Freelander8CockpitPanoramicDisplay8kContent() {
   return (
@@ -18,7 +18,7 @@ export default function Freelander8CockpitPanoramicDisplay8kContent() {
       {/* Exterior hero */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-43-e1783590439397-800x452.png`}
+          src={`${IMG}freelander_8_1.png`}
           alt="Freelander 8 exterior in deep purple paint under a night sky"
           width={800}
           height={452}
@@ -43,7 +43,7 @@ export default function Freelander8CockpitPanoramicDisplay8kContent() {
       {/* Instrument cluster showing vehicle data */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-45-edited.webp`}
+          src={`${IMG}freelander_8_3.webp`}
           alt="Freelander 8 panoramic instrument cluster showing tyre pressure and vehicle data"
           width={1100}
           height={515}
@@ -55,7 +55,7 @@ export default function Freelander8CockpitPanoramicDisplay8kContent() {
       {/* Cockpit teaser through steering wheel */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-44-edited.webp`}
+          src={`${IMG}freelander_8_2.webp`}
           alt="Freelander 8 cockpit view through steering wheel showing panoramic display in low light"
           width={1100}
           height={619}
@@ -99,7 +99,7 @@ export default function Freelander8CockpitPanoramicDisplay8kContent() {
       {/* Display clock closeup */}
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}e59bbee78987-46-edited-768x432.webp`}
+          src={`${IMG}freelander_8_4.webp`}
           alt="Freelander 8 panoramic display right section showing digital clock in bold font"
           width={768}
           height={432}

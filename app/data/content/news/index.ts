@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import Zeekr9xFiveSeatAustraliaLaunch2027Content from './zeekr-9x-five-seat-australia-launch-2027';
+import Zeekr9xFiveSeatAustraliaLaunch2027KoContent from './zeekr-9x-five-seat-australia-launch-2027-ko';
 import GenesisGv60MagmaAustraliaPrice130000Content from './genesis-gv60-magma-australia-price-130000';
 import GenesisGv60MagmaAustraliaPrice130000KoContent from './genesis-gv60-magma-australia-price-130000-ko';
 import FerrariLuceFirstElectricCarFiveSeatsContent from './ferrari-luce-first-electric-car-five-seats';
@@ -72,6 +74,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'zeekr-9x-five-seat-australia-launch-2027': Zeekr9xFiveSeatAustraliaLaunch2027Content,
+  'zeekr-9x-five-seat-australia-launch-2027-ko': Zeekr9xFiveSeatAustraliaLaunch2027KoContent,
   'genesis-gv60-magma-australia-price-130000': GenesisGv60MagmaAustraliaPrice130000Content,
   'genesis-gv60-magma-australia-price-130000-ko': GenesisGv60MagmaAustraliaPrice130000KoContent,
   'ferrari-luce-first-electric-car-five-seats': FerrariLuceFirstElectricCarFiveSeatsContent,

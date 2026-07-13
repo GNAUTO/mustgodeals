@@ -280,7 +280,7 @@ export const LISTINGS: Listing[] = [
 
   {
     slug: "2025-audi-sq5-edition-one",
-    status: "available",
+    status: "sold",
     badge: "DEMO",
     name: "2025 Audi SQ5 Edition One",
     subtitle: "3.0L Turbo V6 · quattro ultra AWD · S tronic",

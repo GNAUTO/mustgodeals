@@ -23,16 +23,28 @@ function getPageNumbers(current: number, total: number): (number | "...")[] {
 }
 
 function MagCard({ item, featured }: { item: NewsItem; featured?: boolean }) {
+  const [imgFailed, setImgFailed] = useState(false);
   return (
     <Link
       href={`/news/${item.slug}`}
       className={`news-mag-card${featured ? " news-mag-card--featured" : ""}`}
+      style={{ background: "#EDECE5" }}
     >
-      <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
+      {!imgFailed && (
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          style={{ objectFit: "cover" }}
+          onError={() => setImgFailed(true)}
+        />
+      )}
 
       <div style={{
         position: "absolute", inset: 0,
-        background: "linear-gradient(transparent 45%, rgba(0,0,0,0.82))",
+        background: imgFailed
+          ? "none"
+          : "linear-gradient(transparent 45%, rgba(0,0,0,0.82))",
         pointerEvents: "none",
       }} />
 
@@ -44,14 +56,25 @@ function MagCard({ item, featured }: { item: NewsItem; featured?: boolean }) {
         {item.category}
       </div>
 
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
-        <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>
-          {item.date}
+      {imgFailed ? (
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "8px" }}>
+          <div style={{ fontSize: "10px", fontWeight: 700, color: "#8A9922", letterSpacing: "0.8px" }}>
+            {item.category}
+          </div>
+          <div style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.4, textAlign: "center", padding: "0 16px" }}>
+            {item.title}
+          </div>
         </div>
-        <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>
-          {item.title}
+      ) : (
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
+          <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>
+            {item.date}
+          </div>
+          <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>
+            {item.title}
+          </div>
         </div>
-      </div>
+      )}
     </Link>
   );
 }

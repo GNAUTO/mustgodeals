@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const IMG = "/images/news/The Luce is not an act of heresy/";
+const IMG = "/images/news/ferrari_luce/";
 
 export default function FerrariLuceFirstElectricCarFiveSeatsContent() {
   return (
@@ -14,7 +14,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce.jpg`}
+          src={`${IMG}ferrari_luce_1.jpg`}
           alt="Ferrari Luce exterior in red, front three quarter view"
           width={1784}
           height={1004}
@@ -44,7 +44,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce (5).jpg`}
+          src={`${IMG}ferrari_luce_2.jpg`}
           alt="Ferrari Luce side and rear profile"
           width={1784}
           height={1004}
@@ -87,7 +87,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce (7).webp`}
+          src={`${IMG}ferrari_luce_3.webp`}
           alt="Ferrari Luce interior showing dashboard and steering wheel"
           width={892}
           height={502}

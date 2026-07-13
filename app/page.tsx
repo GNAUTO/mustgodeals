@@ -10,6 +10,46 @@ import { BLOG_POSTS, NEWS_ITEMS } from "./data/posts";
 import { LISTINGS } from "./data/listings";
 import { JsonLd } from "./components/JsonLd";
 
+import type { NewsItem } from "./data/posts";
+
+function HomeNewsCard({ item }: { item: NewsItem }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  return (
+    <Link href={`/news/${item.slug}`} className="news-mag-card" style={{ background: "#EDECE5" }}>
+      {!imgFailed && (
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          style={{ objectFit: "cover" }}
+          onError={() => setImgFailed(true)}
+        />
+      )}
+      <div style={{
+        position: "absolute", inset: 0,
+        background: imgFailed ? "none" : "linear-gradient(transparent 45%, rgba(0,0,0,0.82))",
+        pointerEvents: "none",
+      }} />
+      {imgFailed ? (
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "8px" }}>
+          <div style={{ fontSize: "10px", fontWeight: 700, color: "#8A9922", letterSpacing: "0.8px" }}>{item.category}</div>
+          <div style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.4, textAlign: "center", padding: "0 16px" }}>{item.title}</div>
+        </div>
+      ) : (
+        <>
+          <div style={{ position: "absolute", top: "16px", left: "16px", fontSize: "10px", fontWeight: 700, color: "#CCDA47", letterSpacing: "0.8px" }}>
+            {item.category}
+          </div>
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
+            <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>{item.date}</div>
+            <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>{item.title}</div>
+          </div>
+        </>
+      )}
+    </Link>
+  );
+}
+
 const ORG_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -171,19 +211,7 @@ export default function Home() {
           ) : (
             <div className="news-mag-grid">
               {filteredNews.slice(0, 4).map((item) => (
-                <Link key={item.slug} href={`/news/${item.slug}`} className="news-mag-card">
-                  <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} />
-                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(transparent 45%, rgba(0,0,0,0.82))", pointerEvents: "none" }} />
-                  <div style={{ position: "absolute", top: "16px", left: "16px", fontSize: "10px", fontWeight: 700, color: "#CCDA47", letterSpacing: "0.8px" }}>
-                    {item.category}
-                  </div>
-                  <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
-                    <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>{item.date}</div>
-                    <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>
-                      {item.title}
-                    </div>
-                  </div>
-                </Link>
+                <HomeNewsCard key={item.slug} item={item} />
               ))}
             </div>
           )}

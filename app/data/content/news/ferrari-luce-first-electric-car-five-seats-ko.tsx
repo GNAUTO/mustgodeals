@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const IMG = "/images/news/The Luce is not an act of heresy/";
+const IMG = "/images/news/ferrari_luce/";
 
 export default function FerrariLuceFirstElectricCarFiveSeatsKoContent() {
   return (
@@ -14,7 +14,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsKoContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce.jpg`}
+          src={`${IMG}ferrari_luce_1.jpg`}
           alt="페라리 루체 외관, 레드 컬러 전면 3/4 앵글"
           width={1784}
           height={1004}
@@ -42,7 +42,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsKoContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce (5).jpg`}
+          src={`${IMG}ferrari_luce_2.jpg`}
           alt="페라리 루체 측면 및 후면 프로파일"
           width={1784}
           height={1004}
@@ -83,7 +83,7 @@ export default function FerrariLuceFirstElectricCarFiveSeatsKoContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}Ferrari Luce (7).webp`}
+          src={`${IMG}ferrari_luce_3.webp`}
           alt="페라리 루체 실내, 대시보드와 스티어링휠"
           width={892}
           height={502}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
-const IMG = "/images/news/Genesis GV60 Magma price/";
+const IMG = "/images/news/genesis_gv60_magma/";
 
 export default function GenesisGv60MagmaAustraliaPrice130000Content() {
   return (
@@ -15,7 +15,7 @@ export default function GenesisGv60MagmaAustraliaPrice130000Content() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}2c8e99eb-eb87-5c68-b28b-2e4071550000.avif`}
+          src={`${IMG}gv60_magma_1.avif`}
           alt="Genesis GV60 Magma in Magma Orange exterior, front three quarter view"
           width={1920}
           height={1080}
@@ -58,7 +58,7 @@ export default function GenesisGv60MagmaAustraliaPrice130000Content() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}30d5b285-1abe-5280-bdf8-d64f2f750000.avif`}
+          src={`${IMG}gv60_magma_2.avif`}
           alt="Genesis GV60 Magma rear view showing spoiler and diffuser"
           width={1920}
           height={1080}
@@ -92,7 +92,7 @@ export default function GenesisGv60MagmaAustraliaPrice130000Content() {
 
       <div style={AS.imgWrap}>
         <Image
-          src={`${IMG}349c16f6-fafe-566e-8e63-1b64c1650000.avif`}
+          src={`${IMG}gv60_magma_3.avif`}
           alt="Genesis GV60 Magma interior showing OLED display and sport seats"
           width={1920}
           height={1080}

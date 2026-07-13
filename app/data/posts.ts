@@ -484,7 +484,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 13, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/Genesis%20GV60%20Magma%20price/2c8e99eb-eb87-5c68-b28b-2e4071550000.avif",
+    image: "/images/news/genesis_gv60_magma/gv60_magma_1.avif",
     lang: "EN",
   },
   {
@@ -495,7 +495,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 13일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/Genesis%20GV60%20Magma%20price/2c8e99eb-eb87-5c68-b28b-2e4071550000.avif",
+    image: "/images/news/genesis_gv60_magma/gv60_magma_1.avif",
     lang: "KO",
   },
   {
@@ -506,7 +506,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 13, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/The%20Luce%20is%20not%20an%20act%20of%20heresy/Ferrari%20Luce.jpg",
+    image: "/images/news/ferrari_luce/ferrari_luce_1.jpg",
     lang: "EN",
   },
   {
@@ -517,7 +517,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 13일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/The%20Luce%20is%20not%20an%20act%20of%20heresy/Ferrari%20Luce.jpg",
+    image: "/images/news/ferrari_luce/ferrari_luce_1.jpg",
     lang: "KO",
   },
   {

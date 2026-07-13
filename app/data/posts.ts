@@ -477,6 +477,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "ferrari-luce-first-electric-car-five-seats",
+    title: "Ferrari Luce Is the Brand's First Electric Car and It Has Five Seats",
+    excerpt:
+      "Ferrari has revealed the Luce, its first fully electric car, built as a five seat hatchback rather than a midship supercar. LoveFrom, the studio led by Jony Ive and Marc Newson, designed the exterior and interior. Peak output is 1,036 horsepower from four motors and a 122 kWh battery.",
+    category: "NEWS",
+    date: "July 13, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/The Luce is not an act of heresy/Ferrari Luce.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "ferrari-luce-first-electric-car-five-seats-ko",
+    title: "페라리 루체가 공개됐다. 브랜드 첫 전기차이자 5인승",
+    excerpt:
+      "페라리가 첫 완전 전기차 루체를 공개했다. 미드십 슈퍼카 대신 5인승 해치백 형태를 선택했으며, 조니 아이브와 마크 뉴슨의 스튜디오 러브프롬이 내외장을 맡았다. 122kWh 배터리와 4모터 구성으로 합산 1,036마력을 낸다.",
+    category: "뉴스",
+    date: "2026년 7월 13일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/The Luce is not an act of heresy/Ferrari Luce.jpg",
+    lang: "KO",
+  },
+  {
     slug: "freelander-8-cockpit-panoramic-display-8k",
     title: "Freelander 8 Cockpit Revealed With 46.3 Inch 8K Panoramic Display",
     excerpt:

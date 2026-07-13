@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import FerrariLuceFirstElectricCarFiveSeatsContent from './ferrari-luce-first-electric-car-five-seats';
+import FerrariLuceFirstElectricCarFiveSeatsKoContent from './ferrari-luce-first-electric-car-five-seats-ko';
 import Freelander8CockpitPanoramicDisplay8kContent from './freelander-8-cockpit-panoramic-display-8k';
 import Freelander8CockpitPanoramicDisplay8kKoContent from './freelander-8-cockpit-panoramic-display-8k-ko';
 import BydWrongModelYearAustraliaFullRefundContent from './byd-wrong-model-year-australia-full-refund';
@@ -68,6 +70,8 @@ import SkodaPeaq2027AustraliaContent from './skoda-peaq-2027-australia';
 import SkodaPeaq2027AustraliaKoContent from './skoda-peaq-2027-australia-ko';
 
 const MAP: Record<string, FC> = {
+  'ferrari-luce-first-electric-car-five-seats': FerrariLuceFirstElectricCarFiveSeatsContent,
+  'ferrari-luce-first-electric-car-five-seats-ko': FerrariLuceFirstElectricCarFiveSeatsKoContent,
   'freelander-8-cockpit-panoramic-display-8k': Freelander8CockpitPanoramicDisplay8kContent,
   'freelander-8-cockpit-panoramic-display-8k-ko': Freelander8CockpitPanoramicDisplay8kKoContent,
   'byd-wrong-model-year-australia-full-refund': BydWrongModelYearAustraliaFullRefundContent,

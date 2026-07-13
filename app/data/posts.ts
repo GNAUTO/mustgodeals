@@ -477,6 +477,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "genesis-gv60-magma-australia-price-130000",
+    title: "Genesis GV60 Magma Lands in Australia at $130,000 Before On Road Costs",
+    excerpt:
+      "Genesis has launched the GV60 Magma in Australia at $130,000 before on-road costs. The first Magma-badged model produces 478 kW and 790 Nm in boost mode, reaches 100 km/h in 3.4 seconds, and costs $15,000 more than the Hyundai Ioniq 5 N it shares technology with.",
+    category: "NEWS",
+    date: "July 13, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/Genesis GV60 Magma price/2c8e99eb-eb87-5c68-b28b-2e4071550000.avif",
+    lang: "EN",
+  },
+  {
+    slug: "genesis-gv60-magma-australia-price-130000-ko",
+    title: "제네시스 GV60 마그마 호주 출시. 온로드 비용 제외 13만 달러",
+    excerpt:
+      "제네시스가 첫 마그마 모델인 GV60 Magma를 호주에 출시했다. 온로드 비용 제외 13만 달러이며, 부스트 모드에서 478 kW와 790 Nm을 발휘하고 0에서 100 km/h까지 3.4초를 주장한다. 기술을 공유하는 현대 Ioniq 5 N보다 15,000달러 높다.",
+    category: "뉴스",
+    date: "2026년 7월 13일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/Genesis GV60 Magma price/2c8e99eb-eb87-5c68-b28b-2e4071550000.avif",
+    lang: "KO",
+  },
+  {
     slug: "ferrari-luce-first-electric-car-five-seats",
     title: "Ferrari Luce Is the Brand's First Electric Car and It Has Five Seats",
     excerpt:

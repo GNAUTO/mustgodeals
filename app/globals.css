@@ -548,3 +548,37 @@ p  { font-size: 15px; }
   }
 }
 
+/* ── Article body links ─────────────────────────────────────────────────── */
+.article-body a {
+  color: #1A1A1A;
+  text-decoration-line: underline;
+  text-decoration-color: #CCDA47;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+.article-body a:hover {
+  text-decoration-thickness: 2.5px;
+}
+
+/* ── Suit / Avoid pair cards ────────────────────────────────────────────── */
+.suit-avoid-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+@media (max-width: 640px) {
+  .suit-avoid-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Article page mobile padding ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .article-page-hero,
+  .article-page-body {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+

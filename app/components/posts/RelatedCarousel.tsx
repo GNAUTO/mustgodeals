@@ -32,9 +32,9 @@ function NavBtn({ onClick, disabled, children }: { onClick: () => void; disabled
       disabled={disabled}
       style={{
         width: "30px", height: "30px", borderRadius: "50%",
-        border: `1px solid ${disabled ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.22)"}`,
+        border: `1px solid ${disabled ? "#EDECE5" : "rgba(0,0,0,0.18)"}`,
         background: "transparent",
-        color: disabled ? "rgba(0,0,0,0.2)" : "#1A1A1A",
+        color: disabled ? "#B4B2A9" : "#1A1A1A",
         cursor: disabled ? "default" : "pointer",
         fontSize: "16px", lineHeight: 1,
         display: "flex", alignItems: "center", justifyContent: "center",
@@ -78,7 +78,7 @@ export default function RelatedCarousel({
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-        <div style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A" }}>{title}</div>
+        <div style={{ fontSize: "11px", fontWeight: 700, color: "#8F8F86", letterSpacing: "1.5px", textTransform: "uppercase" }}>{title}</div>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           {list.length > SHOW && (
             <div style={{ display: "flex", gap: "6px" }}>
@@ -86,7 +86,7 @@ export default function RelatedCarousel({
               <NavBtn onClick={() => setOffset(o => o + 1)} disabled={!canNext}>›</NavBtn>
             </div>
           )}
-          <Link href={allLink} style={{ fontSize: "13px", color: "#8A9A10", textDecoration: "none", fontWeight: 500 }}>
+          <Link href={allLink} style={{ fontSize: "12px", color: "#8F8F86", textDecoration: "none", fontWeight: 500 }}>
             {allLinkText}
           </Link>
         </div>
@@ -96,28 +96,26 @@ export default function RelatedCarousel({
         {visible.map((item) => (
           <Link key={item.slug} href={`${base}/${item.slug}`} style={{ textDecoration: "none", display: "block" }}>
             {cardStyle === "news" ? (
-              <div style={{ background: "#F5F5F0", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
+              <div style={{ background: "#FFFFFF", borderRadius: "10px", border: "1px solid #EDECE5", overflow: "hidden" }}>
                 <Image src={item.image ?? ""} alt={item.title} width={400} height={140} style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }} />
-                <div style={{ padding: "1rem" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.4rem" }}>
-                    <span style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.8px", background: "rgba(204,218,71,0.12)", padding: "2px 8px", borderRadius: "10px" }}>
-                      {item.category}
-                    </span>
-                    <span style={{ fontSize: "11px", color: "#999" }}>{item.date}</span>
+                <div style={{ padding: "0.875rem 1rem" }}>
+                  <div style={{ fontSize: "10px", fontWeight: 700, color: "#8A9922", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "5px" }}>
+                    {item.category}
                   </div>
-                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4 }}>{item.title}</div>
+                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "4px" }}>{item.title}</div>
+                  <div style={{ fontSize: "11px", color: "#B4B2A9" }}>{item.date}</div>
                 </div>
               </div>
             ) : (
-              <div style={{ background: "white", borderRadius: "12px", border: "0.5px solid rgba(0,0,0,0.08)", padding: "1.25rem", height: "100%" }}>
-                <div style={{ fontSize: "10px", color: "#8A9A10", fontWeight: 600, letterSpacing: "0.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              <div style={{ background: "#FFFFFF", borderRadius: "10px", border: "1px solid #EDECE5", padding: "1.25rem", height: "100%" }}>
+                <div style={{ fontSize: "10px", fontWeight: 700, color: "#8A9922", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                   {item.category}
                 </div>
                 <div style={{ fontSize: "15px", fontWeight: 500, color: "#1A1A1A", lineHeight: 1.4, marginBottom: "0.5rem" }}>{item.title}</div>
                 {item.excerpt && (
-                  <div style={{ fontSize: "13px", color: "#777", lineHeight: 1.55, marginBottom: "0.75rem" }}>{item.excerpt}</div>
+                  <div style={{ fontSize: "13px", color: "#8F8F86", lineHeight: 1.55, marginBottom: "0.75rem" }}>{item.excerpt}</div>
                 )}
-                <div style={{ fontSize: "11px", color: "#aaa" }}>{item.readTime} · {item.date}</div>
+                <div style={{ fontSize: "11px", color: "#B4B2A9" }}>{item.readTime} · {item.date}</div>
               </div>
             )}
           </Link>

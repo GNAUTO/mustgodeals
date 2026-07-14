@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AS } from '../../../components/posts/article-styles';
+import SuitAvoid from '../../../components/posts/SuitAvoid';
 
 const faqData = [
   {
@@ -38,12 +39,6 @@ const clusterCard: React.CSSProperties = {
 const clusterTitle: React.CSSProperties = { fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 };
 const clusterArrow: React.CSSProperties = { fontSize: "16px", color: "#CCDA47", flexShrink: 0 };
 
-const sectionTag: React.CSSProperties = {
-  display: "inline-block", background: "#1A1A1A", color: "#CCDA47",
-  fontSize: "10px", fontWeight: 700, letterSpacing: "0.8px",
-  padding: "3px 8px", borderRadius: "4px", marginBottom: "0.75rem",
-};
-
 export default function FuelTypeGuideAustraliaKoContent() {
   return (
     <>
@@ -66,7 +61,7 @@ export default function FuelTypeGuideAustraliaKoContent() {
       <p style={AS.p}>
         차량 구입 시 취득세(스탬프 듀티)는 주(州)마다 다르고 구입 가격에 따라 달라진다.
         연료 방식별 총보유비용을 비교하기 전에 실제 세금 부담을 먼저 파악하는 것이 좋다.{" "}
-        <Link href="/tools/stamp-duty-calculator" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/tools/stamp-duty-calculator">
           스탬프 듀티 계산기
         </Link>
         에서 전 주(州) 계산이 가능하다.
@@ -76,7 +71,7 @@ export default function FuelTypeGuideAustraliaKoContent() {
 
       {/* ── 휘발유 ── */}
       <h2 style={AS.h2}>휘발유</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         가솔린 엔진이 무연 휘발유를 연소해 바퀴를 직접 구동한다.
         별도의 배터리나 전기모터 없이 엔진이 모든 일을 담당하는 구조다.
@@ -89,23 +84,17 @@ export default function FuelTypeGuideAustraliaKoContent() {
         중 가장 높고, 전기차에게 주어지는 FBT 면제 혜택도 받지 못한다.
         전기차 공급이 늘어나면서 감가 압력도 서서히 커지는 추세다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        초기 구입 비용을 최소화해야 하는 구매자. 충전 인프라가 부족하고 새로운 기술
-        정비 서비스가 드문 지방 거주자. 합리적인 가격대에서 가장 넓은 모델 선택폭을
-        원하는 경우에 적합하다.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        연간 2만km 이상 주행해 연료비가 크게 쌓이는 운전자. 고용주가 전기차 노베이티드
-        리스 혜택을 제공하는 직장인은 휘발유차 선택 시 상당한 절세 기회를 놓치게 된다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="초기 구입 비용을 최소화해야 하는 구매자. 충전 인프라가 부족하고 새로운 기술 정비 서비스가 드문 지방 거주자. 합리적인 가격대에서 가장 넓은 모델 선택폭을 원하는 경우에 적합하다."
+        avoid="연간 2만km 이상 주행해 연료비가 크게 쌓이는 운전자. 고용주가 전기차 노베이티드 리스 혜택을 제공하는 직장인은 휘발유차 선택 시 상당한 절세 기회를 놓치게 된다."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── 디젤 ── */}
       <h2 style={AS.h2}>디젤</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         점화 플러그 없이 압축 착화 방식으로 연소한다. 리터당 에너지 밀도가 높아
         지속적인 부하 상황과 고속도로 주행에서 연비가 유리하다.
@@ -118,23 +107,17 @@ export default function FuelTypeGuideAustraliaKoContent() {
         짧은 도심 주행만 반복하면 필터가 막혀 고액 수리로 이어진다. 정비비도 휘발유보다
         다소 높고, 글로벌 배기 규제 강화로 장기 재판매 가치에 불확실성이 있다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        보트, 카라반, 트레일러를 정기적으로 견인하는 운전자. 연간 3만km 이상을
-        주로 고속도로에서 달리는 고주행거리 운전자. 충전소 없이도 최장 거리를
-        달려야 하는 지방 거주자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        왕복 30km 이내 단거리 도심 통근자. 고속도로를 거의 이용하지 않는
-        대도시 거주자. DPF 문제 리스크만으로도 순수 도심 용도에는 부적합하다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="보트, 카라반, 트레일러를 정기적으로 견인하는 운전자. 연간 3만km 이상을 주로 고속도로에서 달리는 고주행거리 운전자. 충전소 없이도 최장 거리를 달려야 하는 지방 거주자."
+        avoid="왕복 30km 이내 단거리 도심 통근자. 고속도로를 거의 이용하지 않는 대도시 거주자. DPF 문제 리스크만으로도 순수 도심 용도에는 부적합하다."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── 하이브리드 ── */}
       <h2 style={AS.h2}>하이브리드 (HEV)</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         가솔린 엔진과 소형 배터리를 결합한다. 배터리는 제동 에너지 회수와 엔진으로
         자동 충전되며, 충전 포트는 없다. 운전자 입장에서는 일반 휘발유차와 동일하게 사용한다.
@@ -148,23 +131,17 @@ export default function FuelTypeGuideAustraliaKoContent() {
         견인 등급이 디젤보다 낮은 편이며, 파워트레인 복잡도가 순수 휘발유차보다
         높지만 주요 브랜드의 신뢰성은 검증됐다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        충전 시설 없이 연료비를 줄이고 싶은 도심 통근자. 충전을 원하지 않거나
-        할 수 없는 아파트 거주자. 생활 패턴 변화 없이 연비를 개선할 수 있는
-        검증된 선택지를 원하는 구매자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        상당한 견인 능력이 필요한 운전자. 연비 절감 폭이 줄어드는 장거리 고속도로
-        주행이 주 용도인 경우, 디젤이나 휘발유와 실질적인 차이가 적을 수 있다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="충전 시설 없이 연료비를 줄이고 싶은 도심 통근자. 충전을 원하지 않거나 할 수 없는 아파트 거주자. 생활 패턴 변화 없이 연비를 개선할 수 있는 검증된 선택지를 원하는 구매자."
+        avoid="상당한 견인 능력이 필요한 운전자. 연비 절감 폭이 줄어드는 장거리 고속도로 주행이 주 용도인 경우, 디젤이나 휘발유와 실질적인 차이가 적을 수 있다."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── PHEV ── */}
       <h2 style={AS.h2}>플러그인 하이브리드 (PHEV)</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         콘센트에서 충전하는 대형 배터리를 탑재한 하이브리드다. 전기만으로 40~80km를
         주행한 뒤 배터리가 방전되면 휘발유로 전환되는 구조다.
@@ -180,24 +157,17 @@ export default function FuelTypeGuideAustraliaKoContent() {
         체결 계약은 리스 기간 종료까지 혜택이 유지되나, 계약 조건을 실질적으로
         변경하면 적격 여부가 리셋될 수 있다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        집이나 직장에서 충전이 가능하고 일일 통근 거리가 60km 이내인 운전자.
-        순수 전기차로 전환하기 전에 휘발유 백업을 유지하며 일상 연료비를 줄이고
-        싶은 구매자. 2025년 4월 이전 체결로 FBT 면제를 유지하고 있는 기존 계약자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        충전이 불가능한 아파트 거주자. FBT 절세를 기대하고 노베이티드 리스를 계획 중인
-        경우, 면제가 이미 종료됐으므로 계산이 달라진다. 배터리 전기 구간이 금방 소진되는
-        장거리 지방 주행이 주 용도인 운전자.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="집이나 직장에서 충전이 가능하고 일일 통근 거리가 60km 이내인 운전자. 순수 전기차로 전환하기 전에 휘발유 백업을 유지하며 일상 연료비를 줄이고 싶은 구매자. 2025년 4월 이전 체결로 FBT 면제를 유지하고 있는 기존 계약자."
+        avoid="충전이 불가능한 아파트 거주자. FBT 절세를 기대하고 노베이티드 리스를 계획 중인 경우, 면제가 이미 종료됐으므로 계산이 달라진다. 배터리 전기 구간이 금방 소진되는 장거리 지방 주행이 주 용도인 운전자."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── EREV ── */}
       <h2 style={AS.h2}>EREV (주행거리 연장형 전기차)</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         배터리 전기차에 소형 가솔린 엔진을 탑재한 형태지만, 엔진은 절대 바퀴를
         직접 구동하지 않는다. 엔진은 오직 발전기 역할만 하며 생산된 전기가
@@ -212,21 +182,15 @@ export default function FuelTypeGuideAustraliaKoContent() {
         감가 데이터가 사실상 없어 재판매 가치 예측이 어렵다는 리스크를 안고 있으며,
         향후 12~18개월 내 선택지가 늘어날 전망이지만 현재는 초기 단계다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        현재 BEV 항속거리가 부족한 장거리 운전자 중 전기차 드라이빙을 원하는 경우.
-        재판매 불확실성을 이해하고 수용할 수 있는 얼리 어답터.
-        2~3년 이내 차량 교체 없이 장기 보유를 계획하는 구매자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        검증된 감가 데이터를 바탕으로 자산 가치를 예측하고 싶은 구매자.
-        폭넓은 딜러 네트워크에서 즉시 출고를 원하는 경우, 현재는 선택지가 매우 제한적이다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="현재 BEV 항속거리가 부족한 장거리 운전자 중 전기차 드라이빙을 원하는 경우. 재판매 불확실성을 이해하고 수용할 수 있는 얼리 어답터. 2~3년 이내 차량 교체 없이 장기 보유를 계획하는 구매자."
+        avoid="검증된 감가 데이터를 바탕으로 자산 가치를 예측하고 싶은 구매자. 폭넓은 딜러 네트워크에서 즉시 출고를 원하는 경우, 현재는 선택지가 매우 제한적이다."
+      />
       <p style={AS.p}>
         EREV는 중고 감가 데이터가 부족하므로, 시승차나 데모카를 구매할 때 워런티 시작
         시점을 정확히 확인하는 것이 특히 중요하다.{" "}
-        <Link href="/blog/demo-car-warranty-start-australia" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/blog/demo-car-warranty-start-australia-ko">
           데모카 워런티 가이드
         </Link>
         에서 서명 전 확인해야 할 사항을 정리했다.
@@ -236,7 +200,7 @@ export default function FuelTypeGuideAustraliaKoContent() {
 
       {/* ── BEV ── */}
       <h2 style={AS.h2}>배터리 전기차 (BEV)</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         배터리에 저장된 전기만으로 주행하며, 콘센트 또는 공공 급속충전기로 충전한다.
         내연기관, 연료탱크, 배기 시스템이 없다.
@@ -253,22 +217,15 @@ export default function FuelTypeGuideAustraliaKoContent() {
         불편함이 커진다. 단일 충전으로 400km를 초과하는 장거리 주행 시 충전 계획이
         필수다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        집이나 직장 충전이 가능하고 일일 주행거리가 항속거리 안에 들어오는 운전자.
-        노베이티드 리스를 통해 FBT 면제와 세전 공제 효과를 극대화하려는 직장인.
-        예측 가능한 일상 패턴과 야간 충전 환경을 갖춘 도심 거주자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        집 충전도, 직장 충전도 불가능한 아파트 거주자. 대부분의 BEV는 중량 견인 등급이
-        낮고, 견인 시 항속거리가 급감한다. 하루 400km 이상을 충전 계획 없이 단번에
-        달려야 하는 운전자에게도 현재 BEV 인프라는 아직 부족하다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="집이나 직장 충전이 가능하고 일일 주행거리가 항속거리 안에 들어오는 운전자. 노베이티드 리스를 통해 FBT 면제와 세전 공제 효과를 극대화하려는 직장인. 예측 가능한 일상 패턴과 야간 충전 환경을 갖춘 도심 거주자."
+        avoid="집 충전도, 직장 충전도 불가능한 아파트 거주자. 대부분의 BEV는 중량 견인 등급이 낮고, 견인 시 항속거리가 급감한다. 하루 400km 이상을 충전 계획 없이 단번에 달려야 하는 운전자에게도 현재 BEV 인프라는 아직 부족하다."
+      />
       <p style={AS.p}>
         노베이티드 리스가 적격 전기차에서 실제로 얼마를 절약해 주는지 연봉별로
         상세하게 분석한 내용은{" "}
-        <Link href="/blog/novated-lease-worth-it-australia" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/blog/novated-lease-worth-it-australia-ko">
           노베이티드 리스 가이드
         </Link>
         에서 확인할 수 있다.
@@ -278,10 +235,10 @@ export default function FuelTypeGuideAustraliaKoContent() {
 
       {/* ── 수소 ── */}
       <h2 style={AS.h2}>수소 (FCEV)</h2>
-      <div style={sectionTag}>작동 방식</div>
+      <div style={AS.overline}>작동 방식</div>
       <p style={AS.p}>
         수소와 산소의 화학 반응으로 전기를 만들어 모터를 구동한다.
-        배기로는 수증기만 나온다. 충전(충전) 시간은 휘발유 주유와 비슷하다.
+        배기로는 수증기만 나온다. 충전 시간은 휘발유 주유와 비슷하다.
       </p>
       <h3 style={AS.h3}>호주에서의 현실</h3>
       <p style={AS.p}>
@@ -291,16 +248,11 @@ export default function FuelTypeGuideAustraliaKoContent() {
         인프라 투자가 장기적으로 상황을 바꿀 수 있지만, 현재는 특정 플릿 운영자를
         위한 기술이다.
       </p>
-      <h3 style={AS.h3}>이런 사람에게 맞는다</h3>
-      <p style={AS.p}>
-        수소 인프라가 구축된 노선을 운영하는 상업 플릿 사업자.
-        충전 시설에 직접 접근 가능한 플릿 계약 운영자.
-      </p>
-      <h3 style={AS.h3}>이런 사람은 피해야 한다</h3>
-      <p style={AS.p}>
-        충전 솔루션을 스스로 마련할 수 없는 일반 소비자 구매자.
-        수소는 2026년 현재 호주 일반 구매자의 현실적인 선택지가 아니다.
-      </p>
+      <SuitAvoid
+        lang="KO"
+        suits="수소 인프라가 구축된 노선을 운영하는 상업 플릿 사업자. 충전 시설에 직접 접근 가능한 플릿 계약 운영자."
+        avoid="충전 솔루션을 스스로 마련할 수 없는 일반 소비자 구매자. 수소는 2026년 현재 호주 일반 구매자의 현실적인 선택지가 아니다."
+      />
 
       <hr style={AS.divider} />
 

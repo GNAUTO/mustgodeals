@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AS } from '../../../components/posts/article-styles';
+import SuitAvoid from '../../../components/posts/SuitAvoid';
 
 const faqData = [
   {
@@ -38,12 +39,6 @@ const clusterCard: React.CSSProperties = {
 const clusterTitle: React.CSSProperties = { fontSize: "14px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.3 };
 const clusterArrow: React.CSSProperties = { fontSize: "16px", color: "#CCDA47", flexShrink: 0 };
 
-const sectionTag: React.CSSProperties = {
-  display: "inline-block", background: "#1A1A1A", color: "#CCDA47",
-  fontSize: "10px", fontWeight: 700, letterSpacing: "0.8px",
-  padding: "3px 8px", borderRadius: "4px", marginBottom: "0.75rem",
-};
-
 export default function FuelTypeGuideAustraliaContent() {
   return (
     <>
@@ -68,7 +63,7 @@ export default function FuelTypeGuideAustraliaContent() {
         Stamp duty is calculated on the vehicle purchase price and varies by state. Before
         comparing total cost of ownership across fuel types, it is worth running the numbers
         on your specific purchase.{" "}
-        <Link href="/tools/stamp-duty-calculator" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/tools/stamp-duty-calculator">
           Our stamp duty calculator
         </Link>{" "}
         covers all Australian states and territories.
@@ -78,7 +73,7 @@ export default function FuelTypeGuideAustraliaContent() {
 
       {/* ── PETROL ── */}
       <h2 style={AS.h2}>Petrol</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         A petrol engine burns unleaded fuel to turn the wheels directly. There is no additional
         battery or electric motor involved. Everything you spend on fuel goes toward moving the car.
@@ -92,24 +87,16 @@ export default function FuelTypeGuideAustraliaContent() {
         qualify for the FBT exemptions that benefit EV buyers. Resale pressure is also
         building gradually as hybrid and electric supply increases.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        Buyers who need the lowest possible purchase price. People in regional areas where
-        charging infrastructure is genuinely sparse and servicing options for newer technology
-        are limited. Anyone who values maximum model choice at an accessible price point.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Anyone driving more than 20,000 km per year where fuel costs compound quickly.
-        Employees whose employers offer novated lease benefits on electric vehicles,
-        where a petrol car leaves significant tax savings on the table.
-      </p>
+      <SuitAvoid
+        suits="Buyers who need the lowest possible purchase price. People in regional areas where charging infrastructure is genuinely sparse and servicing options for newer technology are limited. Anyone who values maximum model choice at an accessible price point."
+        avoid="Anyone driving more than 20,000 km per year where fuel costs compound quickly. Employees whose employers offer novated lease benefits on electric vehicles, where a petrol car leaves significant tax savings on the table."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── DIESEL ── */}
       <h2 style={AS.h2}>Diesel</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         Diesel fuel ignites through compression rather than a spark plug. The process extracts
         more energy per litre than petrol, which translates to better efficiency at sustained
@@ -126,28 +113,20 @@ export default function FuelTypeGuideAustraliaContent() {
         Servicing costs for diesel are also slightly higher than petrol. Global tightening
         of emission standards adds some long term resale uncertainty.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        Drivers who tow boats, caravans, or trailers regularly. Anyone covering more than
-        30,000 km per year, especially on highways. Regional and rural buyers who need
-        the longest possible range between fill-ups and the best payload capacity.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        City commuters whose daily driving is mostly short trips under 30 km round trip.
-        Buyers in major urban centres who rarely venture onto open highways. The DPF risk
-        alone makes diesel a poor fit for pure urban use.
-      </p>
+      <SuitAvoid
+        suits="Drivers who tow boats, caravans, or trailers regularly. Anyone covering more than 30,000 km per year, especially on highways. Regional and rural buyers who need the longest possible range between fill-ups and the best payload capacity."
+        avoid="City commuters whose daily driving is mostly short trips under 30 km round trip. Buyers in major urban centres who rarely venture onto open highways. The DPF risk alone makes diesel a poor fit for pure urban use."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── HYBRID ── */}
       <h2 style={AS.h2}>Hybrid (HEV)</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         A hybrid pairs a petrol engine with a small battery that charges itself through
         regenerative braking and the engine. You never plug it in. It operates exactly
-        like a petrol car from the driver's perspective.
+        like a petrol car from the driver&apos;s perspective.
       </p>
       <h3 style={AS.h3}>Strengths and weaknesses in Australia</h3>
       <p style={AS.p}>
@@ -160,24 +139,16 @@ export default function FuelTypeGuideAustraliaContent() {
         equivalents. The hybrid drivetrain is more complex than a pure petrol unit, though
         reliability has been strong across the major brands.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        City and suburban commuters who cannot or do not want to plug in. Apartment dwellers
-        with no charging access who still want lower fuel costs. Buyers who want a proven,
-        low-maintenance alternative to pure petrol without any infrastructure dependency.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Anyone who needs significant towing capacity. Buyers who drive primarily on open
-        highways where the efficiency advantage is modest and a diesel or petrol may offer
-        similar real-world economy.
-      </p>
+      <SuitAvoid
+        suits="City and suburban commuters who cannot or do not want to plug in. Apartment dwellers with no charging access who still want lower fuel costs. Buyers who want a proven, low-maintenance alternative to pure petrol without any infrastructure dependency."
+        avoid="Anyone who needs significant towing capacity. Buyers who drive primarily on open highways where the efficiency advantage is modest and a diesel or petrol may offer similar real-world economy."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── PHEV ── */}
       <h2 style={AS.h2}>Plug-in Hybrid (PHEV)</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         A PHEV is a hybrid with a much larger battery that you charge from a power point.
         It covers 40 to 80 km on electricity alone before the petrol engine takes over,
@@ -195,26 +166,16 @@ export default function FuelTypeGuideAustraliaContent() {
         that date retain the benefit until lease expiry, subject to no material changes to the
         lease terms.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        Drivers with reliable home or workplace charging whose daily commute is under 60 km.
-        Anyone who wants minimal petrol consumption day to day but is not ready to commit
-        to a pure electric vehicle. Those with existing binding novated lease agreements
-        from before April 2025 who retained the FBT benefit.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Apartment residents with no charging access. Buyers who intend to use a novated lease
-        and were counting on FBT savings that no longer apply. Anyone whose driving is
-        predominantly long regional distances where the electric range depletes quickly
-        and the vehicle's weight works against efficiency.
-      </p>
+      <SuitAvoid
+        suits="Drivers with reliable home or workplace charging whose daily commute is under 60 km. Anyone who wants minimal petrol consumption day to day but is not ready to commit to a pure electric vehicle. Those with existing binding novated lease agreements from before April 2025 who retained the FBT benefit."
+        avoid="Apartment residents with no charging access. Buyers who intend to use a novated lease and were counting on FBT savings that no longer apply. Anyone whose driving is predominantly long regional distances where the electric range depletes quickly and the vehicle's weight works against efficiency."
+      />
 
       <hr style={AS.divider} />
 
       {/* ── EREV ── */}
       <h2 style={AS.h2}>EREV (Extended Range Electric Vehicle)</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         An EREV is a battery electric vehicle with a small petrol engine onboard that acts
         solely as a generator. The engine never drives the wheels under any circumstances.
@@ -232,26 +193,16 @@ export default function FuelTypeGuideAustraliaContent() {
         The choice will expand over the next 12 to 18 months as more manufacturers bring
         EREV variants to market, but early buyers are working with limited benchmarks.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        EV converts who regularly drive distances beyond current BEV comfortable range and
-        want electric driveability without range compromise. Early adopters who understand
-        and accept the resale uncertainty of a new category. Buyers who plan to hold the
-        vehicle for several years rather than trading within two to three.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Buyers who want predictable resale values backed by established market data.
-        Anyone who needs a vehicle available for prompt delivery from a wide dealer network.
-        The limited model availability means compromising on specification or waiting for
-        stock that may not arrive on a clear timeline.
-      </p>
+      <SuitAvoid
+        suits="EV converts who regularly drive distances beyond current BEV comfortable range and want electric driveability without range compromise. Early adopters who understand and accept the resale uncertainty of a new category. Buyers who plan to hold the vehicle for several years rather than trading within two to three."
+        avoid="Buyers who want predictable resale values backed by established market data. Anyone who needs a vehicle available for prompt delivery from a wide dealer network. The limited model availability means compromising on specification or waiting for stock that may not arrive on a clear timeline."
+      />
       <p style={AS.p}>
         Because EREV resale data is thin, buying a lightly used demonstrator carries more
         uncertainty than with established categories. Understanding exactly when the
         manufacturer warranty clock started matters more here than with a mainstream petrol
         or hybrid.{" "}
-        <Link href="/blog/demo-car-warranty-start-australia" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/blog/demo-car-warranty-start-australia">
           Our demo car warranty guide
         </Link>{" "}
         explains what to check and confirm before signing.
@@ -261,7 +212,7 @@ export default function FuelTypeGuideAustraliaContent() {
 
       {/* ── BEV ── */}
       <h2 style={AS.h2}>Battery Electric (BEV)</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         A BEV runs entirely on a battery pack recharged from a power point or public fast
         charger. There is no combustion engine, no fuel tank, and no exhaust system.
@@ -281,24 +232,14 @@ export default function FuelTypeGuideAustraliaContent() {
         drives exceeding 400 km without a planned fast charge stop, though fast charger
         coverage is improving on major routes.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        Drivers with home or reliable workplace charging whose daily distances sit well within
-        the vehicle's range. PAYG employees with access to a salary sacrifice arrangement
-        where the novated lease FBT exemption delivers maximum value. City-based buyers
-        with predictable routines and access to overnight charging.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Apartment residents with no home charging and no employer charging access.
-        Buyers who regularly tow, as most BEVs are not rated for significant towing
-        and range reduces sharply under load. Anyone whose daily driving regularly
-        exceeds 400 km in a single stretch without a planned charge stop.
-      </p>
+      <SuitAvoid
+        suits="Drivers with home or reliable workplace charging whose daily distances sit well within the vehicle's range. PAYG employees with access to a salary sacrifice arrangement where the novated lease FBT exemption delivers maximum value. City-based buyers with predictable routines and access to overnight charging."
+        avoid="Apartment residents with no home charging and no employer charging access. Buyers who regularly tow, as most BEVs are not rated for significant towing and range reduces sharply under load. Anyone whose daily driving regularly exceeds 400 km in a single stretch without a planned charge stop."
+      />
       <p style={AS.p}>
         For a detailed breakdown of how much a novated lease actually saves on an eligible
         electric vehicle at different income levels,{" "}
-        <Link href="/blog/novated-lease-worth-it-australia" style={{ color: "#8A9922", fontWeight: 600 }}>
+        <Link href="/blog/novated-lease-worth-it-australia">
           see our novated lease guide
         </Link>
         .
@@ -308,7 +249,7 @@ export default function FuelTypeGuideAustraliaContent() {
 
       {/* ── HYDROGEN ── */}
       <h2 style={AS.h2}>Hydrogen (FCEV)</h2>
-      <div style={sectionTag}>HOW IT WORKS</div>
+      <div style={AS.overline}>HOW IT WORKS</div>
       <p style={AS.p}>
         A hydrogen fuel cell vehicle uses a chemical reaction between hydrogen and oxygen
         to produce electricity that powers the motor. The only byproduct is water vapour.
@@ -324,17 +265,10 @@ export default function FuelTypeGuideAustraliaContent() {
         this picture over the coming decade, but the general consumer market is not
         the target audience for hydrogen today.
       </p>
-      <h3 style={AS.h3}>Who it suits</h3>
-      <p style={AS.p}>
-        Commercial fleet operators who operate within defined corridors where hydrogen
-        infrastructure has been established. Buyers who have direct access to a hydrogen
-        refuelling facility as part of their fleet arrangement.
-      </p>
-      <h3 style={AS.h3}>Who should avoid it</h3>
-      <p style={AS.p}>
-        Any private buyer without a guaranteed fuelling solution. Hydrogen should not
-        be on the shortlist for general consumer use in Australia in 2026.
-      </p>
+      <SuitAvoid
+        suits="Commercial fleet operators who operate within defined corridors where hydrogen infrastructure has been established. Buyers who have direct access to a hydrogen refuelling facility as part of their fleet arrangement."
+        avoid="Any private buyer without a guaranteed fuelling solution. Hydrogen should not be on the shortlist for general consumer use in Australia in 2026."
+      />
 
       <hr style={AS.divider} />
 

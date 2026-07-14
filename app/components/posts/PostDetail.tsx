@@ -70,7 +70,7 @@ export default function PostDetail({ type, slug, title, category, date, author, 
   const H = {
     page:      { minHeight: "100vh", background: "#FFFFFF" } as React.CSSProperties,
     hero:      { background: "#FFFFFF", padding: "2.25rem 2rem 2rem", borderBottom: "1px solid #EDECE5" } as React.CSSProperties,
-    heroInner: { maxWidth: "660px", margin: "0 auto" } as React.CSSProperties,
+    heroInner: { maxWidth: "780px", margin: "0 auto" } as React.CSSProperties,
     overline: {
       fontSize: "11px", fontWeight: 600, color: "#8A9922",
       letterSpacing: "1.5px", textTransform: "uppercase" as const,
@@ -85,7 +85,7 @@ export default function PostDetail({ type, slug, title, category, date, author, 
       flexWrap: "wrap" as const,
     } as React.CSSProperties,
     metaItem: { fontSize: "12px", color: "#8F8F86" } as React.CSSProperties,
-    article:   { maxWidth: "660px", margin: "0 auto", padding: "3rem 2rem 4rem" } as React.CSSProperties,
+    article:   { maxWidth: "780px", margin: "0 auto", padding: "3rem 2rem 4rem" } as React.CSSProperties,
     body:      { fontSize: "16px", lineHeight: 1.85, color: "#3D3D38" } as React.CSSProperties,
     breadcrumb: {
       display: "flex", gap: "6px", alignItems: "center",
@@ -154,7 +154,7 @@ export default function PostDetail({ type, slug, title, category, date, author, 
       {/* Related News */}
       {relatedNews.length > 0 && (
         <div style={{ background: "#F5F5F0", borderTop: "1px solid #EDECE5", padding: "2.5rem 2rem" }}>
-          <div style={{ maxWidth: "660px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "780px", margin: "0 auto" }}>
             <RelatedCarousel
               items={relatedNews.map(n => ({ slug: n.slug, title: n.title, category: n.category, date: n.date, image: n.image }))}
               base="/news"
@@ -170,7 +170,7 @@ export default function PostDetail({ type, slug, title, category, date, author, 
       {/* Related Blog — news pages only */}
       {type === "news" && relatedBlogPosts.length > 0 && (
         <div style={{ background: "#FFFFFF", borderTop: "1px solid #EDECE5", padding: "2.5rem 2rem 3rem" }}>
-          <div style={{ maxWidth: "660px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "780px", margin: "0 auto" }}>
             <div style={{ fontSize: "11px", fontWeight: 700, color: "#8F8F86", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "1.25rem" }}>
               {isKo ? "관련 블로그" : "Related Blog"}
             </div>

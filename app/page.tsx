@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* Demo Cars */}
       <div style={{ background: "#FAFAFA", padding: "2.5rem 0" }}>
-        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "0 2rem" }}>
+        <div className="news-home-wrap">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
             <h2 style={{ fontFamily: "var(--font-newsreader)", fontSize: "24px", fontWeight: 400, color: "#26261f", margin: 0 }}>Demo Cars Available Now</h2>
             <Link href="/listings" style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.1em", color: "#84a300", textDecoration: "none" }}>View all listings →</Link>

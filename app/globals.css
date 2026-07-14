@@ -585,9 +585,9 @@ p  { font-size: 15px; }
 
 /* Home blog section */
 .blog-section-inner {
-  max-width: 1600px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 64px;
 }
 .blog-home-grid {
   display: grid;
@@ -620,6 +620,10 @@ p  { font-size: 15px; }
   }
   .blog-cover-hero { aspect-ratio: 16 / 9; }
 
+  .blog-section-inner { padding: 0 40px; }
+}
+
+@media (max-width: 640px) {
   .blog-section-inner { padding: 0 20px; }
 }
 

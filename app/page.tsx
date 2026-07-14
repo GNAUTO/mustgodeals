@@ -179,8 +179,8 @@ export default function Home() {
       <div style={{ background: "#FAFAFA", padding: "2.5rem 0" }}>
         <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <h2 style={{ fontSize: "16px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.06em", textTransform: "uppercase" }}>Demo Cars Available Now</h2>
-            <Link href="/listings" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>View all listings →</Link>
+            <h2 style={{ fontFamily: "var(--font-newsreader)", fontSize: "24px", fontWeight: 400, color: "#26261f", margin: 0 }}>Demo Cars Available Now</h2>
+            <Link href="/listings" style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.1em", color: "#84a300", textDecoration: "none" }}>View all listings →</Link>
           </div>
 
           <div className="demo-grid">
@@ -276,11 +276,11 @@ export default function Home() {
 
           {/* Section header */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
-            <h2 style={{ fontSize: "18px", fontWeight: 500, color: "#1A1A1A", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader)", fontSize: "24px", fontWeight: 400, color: "#26261f", margin: 0 }}>
               {activeLang === "KO" ? "가이드" : "Guides"}
             </h2>
-            <Link href="/blog" style={{ fontSize: "13px", color: "#1A1A1A", textDecoration: "none", fontWeight: 500 }}>
-              {activeLang === "KO" ? "전체 보기" : "View all"}
+            <Link href="/blog" style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.1em", color: "#84a300", textDecoration: "none" }}>
+              {activeLang === "KO" ? "전체 보기 →" : "View all →"}
             </Link>
           </div>
 

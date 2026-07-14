@@ -41,7 +41,8 @@ export default function Navbar({
   const isActive = (key: string) =>
     (key === "blog" && pathname.startsWith("/blog")) ||
     (key === "news" && pathname.startsWith("/news")) ||
-    (key === "listings" && pathname.startsWith("/listings"));
+    (key === "listings" && pathname.startsWith("/listings")) ||
+    (key === "tools" && pathname.startsWith("/tools"));
 
   const linkStyle = (key: string): React.CSSProperties => ({
     color: isActive(key) ? "#1A1A1A" : "#777",
@@ -209,6 +210,7 @@ export default function Navbar({
             <Link href="/listings" style={linkStyle("listings")}>Listings</Link>
             <Link href="/news"     style={linkStyle("news")}>News</Link>
             <Link href="/blog"     style={linkStyle("blog")}>Blog</Link>
+            <Link href="/tools"    style={linkStyle("tools")}>Tools</Link>
           </div>
 
           {/* Right: lang + hamburger */}
@@ -242,6 +244,7 @@ export default function Navbar({
             <Link href="/listings"    onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Listings</Link>
             <Link href="/news"        onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>News</Link>
             <Link href="/blog"        onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Blog</Link>
+            <Link href="/tools"       onClick={() => setMenuOpen(false)} style={{ color: "#1A1A1A", fontSize: "15px", textDecoration: "none", padding: "14px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>Tools</Link>
             <Link href="/how-it-works" onClick={() => setMenuOpen(false)} style={{ color: "#777", fontSize: "14px", textDecoration: "none", padding: "12px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>How It Works</Link>
             <Link href="/for-dealers" onClick={() => setMenuOpen(false)} style={{ color: "#777", fontSize: "14px", textDecoration: "none", padding: "12px 2rem", borderTop: "1px solid rgba(0,0,0,0.05)", display: "block" }}>For Dealers</Link>
           </div>

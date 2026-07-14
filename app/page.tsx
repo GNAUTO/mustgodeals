@@ -65,9 +65,24 @@ const LANGS = [
   { label: "中文", code: "ZH", comingSoon: "敬请期待。" },
 ];
 
+type GuideEntry = { href: string; title: string; category: string; time: string };
+const GUIDE_DATA: Record<"start" | "most", GuideEntry[]> = {
+  start: [
+    { href: "/blog/buying-a-car-in-australia-guide", title: "The complete guide to buying a car in Australia", category: "Buying guide", time: "12 min" },
+    { href: "/blog/why-buy-demo-car-australia", title: "Why a demo car makes more sense than you think", category: "Buying guide", time: "7 min" },
+    { href: "/blog/demo-car-warranty-start-australia", title: "When does a demo car warranty actually start?", category: "Ownership", time: "8 min" },
+  ],
+  most: [
+    { href: "/blog/novated-lease-worth-it-australia", title: "Is a novated lease actually worth it?", category: "Buying guide", time: "9 min" },
+    { href: "/blog/car-stamp-duty-australia-explained", title: "Stamp duty on cars in Australia, explained", category: "Tax", time: "6 min" },
+    { href: "/blog/fuel-type-guide-australia", title: "Which fuel type actually fits your life", category: "Buying guide", time: "12 min" },
+  ],
+};
+
 
 export default function Home() {
   const [activeLang, setActiveLang] = useState("EN");
+  const [cardTab, setCardTab] = useState<"start" | "most">("start");
 
   const filtered = BLOG_POSTS
     .filter((p) => p.lang === activeLang)
@@ -75,56 +90,101 @@ export default function Home() {
   const filteredNews = NEWS_ITEMS.filter((n) => n.lang === activeLang);
   const currentLang = LANGS.find((l) => l.code === activeLang)!;
 
-  const tickerItems = LISTINGS
-    .filter((l) => l.status === "available")
-    .map((l) => ({
-      save: `SAVE $${l.savingsAmount.toLocaleString("en-AU")}`,
-      vehicle: `on ${l.name}`,
-    }));
-
   return (
     <div style={{ minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" }}>
       <JsonLd data={ORG_SCHEMA} />
       <Navbar langTabs={{ activeLang, onLangChange: setActiveLang }} />
 
-      {/* Hero — light theme */}
-      <div className="hero-section" style={{ background: "#FAFAFA", textAlign: "center" }}>
-        <h1 style={{ color: "#1A1A1A", fontSize: "clamp(2rem, 8vw, 4rem)", fontWeight: 600, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
-          Cars dealers <span style={{ color: "#CCDA47" }}>must move</span><br />
-          Savings you didn&rsquo;t expect
-        </h1>
-        <p style={{ color: "#6B6B6B", fontSize: "clamp(0.875rem, 2vw, 1rem)", maxWidth: "420px", margin: "0 auto 2rem" }}>
-          Dealer clearance vehicles. Real discounts. Updated regularly.
-        </p>
-        <div className="hero-btns">
-          <Link href="/listings" style={{ background: "#CCDA47", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
-            Browse Demo Cars
-          </Link>
-          <Link href="/blog" style={{ background: "transparent", color: "#1A1A1A", padding: "12px 28px", borderRadius: "8px", fontSize: "14px", fontWeight: 500, border: "1.5px solid #1A1A1A", textDecoration: "none" }}>
-            Read buying guides
-          </Link>
-        </div>
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
+      <div style={{ background: "#fdfdfb", borderBottom: "1px solid #edeae0" }}>
+        <div className="new-hero-wrap">
+          <div className="new-hero-grid">
 
-        {/* Deal ticker */}
-        {tickerItems.length > 0 && (
-          <div style={{ marginTop: "2rem" }} aria-hidden="true">
-            <div className="deal-ticker">
-              <div className="deal-ticker-track">
-                {[...tickerItems, ...tickerItems].map((item, i) => (
-                  <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
-                    <span style={{ color: "#CCDA47", fontWeight: 700, fontSize: "12px", letterSpacing: "0.02em" }}>
-                      {item.save}
-                    </span>
-                    <span style={{ color: "#6B6B6B", fontSize: "12px" }}>
-                      &nbsp;{item.vehicle}
-                    </span>
-                    <span style={{ color: "rgba(0,0,0,0.18)", fontSize: "12px", margin: "0 20px" }}>·</span>
-                  </span>
-                ))}
+            {/* Left: copy */}
+            <div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: "12px", letterSpacing: "0.16em", color: "#84a300", textTransform: "uppercase", marginBottom: "28px" }}>
+                Written from inside the industry
+              </div>
+              <h1 className="new-hero-h1">
+                Know what<br />the dealer knows.
+              </h1>
+              <p className="new-hero-sub">
+                Buying guides written from inside the industry, plus real dealer
+                clearance cars with the discount shown on every listing.
+              </p>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <Link href="/blog" className="new-hero-cta1">Read the guides</Link>
+                <Link href="/listings" className="new-hero-cta2">Browse cars</Link>
+              </div>
+            </div>
+
+            {/* Right: guide index card */}
+            <div className="new-hero-card">
+              <div className="new-hero-card-tabs">
+                <button
+                  onClick={() => setCardTab("start")}
+                  className={`new-hero-card-tab${cardTab === "start" ? " active" : ""}`}
+                >
+                  START HERE
+                </button>
+                <button
+                  onClick={() => setCardTab("most")}
+                  className={`new-hero-card-tab${cardTab === "most" ? " active" : ""}`}
+                >
+                  MOST READ
+                </button>
+              </div>
+
+              {GUIDE_DATA[cardTab].map((g, i) => (
+                <Link key={g.href} href={g.href} className="new-hero-card-item">
+                  <div style={{ fontFamily: "var(--font-newsreader)", fontSize: "22px", color: "#c9c5b6", fontVariantNumeric: "tabular-nums", flexShrink: 0, lineHeight: 1, marginTop: "3px" }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div>
+                    <div style={{ fontFamily: "var(--font-grotesk)", fontSize: "14px", fontWeight: 500, color: "#26261f", lineHeight: 1.4, marginBottom: "6px" }}>
+                      {g.title}
+                    </div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#a3a091", letterSpacing: "0.05em" }}>
+                      {g.category} · {g.time}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              <div style={{ padding: "16px 24px", borderTop: "1px solid #f0ede4" }}>
+                <Link href="/blog" style={{ fontFamily: "var(--font-grotesk)", fontSize: "13px", color: "#84a300", textDecoration: "none", fontWeight: 500 }}>
+                  All guides →
+                </Link>
               </div>
             </div>
           </div>
-        )}
+
+          {/* Stats bar */}
+          <div className="new-hero-stats">
+            <div className="new-hero-stats-label">CURRENTLY LISTED</div>
+            <div className="new-hero-stats-items">
+              {([
+                { val: "$37,510", label: "total verified discount" },
+                { val: "23%",     label: "largest below new price" },
+                { val: "3",       label: "cars dealers must move"  },
+              ] as const).map((s) => (
+                <div key={s.label} style={{ flexShrink: 0 }}>
+                  <div style={{ fontFamily: "var(--font-newsreader)", fontSize: "32px", fontVariantNumeric: "tabular-nums", color: "#26261f", lineHeight: 1.1, whiteSpace: "nowrap" }}>
+                    {s.val.startsWith("$") ? (
+                      <>
+                        <span style={{ fontFamily: "var(--font-grotesk)", fontSize: "22px", fontWeight: 500, verticalAlign: "2px", marginRight: "1px" }}>$</span>
+                        {s.val.slice(1)}
+                      </>
+                    ) : s.val}
+                  </div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "#a3a091", letterSpacing: "0.06em", marginTop: "4px" }}>
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Demo Cars */}

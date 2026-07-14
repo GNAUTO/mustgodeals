@@ -30,7 +30,7 @@ const TOOLS = [
 ];
 
 const S = {
-  page:   { minHeight: "100vh", background: "#FAFAFA" } as React.CSSProperties,
+  page:   { minHeight: "100vh", background: "#FAFAFA", display: "flex", flexDirection: "column" } as React.CSSProperties,
   hero:   { background: "#FAFAFA", padding: "2.5rem 1.5rem 2rem", borderBottom: "1px solid rgba(0,0,0,0.06)" } as React.CSSProperties,
   heroIn: { maxWidth: "780px", margin: "0 auto" } as React.CSSProperties,
   h1:     { fontSize: "36px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.2, marginBottom: "0.75rem", letterSpacing: "-0.5px" } as React.CSSProperties,
@@ -60,7 +60,7 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      <div style={S.grid}>
+      <div style={{ ...S.grid, flex: 1 }}>
         {TOOLS.map((tool) => (
           <Link key={tool.href} href={tool.href} style={S.card}>
             <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em" }}>

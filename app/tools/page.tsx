@@ -46,6 +46,7 @@ export default function ToolsPage() {
     <div style={S.page}>
       <Navbar />
 
+      <div style={{ flex: 1 }}>
       <div style={S.hero}>
         <div style={S.heroIn}>
           <div style={S.breadc}>
@@ -60,7 +61,7 @@ export default function ToolsPage() {
         </div>
       </div>
 
-      <div style={{ ...S.grid, flex: 1 }}>
+      <div style={S.grid}>
         {TOOLS.map((tool) => (
           <Link key={tool.href} href={tool.href} style={S.card}>
             <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em" }}>
@@ -78,6 +79,7 @@ export default function ToolsPage() {
             </div>
           </Link>
         ))}
+      </div>
       </div>
 
       <Footer />

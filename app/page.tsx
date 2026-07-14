@@ -15,31 +15,19 @@ import type { NewsItem } from "./data/posts";
 function HomeNewsCard({ item }: { item: NewsItem }) {
   const [imgFailed, setImgFailed] = useState(false);
   return (
-    <Link href={`/news/${item.slug}`} className="news-mag-card" style={{ background: "#EDECE5" }}>
+    <Link href={`/news/${item.slug}`} className="news-mag-card" style={{ background: "#f0ede4" }}>
       {!imgFailed && (
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          style={{ objectFit: "cover" }}
-          onError={() => setImgFailed(true)}
-        />
+        <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} onError={() => setImgFailed(true)} />
       )}
-      <div style={{
-        position: "absolute", inset: 0,
-        background: imgFailed ? "none" : "linear-gradient(transparent 45%, rgba(0,0,0,0.82))",
-        pointerEvents: "none",
-      }} />
+      <div style={{ position: "absolute", inset: 0, background: imgFailed ? "none" : "linear-gradient(transparent 45%, rgba(0,0,0,0.82))", pointerEvents: "none" }} />
       {imgFailed ? (
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "8px" }}>
-          <div style={{ fontSize: "10px", fontWeight: 700, color: "#8A9922", letterSpacing: "0.8px" }}>{item.category}</div>
-          <div style={{ fontSize: "13px", fontWeight: 600, color: "#1A1A1A", lineHeight: 1.4, textAlign: "center", padding: "0 16px" }}>{item.title}</div>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.15em", color: "#84a300", textTransform: "uppercase" }}>{item.category}</div>
+          <div style={{ fontSize: "13px", fontWeight: 600, color: "#26261f", lineHeight: 1.4, textAlign: "center", padding: "0 16px" }}>{item.title}</div>
         </div>
       ) : (
         <>
-          <div style={{ position: "absolute", top: "16px", left: "16px", fontSize: "10px", fontWeight: 700, color: "#CCDA47", letterSpacing: "0.8px" }}>
-            {item.category}
-          </div>
+          <div style={{ position: "absolute", top: "16px", left: "16px", fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.15em", color: "#84a300", textTransform: "uppercase" }}>{item.category}</div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px 18px 18px" }}>
             <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", marginBottom: "6px" }}>{item.date}</div>
             <div className="news-mag-title" style={{ fontWeight: 700, color: "#ffffff", lineHeight: 1.3 }}>{item.title}</div>
@@ -260,14 +248,18 @@ export default function Home() {
       </div>
 
       {/* Latest News */}
-      <div style={{ background: "#FAFAFA", padding: "2.5rem 0", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-        <div style={{ maxWidth: "1600px", margin: "0 auto", padding: "0 2rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
-            <h2 style={{ fontSize: "22px", fontWeight: 500, color: "#1A1A1A" }}>Latest News</h2>
-            <Link href="/news" style={{ fontSize: "13px", color: "#6B6B6B", textDecoration: "none", fontWeight: 500 }}>All news →</Link>
+      <div style={{ background: "#fdfdfb", padding: "3rem 0", borderTop: "1px solid #edeae0" }}>
+        <div className="news-home-wrap">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1.5rem" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader)", fontSize: "24px", fontWeight: 400, color: "#26261f", margin: 0 }}>
+              {activeLang === "KO" ? "최신 뉴스" : "Latest News"}
+            </h2>
+            <Link href="/news" style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.1em", color: "#84a300", textDecoration: "none" }}>
+              {activeLang === "KO" ? "전체 보기 →" : "All news →"}
+            </Link>
           </div>
           {filteredNews.length === 0 ? (
-            <div style={{ textAlign: "center", padding: "2rem", color: "#AAAAAA", fontSize: "14px" }}>{currentLang.comingSoon}</div>
+            <div style={{ textAlign: "center", padding: "2rem", color: "#a3a091", fontSize: "14px" }}>{currentLang.comingSoon}</div>
           ) : (
             <div className="news-mag-grid">
               {filteredNews.slice(0, 4).map((item) => (
@@ -309,51 +301,47 @@ export default function Home() {
       </div>
 
       {/* Tools banner */}
-      <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", padding: "2rem 2rem" }}>
-        <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-            <h2 style={{ fontSize: "16px", fontWeight: 600, color: "#1A1A1A", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+      <div style={{ background: "#fdfdfb", borderTop: "1px solid #edeae0", padding: "3rem 0" }}>
+        <div className="news-home-wrap">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1.5rem" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader)", fontSize: "24px", fontWeight: 400, color: "#26261f", margin: 0 }}>
               {activeLang === "KO" ? "무료 도구" : "Free Tools"}
             </h2>
+            <Link href="/tools" style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.1em", color: "#84a300", textDecoration: "none" }}>
+              {activeLang === "KO" ? "전체 보기 →" : "All tools →"}
+            </Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "14px" }}>
             <Link
               href={activeLang === "KO" ? "/tools/stamp-duty-calculator-ko" : "/tools/stamp-duty-calculator"}
-              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", background: "white", border: "0.5px solid rgba(0,0,0,0.1)", borderLeft: "4px solid #CCDA47", borderRadius: "12px", padding: "20px 24px", textDecoration: "none" }}
+              className="home-tool-card"
             >
               <div>
-                <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em", marginBottom: "5px" }}>
-                  {activeLang === "KO" ? "스탬프 듀티" : "STAMP DUTY"}
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.15em", color: "#84a300", textTransform: "uppercase", marginBottom: "6px" }}>
+                  {activeLang === "KO" ? "스탬프 듀티" : "Stamp Duty"}
                 </div>
-                <div style={{ fontSize: "17px", fontWeight: 700, color: "#1A1A1A", marginBottom: "4px" }}>
+                <div style={{ fontFamily: "var(--font-newsreader)", fontSize: "19px", color: "#26261f", lineHeight: 1.3, marginBottom: "6px" }}>
                   {activeLang === "KO" ? "스탬프 듀티 계산기" : "Stamp Duty Calculator"}
                 </div>
-                <div style={{ fontSize: "13px", color: "#888" }}>
-                  {activeLang === "KO"
-                    ? "전 주 차량 구매세 즉시 계산"
-                    : "Instant estimate for all Australian states"}
+                <div style={{ fontSize: "13px", color: "#6b6963", lineHeight: 1.6 }}>
+                  {activeLang === "KO" ? "전 주 차량 구매세 즉시 계산" : "Instant estimate for all Australian states"}
                 </div>
               </div>
-              <div style={{ fontSize: "24px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: "13px", color: "#84a300", flexShrink: 0 }}>→</div>
             </Link>
-            <Link
-              href="/tools/rego-calculator"
-              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", background: "white", border: "0.5px solid rgba(0,0,0,0.1)", borderLeft: "4px solid #CCDA47", borderRadius: "12px", padding: "20px 24px", textDecoration: "none" }}
-            >
+            <Link href="/tools/rego-calculator" className="home-tool-card">
               <div>
-                <div style={{ fontSize: "10px", fontWeight: 700, color: "#7a8a00", letterSpacing: "0.1em", marginBottom: "5px" }}>
-                  {activeLang === "KO" ? "레고" : "REGISTRATION"}
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", letterSpacing: "0.15em", color: "#84a300", textTransform: "uppercase", marginBottom: "6px" }}>
+                  {activeLang === "KO" ? "레고" : "Registration"}
                 </div>
-                <div style={{ fontSize: "17px", fontWeight: 700, color: "#1A1A1A", marginBottom: "4px" }}>
+                <div style={{ fontFamily: "var(--font-newsreader)", fontSize: "19px", color: "#26261f", lineHeight: 1.3, marginBottom: "6px" }}>
                   {activeLang === "KO" ? "레고 계산기" : "Rego Calculator"}
                 </div>
-                <div style={{ fontSize: "13px", color: "#888" }}>
-                  {activeLang === "KO"
-                    ? "전 주 연간 레고 비용 즉시 계산"
-                    : "Annual rego estimate for all Australian states"}
+                <div style={{ fontSize: "13px", color: "#6b6963", lineHeight: 1.6 }}>
+                  {activeLang === "KO" ? "전 주 연간 레고 비용 즉시 계산" : "Annual rego estimate for all Australian states"}
                 </div>
               </div>
-              <div style={{ fontSize: "24px", color: "#CCDA47", flexShrink: 0 }}>→</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: "13px", color: "#84a300", flexShrink: 0 }}>→</div>
             </Link>
           </div>
         </div>

@@ -29,6 +29,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "fuel-type-guide-australia",
+    title: "Petrol, Diesel, Hybrid, PHEV, EREV, Electric or Hydrogen. Which One Actually Fits Your Life",
+    excerpt:
+      "Seven powertrain types, one buying decision. This guide matches each fuel type to specific Australian life patterns, covering running costs, FBT implications, towing, and charging reality so you can narrow the field before you visit a dealership.",
+    category: "Buying Guide",
+    readTime: "12 min read",
+    date: "July 14, 2026",
+    lang: "EN",
+    highlight: "Which fuel?",
+    thumbSubtext: "fuel type guide",
+    relatedSlugs: ["novated-lease-worth-it-australia", "demo-car-warranty-start-australia", "car-stamp-duty-australia-explained"],
+  },
+  {
+    slug: "fuel-type-guide-australia-ko",
+    title: "휘발유, 디젤, 하이브리드, PHEV, EREV, 전기, 수소. 내 생활에 맞는 건 뭘까",
+    excerpt:
+      "일곱 가지 파워트레인 중 어느 것이 내 생활에 맞는지 판단하는 가이드. 연료비, FBT 적용 여부, 견인 능력, 충전 현실을 호주 기준으로 정리했다. 딜러십 방문 전에 선택지를 좁히는 데 도움이 될 것이다.",
+    category: "Buying Guide",
+    readTime: "12분 읽기",
+    date: "2026년 7월 14일",
+    lang: "KO",
+    highlight: "어떤 연료?",
+    thumbSubtext: "연료 방식 가이드",
+    relatedSlugs: ["novated-lease-worth-it-australia-ko", "demo-car-warranty-start-australia-ko", "car-stamp-duty-australia-explained-ko"],
+  },
+  {
     slug: "demo-car-warranty-start-australia",
     title: "When Does a Demo Car Warranty Actually Start in Australia",
     excerpt:

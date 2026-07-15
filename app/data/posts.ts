@@ -29,6 +29,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "novated-lease-quote-fine-print-australia",
+    title: "What a Novated Lease Quote Does Not Tell You",
+    excerpt:
+      "The comparison in most quotes is against doing nothing. The vehicle price may not match what you could negotiate directly. The monthly payment bundles costs that are difficult to separate. Here is what to check before signing.",
+    category: "Buying Guide",
+    readTime: "9 min read",
+    date: "July 15, 2026",
+    lang: "EN",
+    highlight: "Fine print",
+    thumbSubtext: "novated lease quote",
+    relatedSlugs: ["novated-lease-worth-it-australia", "novated-lease-vs-car-loan-australia", "fuel-type-guide-australia"],
+  },
+  {
+    slug: "novated-lease-quote-fine-print-australia-ko",
+    title: "노베이티드 리스 견적서가 말해주지 않는 것들",
+    excerpt:
+      "대부분의 견적 비교 대상은 아무것도 하지 않는 경우다. 차량 가격은 직접 협상했을 때와 다를 수 있다. 월 납입금에는 개별 비교가 어려운 비용이 묶여 있다. 서명 전 확인해야 할 것들을 정리했다.",
+    category: "구매 가이드",
+    readTime: "9분",
+    date: "2026년 7월 15일",
+    lang: "KO",
+    highlight: "견적 너머",
+    thumbSubtext: "노베이티드 리스 견적",
+    relatedSlugs: ["novated-lease-worth-it-australia-ko", "novated-lease-vs-car-loan-australia-ko", "fuel-type-guide-australia-ko"],
+  },
+  {
     slug: "fuel-type-guide-australia",
     title: "Petrol, Diesel, Hybrid, PHEV, EREV, Electric or Hydrogen. Which One Actually Fits Your Life",
     excerpt:

@@ -18,6 +18,8 @@ import GwmTank300FaceliftChinaReveal2026Content from './gwm-tank-300-facelift-ch
 import GwmTank300FaceliftChinaReveal2026KoContent from './gwm-tank-300-facelift-china-reveal-2026-ko';
 import AustraliaNewRoadRulesJuly2026Content from './australia-new-road-rules-july-2026';
 import AustraliaNewRoadRulesJuly2026KoContent from './australia-new-road-rules-july-2026-ko';
+import AussieSpeedingFinesNotDeliberateNavmanSurveyContent from './aussie-speeding-fines-not-deliberate-navman-survey';
+import AussieSpeedingFinesNotDeliberateNavmanSurveyKoContent from './aussie-speeding-fines-not-deliberate-navman-survey-ko';
 import Ferrari12CilindriManualeContent from './ferrari-12cilindri-manuale-manual-v12';
 import Ferrari12CilindriManualeKoContent from './ferrari-12cilindri-manuale-manual-v12-ko';
 import LiMegaElectricChinaAustraliaContent from './li-mega-electric-china-australia';
@@ -146,6 +148,8 @@ const MAP: Record<string, FC> = {
   'renault-megane-etech-2026-australia-ko': RenaultMeganeEtech2026AustraliaKoContent,
   'skoda-peaq-2027-australia': SkodaPeaq2027AustraliaContent,
   'skoda-peaq-2027-australia-ko': SkodaPeaq2027AustraliaKoContent,
+  'aussie-speeding-fines-not-deliberate-navman-survey': AussieSpeedingFinesNotDeliberateNavmanSurveyContent,
+  'aussie-speeding-fines-not-deliberate-navman-survey-ko': AussieSpeedingFinesNotDeliberateNavmanSurveyKoContent,
 };
 
 export function getNewsContent(slug: string): FC | null {

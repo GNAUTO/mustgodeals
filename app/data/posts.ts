@@ -529,6 +529,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "aussie-speeding-fines-not-deliberate-navman-survey",
+    title: "Most Aussie Speeding Fines Are Not Deliberate. New Survey Explains Why",
+    excerpt:
+      "A Navman survey found that 26% of Australian drivers who received a speeding fine in 2025 were simply not paying attention at the time. Only 12% said they had deliberately exceeded the limit.",
+    category: "NEWS",
+    date: "July 15, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/australia-speed-sign-60kmh.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "aussie-speeding-fines-not-deliberate-navman-survey-ko",
+    title: "호주 과속 벌금은 대부분 고의가 아니다. 새 설문이 밝힌 이유",
+    excerpt:
+      "Navman 설문에 따르면 2025년에 과속 벌금을 받은 호주 운전자 중 26%가 당시 단순히 주의를 기울이지 않고 있었다고 답했다. 고의로 제한속도를 넘겼다고 인정한 응답자는 12%에 불과했다.",
+    category: "뉴스",
+    date: "2026년 7월 15일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/australia-speed-sign-60kmh.jpg",
+    lang: "KO",
+  },
+  {
     slug: "zeekr-9x-five-seat-australia-launch-2027",
     title: "2027 Zeekr 9X Gains a Five Seat Variant as Its Australian Launch Nears",
     excerpt:

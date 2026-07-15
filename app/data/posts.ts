@@ -529,6 +529,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "vw-id-polo-gti-electric-hit-or-miss",
+    title: "VW ID.Polo GTI Electric. Two Opposing Takes on the Electric Hot Hatch",
+    excerpt:
+      "Volkswagen describes the ID.Polo GTI as driving closer to the Golf GTI than to any petrol Polo GTI before it. The 166 kW electric hot hatch has already split opinion on whether VW has played it too safe or finally got the formula right.",
+    category: "NEWS",
+    date: "July 15, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/vw_polo_gti/vw_polo_gti_4.webp",
+    lang: "EN",
+  },
+  {
+    slug: "vw-id-polo-gti-electric-hit-or-miss-ko",
+    title: "VW ID.폴로 GTI 전기차. 정반대 평가가 나온 이유",
+    excerpt:
+      "폭스바겐은 ID.폴로 GTI의 주행 감각이 기존 내연기관 폴로 GTI보다 현행 골프 GTI에 더 가깝다고 설명한다. 166 kW의 전기 핫해치를 두고 회의론과 낙관론이 정반대로 갈렸다.",
+    category: "뉴스",
+    date: "2026년 7월 15일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/vw_polo_gti/vw_polo_gti_4.webp",
+    lang: "KO",
+  },
+  {
     slug: "aussie-speeding-fines-not-deliberate-navman-survey",
     title: "Most Aussie Speeding Fines Are Not Deliberate. New Survey Explains Why",
     excerpt:

@@ -529,6 +529,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "freelander-8-interior-reveal",
+    title: "Chery and Jaguar Land Rover Reveal the Freelander 8 Interior",
+    excerpt:
+      "The Freelander 8 interior has been officially shown for the first time. The cabin features two independently named seat positions, a T-shaped Bridge dashboard with a 46.3 inch 8K display, and Huawei ADS 5.0 standard across all trims. A China debut is set for the second half of 2026.",
+    category: "NEWS",
+    date: "July 16, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/freelander_8_interior/freelander_8_interior_1.webp",
+    lang: "EN",
+  },
+  {
+    slug: "freelander-8-interior-reveal-ko",
+    title: "체리와 재규어 랜드로버가 프리랜더 8 실내를 공개했다",
+    excerpt:
+      "프리랜더 8의 실내 이미지가 처음 공식 공개됐다. 각각 Commander와 L·A·D·Y로 명명된 이중 마스터 시트 구조, T자 브릿지 대시보드와 46.3인치 8K 디스플레이, 전 트림 기본 화웨이 첸쿤 ADS 5.0이 핵심이다. 중국 출시는 2026년 하반기 예정이다.",
+    category: "뉴스",
+    date: "2026년 7월 16일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/freelander_8_interior/freelander_8_interior_1.webp",
+    lang: "KO",
+  },
+  {
     slug: "vw-id-cross-electric-suv-reveal",
     title: "Volkswagen ID. Cross Is the Brand's New Baby Electric SUV",
     excerpt:

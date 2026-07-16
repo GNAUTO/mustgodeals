@@ -24,6 +24,8 @@ import VwIdPoloGtiElectricHitOrMissContent from './vw-id-polo-gti-electric-hit-o
 import VwIdPoloGtiElectricHitOrMissKoContent from './vw-id-polo-gti-electric-hit-or-miss-ko';
 import VwIdCrossElectricSuvRevealContent from './vw-id-cross-electric-suv-reveal';
 import VwIdCrossElectricSuvRevealKoContent from './vw-id-cross-electric-suv-reveal-ko';
+import Freelander8InteriorRevealContent from './freelander-8-interior-reveal';
+import Freelander8InteriorRevealKoContent from './freelander-8-interior-reveal-ko';
 import Ferrari12CilindriManualeContent from './ferrari-12cilindri-manuale-manual-v12';
 import Ferrari12CilindriManualeKoContent from './ferrari-12cilindri-manuale-manual-v12-ko';
 import LiMegaElectricChinaAustraliaContent from './li-mega-electric-china-australia';
@@ -158,6 +160,8 @@ const MAP: Record<string, FC> = {
   'vw-id-polo-gti-electric-hit-or-miss-ko': VwIdPoloGtiElectricHitOrMissKoContent,
   'vw-id-cross-electric-suv-reveal': VwIdCrossElectricSuvRevealContent,
   'vw-id-cross-electric-suv-reveal-ko': VwIdCrossElectricSuvRevealKoContent,
+  'freelander-8-interior-reveal': Freelander8InteriorRevealContent,
+  'freelander-8-interior-reveal-ko': Freelander8InteriorRevealKoContent,
 };
 
 export function getNewsContent(slug: string): FC | null {

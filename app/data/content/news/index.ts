@@ -22,6 +22,8 @@ import AussieSpeedingFinesNotDeliberateNavmanSurveyContent from './aussie-speedi
 import AussieSpeedingFinesNotDeliberateNavmanSurveyKoContent from './aussie-speeding-fines-not-deliberate-navman-survey-ko';
 import VwIdPoloGtiElectricHitOrMissContent from './vw-id-polo-gti-electric-hit-or-miss';
 import VwIdPoloGtiElectricHitOrMissKoContent from './vw-id-polo-gti-electric-hit-or-miss-ko';
+import VwIdCrossElectricSuvRevealContent from './vw-id-cross-electric-suv-reveal';
+import VwIdCrossElectricSuvRevealKoContent from './vw-id-cross-electric-suv-reveal-ko';
 import Ferrari12CilindriManualeContent from './ferrari-12cilindri-manuale-manual-v12';
 import Ferrari12CilindriManualeKoContent from './ferrari-12cilindri-manuale-manual-v12-ko';
 import LiMegaElectricChinaAustraliaContent from './li-mega-electric-china-australia';
@@ -154,6 +156,8 @@ const MAP: Record<string, FC> = {
   'aussie-speeding-fines-not-deliberate-navman-survey-ko': AussieSpeedingFinesNotDeliberateNavmanSurveyKoContent,
   'vw-id-polo-gti-electric-hit-or-miss': VwIdPoloGtiElectricHitOrMissContent,
   'vw-id-polo-gti-electric-hit-or-miss-ko': VwIdPoloGtiElectricHitOrMissKoContent,
+  'vw-id-cross-electric-suv-reveal': VwIdCrossElectricSuvRevealContent,
+  'vw-id-cross-electric-suv-reveal-ko': VwIdCrossElectricSuvRevealKoContent,
 };
 
 export function getNewsContent(slug: string): FC | null {

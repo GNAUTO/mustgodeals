@@ -529,6 +529,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "vw-id-cross-electric-suv-reveal",
+    title: "Volkswagen ID. Cross Is the Brand's New Baby Electric SUV",
+    excerpt:
+      "Volkswagen has revealed the ID. Cross, a five door five seat electric crossover built on the same platform as the ID.Polo. UK pricing starts below £25,000, with two battery options offering claimed ranges of around 315 km and 435 km.",
+    category: "NEWS",
+    date: "July 16, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/volkswagen_id_cross/vw_id_cross_1.webp",
+    lang: "EN",
+  },
+  {
+    slug: "vw-id-cross-electric-suv-reveal-ko",
+    title: "폭스바겐 ID. Cross가 공개됐다. 브랜드의 새 소형 전기 SUV",
+    excerpt:
+      "폭스바겐이 ID.Polo 플랫폼 기반의 5도어 5인승 전기 크로스오버 ID. Cross를 공개했다. 영국 판매 가격은 £25,000 미만이며 배터리 두 가지 옵션이 각각 약 315 km와 435 km의 주장 항속거리를 제공한다.",
+    category: "뉴스",
+    date: "2026년 7월 16일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/volkswagen_id_cross/vw_id_cross_1.webp",
+    lang: "KO",
+  },
+  {
     slug: "vw-id-polo-gti-electric-hit-or-miss",
     title: "VW ID.Polo GTI Electric. Two Opposing Takes on the Electric Hot Hatch",
     excerpt:

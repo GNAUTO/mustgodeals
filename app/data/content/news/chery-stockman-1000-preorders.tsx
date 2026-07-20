@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
+const IMG = "/images/news/chery_stockman/";
+
 export default function CheryStockman1000PreordersContent() {
   return (
     <>
@@ -11,8 +13,8 @@ export default function CheryStockman1000PreordersContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src="/images/news/chery_stockman.jpg"
-          alt="Chery Stockman diesel plug in hybrid dual cab ute exterior"
+          src={`${IMG}chery_stockman_1.jpg`}
+          alt="Chery Stockman diesel plug in hybrid dual cab ute exterior front view"
           width={1920}
           height={1080}
           style={{ width: "100%", height: "460px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
@@ -38,6 +40,17 @@ export default function CheryStockman1000PreordersContent() {
         rivals.
       </p>
 
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_3.jpg`}
+          alt="Chery Stockman ute side profile showing dual cab body and all terrain tyres"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
+
       <p style={AS.p}>
         On paper it is built for the way Australians actually use a ute. Chery has confirmed{" "}
         <span style={AS.highlight}>3500kg of braked towing</span>, full 4x4, all terrain tyres
@@ -53,11 +66,33 @@ export default function CheryStockman1000PreordersContent() {
         landing under 50,000 dollars before on road costs.
       </p>
 
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_5.jpg`}
+          alt="Chery Stockman interior cabin and technology features"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
+
       <p style={AS.p}>
         What is still missing is the thing that decides whether those 1000 preorders turn into
         1000 sales. Chery has not put a price on the Stockman yet, and grades and final specs
         are still to come. A petrol plug in hybrid version is expected to follow in 2027.
       </p>
+
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_6.jpg`}
+          alt="Chery Stockman rear three quarter view and towing capability"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
 
       <p style={AS.p}>
         The Stockman reaches Australian showrooms in the fourth quarter of 2026.

@@ -562,7 +562,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "NEWS",
     date: "July 20, 2026",
     author: "MustGoDeals Editorial",
-    image: "/images/news/chery_stockman.jpg",
+    image: "/images/news/chery_stockman/chery_stockman_1.jpg",
     lang: "EN",
   },
   {
@@ -573,7 +573,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: "뉴스",
     date: "2026년 7월 20일",
     author: "MustGoDeals 편집팀",
-    image: "/images/news/chery_stockman.jpg",
+    image: "/images/news/chery_stockman/chery_stockman_1.jpg",
     lang: "KO",
   },
   {

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { AS } from '../../../components/posts/article-styles';
 
+const IMG = "/images/news/chery_stockman/";
+
 export default function CheryStockman1000PreordersKoContent() {
   return (
     <>
@@ -10,8 +12,8 @@ export default function CheryStockman1000PreordersKoContent() {
 
       <div style={AS.imgWrap}>
         <Image
-          src="/images/news/chery_stockman.jpg"
-          alt="체리 스톡맨 디젤 플러그인 하이브리드 듀얼캡 유트 외관"
+          src={`${IMG}chery_stockman_1.jpg`}
+          alt="체리 스톡맨 디젤 플러그인 하이브리드 듀얼캡 유트 외관 전면"
           width={1920}
           height={1080}
           style={{ width: "100%", height: "460px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
@@ -34,6 +36,17 @@ export default function CheryStockman1000PreordersKoContent() {
         조금 깎아서 보는 게 좋아요.
       </p>
 
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_3.jpg`}
+          alt="체리 스톡맨 유트 사이드 프로파일과 올터레인 타이어"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
+
       <p style={AS.p}>
         숫자만 보면 호주 사람들이 유트 쓰는 방식에 맞춰 만든 차입니다. 견인{" "}
         <span style={AS.highlight}>3500kg</span>, 4x4, 올터레인 타이어 기본, 지상고 247mm를
@@ -47,11 +60,33 @@ export default function CheryStockman1000PreordersKoContent() {
         있고요. 이 중 제일 싼 건 헌터로, 온로드 비용 빼고 5만 불 아래에서 시작합니다.
       </p>
 
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_5.jpg`}
+          alt="체리 스톡맨 실내 캐빈과 기술 사양"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
+
       <p style={AS.p}>
         아직 빠진 건 그 1000대가 진짜 판매로 이어질지를 가를 부분, 바로 가격입니다. 체리는
         아직 스톡맨 가격을 안 내놨고 등급이랑 최종 사양도 나중에 공개해요. 가솔린 플러그인
         하이브리드 버전은 2027년에 나올 걸로 보입니다.
       </p>
+
+      <div style={AS.imgWrap}>
+        <Image
+          src={`${IMG}chery_stockman_6.jpg`}
+          alt="체리 스톡맨 리어 쿼터뷰와 견인 능력"
+          width={1920}
+          height={1080}
+          style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "center", borderRadius: "8px", display: "block" }}
+        />
+        <p style={AS.imgCaption}>Photo: Chery Australia</p>
+      </div>
 
       <p style={AS.p}>
         스톡맨은 2026년 4분기에 호주 매장에 들어옵니다.

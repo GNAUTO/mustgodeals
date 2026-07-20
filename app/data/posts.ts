@@ -555,6 +555,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "chery-stockman-1000-preorders",
+    title: "Chery Stockman racks up 1000 preorders before its price is even set",
+    excerpt:
+      "Chery says it has over 1000 preorders and 5000 expressions of interest for the Stockman, Australia's first diesel plug in hybrid ute, before any price is announced.",
+    category: "NEWS",
+    date: "July 20, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/chery_stockman.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "chery-stockman-1000-preorders-ko",
+    title: "체리 스톡맨, 가격도 안 나왔는데 사전예약 1000대 돌파",
+    excerpt:
+      "체리가 가격 공개 전부터 호주 첫 디젤 플러그인 하이브리드 유트 스톡맨의 사전예약 1000대와 관심 등록 5000건을 확보했습니다.",
+    category: "뉴스",
+    date: "2026년 7월 20일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/chery_stockman.jpg",
+    lang: "KO",
+  },
+  {
     slug: "freelander-8-interior-reveal",
     title: "Chery and Jaguar Land Rover Reveal the Freelander 8 Interior",
     excerpt:

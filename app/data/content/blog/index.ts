@@ -38,6 +38,8 @@ import FuelTypeGuideAustraliaContent from './fuel-type-guide-australia';
 import FuelTypeGuideAustraliaKoContent from './fuel-type-guide-australia-ko';
 import NovatedLeaseQuoteFinePrintAustraliaContent from './novated-lease-quote-fine-print-australia';
 import NovatedLeaseQuoteFinePrintAustraliaKoContent from './novated-lease-quote-fine-print-australia-ko';
+import ShouldYouDetailCarBeforeTradeInContent from './should-you-detail-car-before-trade-in';
+import ShouldYouDetailCarBeforeTradeInKoContent from './should-you-detail-car-before-trade-in-ko';
 
 const MAP: Record<string, FC> = {
   'buying-a-car-in-australia-guide': BuyingACarInAustraliaGuideContent,
@@ -78,6 +80,8 @@ const MAP: Record<string, FC> = {
   'fuel-type-guide-australia-ko': FuelTypeGuideAustraliaKoContent,
   'novated-lease-quote-fine-print-australia': NovatedLeaseQuoteFinePrintAustraliaContent,
   'novated-lease-quote-fine-print-australia-ko': NovatedLeaseQuoteFinePrintAustraliaKoContent,
+  'should-you-detail-car-before-trade-in': ShouldYouDetailCarBeforeTradeInContent,
+  'should-you-detail-car-before-trade-in-ko': ShouldYouDetailCarBeforeTradeInKoContent,
 };
 
 export function getBlogContent(slug: string): FC | null {

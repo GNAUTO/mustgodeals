@@ -29,6 +29,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "should-you-detail-car-before-trade-in",
+    title: "Should you detail your car before you trade it in",
+    excerpt:
+      "A detailer explains why paying for a full detail before you trade your car in to a dealer is usually wasted money and what to do instead.",
+    category: "Buying Guide",
+    readTime: "3 min read",
+    date: "July 20, 2026",
+    lang: "EN",
+    highlight: "Trade in",
+    thumbSubtext: "car detailing",
+    relatedSlugs: ["how-to-negotiate-car-price-australia", "best-time-to-buy-a-car-australia", "what-is-a-dealer-clearance-car-australia"],
+  },
+  {
+    slug: "should-you-detail-car-before-trade-in-ko",
+    title: "차 팔기 전에 디테일링 받아야 하나",
+    excerpt:
+      "디테일러가 설명하는, 딜러에게 트레이드인 하기 전 풀 디테일링에 돈을 쓰는 것이 왜 대개 낭비인지 그리고 대신 무엇을 하면 되는지.",
+    category: "구매 가이드",
+    readTime: "3분",
+    date: "2026년 7월 20일",
+    lang: "KO",
+    highlight: "트레이드인",
+    thumbSubtext: "차 디테일링",
+    relatedSlugs: ["how-to-negotiate-car-price-australia-ko", "best-time-to-buy-a-car-australia-ko", "what-is-a-dealer-clearance-car-australia-ko"],
+  },
+  {
     slug: "novated-lease-quote-fine-print-australia",
     title: "What a Novated Lease Quote Does Not Tell You",
     excerpt:

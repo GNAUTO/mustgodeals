@@ -40,6 +40,8 @@ import NovatedLeaseQuoteFinePrintAustraliaContent from './novated-lease-quote-fi
 import NovatedLeaseQuoteFinePrintAustraliaKoContent from './novated-lease-quote-fine-print-australia-ko';
 import ShouldYouDetailCarBeforeTradeInContent from './should-you-detail-car-before-trade-in';
 import ShouldYouDetailCarBeforeTradeInKoContent from './should-you-detail-car-before-trade-in-ko';
+import BuyNewCarRunOutModelContent from './buy-new-car-run-out-model';
+import BuyNewCarRunOutModelKoContent from './buy-new-car-run-out-model-ko';
 
 const MAP: Record<string, FC> = {
   'buying-a-car-in-australia-guide': BuyingACarInAustraliaGuideContent,
@@ -82,6 +84,8 @@ const MAP: Record<string, FC> = {
   'novated-lease-quote-fine-print-australia-ko': NovatedLeaseQuoteFinePrintAustraliaKoContent,
   'should-you-detail-car-before-trade-in': ShouldYouDetailCarBeforeTradeInContent,
   'should-you-detail-car-before-trade-in-ko': ShouldYouDetailCarBeforeTradeInKoContent,
+  'buy-new-car-run-out-model': BuyNewCarRunOutModelContent,
+  'buy-new-car-run-out-model-ko': BuyNewCarRunOutModelKoContent,
 };
 
 export function getBlogContent(slug: string): FC | null {

@@ -29,6 +29,32 @@ export type NewsItem = {
 // ── Blog posts — newest first ──────────────────────────────────────────────
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "buy-new-car-run-out-model",
+    title: "The most refined version of a car, at the best price it will ever be",
+    excerpt:
+      "Why buying a new car in its run out, the final model year before a full model change, gives you the most refined car at the best price if you keep cars for ten to fifteen years.",
+    category: "Buying Guide",
+    readTime: "5 min read",
+    date: "July 21, 2026",
+    lang: "EN",
+    highlight: "Run out",
+    thumbSubtext: "run out model",
+    relatedSlugs: ["best-time-to-buy-a-car-australia", "how-to-negotiate-car-price-australia", "what-is-a-dealer-clearance-car-australia"],
+  },
+  {
+    slug: "buy-new-car-run-out-model-ko",
+    title: "가장 완성도 높은 차를 가장 좋은 값에 사는 법",
+    excerpt:
+      "차를 십 년 십오 년 오래 타시는 분들께 풀체인지 직전 마지막 연식이 왜 가장 완성도 높고 가장 값이 좋은 선택인지 설명합니다.",
+    category: "구매 가이드",
+    readTime: "5분",
+    date: "2026년 7월 21일",
+    lang: "KO",
+    highlight: "런아웃",
+    thumbSubtext: "마지막 연식",
+    relatedSlugs: ["best-time-to-buy-a-car-australia-ko", "how-to-negotiate-car-price-australia-ko", "what-is-a-dealer-clearance-car-australia-ko"],
+  },
+  {
     slug: "should-you-detail-car-before-trade-in",
     title: "Should you detail your car before you trade it in",
     excerpt:

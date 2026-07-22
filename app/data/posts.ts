@@ -581,6 +581,28 @@ export const BLOG_POSTS: BlogPost[] = [
 // ── News items — newest first ──────────────────────────────────────────────
 export const NEWS_ITEMS: NewsItem[] = [
   {
+    slug: "range-rover-gt-electric-fastback",
+    title: "Range Rover is building a sedan, sort of",
+    excerpt:
+      "Range Rover has previewed the 2027 Range Rover GT, an electric fastback and the first non SUV Range Rover ever, ahead of its global debut later this year.",
+    category: "NEWS",
+    date: "July 22, 2026",
+    author: "MustGoDeals Editorial",
+    image: "/images/news/range_rover_gt/range_rover_gt_1.jpg",
+    lang: "EN",
+  },
+  {
+    slug: "range-rover-gt-electric-fastback-ko",
+    title: "레인지로버가 세단을 만듭니다, 어떻게 보면요",
+    excerpt:
+      "레인지로버가 사상 첫 비 SUV 모델인 전기 패스트백 2027 레인지로버 GT를 올해 하반기 공개를 앞두고 처음 공개했습니다.",
+    category: "뉴스",
+    date: "2026년 7월 22일",
+    author: "MustGoDeals 편집팀",
+    image: "/images/news/range_rover_gt/range_rover_gt_1.jpg",
+    lang: "KO",
+  },
+  {
     slug: "chery-stockman-1000-preorders",
     title: "Chery Stockman racks up 1000 preorders before its price is even set",
     excerpt:
